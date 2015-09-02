@@ -25,7 +25,6 @@ class ElementImageView: UIImageView {
         super.init(image: image)
         
         self.userInteractionEnabled = true // to allow dragging
-
         
         var panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
         self.gestureRecognizers = [panRecognizer]

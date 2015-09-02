@@ -1,0 +1,89 @@
+/*
+*  tranlateElementInArray :
+This function is made to make trnalsteion for the lement in an array , where you can get a random sequence not repeatedly , disabled for now
+*/
+/*
+func translateElementInArray(inout array : Array<String>  , step : Int){
+
+var holdArray = array
+
+var count = 0
+var size = holdArray.count
+for  a in holdArray{
+array[count] = holdArray[(count+step)%size]
+count++
+}
+}
+
+*/
+
+
+// *****************************************************************************************************************************
+
+
+/*
+Animation for Tick
+*/
+// right answer !
+/*
+
+check for the mastered list of the word
+counts number of times answered of the element
+
+By usng (rightAnswerElement) variable we get and read the mastered and count
+
+*/
+
+//                            if let el = self.rightAnswerElement{
+//                                var copyOfRightAnswerElement = NSMutableDictionary(dictionary: el)
+//                                var key = "answeredTimes"
+//                                let name: String? = el.objectForKey("name") as? String
+//                                println("before answering : ")
+//                                //                println((dictionaryOfAllElements[randomElementsForChoices.objectAtIndex(rightAnswerIndex) as! String]!.objectForKey(key))!)
+//                                var count = copyOfRightAnswerElement.objectForKey(key) as! Int
+//                                count++
+//
+//
+//                                /* Comments :
+//
+//                                            ** when the user get Mastered , the alert should be immediatly after he presses the button
+//                                            ** should save the dictuinary in UserDefaults ,
+//
+//                                    ******  Change number of times the word should be answered here  ****
+//
+//                                */
+//
+//                                if count >= 2 {
+////                                    let alert = UIAlertView(title: "You have mastered This word!", message: "Conrgratulation , you have mastered the word\(name!)", delegate: self, cancelButtonTitle: "Done")
+////                                    alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
+////                                    alert.show()
+//
+//                                    let blackView = UIView(frame: self.view.frame)
+//                                    blackView.backgroundColor = UIColor.blackColor()
+//                                    blackView.alpha = 0.4
+//                                    blackView.userInteractionEnabled = true
+//                                    self.view.addSubview(blackView)
+//
+//                                    let starView = UIImageView(frame: CGRectMake(self.view.center.x, self.view.center.y, 220.0, 220.0))
+//                                    starView.center = self.view.center
+//                                    starView.image = UIImage(named:"star")
+//                                    self.view.addSubview(starView)
+//                                    println("\n****Mastered****\n")
+//
+//                                }
+//
+//                                copyOfRightAnswerElement.setValue(count, forKey: key)
+//                                copyOfRightAnswerElement.setValue(true, forKey: "isMastered")
+//                                println("copyOfRightAnswerElement : \(copyOfRightAnswerElement)\n count is : \(count)")
+//                                self.dictionaryOfAllElements[self.rightAnswerKey] = copyOfRightAnswerElement
+//
+//                                println("after answering ")
+//                                self.rightAnswerElement = copyOfRightAnswerElement
+//                                println(self.dictionaryOfAllElements[self.rightAnswerKey])
+
+
+// *****************************************************************************************************************************
+
+
+
+

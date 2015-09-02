@@ -1737,13 +1737,13 @@
                                         <exclude reference="0it-CC-Lzy"/>
                                         <exclude reference="dRj-O6-3iR"/>
                                         <exclude reference="h7e-ad-vuz"/>
-                                        <exclude reference="nbr-FH-Das"/>
-                                        <exclude reference="qJC-Xp-k0l"/>
                                         <exclude reference="MdU-Tw-iWo"/>
                                         <exclude reference="ZMd-00-F2n"/>
                                         <exclude reference="thc-ZX-9Oa"/>
                                         <exclude reference="dTD-ye-uWv"/>
                                         <exclude reference="dq6-VU-0fj"/>
+                                        <exclude reference="nbr-FH-Das"/>
+                                        <exclude reference="qJC-Xp-k0l"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -1759,13 +1759,13 @@
                                         <include reference="0it-CC-Lzy"/>
                                         <include reference="dRj-O6-3iR"/>
                                         <include reference="h7e-ad-vuz"/>
-                                        <include reference="nbr-FH-Das"/>
-                                        <include reference="qJC-Xp-k0l"/>
                                         <exclude reference="MdU-Tw-iWo"/>
                                         <include reference="ZMd-00-F2n"/>
                                         <include reference="thc-ZX-9Oa"/>
                                         <include reference="dTD-ye-uWv"/>
                                         <include reference="dq6-VU-0fj"/>
+                                        <include reference="nbr-FH-Das"/>
+                                        <include reference="qJC-Xp-k0l"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -3437,7 +3437,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="14"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">

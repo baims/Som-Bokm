@@ -557,9 +557,36 @@ class QuizVC: UIViewController {
 
     @IBAction func backButtonTapped(sender: UIButton)
     {
-        self.navigationController?.popViewControllerAnimated(true)
+        let alertViewController = UIAlertController(title: "تأكيد", message: "هل انت متأكد من الخروج ؟", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let exitAction = UIAlertAction(title: "خروج", style: UIAlertActionStyle.Default)
+            { (action) -> Void in
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        
+        let cancelAction = UIAlertAction(title: "الغاء", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        alertViewController.addAction(exitAction)
+        alertViewController.addAction(cancelAction)
+        
+        self.presentViewController(alertViewController, animated: true, completion: nil)
     }
 
+    @IBAction func homeButtonTapped(sender: UIButton)
+    {
+        let alertViewController = UIAlertController(title: "تأكيد", message: "هل انت متأكد من الخروج ؟", preferredStyle: UIAlertControllerStyle.Alert)
+        let exitAction = UIAlertAction(title: "خروج", style: UIAlertActionStyle.Default)
+            { (action) -> Void in
+                self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+        
+        let cancelAction = UIAlertAction(title: "الغاء", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        alertViewController.addAction(exitAction)
+        alertViewController.addAction(cancelAction)
+        
+        self.presentViewController(alertViewController, animated: true, completion: nil)
+    }
     
     
 /*

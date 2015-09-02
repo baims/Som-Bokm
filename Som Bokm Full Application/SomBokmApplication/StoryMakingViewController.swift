@@ -118,21 +118,61 @@ class StoryMakingViewController: UIViewController {
     }
     
     @IBAction func homeButtonTapped(sender: AnyObject) {
+        var save = false
+        
         if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0
         {
-            self.saveSceneToRealm()
+            save = true
         }
         
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.showExitAlertView(home: true, back: false, saving: save)
     }
     
     @IBAction func backButtonTapped(sender: UIButton) {
+        var save = false
+        
         if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0
         {
-            self.saveSceneToRealm()
+            save = true
         }
         
-        self.navigationController?.popViewControllerAnimated(true)
+        self.showExitAlertView(home: false, back: true, saving: save)
+    }
+    
+    
+    func showExitAlertView(#home: Bool, back: Bool, saving: Bool)
+    {
+        let homeOrBackString = home == true ? "الخروج" : "الرجوع"
+        let messageString    = saving == true ? "هل تريد حفظ هذه القصة قبل \(homeOrBackString) ؟" : "هل انت متأكد من \(homeOrBackString)"
+        let exitString       = saving == true ? "عدم حفظ القصة" : "نعم"
+    
+        
+        let alertViewController = UIAlertController(title: "تأكيد", message: messageString, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let saveAndExitAction = UIAlertAction(title: "\(homeOrBackString) مع حفظ القصة", style: UIAlertActionStyle.Default)
+            { (action) -> Void in
+                
+                self.saveSceneToRealm()
+                self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+
+        let exitAction = UIAlertAction(title: exitString, style: UIAlertActionStyle.Default)
+            { (action) -> Void in
+                
+                self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+        
+        let cancelAction = UIAlertAction(title: "عدم \(homeOrBackString)", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        
+        if saving == true
+        {
+            alertViewController.addAction(saveAndExitAction)
+        }
+        alertViewController.addAction(exitAction)
+        alertViewController.addAction(cancelAction)
+        
+        self.presentViewController(alertViewController, animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews()

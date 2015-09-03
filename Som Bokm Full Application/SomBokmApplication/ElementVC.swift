@@ -27,12 +27,12 @@ import MediaPlayer
 
 class ElementVC: UIViewController {
     
-    var elementDictionary = NSDictionary()
-    var dictionaryName    = String()
+    var element : ElementManager.Element?
+    //    var dictionaryName    = String()
     
     @IBOutlet weak var elementNameLabel : UILabel!
     @IBOutlet weak var elementImage     : UIImageView!
-    @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var captionLabel     : UILabel!
     
     var elementCaption    : String?
     var elementName       : String?
@@ -44,8 +44,8 @@ class ElementVC: UIViewController {
     var elementHasTahjee2Video = false
     
     var tahjee2VideoPlayer : VideoPlayer?
-    var tahjee2VideoName : String?
-    var tahjee2Frame        = CGRect()
+    var tahjee2VideoName   : String?
+    var tahjee2Frame       = CGRect()
     
     
     var spellingVideoPlayer : AlphabitAnimator!
@@ -109,14 +109,10 @@ class ElementVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareItemsInDictionary()
-        
-        
-        //        self.navigationController?.navigationBar.hidden = true
-        
     }
     
     override func viewWillLayoutSubviews() {
-        let bgImageView = UIImageView(image: UIImage(named: "parkLandscapeBG"))
+        let bgImageView = UIImageView(image: UIImage(named: "QamosBG"))
         bgImageView.contentMode = .ScaleAspectFit
         bgImageView.frame = self.view.frame
         self.view.addSubview(bgImageView)
@@ -157,30 +153,33 @@ class ElementVC: UIViewController {
     
     func prepareItemsInDictionary(){
         //** ELement Image
-        
-        if let imageOfElementInDictionary : String = elementDictionary.objectForKey("image") as? String
-        {  elementImage.image = UIImage(named:imageOfElementInDictionary)}
-        
+        elementImage.image = element?.image
+        //        if let imageOfElementInDictionary : String = element.objectForKey("image") as? String
+        //        {  elementImage.image = UIImage(named:imageOfElementInDictionary)}
         //** ELement Caption
-        if let captionOfElementInDictionary : String = elementDictionary.objectForKey("caption") as? String
-        {   elementCaption = captionOfElementInDictionary }
+        elementCaption = element?.caption
+        
+        //        if let captionOfElementInDictionary : String = element.objectForKey("caption") as? String
+        //        {   elementCaption = captionOfElementInDictionary }
         
         //** ELement tahjee2 Video Name from Dictionary
-        if let SIVideoOfElementInDictionary : String = elementDictionary.objectForKey("SI_video") as? String
-        {   tahjee2VideoName = SIVideoOfElementInDictionary }
+        tahjee2VideoName = element?.videoName
+        //        if let SIVideoOfElementInDictionary : String = element.objectForKey("SI_video") as? String
+        //        {   tahjee2VideoName = SIVideoOfElementInDictionary }
         
         
         ////** alphabitaclally video Player NO NEED FOR NOW ,
         //        WE SUBSITITUTE IT WITH THE ALPHABITACALY Class
         //
-        //        if let SpellingVideoOfElementInDictionary : String = elementDictionary.objectForKey("spelling_video") as? String
+        //        if let SpellingVideoOfElementInDictionary : String = element.objectForKey("spelling_video") as? String
         //            {   spellingVideoName = SpellingVideoOfElementInDictionary }
         
         
         //Element Name in ARABIC
         
-        if let nameOfElementInDictionary : String = elementDictionary.objectForKey("name") as? String{
+        if let nameOfElementInDictionary : String = element?.arName != nil ? element?.arName! : element?.name! {
             elementName = nameOfElementInDictionary
+            
             //here we change the word with respect of the name of the images of the hands
             spellingVideoPlayer     = AlphabitAnimator(word: nameOfElementInDictionary)
             lettersVideoPlayer      = AlphabitAnimator(word: nameOfElementInDictionary)
@@ -192,11 +191,12 @@ class ElementVC: UIViewController {
             println("THE NAME OF THE ELEMENT IS \(nameOfElementInDictionary)")
         }
         else{
-            elementName = dictionaryName
+            elementName = element?.name!
         }
         
         // Get the tahjee2 Video from the bundle
         if let tahjee2vidName : String? = NSBundle.mainBundle().pathForResource(tahjee2VideoName, ofType: "mp4"){
+            println(tahjee2VideoName)
             if tahjee2vidName != nil{
                 elementHasTahjee2Video = true
                 println("\n\n\n********\n\n\nDoes have a video\n\n\(tahjee2vidName)")
@@ -209,7 +209,7 @@ class ElementVC: UIViewController {
         }
         //CAPTION
         
-        if let caption : String? = elementDictionary.objectForKey("caption") as? String
+        if let caption : String? = element?.caption
         {
             captionLabel.text = caption
         }

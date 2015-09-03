@@ -6,21 +6,32 @@
 //  Copyright (c) 2015 Baims. All rights reserved.
 //
 
+enum GameType {
+    case Free
+    case Limited
+}
+
+
 import UIKit
 
 class QuizChooseVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-
+    
     
     @IBOutlet var numberField: UITextField!
     @IBOutlet var collectionView: UICollectionView!
-
+    
     var numberOfQuestions = 0
+    var gameType : GameType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+        
         
         // Do any additional setup after loading the view.
+    }
+    @IBAction func FreeGame(sender: UIButton) {
+        gameType = GameType.Free
+        self.performSegueWithIdentifier("2quiz", sender: self)
     }
     
     @IBAction func Done(sender: UIButton) {
@@ -30,11 +41,12 @@ class QuizChooseVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
         else
         {
             numberOfQuestions = numberField.text.toInt()!
+            gameType = GameType.Limited
             self.performSegueWithIdentifier("2quiz", sender: self)
         }
-//        
-//        if let i =  numberField.text.toInt() {
-//        }
+        //
+        //        if let i =  numberField.text.toInt() {
+        //        }
     }
     
     
@@ -45,26 +57,28 @@ class QuizChooseVC: UIViewController,UICollectionViewDelegate,UICollectionViewDa
         
         return cell
     }
-
+    
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func backButtonTapped(sender: UIButton)
+    {
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
-
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      
+        
         var vc = segue.destinationViewController as! QuizVC
         vc.numberOfQuestions = numberOfQuestions
+        vc.gameType = gameType
     }
     
-
+    
 }
+

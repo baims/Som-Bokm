@@ -13,7 +13,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     @IBOutlet weak var segmentControl : UISegmentedControl!
     @IBOutlet weak var searchView     : UIView!
     @IBOutlet weak var searchButton   : UIButton!
-    var elementNeeds : [String]?
+    var elementNeeds : ElementManager.Element?
     
     var selectedIndexPath : NSIndexPath!    //index for collection view to know which item was selected in segue
     
@@ -94,9 +94,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     // -----------------   F U N C T I O N S   --------------
     
     func goToSearchedItem(notification:NSNotification){
-        var center = NSNotificationCenter.defaultCenter()
-        elementNeeds = notification.object as? [String]
-        
+        elementNeeds = notification.object as? ElementManager.Element
         
         performSegueWithIdentifier("showElementFromCategories", sender: self)
     }
@@ -118,7 +116,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     // C L O S I N G
     func hideSearchView(notification: NSNotification?){
         NSNotificationCenter.defaultCenter().postNotificationName("hideKeyboard", object:nil )
-
+        
         UIView.animateKeyframesWithDuration(0.3, delay: 0.0, options: UIViewKeyframeAnimationOptions.BeginFromCurrentState, animations: { () -> Void in
             
             self.searchView.frame       = self.searchViewFrameOff
@@ -168,8 +166,8 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         
         // C E L L  _  I M A G E
         
-        let cell_image_name = rootsArray![segmentControl.selectedSegmentIndex].categoriesArray![indexPath.row].categoryName
-        if let cell_image   = UIImage(named:cell_image_name!){
+        let cell_image_name = rootsArray![segmentControl.selectedSegmentIndex].categoriesArray![indexPath.row].categoryName! + "_thumb"
+        if let cell_image   = UIImage(named:cell_image_name){
             cell.cellBG.image       = cell_image
             cell.cellBG.contentMode = UIViewContentMode.ScaleAspectFit
         }
@@ -213,22 +211,12 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         // from search
         if segue.identifier == "showElementFromCategories"
         {
-            //            let vc : ElementVC = segue.destinationViewController as! ElementVC
-            
-            //passing the pressed button key to the dictionary that will be sent to the next VC
-            
-            //                    vc.elementDictionary = element() // hoho
-            //                    println("Dictionary of the element is the following,,,\n\(elementDictionary)")
-            //                    vc.dictionaryName = element.name // hoho
-            //                    println("Name of the element is \(elementName)")
-            
             let vc : ElementVC = segue.destinationViewController as! ElementVC
-            
-            let itemName = elementNeeds![2]
-            //println(itemName)
+            println("&& HERE PREPAREA FOR SUGUE")
+            println(elementNeeds?.name)
             
             //passing the pressed button key to the dictionary that will be sent to the next VC
-            var itemToTransfer : ElementManager.Element? = ElementManager.Base()[itemName]
+            var itemToTransfer : ElementManager.Element? = elementNeeds
             itemToTransfer?.printDescreption()
             vc.element    = itemToTransfer
             

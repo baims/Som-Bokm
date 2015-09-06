@@ -45,7 +45,7 @@
 	</dict>
 	<key>أبجدي</key>
 	<dict>
-		<key>أحرف</key>
+		<key>احرف</key>
 		<array>
 			<string>أ</string>
 			<string>ب</string>
@@ -76,7 +76,7 @@
 			<string>و</string>
 			<string>ي</string>
 		</array>
-		<key>أرقام</key>
+		<key>ارقام</key>
 		<array>
 			<string>1</string>
 			<string>2</string>

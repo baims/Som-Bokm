@@ -74,6 +74,7 @@ class ElementManager {
             get{
                 if let _image = UIImage(named: imageName!){
                     return _image
+                    
                 }
                 return nil
             }

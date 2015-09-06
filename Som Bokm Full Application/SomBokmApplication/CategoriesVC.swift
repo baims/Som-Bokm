@@ -20,7 +20,7 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
     }
     
     override func viewWillLayoutSubviews() {
-        let bgImageView = UIImageView(image: UIImage(named: "QamosBG"))
+        let bgImageView = UIImageView(image: UIImage(named: "parkLandscapeBG"))
         bgImageView.contentMode = .ScaleAspectFit
         bgImageView.frame = self.view.frame
         self.view.addSubview(bgImageView)

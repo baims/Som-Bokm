@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>0E5B06DB-25A6-4074-8957-E491DB686EA5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SomBokmApplication</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9D57FB8CC6A08D9D7EB0E788732D1C63B6E11CEF</key>
 		<string>https://github.com/baims/Som-Bokm.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Som Bokm Full Application/SomBokmApplication.xcodeproj</string>
+	<string>Som Bokm Full Application/SomBokmApplication.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9D57FB8CC6A08D9D7EB0E788732D1C63B6E11CEF</key>

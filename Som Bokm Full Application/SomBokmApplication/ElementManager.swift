@@ -32,6 +32,11 @@ import UIKit
 
 class ElementManager {
     
+    enum ElementNameType{
+        case Arabic
+        case English
+    }
+    
     class Element
     {
         
@@ -42,6 +47,7 @@ class ElementManager {
         var caption         : String? = ""
         var isMastered      : Bool! = false
         
+        var isNil : Bool?
         
         var imageName : String?  {
             get{
@@ -102,6 +108,8 @@ class ElementManager {
         }
         
         init(_name:AnyObject){
+            isNil = false
+            
             if _name is String {
                 name = _name as? String
             }
@@ -109,11 +117,13 @@ class ElementManager {
                 var arrayOfElemnt = _name as? [AnyObject]
                 name = arrayOfElemnt![0] as? String
                 
-                if arrayOfElemnt?.count >= 3{
+                if arrayOfElemnt?.count >= 2{
                     if let _arName = arrayOfElemnt![1] as? String
                     {
                         arName = _arName
                     }
+                }
+                if arrayOfElemnt?.count >= 3{
                     if let _caption = arrayOfElemnt![2] as? String
                     {
                         caption = _caption
@@ -121,9 +131,20 @@ class ElementManager {
                 }
             }
         }
+        
+        class func getArabicNameFromEnglish(englishName:String) -> String?{
+            return Base()[englishName].arName
+        }
+        
+        class func getEnglishNameFromArabic(arabicName:String) -> String?{
+            return ElementManager.searchForItemWithName(arabicName, base: Base(), nameType: ElementManager.ElementNameType.Arabic).name
+        }
+        
         init(){
+            isNil = true
             // return nil
         }
+        
     }
     
     
@@ -229,34 +250,75 @@ class ElementManager {
             // searching
             let base = Base(_rootArray: rootArray!)
             
+            
             return ElementManager.searchForItemWithName(elementName, base: base)
         }
         
     }
     
-    class func searchForItemWithName(name:String , base:Base) -> Element{
+    class func searchForItemWithName(name:String , base:Base,nameType : ElementNameType?=nil) -> Element{
         
-        for _root in base.rootArray! {
-            for _category in _root.categoriesArray!{
-                
-                for _element in _category.elementsArray!{
-                    if let elementName = _element.name{
-                        if name == elementName {
-                            return _element
+        for _root in base.rootArray!
+        {
+            for _category in _root.categoriesArray!
+            {
+                for _element in _category.elementsArray!
+                {
+                    if nameType == .English || nameType == nil
+                    {
+                        
+                        if let elementName = _element.name
+                        {
+                            if name == elementName
+                            {
+                                return _element
+                            }
                         }
                     }
+                        
+                    else if nameType == .Arabic
+                    {
+                        if let elementName = _element.arName
+                        {
+                            if name == elementName
+                            {
+                                return _element
+                            }
+                        }
+                    }
+                    
                 }
                 
-                // return _element
-                //}
             }
         }
         
         let nil_element = Element()
-        println("search result : nil")
+        //        println("search result : nil")
         return nil_element
     }
     
+    //    class func searchProccess(text:String,base:Base) -> ([Element],Bool){
+    //        let array = ElementManager.getArrayyOfElementsWithPrefix(text, base: base)
+    //        var status = false
+    //
+    //        println("-----------------")
+    //        for i in array{
+    //            println(i.name!)
+    //
+    //        }
+    //        // get the element
+    //        if let str = ElementManager.Element.getEnglishNameFromArabic(text){
+    //            var el = base[str]
+    //            println("^^^^^^^^^")
+    //
+    //            if !el.isNil!
+    //            {
+    //                el.printDescreption()
+    //                status = true
+    //            }
+    //        }
+    //        return (array,status)
+    //    }
     
     class func getArrayyOfElementsWithPrefix(prefix:String , base:Base) -> [Element]{
         var arrayOfSuggestedElements: [Element] = []
@@ -268,11 +330,9 @@ class ElementManager {
                 {
                     if let elementName = _element.arName // if name exists
                     {
-                        println(elementName)
                         if elementName.hasPrefix(prefix)
                         {
-                            arrayOfSuggestedElements.append(Base()[elementName])
-                            
+                            arrayOfSuggestedElements.append(base[_element.name!]) // Change This to get elemnt
                         }
                         
                     }
@@ -284,8 +344,6 @@ class ElementManager {
         
         return arrayOfSuggestedElements
     }
-
-    
     
     
     // -------- THE MAIN FUNCTION
@@ -320,8 +378,7 @@ class ElementManager {
         /*
         • Unrapping    ROOT •
         */
-        for (rootName , rootDictionary) in baseDictionarySwift
-        {
+        for (rootName , rootDictionary) in baseDictionarySwift{
             categorysArray  = [Category]()
             /*
             • Unrapping Category •
@@ -368,7 +425,7 @@ class ElementManager {
         //        _base["lion"].isMastered = true
         //
         //        //println(base["lion"].isMastered)
-        //        
+        //
         //    }
         
         return base!

@@ -48,6 +48,24 @@ class StoryMakingViewController: UIViewController {
         self.backgroundImageView.image?.accessibilityIdentifier = "parkLandscapeBG"
     }
     
+    override func viewDidLayoutSubviews()
+    {
+        if viewIsLoaded == false
+        {
+            viewIsLoaded = true
+            
+            self.storyBlurBackground.layer.cornerRadius = self.storyBlurBackground.frame.height/2
+            self.storyBlurBackground.clipsToBounds = true
+            
+            if orderOfSceneInStory == 1
+            {
+                self.backSceneButton.hidden = true
+            }
+            
+            self.checkIfSceneIsSaved()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -225,24 +243,6 @@ class StoryMakingViewController: UIViewController {
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
     }
-    
-    override func viewDidLayoutSubviews()
-    {
-        if viewIsLoaded == false
-        {
-            viewIsLoaded = true
-            
-            self.storyBlurBackground.layer.cornerRadius = self.storyBlurBackground.frame.height/2
-            self.storyBlurBackground.clipsToBounds = true
-            
-            if orderOfSceneInStory == 1
-            {
-                self.backSceneButton.hidden = true
-            }
-            
-            self.checkIfSceneIsSaved()
-        }
-    }
 }
 
 
@@ -273,10 +273,12 @@ extension StoryMakingViewController
         if self.storyLabel.text != ""
         {
             self.storyBlurBackground.hidden = false
+            self.editStoryButton.setImage(UIImage(named: "edit icon - highlighted"), forState: UIControlState.Normal)
         }
         else
         {
             self.storyBlurBackground.hidden = true
+            self.editStoryButton.setImage(UIImage(named: "edit icon"), forState: UIControlState.Normal)
         }
     }
 }
@@ -311,6 +313,8 @@ extension StoryMakingViewController
     func videoHasBeenRecorded(url : NSURL)
     {
         self.videoUrl = url
+        
+        self.videoButton.setImage(UIImage(named: "video icon - highlighted"), forState: UIControlState.Normal)
     }
 }
 
@@ -468,11 +472,14 @@ extension StoryMakingViewController
         {
             self.storyLabel.text = scene.story!
             self.storyBlurBackground.hidden = false
+            
+            self.editStoryButton.setImage(UIImage(named: "edit icon - highlighted"), forState: UIControlState.Normal)
         }
         
         if scene.videoUrl != ""
         {
             self.videoUrl = NSURL(string: scene.videoUrl!)
+            self.videoButton.setImage(UIImage(named: "video icon - highlighted"), forState: UIControlState.Normal)
         }
         
         
@@ -511,7 +518,7 @@ extension StoryMakingViewController
             {
                 self.videoButton.hidden = true
             }
-            
+
             self.enableUserInteractionsForAllElements(false)
         }
     }

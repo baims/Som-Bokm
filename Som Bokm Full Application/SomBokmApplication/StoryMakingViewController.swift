@@ -28,6 +28,7 @@ class StoryMakingViewController: UIViewController {
     @IBOutlet weak var editStoryButton: UIButton!
     @IBOutlet weak var editBackgroundButton: UIButton!
     @IBOutlet weak var nextSceneButton: UIButton!
+    @IBOutlet weak var backSceneButton: UIButton!
     @IBOutlet weak var videoButton: UIButton!
     
     var typeStoryViewController : TypeStoryViewController!
@@ -45,6 +46,24 @@ class StoryMakingViewController: UIViewController {
         self.elementsScrollView.addElements()
         
         self.backgroundImageView.image?.accessibilityIdentifier = "parkLandscapeBG"
+    }
+    
+    override func viewDidLayoutSubviews()
+    {
+        if viewIsLoaded == false
+        {
+            viewIsLoaded = true
+            
+            self.storyBlurBackground.layer.cornerRadius = self.storyBlurBackground.frame.height/2
+            self.storyBlurBackground.clipsToBounds = true
+            
+            if orderOfSceneInStory == 1
+            {
+                self.backSceneButton.hidden = true
+            }
+            
+            self.checkIfSceneIsSaved()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -118,74 +137,110 @@ class StoryMakingViewController: UIViewController {
     }
     
     @IBAction func homeButtonTapped(sender: AnyObject) {
-        var save = false
+//        var save = false
+//        
+//        if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0
+//        {
+//            save = true
+//        }
+//        
+//        self.showExitAlertView(home: true, back: false, saving: save)
         
-        if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0
+        if (self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0) && self.typeOfRealmString != "Reading"
         {
-            save = true
+            self.showExitAlertView(home: false, back: true)
         }
-        
-        self.showExitAlertView(home: true, back: false, saving: save)
+        else
+        {
+            self.popToHome()
+        }
     }
     
     @IBAction func backButtonTapped(sender: UIButton) {
-        var save = false
+//        var save = false
+//        
+//        if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0
+//        {
+//            save = true
+//        }
+//        
+//        self.showExitAlertView(home: false, back: true, saving: save)
         
-        if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0
-        {
-            save = true
-        }
-        
-        self.showExitAlertView(home: false, back: true, saving: save)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     
-    func showExitAlertView(#home: Bool, back: Bool, saving: Bool)
+    func showExitAlertView(#home: Bool, back: Bool)
     {
-        let homeOrBackString = home == true ? "الخروج" : "الرجوع"
-        let messageString    = saving == true ? "هل تريد حفظ هذه القصة قبل \(homeOrBackString) ؟" : "هل انت متأكد من \(homeOrBackString)"
-        let exitString       = saving == true ? "عدم حفظ القصة" : "نعم"
-    
+//        let homeOrBackString = home == true ? "الخروج" : "الرجوع"
+//        let messageString    = saving == true ? "هل تريد حفظ هذه القصة قبل \(homeOrBackString) ؟" : "هل انت متأكد من \(homeOrBackString)"
+//        let exitString       = saving == true ? "عدم حفظ القصة" : "نعم"
+//    
+//        
+//        let alertViewController = UIAlertController(title: "تأكيد", message: messageString, preferredStyle: UIAlertControllerStyle.Alert)
+//        
+//        let saveAndExitAction = UIAlertAction(title: "\(homeOrBackString) مع حفظ القصة", style: UIAlertActionStyle.Default)
+//            { (action) -> Void in
+//                
+//                self.saveSceneToRealm()
+//                self.navigationController?.popToRootViewControllerAnimated(true)
+//        }
+//
+//        let exitAction = UIAlertAction(title: exitString, style: UIAlertActionStyle.Default)
+//            { (action) -> Void in
+//                
+//                self.navigationController?.popToRootViewControllerAnimated(true)
+//        }
+//        
+//        let cancelAction = UIAlertAction(title: "عدم \(homeOrBackString)", style: UIAlertActionStyle.Cancel, handler: nil)
+//        
+//        
+//        if saving == true
+//        {
+//            alertViewController.addAction(saveAndExitAction)
+//        }
+//        alertViewController.addAction(exitAction)
+//        alertViewController.addAction(cancelAction)
+//        
+//        self.presentViewController(alertViewController, animated: true, completion: nil)
         
-        let alertViewController = UIAlertController(title: "تأكيد", message: messageString, preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "تأكيد", message: "هل انت متأكد من الخروج ؟", preferredStyle: UIAlertControllerStyle.Alert)
         
-        let saveAndExitAction = UIAlertAction(title: "\(homeOrBackString) مع حفظ القصة", style: UIAlertActionStyle.Default)
+        let cancelAction = UIAlertAction(title: "لا", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        let exitAction = UIAlertAction(title: "نعم", style: UIAlertActionStyle.Default)
             { (action) -> Void in
                 
                 self.saveSceneToRealm()
-                self.navigationController?.popToRootViewControllerAnimated(true)
+                if home == true
+                {
+                    self.popToHome()
+                }
+                else if back == true
+                {
+                    self.popToHome()
+                }
         }
-
-        let exitAction = UIAlertAction(title: exitString, style: UIAlertActionStyle.Default)
-            { (action) -> Void in
-                
-                self.navigationController?.popToRootViewControllerAnimated(true)
-        }
         
-        let cancelAction = UIAlertAction(title: "عدم \(homeOrBackString)", style: UIAlertActionStyle.Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.addAction(exitAction)
         
-        
-        if saving == true
-        {
-            alertViewController.addAction(saveAndExitAction)
-        }
-        alertViewController.addAction(exitAction)
-        alertViewController.addAction(cancelAction)
-        
-        self.presentViewController(alertViewController, animated: true, completion: nil)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    override func viewDidLayoutSubviews()
+    func popToHome()
     {
-        if viewIsLoaded == false
+        if self.adminMode == true
         {
-            viewIsLoaded = true
-            
-            self.storyBlurBackground.layer.cornerRadius = self.storyBlurBackground.frame.height/2
-            self.storyBlurBackground.clipsToBounds = true
-            
-            
-            self.checkIfSceneIsSaved()
+            self.navigationController?.popToViewController(self.navigationController!.viewControllers[2] as! UIViewController, animated: true)
+        }
+        else if self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing"
+        {
+            self.navigationController?.popToViewController(self.navigationController!.viewControllers[1] as! UIViewController, animated: true)
+        }
+        else
+        {
+            self.navigationController?.popToRootViewControllerAnimated(true)
         }
     }
 }
@@ -218,10 +273,12 @@ extension StoryMakingViewController
         if self.storyLabel.text != ""
         {
             self.storyBlurBackground.hidden = false
+            self.editStoryButton.setImage(UIImage(named: "edit icon - highlighted"), forState: UIControlState.Normal)
         }
         else
         {
             self.storyBlurBackground.hidden = true
+            self.editStoryButton.setImage(UIImage(named: "edit icon"), forState: UIControlState.Normal)
         }
     }
 }
@@ -256,6 +313,8 @@ extension StoryMakingViewController
     func videoHasBeenRecorded(url : NSURL)
     {
         self.videoUrl = url
+        
+        self.videoButton.setImage(UIImage(named: "video icon - highlighted"), forState: UIControlState.Normal)
     }
 }
 
@@ -413,11 +472,14 @@ extension StoryMakingViewController
         {
             self.storyLabel.text = scene.story!
             self.storyBlurBackground.hidden = false
+            
+            self.editStoryButton.setImage(UIImage(named: "edit icon - highlighted"), forState: UIControlState.Normal)
         }
         
         if scene.videoUrl != ""
         {
             self.videoUrl = NSURL(string: scene.videoUrl!)
+            self.videoButton.setImage(UIImage(named: "video icon - highlighted"), forState: UIControlState.Normal)
         }
         
         
@@ -436,6 +498,7 @@ extension StoryMakingViewController
         }
     }
     
+    
     func removeUnnecessaryViews(scene : Scene, numberOfScenes : Int)
     {
         if scene.isEditable == false && self.adminMode == false
@@ -444,6 +507,7 @@ extension StoryMakingViewController
             self.editStoryButton.hidden             = true
             self.elementsBackgroundImageView.hidden = true
             self.elementsScrollView.hidden          = true
+
             
             if scene.order == numberOfScenes && self.typeOfRealmString == "Reading"
             {
@@ -454,7 +518,7 @@ extension StoryMakingViewController
             {
                 self.videoButton.hidden = true
             }
-            
+
             self.enableUserInteractionsForAllElements(false)
         }
     }

@@ -55,6 +55,8 @@
     
     var def = NSUserDefaults.standardUserDefaults()
     
+    var base : ElementManager.Base!
+    
     /*  ******************************************
     
     Did Load
@@ -71,6 +73,8 @@
         Change the dictionary of what elements shows on screen
         */
         dictionaryOfAllElements = DictionaryManager.getAllElementsInDictinoary()
+        base = ElementManager.Base()
+
         
         elementsImages = [self.image1, self.image2 , self.image3 , self.image4]
         

@@ -41,7 +41,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         base.printDescreption()
         
         
-        segmentControl.selectedSegmentIndex = 0
+        segmentControl.selectedSegmentIndex = (segmentControl.numberOfSegments-1) 
         
         //        self.navigationController?.navigationBarHidden = true
         

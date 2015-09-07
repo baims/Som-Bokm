@@ -228,7 +228,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         {
             let vc : CategoriesVC = segue.destinationViewController as! CategoriesVC
             
-            if let itemName = rootsArray![selectedIndexPath.row].rootName
+            if let itemName = rootsArray![segmentControl.selectedSegmentIndex].rootName
             {
                 //passing the pressed button key to the dictionary that will be sent to the next VC
                 var item  = rootsArray![segmentControl.selectedSegmentIndex].categoriesArray![selectedIndexPath.row].elementsArray

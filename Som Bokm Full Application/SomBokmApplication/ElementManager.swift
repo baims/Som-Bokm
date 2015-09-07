@@ -46,6 +46,7 @@ class ElementManager {
         var rootName        : String?
         var caption         : String? = ""
         var isMastered      : Bool! = false
+        var answeredTimes   : Int   = 0
         
         var isNil : Bool?
         
@@ -255,6 +256,37 @@ class ElementManager {
             return ElementManager.searchForItemWithName(elementName, base: base)
         }
         
+    }
+    
+    class func getAllElementsFromBase(base:Base?=Base()) -> [Element]{
+        
+        func names()->[String]{
+            var ar : [String]!
+            for i in getAllElementsFromBase()
+            {
+                ar.append(i.name!)
+            }
+            return ar
+        }
+        
+        
+        var allElementArray : [Element] = []
+        for _root in base!.rootArray!
+        {
+            for _category in _root.categoriesArray!
+            {
+                for _element in _category.elementsArray!
+                {
+                    
+                    allElementArray.append(_element)
+                    
+                }
+            }
+        }
+        for i in allElementArray{
+            println(i.name!)
+        }
+        return allElementArray
     }
     
     class func searchForItemWithName(name:String , base:Base,nameType : ElementNameType?=nil) -> Element{

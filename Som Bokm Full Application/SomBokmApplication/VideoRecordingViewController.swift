@@ -137,7 +137,7 @@ extension VideoRecordingViewController
             
             
             // maximum duration of recording
-            self.camera.movieFileOutput.maxRecordedDuration = CMTimeMake(5, 1);
+            self.camera.movieFileOutput.maxRecordedDuration = CMTimeMake(10, 1)
             
             // start recording
             let outputURL = self.applicationDocumentsDirectory().URLByAppendingPathComponent(nameOfFile).URLByAppendingPathExtension("mov")

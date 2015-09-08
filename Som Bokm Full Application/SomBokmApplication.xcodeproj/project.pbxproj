@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		0705D1AD1B7EA7A4002D6672 /* ImagesForSomApp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0705D1AC1B7EA7A4002D6672 /* ImagesForSomApp.xcassets */; };
 		0705D1AF1B7EA7FF002D6672 /* buttons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0705D1AE1B7EA7FF002D6672 /* buttons.xcassets */; };
+		0709D7B31B9DFCEE00AED422 /* QuizExtensionsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709D7B21B9DFCEE00AED422 /* QuizExtensionsUI.swift */; };
+		0709D8111B9E379A00AED422 /* hammer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0709D8101B9E379A00AED422 /* hammer.mp4 */; };
 		074C51AB1B95A0590097FE55 /* codes in Resources */ = {isa = PBXBuildFile; fileRef = 074C51AA1B95A0590097FE55 /* codes */; };
 		079632151B9352EF00CC70A7 /* QuizChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079632141B9352EF00CC70A7 /* QuizChooseVC.swift */; };
 		079632191B93692B00CC70A7 /* IBElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079632181B93692B00CC70A7 /* IBElements.swift */; };
+		07CAA44F1B9805F8003D950C /* ElementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CAA44E1B9805F8003D950C /* ElementManager.swift */; };
+		07CAA4511B980776003D950C /* Dictionary_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07CAA4501B980776003D950C /* Dictionary_1.plist */; };
 		07EAD2A01B7EB0E0002B43C6 /* Dictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */; };
 		07EAD2A31B7EB1C5002B43C6 /* DictionaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAD2A21B7EB1C5002B43C6 /* DictionaryVC.swift */; };
 		07EAD2A51B7EB241002B43C6 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAD2A41B7EB241002B43C6 /* CategoriesVC.swift */; };
@@ -201,9 +205,13 @@
 /* Begin PBXFileReference section */
 		0705D1AC1B7EA7A4002D6672 /* ImagesForSomApp.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = ImagesForSomApp.xcassets; path = SomBokmApplication/ImagesForSomApp.xcassets; sourceTree = "<group>"; };
 		0705D1AE1B7EA7FF002D6672 /* buttons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = buttons.xcassets; path = SomBokmApplication/buttons.xcassets; sourceTree = "<group>"; };
+		0709D7B21B9DFCEE00AED422 /* QuizExtensionsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizExtensionsUI.swift; path = ../QuizExtensionsUI.swift; sourceTree = "<group>"; };
+		0709D8101B9E379A00AED422 /* hammer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hammer.mp4; sourceTree = "<group>"; };
 		074C51AA1B95A0590097FE55 /* codes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = codes; sourceTree = "<group>"; };
 		079632141B9352EF00CC70A7 /* QuizChooseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizChooseVC.swift; sourceTree = "<group>"; };
 		079632181B93692B00CC70A7 /* IBElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBElements.swift; sourceTree = "<group>"; };
+		07CAA44E1B9805F8003D950C /* ElementManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementManager.swift; sourceTree = "<group>"; };
+		07CAA4501B980776003D950C /* Dictionary_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dictionary_1.plist; sourceTree = "<group>"; };
 		07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dictionary.plist; sourceTree = "<group>"; };
 		07EAD2A21B7EB1C5002B43C6 /* DictionaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryVC.swift; sourceTree = "<group>"; };
 		07EAD2A41B7EB241002B43C6 /* CategoriesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
@@ -395,6 +403,7 @@
 		07EAD2A11B7EB11C002B43C6 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
+				07EAD34F1B7EB74F002B43C6 /* DictionaryManager.swift */,
 				07EAD2A21B7EB1C5002B43C6 /* DictionaryVC.swift */,
 				07EAD2A41B7EB241002B43C6 /* CategoriesVC.swift */,
 				07EAD2A61B7EB247002B43C6 /* ElementVC.swift */,
@@ -406,11 +415,11 @@
 		07EAD2B21B7EB292002B43C6 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				07CAA44E1B9805F8003D950C /* ElementManager.swift */,
 				9FBB26FC1B7FB76200BD8041 /* StoryTelling-Bridging-Header.h */,
 				9FBB26FD1B7FB76200BD8041 /* StoryTelling-Swift2.h */,
 				9FBB270E1B7FB87E00BD8041 /* Realm */,
 				9FBB27111B7FB89700BD8041 /* LLSimpleCamera */,
-				07EAD34F1B7EB74F002B43C6 /* DictionaryManager.swift */,
 				07EAD2AA1B7EB263002B43C6 /* SearchTableViewCell.swift */,
 				07EAD2AC1B7EB289002B43C6 /* CollectionViewCell.swift */,
 				07EAD2AD1B7EB289002B43C6 /* VideoPlayer.swift */,
@@ -539,6 +548,7 @@
 		07EAD3A51B7EB954002B43C6 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				0709D8101B9E379A00AED422 /* hammer.mp4 */,
 				07EAD3891B7EB93D002B43C6 /* butterfly.mp4 */,
 				07EAD38A1B7EB93D002B43C6 /* camel.mp4 */,
 				07EAD38B1B7EB93D002B43C6 /* flower.mp4 */,
@@ -559,6 +569,7 @@
 		07EAD3F21B7EED2F002B43C6 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				0709D7B21B9DFCEE00AED422 /* QuizExtensionsUI.swift */,
 				079632141B9352EF00CC70A7 /* QuizChooseVC.swift */,
 				07EAD3EF1B7EED2A002B43C6 /* QuizVC.swift */,
 				074C51AA1B95A0590097FE55 /* codes */,
@@ -614,6 +625,7 @@
 		1718D6481B2B88A1004004A6 /* SomBokmApplication */ = {
 			isa = PBXGroup;
 			children = (
+				07CAA4501B980776003D950C /* Dictionary_1.plist */,
 				1718D64F1B2B88A1004004A6 /* Main.storyboard */,
 				07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */,
 				079632181B93692B00CC70A7 /* IBElements.swift */,
@@ -803,6 +815,7 @@
 				07EAD33C1B7EB2E9002B43C6 /* ظ_thumb.png in Resources */,
 				07EAD2E41B7EB2BF002B43C6 /* حSI.png in Resources */,
 				07EAD3E11B7EE48A002B43C6 /* فa.png in Resources */,
+				0709D8111B9E379A00AED422 /* hammer.mp4 in Resources */,
 				07EAD32F1B7EB2E9002B43C6 /* ث_thumb.png in Resources */,
 				07EAD2D91B7EB2BF002B43C6 /* ءSI.png in Resources */,
 				07EAD3E41B7EE48A002B43C6 /* لa.png in Resources */,
@@ -817,6 +830,7 @@
 				07EAD3431B7EB2E9002B43C6 /* لا_thumb.png in Resources */,
 				07EAD2F41B7EB2BF002B43C6 /* كSI.png in Resources */,
 				07EAD3E81B7EE48A002B43C6 /* وa.png in Resources */,
+				07CAA4511B980776003D950C /* Dictionary_1.plist in Resources */,
 				07EAD2F71B7EB2BF002B43C6 /* مSI.png in Resources */,
 				07EAD2DE1B7EB2BF002B43C6 /* إSI.png in Resources */,
 				07EAD3D41B7EE48A002B43C6 /* خa.png in Resources */,
@@ -948,6 +962,7 @@
 				9FBB27161B7FB8A300BD8041 /* UIImage+FixOrientation.m in Sources */,
 				07EAD3F11B7EED2A002B43C6 /* QuizVC.swift in Sources */,
 				07EAD2A91B7EB253002B43C6 /* SearchVC.swift in Sources */,
+				07CAA44F1B9805F8003D950C /* ElementManager.swift in Sources */,
 				9FBB27171B7FB8A300BD8041 /* LLSimpleCamera.m in Sources */,
 				07EAD3501B7EB74F002B43C6 /* DictionaryManager.swift in Sources */,
 				07EAD2A51B7EB241002B43C6 /* CategoriesVC.swift in Sources */,
@@ -956,6 +971,7 @@
 				07EAD2AF1B7EB289002B43C6 /* CollectionViewCell.swift in Sources */,
 				07EAD2A31B7EB1C5002B43C6 /* DictionaryVC.swift in Sources */,
 				9FBB27211B7FBC5B00BD8041 /* HomeViewController.swift in Sources */,
+				0709D7B31B9DFCEE00AED422 /* QuizExtensionsUI.swift in Sources */,
 				1718D64C1B2B88A1004004A6 /* AppDelegate.swift in Sources */,
 				9FBB27281B8571DE00BD8041 /* AdminViewController.swift in Sources */,
 				9FBB27051B7FB83900BD8041 /* VideoRecordingViewController.swift in Sources */,

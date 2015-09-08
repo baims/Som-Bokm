@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>التصنيف</key>
+	<dict>
+		<key>حيوانات</key>
+		<array>
+			<array>
+				<string>lion</string>
+				<string>أسد</string>
+				<string>الأسد هو ملك الغابة و كذا</string>
+			</array>
+			<array>
+				<string>tiger</string>
+				<string>نمر</string>
+				<string>النمر حيوان</string>
+			</array>
+			<array>
+				<string>camel</string>
+				<string>جمل</string>
+				<string>الجمل سفينة الصحراء</string>
+			</array>
+			<array>
+				<string>horse</string>
+				<string>حصان</string>
+				<string>الدعسوقة حيوان مسكين</string>
+			</array>
+		</array>
+		<key>ادوات</key>
+		<array>
+			<array>
+				<string>hammer</string>
+				<string>مطرقة</string>
+			</array>
+			<array>
+				<string>knife</string>
+				<string>سكينة</string>
+			</array>
+			<array>
+				<string>telephone</string>
+				<string>هاتف</string>
+			</array>
+		</array>
+	</dict>
+</dict>
+</plist>

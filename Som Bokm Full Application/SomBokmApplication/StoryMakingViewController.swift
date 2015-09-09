@@ -22,7 +22,7 @@ class StoryMakingViewController: UIViewController {
     @IBOutlet weak var typeStoryContainerView: UIView!
     @IBOutlet weak var videoRecordingContainerView: UIView!
     @IBOutlet weak var elementsScrollView: ElementsScrollView!
-    @IBOutlet weak var storyBlurBackground: UIVisualEffectView!
+    //@IBOutlet weak var storyBlurBackground: UIVisualEffectView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var elementsBackgroundImageView: UIImageView!
     @IBOutlet weak var editStoryButton: UIButton!
@@ -53,9 +53,6 @@ class StoryMakingViewController: UIViewController {
         if viewIsLoaded == false
         {
             viewIsLoaded = true
-            
-            self.storyBlurBackground.layer.cornerRadius = self.storyBlurBackground.frame.height/2
-            self.storyBlurBackground.clipsToBounds = true
             
             if orderOfSceneInStory == 1
             {
@@ -272,12 +269,10 @@ extension StoryMakingViewController
         
         if self.storyLabel.text != ""
         {
-            self.storyBlurBackground.hidden = false
             self.editStoryButton.setImage(UIImage(named: "edit icon - highlighted"), forState: UIControlState.Normal)
         }
         else
         {
-            self.storyBlurBackground.hidden = true
             self.editStoryButton.setImage(UIImage(named: "edit icon"), forState: UIControlState.Normal)
         }
     }
@@ -471,7 +466,6 @@ extension StoryMakingViewController
         if scene.story! != ""
         {
             self.storyLabel.text = scene.story!
-            self.storyBlurBackground.hidden = false
             
             self.editStoryButton.setImage(UIImage(named: "edit icon - highlighted"), forState: UIControlState.Normal)
         }

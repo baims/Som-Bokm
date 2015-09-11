@@ -21,8 +21,9 @@ class StoryMakingViewController: UIViewController {
     @IBOutlet weak var storyLabel: UILabel!
     @IBOutlet weak var typeStoryContainerView: UIView!
     @IBOutlet weak var videoRecordingContainerView: UIView!
+    @IBOutlet weak var searchContainerView: UIView!
+    @IBOutlet weak var adminTypeStoryContainerView: UIView!
     @IBOutlet weak var elementsScrollView: ElementsScrollView!
-    //@IBOutlet weak var storyBlurBackground: UIVisualEffectView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var elementsBackgroundImageView: UIImageView!
     @IBOutlet weak var editStoryButton: UIButton!
@@ -31,8 +32,10 @@ class StoryMakingViewController: UIViewController {
     @IBOutlet weak var backSceneButton: UIButton!
     @IBOutlet weak var videoButton: UIButton!
     
-    var typeStoryViewController : TypeStoryViewController!
+    var typeStoryViewController      : TypeStoryViewController!
     var videoRecordingViewController : VideoRecordingViewController!
+    var adminTypeStoryViewController : TypeReadingStoryViewController!
+    var searchViewController         : SearchVC!
     
     var viewIsLoaded = false
     
@@ -82,6 +85,17 @@ class StoryMakingViewController: UIViewController {
             videoRecordingViewController = segue.destinationViewController as! VideoRecordingViewController
             
             videoRecordingViewController.nameOfFile = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        }
+            
+        else if segue.identifier == "AdminTypeStory"
+        {
+            adminTypeStoryViewController = segue.destinationViewController as! TypeReadingStoryViewController
+            adminTypeStoryViewController.adminMode = self.adminMode
+        }
+            
+        else if segue.identifier == "Search"
+        {
+            searchViewController = segue.destinationViewController as! SearchVC
         }
         
         else if segue.identifier == "NextScene"
@@ -313,6 +327,29 @@ extension StoryMakingViewController
     }
 }
 
+// AdminTypeReadingStoryViewController extensions
+extension StoryMakingViewController
+{
+    /*** for adminMode = true ***/
+    func changeStoryReadingWord(textOfButton : String)
+    {
+        /*** OMAR ***/
+        
+        // show searchVC
+        // send searchVC 'textOfButton'
+        // the search bar in searchVC should have the same text as 'textOfButton'
+    }
+    
+    // searchVC will send the new word's dictionary to this function
+    func wordIsSelectedFromSearchVC(englishName : String!)
+    {
+        adminTypeStoryViewController.changeWordButton(englishName, index: nil)
+    }
+    
+    /*** for adminMode == false ***/
+    // show the video ?? /*** OMAR ***/
+}
+
 // Realm stuff
 extension StoryMakingViewController
 {
@@ -418,7 +455,24 @@ extension StoryMakingViewController
             
             scene.elements.append(element) // adding every Element to Scene
         }
-
+        
+        
+        /*** StoryReadingWord ***/
+        if ( self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing" ) && self.adminMode == true
+        {
+            for word in self.adminTypeStoryViewController.arrayOfButtons
+            {
+                if let englishName = (word as! StoryReadingWordButton).englishName
+                {
+                    var storyReadingWord = StoryReadingWord()
+                    storyReadingWord.englishName = englishName
+                    storyReadingWord.order       = self.adminTypeStoryViewController.arrayOfButtons.indexOfObject(word)
+                    
+                    scene.words.append(storyReadingWord)
+                }
+            }
+        }
+        
         
         // writing to realm
         realm.write {
@@ -460,6 +514,19 @@ extension StoryMakingViewController
     
     func showSavedScene(scene : Scene)
     {
+        
+        /** showing the words in Reading/Completing story **/
+        if scene.words.count > 0
+        {
+            self.storyLabel.hidden = true
+            self.adminTypeStoryContainerView.hidden = false
+            
+            for word in scene.words
+            {
+                self.adminTypeStoryViewController.changeWordButton(word.englishName, index: word.order)
+            }
+        }
+        
         // add everything to screen
         self.backgroundImageView.image = UIImage(named: scene.backgroundImageName)
         

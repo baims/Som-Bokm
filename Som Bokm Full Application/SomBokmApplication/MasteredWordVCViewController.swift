@@ -18,7 +18,7 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
 
 // uncomment this line if you are using NSUserDefaults 
         
-        masteredWordsArray = NSUserDefaults.standardUserDefaults().objectForKey("MasteredWordsArray") as! [String]
+//        masteredWordsArray = NSUserDefaults.standardUserDefaults().objectForKey("MasteredWordsArray") as! [String]
         
         println(masteredWordsArray)
 
@@ -59,6 +59,9 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
         if buttonIndex == 0 {
             NSUserDefaults.standardUserDefaults().setObject([], forKey: "MasteredWordsArray")
             masteredWordsArray = []
+            var Print_numberOFmasteredWords = ElementManager.getMasteredWords()
+            
+            ElementManager.resetBase()
             
             tableView.reloadData()
 
@@ -77,4 +80,30 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
     }
     */
 
+}
+
+extension ElementManager {
+    class func getMasteredWords()->[ElementManager.Element]
+    {
+        var mastered : [ElementManager.Element] = []
+        for element in self.getAllElementsFromBase(base: Base())
+        {
+            if element.isMastered! == true{
+//                print(element.name! + "  IS master\n")
+                mastered.append(element)
+            }
+        }
+        println("All mastered words are\(mastered.count)")
+        return mastered
+    }
+    
+
+}
+
+extension ElementManager{
+    class func resetBase(){
+        var b = Base()
+            b = prepareItemsOfDataBase()
+            b.sync()
+    }
 }

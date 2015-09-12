@@ -36,8 +36,12 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideKeyboard:"  , name: "hideKeyboard", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showKeyboard:"  , name: "showKeyboard", object: nil)
         
+
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        searchField.resignFirstResponder()
+    }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

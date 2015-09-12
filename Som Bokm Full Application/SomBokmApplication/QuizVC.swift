@@ -12,7 +12,7 @@
  
  class QuizVC: UIViewController {
     // number of times the word should be answered to get matered in the word
-    let masteredConstant = 5
+    let masteredConstant = 1
     
     @IBOutlet weak var videoContainer: UIView! // container to get the frame from it
     
@@ -139,20 +139,18 @@
         Right Answer
         ••••••••••••••••••••••••••••••••
         */
-        if sender.tag == rightAnswerIndex + 1 {
-            
-            rightAnsweredTimes++ // Aug 29
+        
+        if sender.tag == rightAnswerIndex + 1
+        {
+            rightAnsweredTimes++ // Aug 29 counting right answer for summary sheet
             
             correctionImage.image = UIImage(named: "rightImage")
             correctionImage.hidden = false
-            
-//            self.checkMaster()
-            
-            
-            
+
+            rightAnswerElement?.answeredTimes?++
+            self.checkMaster(rightAnswerElement!)
             
             /// Show Tick
-            
             
             self.showCorrectionImage(sender,answered: true)
         }

@@ -16,8 +16,10 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     var elementNeeds : ElementManager.Element?
     
     var selectedIndexPath : NSIndexPath!    //index for collection view to know which item was selected in segue
-    
-    var base = ElementManager.Base()
+    /**
+    Here dictionary wont have access to the mastered words synced from QuizVC
+    */
+    var base = ElementManager.prepareItemsOfDataBase()
     var rootsArray : [ElementManager.Root]?
     
     // ------- V I E W  D I D  L O A D  -------------
@@ -26,6 +28,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         rootsArray = base.rootArray //
         

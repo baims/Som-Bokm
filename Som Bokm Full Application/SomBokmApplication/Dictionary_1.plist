@@ -26,6 +26,21 @@
 				<string>حصان</string>
 				<string>الدعسوقة حيوان مسكين</string>
 			</array>
+			<string>ladybug</string>
+			<string>butterfly</string>
+		</array>
+		<key>نباتات</key>
+		<array>
+			<array>
+				<string>flower</string>
+				<string>زهرة</string>
+				<string>الزهرة هي نبات جميل</string>
+			</array>
+			<array>
+				<string>tree</string>
+				<string>شجرة</string>
+				<string>الشجرة نبات طويل و يأكل الزراف منه</string>
+			</array>
 		</array>
 		<key>ادوات</key>
 		<array>

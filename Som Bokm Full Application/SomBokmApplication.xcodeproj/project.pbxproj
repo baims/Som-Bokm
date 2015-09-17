@@ -175,6 +175,8 @@
 		9FBB271D1B7FB9E000BD8041 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBB27191B7FB9E000BD8041 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FBB27211B7FBC5B00BD8041 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB27201B7FBC5B00BD8041 /* HomeViewController.swift */; };
 		9FBB27281B8571DE00BD8041 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB27271B8571DE00BD8041 /* AdminViewController.swift */; };
+		9FF207631BA1E25000B2345B /* TypeReadingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF207621BA1E25000B2345B /* TypeReadingStoryViewController.swift */; };
+		9FF207651BA1F00A00B2345B /* StoryReadingWordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF207641BA1F00A00B2345B /* StoryReadingWordButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -377,6 +379,8 @@
 		9FBB27191B7FB9E000BD8041 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = ../RealmSwift.framework; sourceTree = "<group>"; };
 		9FBB27201B7FBC5B00BD8041 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9FBB27271B8571DE00BD8041 /* AdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		9FF207621BA1E25000B2345B /* TypeReadingStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeReadingStoryViewController.swift; sourceTree = "<group>"; };
+		9FF207641BA1F00A00B2345B /* StoryReadingWordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryReadingWordButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -674,6 +678,8 @@
 				9FBB26FF1B7FB83900BD8041 /* StoryMakingViewController.swift */,
 				9FBB27001B7FB83900BD8041 /* VideoRecordingViewController.swift */,
 				9FBB27011B7FB83900BD8041 /* TypeStoryViewController.swift */,
+				9FF207621BA1E25000B2345B /* TypeReadingStoryViewController.swift */,
+				9FF207641BA1F00A00B2345B /* StoryReadingWordButton.swift */,
 				9FBB27021B7FB83900BD8041 /* ElementsScrollView.swift */,
 				9FBB27031B7FB83900BD8041 /* ElementImageView.swift */,
 			);
@@ -963,6 +969,7 @@
 				07EAD3F11B7EED2A002B43C6 /* QuizVC.swift in Sources */,
 				07EAD2A91B7EB253002B43C6 /* SearchVC.swift in Sources */,
 				07CAA44F1B9805F8003D950C /* ElementManager.swift in Sources */,
+				9FF207651BA1F00A00B2345B /* StoryReadingWordButton.swift in Sources */,
 				9FBB27171B7FB8A300BD8041 /* LLSimpleCamera.m in Sources */,
 				07EAD3501B7EB74F002B43C6 /* DictionaryManager.swift in Sources */,
 				07EAD2A51B7EB241002B43C6 /* CategoriesVC.swift in Sources */,
@@ -982,6 +989,7 @@
 				9FBB270C1B7FB86B00BD8041 /* SavedStoriesCollectionViewController.swift in Sources */,
 				07EAD2A71B7EB247002B43C6 /* ElementVC.swift in Sources */,
 				07EAD2B11B7EB289002B43C6 /* AlphabitAnimator.swift in Sources */,
+				9FF207631BA1E25000B2345B /* TypeReadingStoryViewController.swift in Sources */,
 				9FBB27101B7FB88D00BD8041 /* StoryTellingRealm.swift in Sources */,
 				07EAD2AB1B7EB263002B43C6 /* SearchTableViewCell.swift in Sources */,
 				07EAD3F01B7EED2A002B43C6 /* MasteredWordVCViewController.swift in Sources */,

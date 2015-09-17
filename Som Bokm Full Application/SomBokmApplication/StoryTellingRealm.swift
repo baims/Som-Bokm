@@ -20,12 +20,13 @@ class StoryTelling : Object
 
 class Scene : Object
 {
-    dynamic var order = 0
+    dynamic var order = 0 // order starts from 1
     dynamic var story    : String?
     dynamic var videoUrl : String?
     dynamic var backgroundImageName : String!
     dynamic var isEditable : Bool = true
     let elements = List<Element>()
+    let words    = List<StoryReadingWord>()
 }
 
 class Element : Object
@@ -33,4 +34,10 @@ class Element : Object
     dynamic var positionX : Float = 0
     dynamic var positionY : Float = 0
     dynamic var imageName = ""
+}
+
+class StoryReadingWord : Object
+{
+    dynamic var englishName : String!
+    dynamic var order = 0 // order starts from 0
 }

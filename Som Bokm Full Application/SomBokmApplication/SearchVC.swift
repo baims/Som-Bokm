@@ -27,8 +27,10 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     var selectedElement = ElementManager.Element()
     var searchedItemExists = false
     var base = ElementManager.Base()
+    var storyTellingMode : Bool?
     
     override func viewDidLoad() {
+        println("story Telling mode is (\(storyTellingMode))")
         super.viewDidLoad()
         table.backgroundColor = UIColor.clearColor()
         table.separatorColor = UIColor.clearColor()
@@ -91,6 +93,14 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
             
             NSNotificationCenter.defaultCenter().postNotificationName("goToSearchedItem", object:selectedElement )
             // notifiaction pushed
+            
+            if storyTellingMode == true{
+                println("story telling mode is true")
+                NSNotificationCenter.defaultCenter().postNotificationName("setTextOfButtonPressed",object: selectedElement.name)
+                
+                                NSNotificationCenter.defaultCenter().postNotificationName("hideSearchView",object: nil)
+                
+            }
             
             table.reloadData()
             searchField.text = ""

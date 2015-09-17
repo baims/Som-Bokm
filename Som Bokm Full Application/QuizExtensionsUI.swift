@@ -36,7 +36,7 @@ extension QuizVC{
         starView.image = UIImage(named:"star")
         self.view.addSubview(starView)
         starView.alpha  = 0.0
-        println("\n****Mastered****\n")
+        print("\n****Mastered****\n")
         
         
         UIView.animateWithDuration(0.4, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
@@ -211,7 +211,7 @@ extension QuizVC{
                 
                 
                 if self.gameIsOver(){
-                    println("Game Over!")
+                    print("Game Over!")
                     // Show result
                     self.showResult()
                     
@@ -316,7 +316,7 @@ extension QuizVC {
     
     func checkMaster(rightAnswer: ElementManager.Element){
 
-        println("Checking mastere...\(rightAnswer.answeredTimes)")
+        print("Checking mastere...\(rightAnswer.answeredTimes)")
         
         if !(rightAnswer.isMastered!)
         {

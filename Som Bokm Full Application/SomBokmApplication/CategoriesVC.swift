@@ -74,11 +74,11 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
         
         let vc : ElementVC = segue.destinationViewController as! ElementVC
         
-        if let itemName = categoryArray![selectedIndexPath.row].categoryName{
+        if let _ = categoryArray![selectedIndexPath.row].categoryName{
             //println(itemName)
             
             //passing the pressed button key to the dictionary that will be sent to the next VC
-            var itemToTransfer = categoryArray![selectedIndexPath.row]
+            let itemToTransfer = categoryArray![selectedIndexPath.row]
             itemToTransfer.printDescreption()
             vc.element    = itemToTransfer
             

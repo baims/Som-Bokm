@@ -54,7 +54,7 @@ class DictionaryManager: NSObject {
     }
     
  
-    func getElementDictionary(#name : String) -> Dictionary<String,NSDictionary>{
+    func getElementDictionary(name name : String) -> Dictionary<String,NSDictionary>{
         if let dic = dictionary[name]{
             
             return dic as! Dictionary<String, NSDictionary>
@@ -80,7 +80,7 @@ class DictionaryManager: NSObject {
             if let categories = DictionaryFromPlist["categories"] as? Dictionary<String,NSDictionary>
             {
                 
-                for (keyOfCategory , specificCategory) in categories
+                for (_ , specificCategory) in categories
                 {
                     //                    println("Dictionary Name : \(keyOfCategory) contents: \n\(specificCategory)")
                     

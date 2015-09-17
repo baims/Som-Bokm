@@ -6,27 +6,27 @@
 	<dict>
 		<key>Headers/RealmSwift-Swift.h</key>
 		<data>
-		2F6ZPq7dzXMPPJ2QQmH2EImupoc=
+		3C/q90Qu3x0NIyKh3cPGkrUhnSE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cUcPfQgNFvcYn6VI4HZWULShkBE=
+		46SLiWyaSBS23oiB2/jp/+PNKDk=
 		</data>
 		<key>Modules/RealmSwift.swiftmodule/arm.swiftdoc</key>
 		<data>
-		QUu12ZXWL3s9itSk/viGwBb583A=
+		zf4Ex6rBu6h0+R1Z/gU4n5kyIlM=
 		</data>
 		<key>Modules/RealmSwift.swiftmodule/arm.swiftmodule</key>
 		<data>
-		o285FtIezRZuPNt7ulldtQZ0dus=
+		ze+KtXuG9u/xA1WUraycJp01WkY=
 		</data>
 		<key>Modules/RealmSwift.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		ZTosiPDsxBluyWJzyguXCYrHX5Y=
+		yk7Sg/Y/igaAgaP6r35J3lvgp3g=
 		</data>
 		<key>Modules/RealmSwift.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		f+JeQSI/TP3ivI/8mK+2jXsV6sc=
+		hEGy1qNdL/WRavG2+mKBVopQ+3Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -37,23 +37,23 @@
 	<dict>
 		<key>Headers/RealmSwift-Swift.h</key>
 		<data>
-		2F6ZPq7dzXMPPJ2QQmH2EImupoc=
+		3C/q90Qu3x0NIyKh3cPGkrUhnSE=
 		</data>
 		<key>Modules/RealmSwift.swiftmodule/arm.swiftdoc</key>
 		<data>
-		QUu12ZXWL3s9itSk/viGwBb583A=
+		zf4Ex6rBu6h0+R1Z/gU4n5kyIlM=
 		</data>
 		<key>Modules/RealmSwift.swiftmodule/arm.swiftmodule</key>
 		<data>
-		o285FtIezRZuPNt7ulldtQZ0dus=
+		ze+KtXuG9u/xA1WUraycJp01WkY=
 		</data>
 		<key>Modules/RealmSwift.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		ZTosiPDsxBluyWJzyguXCYrHX5Y=
+		yk7Sg/Y/igaAgaP6r35J3lvgp3g=
 		</data>
 		<key>Modules/RealmSwift.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		f+JeQSI/TP3ivI/8mK+2jXsV6sc=
+		hEGy1qNdL/WRavG2+mKBVopQ+3Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

@@ -66,7 +66,7 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerValues.count
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return String(stringInterpolationSegment: pickerValues[row])
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
@@ -83,7 +83,7 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("co", forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("co", forIndexPath: indexPath)
         
         
         
@@ -106,7 +106,7 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        var vc = segue.destinationViewController as! QuizVC
+        let vc = segue.destinationViewController as! QuizVC
         vc.numberOfQuestions = numberOfQuestions
         vc.gameType = gameType
     }

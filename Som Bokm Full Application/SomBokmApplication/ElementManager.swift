@@ -96,17 +96,17 @@ class ElementManager {
         
         
         func printDescreption(){
-            println(name            != nil ? " •\(name!): { "                          : "nil"         )
-            println(arName          != nil ? "   arabic name    : \(arName!)"           : ""            )
-            println(caption         != nil ? "   caption        : \(caption!)"          : ""            )
-            println(imageName       != nil ? "   image name     : \(imageName!)"        : "doesnt exist")
-            println(thumbImageName  != nil ? "   thumb name     : \(thumbImageName!)"   : "doesnt exist")
-            println(videoName       != nil ? "   video name     : \(videoName!)"        : "doesnt exist")
-            println(isMastered      != nil ? "   is Mastered    : \(isMastered!)"       : "doesnt exist")
-            println(answeredTimes   != nil ? "   ansered times  : \(answeredTimes!)"    : "doesnt exist")
-            println(categoryName    != nil ? "   category name  : \(categoryName!)"     : "doesnt exist")
-            println(rootName        != nil ? "   root name      : \(rootName!)"         : "doesnt exist")
-            println("}")
+            print(name            != nil ? " •\(name!): { "                          : "nil"         )
+            print(arName          != nil ? "   arabic name    : \(arName!)"           : ""            )
+            print(caption         != nil ? "   caption        : \(caption!)"          : ""            )
+            print(imageName       != nil ? "   image name     : \(imageName!)"        : "doesnt exist")
+            print(thumbImageName  != nil ? "   thumb name     : \(thumbImageName!)"   : "doesnt exist")
+            print(videoName       != nil ? "   video name     : \(videoName!)"        : "doesnt exist")
+            print(isMastered      != nil ? "   is Mastered    : \(isMastered!)"       : "doesnt exist")
+            print(answeredTimes   != nil ? "   ansered times  : \(answeredTimes!)"    : "doesnt exist")
+            print(categoryName    != nil ? "   category name  : \(categoryName!)"     : "doesnt exist")
+            print(rootName        != nil ? "   root name      : \(rootName!)"         : "doesnt exist")
+            print("}")
             
             
         }
@@ -208,12 +208,12 @@ class ElementManager {
         
         func printDescreption()
         {
-            println("   \(categoryName!)  : {")
+            print("   \(categoryName!)  : {")
             for _element in elementsArray!
             {
-                println("       \(_element.name!)")
+                print("       \(_element.name!)")
             }
-            println("   }")
+            print("   }")
         }
         
         // elements with their details
@@ -260,11 +260,11 @@ class ElementManager {
         var categoriesArray : [Category]?
         
         func printDescreption(){
-            println("\(rootName!): {")
+            print("\(rootName!): {")
             for category in categoriesArray!{
                 category.printDescreption()
             }
-            println("}")
+            print("}")
             
             
         }
@@ -292,7 +292,7 @@ class ElementManager {
             }
             // C R A S H
             if category == nil {
-                println("No such Category named \(categoryName)")
+                print("No such Category named \(categoryName)")
             }
             return category!
         }
@@ -419,7 +419,7 @@ class ElementManager {
             }
         }
         for i in allElementArray{
-            println(i.name!)
+            print(i.name!)
         }
         return allElementArray
     }
@@ -456,7 +456,7 @@ class ElementManager {
             }
         }
         for i in allElementArray{
-            println(i.name!)
+            print(i.name!)
         }
         
         switch returnType{
@@ -608,7 +608,7 @@ class ElementManager {
                 */
                 for elementName in categoryArray{
                     //println("   \(elementName)")
-                    var element :  Element = Element(_name: elementName)
+                    let element :  Element = Element(_name: elementName)
                     element.categoryName   = categoryName
                     element.rootName       = rootName
                     elementsArray.append(element)
@@ -616,19 +616,19 @@ class ElementManager {
                 }
                 
                 //println("====")
-                var category : Category = Category(_categoryName: categoryName, _elementsArray: elementsArray)
+                let category : Category = Category(_categoryName: categoryName, _elementsArray: elementsArray)
                 categorysArray.append(category)
                 
                 
             }
             
-            var root = Root(_categoriesArray: categorysArray ,_rootName: rootName)
+            let root = Root(_categoriesArray: categorysArray ,_rootName: rootName)
             rootArray.append(root)
             //println("---------------------")
             
             
         }
-        var base : Base? = Base(_rootArray:rootArray)
+        let base : Base? = Base(_rootArray:rootArray)
         
         // T E S T I N G
         
@@ -650,7 +650,7 @@ class ElementManager {
     }
     
     class func checkNewPlistUpdate(plistName: String) -> Bool{
-        var def = NSUserDefaults.standardUserDefaults()
+        let def = NSUserDefaults.standardUserDefaults()
         let path : String? = NSBundle.mainBundle().pathForResource(plistName, ofType: "plist")
         let baseDictionary = NSDictionary(contentsOfFile: path!)
 
@@ -665,13 +665,13 @@ class ElementManager {
             {
                 if def.objectForKey("dictionary.plist") as? NSDictionary == dictionaryOfPlist // dictionary in userdefault identical to the current dictionary
                 {
-                    println("Dictionary has not changed")
+                    print("Dictionary has not changed")
                     return false
                 }
                 else // dictionary in user default doenst match the current dictionary
                 {
 
-                    println("dictionary has changed !")
+                    print("dictionary has changed !")
                     def.setObject(dictionaryOfPlist, forKey: "dictionary.plist")
                     return true
 

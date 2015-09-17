@@ -88,7 +88,7 @@ class StoryMakingViewController: UIViewController {
         searchViewFrameOn   = searchView.frame
         
         searchView.frame.origin.x = self.view.frame.size.width
-        var dif = searchView.frame.origin.x - searchViewFrameOn.origin.x
+        //var dif = searchView.frame.origin.x - searchViewFrameOn.origin.x
         searchViewFrameOff = searchView.frame
     }
     
@@ -208,7 +208,7 @@ class StoryMakingViewController: UIViewController {
     }
     
     
-    func showExitAlertView(#home: Bool, back: Bool)
+    func showExitAlertView(home home: Bool, back: Bool)
     {
 //        let homeOrBackString = home == true ? "الخروج" : "الرجوع"
 //        let messageString    = saving == true ? "هل تريد حفظ هذه القصة قبل \(homeOrBackString) ؟" : "هل انت متأكد من \(homeOrBackString)"
@@ -270,11 +270,11 @@ class StoryMakingViewController: UIViewController {
     {
         if self.adminMode == true
         {
-            self.navigationController?.popToViewController(self.navigationController!.viewControllers[2] as! UIViewController, animated: true)
+            self.navigationController?.popToViewController(self.navigationController!.viewControllers[2], animated: true)
         }
         else if self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing"
         {
-            self.navigationController?.popToViewController(self.navigationController!.viewControllers[1] as! UIViewController, animated: true)
+            self.navigationController?.popToViewController(self.navigationController!.viewControllers[1], animated: true)
         }
         else
         {
@@ -386,7 +386,7 @@ extension StoryMakingViewController
     
     func setTextOfButtonPressed(notification: NSNotification){
         let text = notification.object as! String
-        println("button pressed has value : \(text)")
+        print("button pressed has value : \(text)")
         wordIsSelectedFromSearchVC(text)
         
     }
@@ -430,7 +430,7 @@ extension StoryMakingViewController
 {
     func saveSceneToRealm()
     {
-        let realm = Realm()
+        let realm = try! Realm()
         
         /*** Story Telling ***/
         var storyTelling = StoryTelling()
@@ -484,10 +484,10 @@ extension StoryMakingViewController
             }
         }
         
-        var scene = Scene()
+        let scene = Scene()
         
         scene.order = self.orderOfSceneInStory
-        scene.backgroundImageName = self.backgroundImageView.image?.accessibilityIdentifier
+        scene.backgroundImageName = self.backgroundImageView.image!.accessibilityIdentifier!
         
         /** making the scene editable or not editable **/
         if (self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing") && self.adminMode == true
@@ -506,7 +506,7 @@ extension StoryMakingViewController
         }
         else
         {
-            scene.story = nil
+            scene.story = ""
         }
         
         if let url = self.videoUrl
@@ -523,10 +523,10 @@ extension StoryMakingViewController
         /*** Element ***/
         for elementOnScreen in self.elementsScrollView.elementsOnscreen
         {
-            var element = Element()
+            let element = Element()
             element.positionX = Float(elementOnScreen.frame.origin.x)
             element.positionY = Float(elementOnScreen.frame.origin.y)
-            element.imageName = elementOnScreen.image!.accessibilityIdentifier
+            element.imageName = elementOnScreen.image!.accessibilityIdentifier!
             
             scene.elements.append(element) // adding every Element to Scene
         }
@@ -539,7 +539,7 @@ extension StoryMakingViewController
             {
                 if let englishName = (word as! StoryReadingWordButton).englishName
                 {
-                    var storyReadingWord = StoryReadingWord()
+                    let storyReadingWord = StoryReadingWord()
                     storyReadingWord.englishName = englishName
                     storyReadingWord.order       = self.adminTypeStoryViewController.arrayOfButtons.indexOfObject(word)
                     
@@ -563,14 +563,14 @@ extension StoryMakingViewController
     
     func checkIfSceneIsSaved()
     {
-        let realm = Realm()
+        let realm = try! Realm()
         
         let predicate = NSPredicate(format: "date = %@", self.dateOfStory) // dateOfStory checking predicate
         
         
         if realm.objects(StoryTelling).filter(predicate).count == 1 // saved story
         {
-            var storyTelling = realm.objects(StoryTelling).filter(predicate).first!
+            let storyTelling = realm.objects(StoryTelling).filter(predicate).first!
             
             
             for scene in storyTelling.scenes
@@ -605,16 +605,16 @@ extension StoryMakingViewController
         // add everything to screen
         self.backgroundImageView.image = UIImage(named: scene.backgroundImageName)
         
-        if scene.story! != ""
+        if scene.story != ""
         {
-            self.storyLabel.text = scene.story!
+            self.storyLabel.text = scene.story
             
             self.editStoryButton.setImage(UIImage(named: "edit icon - highlighted"), forState: UIControlState.Normal)
         }
         
         if scene.videoUrl != ""
         {
-            self.videoUrl = NSURL(string: scene.videoUrl!)
+            self.videoUrl = NSURL(string: scene.videoUrl)
             self.videoButton.setImage(UIImage(named: "video icon - highlighted"), forState: UIControlState.Normal)
         }
         
@@ -650,7 +650,7 @@ extension StoryMakingViewController
                 self.nextSceneButton.hidden = true
             }
             
-            if scene.videoUrl! == ""
+            if scene.videoUrl == ""
             {
                 self.videoButton.hidden = true
             }

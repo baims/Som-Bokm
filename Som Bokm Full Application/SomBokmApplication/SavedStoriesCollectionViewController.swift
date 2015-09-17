@@ -38,15 +38,15 @@ class SavedStoriesCollectionViewController: UIViewController, UICollectionViewDe
     }
     
     override func viewWillAppear(animated: Bool) {
-        if self.collectionView.indexPathsForSelectedItems().count > 0
+        if let indexPaths = self.collectionView.indexPathsForSelectedItems() where indexPaths.count > 0
         {
-            self.collectionView.deselectItemAtIndexPath(self.collectionView?.indexPathsForSelectedItems().first as? NSIndexPath, animated: true)
+            self.collectionView.deselectItemAtIndexPath(indexPaths.first!, animated: true)
         }
         
         // Loading the Collection View and showing the saved stories
         let predicate = NSPredicate(format: "%K == true", self.typeOfRealmString.lowercaseString);
         
-        let realm = Realm()
+        let realm = try! Realm()
         self.stories = realm.objects(StoryTelling).filter(predicate).sorted("date", ascending: false)
         self.numberOfStories = self.stories.count
         
@@ -131,7 +131,7 @@ extension SavedStoriesCollectionViewController
         
         let deleteAction = UIAlertAction(title: "مسح جميع القصص", style: UIAlertActionStyle.Destructive)
             { (action) -> Void in
-                let realm = Realm()
+                let realm = try! Realm()
                 
                 realm.write {
                     realm.delete(realm.objects(StoryTelling))
@@ -161,14 +161,14 @@ extension SavedStoriesCollectionViewController
                 
                 var stories = [StoryTelling]()
                 
-                for indexPath in self.collectionView!.indexPathsForSelectedItems()
+                for indexPath in self.collectionView!.indexPathsForSelectedItems()!
                 {
-                    let cell = self.collectionView!.cellForItemAtIndexPath(indexPath as! NSIndexPath) as!SavedStoryCollectionViewCell
+                    let cell = self.collectionView!.cellForItemAtIndexPath(indexPath) as! SavedStoryCollectionViewCell
                     
                     stories.append(cell.storyTelling)
                 }
                 
-                let realm = Realm()
+                let realm = try! Realm()
                 
                 realm.write {
                     realm.delete(stories)

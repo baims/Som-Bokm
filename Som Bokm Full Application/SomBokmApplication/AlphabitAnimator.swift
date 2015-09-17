@@ -13,8 +13,10 @@ class AlphabitAnimator: UIImageView {
     var animationImage = UIImage()
     var wordOfElement : String!
     var suffix : String?
+    
     init(word: String){
-        super.init(image: UIImage(CGImage: nil))
+        super.init(image: UIImage())
+        
         wordOfElement = word
         suffix = ""
         self.contentMode = UIViewContentMode.ScaleAspectFit
@@ -36,8 +38,8 @@ class AlphabitAnimator: UIImageView {
         var count = 0.0
         var images = [UIImage]()
         
-        for c in word {
-            println(c)
+        for c in word.characters {
+            print(c)
             count++
             
             

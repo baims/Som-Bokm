@@ -27,7 +27,7 @@ class ElementsScrollView: UIScrollView {
         {
             let yPosition = (heightOfElement/3)*(i+1) + (heightOfElement*(i))
             
-            let elementButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+            let elementButton = UIButton(type: .Custom)
             elementButton.frame = CGRectMake(29, CGFloat(yPosition), CGFloat(widthOfElement), CGFloat(heightOfElement))
             elementButton.center.x = self.contentSize.width/2
             elementButton.addTarget(self, action: "elementTapped:", forControlEvents: UIControlEvents.TouchUpInside)

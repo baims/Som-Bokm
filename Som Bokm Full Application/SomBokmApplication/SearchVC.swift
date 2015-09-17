@@ -30,7 +30,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     var storyTellingMode : Bool?
     
     override func viewDidLoad() {
-        println("story Telling mode is (\(storyTellingMode))")
+        print("story Telling mode is (\(storyTellingMode))")
         super.viewDidLoad()
         table.backgroundColor = UIColor.clearColor()
         table.separatorColor = UIColor.clearColor()
@@ -57,14 +57,14 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("searchCell", forIndexPath: indexPath) as! SearchTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("searchCell", forIndexPath: indexPath) as! SearchTableViewCell
         
         cell.cellLabel.text  = suggestedItems[indexPath.row].arName
         
-        var imageName        = suggestedItems[indexPath.row].imageName
+        let imageName        = suggestedItems[indexPath.row].imageName
         cell.cellImage.image = UIImage(named:imageName!)
         
-        var seperatorView = UIView(frame: CGRectMake(0,cell.frame.size.height-3,cell.frame.size.width,3))
+        let seperatorView = UIView(frame: CGRectMake(0,cell.frame.size.height-3,cell.frame.size.width,3))
         seperatorView.backgroundColor = UIColor.grayColor()
         cell.addSubview(seperatorView)
         
@@ -74,9 +74,9 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Selected")
+        print("Selected")
         
-        var cell = tableView.cellForRowAtIndexPath(indexPath) as! SearchTableViewCell
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! SearchTableViewCell
         searchField.text = cell.cellLabel.text
         
         checkSearching(cell.cellLabel.text!)
@@ -87,15 +87,15 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         searchField.text = text
         
         checkSearching(text)
-        println(searchedItemExists)
+        print(searchedItemExists)
         if searchedItemExists{
-            println ("notifiaction pushed")
+            print("notifiaction pushed")
             
             NSNotificationCenter.defaultCenter().postNotificationName("goToSearchedItem", object:selectedElement )
             // notifiaction pushed
             
             if storyTellingMode == true{
-                println("story telling mode is true")
+                print("story telling mode is true")
                 NSNotificationCenter.defaultCenter().postNotificationName("setTextOfButtonPressed",object: selectedElement.name)
                 
                                 NSNotificationCenter.defaultCenter().postNotificationName("hideSearchView",object: nil)
@@ -114,8 +114,8 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     
     
     @IBAction func searchWord(sender: UITextField) {
-        if let text = sender.text{
-            checkSearching(sender.text)
+        if let _ = sender.text{
+            checkSearching(sender.text!)
             table.reloadData()
         }
         
@@ -134,12 +134,12 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         
         // get the element
         if let str = ElementManager.Element.getEnglishNameFromArabic(text){
-            var el = ElementManager.Base()[str]
+            let el = ElementManager.Base()[str]
             
             if !el.isNil!
             {
                 selectedElement = el
-                println("The selected element \(selectedElement.name) is ready to push")
+                print("The selected element \(selectedElement.name) is ready to push")
                 searchedItemExists = true
             }
             else{
@@ -154,7 +154,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         if searchedItemExists{
             //            self.performSegueWithIdentifier("showElementFromCategories", sender: self)
             searchField.resignFirstResponder()
-            println("Presed")
+            print("Presed")
         }
     }
     

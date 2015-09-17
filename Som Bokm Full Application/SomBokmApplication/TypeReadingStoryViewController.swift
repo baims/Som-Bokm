@@ -47,7 +47,7 @@ class TypeReadingStoryViewController: UIViewController {
             // do something else
             // show the video ?? /*** OMAR ***/
             parentViewController.showSearchView()
-            println("Showing searchVC")
+            print("Showing searchVC")
         }
     }
     

@@ -17,31 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-//<<<<<<< HEAD
+        
         ElementManager.Base().sync()
-              
-//=======
-        
-//>>>>>>> ae3d03ce3b7b45ec4087cd6077298da3adb83bd8
-        
-        // Realm Migration
-        /*setSchemaVersion(2, Realm.defaultPath, { migration, oldSchemaVersion in
-            if oldSchemaVersion < 2 {
-                // The enumerate(_:_:) method iterates
-                // over every Scene object stored in the Realm file
-                migration.enumerate(Scene.className()) { oldObject, newObject in
-                    // combine name fields into a single field
-                    newObject!["isEditable"] = false
-                }
-                
-                migration.enumerate(StoryTelling.className()) { oldObject, newObject in
-                    // combine name fields into a single field
-                    newObject!["telling"]    = false
-                    newObject!["reading"]    = false
-                    newObject!["completing"] = false
-                }
-            }
-        })*/
         
         return true
     }

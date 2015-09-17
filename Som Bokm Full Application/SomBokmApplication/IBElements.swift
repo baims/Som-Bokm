@@ -35,7 +35,7 @@ import Foundation
             layer.borderColor = newValue?.CGColor
         }
         get{
-            let c = UIColor(CGColor: layer.borderColor)
+            let c = UIColor(CGColor: layer.borderColor!)
             return c
         }
     }
@@ -69,7 +69,7 @@ import Foundation
             layer.borderColor = newValue?.CGColor
         }
         get{
-            let c = UIColor(CGColor: layer.borderColor)
+            let c = UIColor(CGColor: layer.borderColor!)
             return c
         }
     }

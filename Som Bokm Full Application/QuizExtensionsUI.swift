@@ -36,7 +36,7 @@ extension QuizVC{
         starView.image = UIImage(named:"star")
         self.view.addSubview(starView)
         starView.alpha  = 0.0
-        println("\n****Mastered****\n")
+        print("\n****Mastered****\n")
         
         
         UIView.animateWithDuration(0.4, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
@@ -211,7 +211,7 @@ extension QuizVC{
                 
                 
                 if self.gameIsOver(){
-                    println("Game Over!")
+                    print("Game Over!")
                     // Show result
                     self.showResult()
                     
@@ -246,75 +246,91 @@ extension QuizVC{
 
 extension QuizVC {
     
-    func checkMaster()
-    {
+//    func checkMaster()
+//    {
+//        
+//        if let _rightAnswerElement = self.rightAnswerElement{
+//            var copyOfRightAnswerElement =  _rightAnswerElement
+////            var key = "answeredTimes"
+//            let name: String? = _rightAnswerElement.name!
+//            println("before answering : ")
+//            //                println((dictionaryOfAllElements[randomElementsForChoices.objectAtIndex(rightAnswerIndex) as! String]!.objectForKey(key))!)
+//            var count = copyOfRightAnswerElement.answeredTimes
+//            count?++
+//            
+//            
+//            /* Comments :
+//            
+//            ** when the user get Mastered , the alert should be immediatly after he presses the button
+//            ** should save the dictuinary in UserDefaults ,
+//            
+//
+//            */
+//            var masteredAlready = false
+//            
+//            if let wordsArray = def.objectForKey("MasteredWordsArray") as? [String]
+//            {
+//                println("there are some variables added to The Defaults")
+//                
+//                masteredWords = wordsArray
+//                for s in wordsArray
+//                {
+//                    println("OMSILALA")
+//                    println(s)
+//                    if name! == s
+//                    {
+//                        println("\(name) element is mastered already\n\n")
+//                        masteredAlready = true
+//                    }
+//                }
+//            }
+//            
+//            if masteredAlready
+//            {
+//                // just skip the else
+//                println("MASTERED HUHH")
+//            }
+//            else if count == masteredConstant
+//            {
+//                masteredWords.append(name!)
+//                def.setObject (masteredWords, forKey: ("MasteredWordsArray"))
+//                def.synchronize()
+//                
+//                self.showMasteredView()
+//            }
+//            
+//            copyOfRightAnswerElement.answeredTimes = count
+//            copyOfRightAnswerElement.isMastered = true
+//            println("copyOfRightAnswerElement : \(copyOfRightAnswerElement)\n count is : \(count)")
+//            //            self.dictionaryOfAllElements[self.rightAnswerKey] = copyOfRightAnswerElement
+//            //            base[key] = copyOfRightAnswerElement // Saving here
+//            
+//            println("after answering ")
+//            self.rightAnswerElement = copyOfRightAnswerElement
+//            println(self.dictionaryOfAllElements[self.rightAnswerKey])
+//            
+//        }
+//    }
+//    
+//    
+    
+    func checkMaster(rightAnswer: ElementManager.Element){
+
+        print("Checking mastere...\(rightAnswer.answeredTimes)")
         
-        if let _rightAnswerElement = self.rightAnswerElement{
-            var copyOfRightAnswerElement =  _rightAnswerElement
-//            var key = "answeredTimes"
-            let name: String? = _rightAnswerElement.name!
-            println("before answering : ")
-            //                println((dictionaryOfAllElements[randomElementsForChoices.objectAtIndex(rightAnswerIndex) as! String]!.objectForKey(key))!)
-            var count = copyOfRightAnswerElement.answeredTimes
-            count++
-            
-            
-            /* Comments :
-            
-            ** when the user get Mastered , the alert should be immediatly after he presses the button
-            ** should save the dictuinary in UserDefaults ,
-            
-            ******  Change number of times the word should be answered here  ****
-            
-            */
-            var masteredAlready = false
-            
-            if let wordsArray = def.objectForKey("MasteredWordsArray") as? [String]
+        if !(rightAnswer.isMastered!)
+        {
+            if rightAnswer.answeredTimes == masteredConstant
             {
-                println("there are some variables added to The Defaults")
-                
-                masteredWords = wordsArray
-                for s in wordsArray
-                {
-                    println("OMSILALA")
-                    println(s)
-                    if name! == s
-                    {
-                        println("\(name) element is mastered already\n\n")
-                        masteredAlready = true
-                    }
-                }
-            }
-            
-            if masteredAlready
-            {
-                // just skip the else
-                println("MASTERED HUHH")
-            }
-            else if count == masteredConstant
-            {
-                masteredWords.append(name!)
-                def.setObject (masteredWords, forKey: ("MasteredWordsArray"))
-                def.synchronize()
-                
+
+                rightAnswer.isMastered = true
+                masteredWords.append(rightAnswer.name!)
+                NSUserDefaults.standardUserDefaults().setObject(masteredWords, forKey: "MasteredWordsArray")
                 self.showMasteredView()
+                base.sync()
+            
             }
-            
-            copyOfRightAnswerElement.answeredTimes = count
-            copyOfRightAnswerElement.isMastered = true
-            println("copyOfRightAnswerElement : \(copyOfRightAnswerElement)\n count is : \(count)")
-            //            self.dictionaryOfAllElements[self.rightAnswerKey] = copyOfRightAnswerElement
-            //            base[key] = copyOfRightAnswerElement // Saving here
-            
-            println("after answering ")
-            self.rightAnswerElement = copyOfRightAnswerElement
-            println(self.dictionaryOfAllElements[self.rightAnswerKey])
-            
         }
     }
-    
-    
-    
-    
     
 }

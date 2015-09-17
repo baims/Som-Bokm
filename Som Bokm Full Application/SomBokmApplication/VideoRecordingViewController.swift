@@ -67,7 +67,7 @@ class VideoRecordingViewController: UIViewController {
             
         }
         
-        var error : NSError?
+        //var error : NSError?
         
         self.camera.onError = {
             (camera, error : NSError?) in
@@ -112,7 +112,7 @@ class VideoRecordingViewController: UIViewController {
     
     func applicationDocumentsDirectory() -> NSURL!
     {
-        return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).last as! NSURL
+        return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).last// as! NSURL
     }
     
 }
@@ -153,7 +153,7 @@ extension VideoRecordingViewController
     
     func endRecording()
     {
-        var error : NSError?
+       // var error : NSError?
         
         self.camera.stopRecording {
             (camera, url, error) in
@@ -192,7 +192,7 @@ extension VideoRecordingViewController
         self.avPlayerLayer!.transform = CATransform3DConcat(CATransform3DMakeRotation(CGFloat(M_PI/2), 0, 0, 1.0), CATransform3DMakeScale(-1.9, 1.9, 1))
         
         
-        self.view.layer.insertSublayer(self.avPlayerLayer, atIndex: 1)
+        self.view.layer.insertSublayer(self.avPlayerLayer!, atIndex: 1)
         self.camera.view.hidden = true
         
         self.avPlayer?.play()
@@ -219,7 +219,7 @@ extension VideoRecordingViewController
         
         self.camera.view.hidden = false
         
-        if let avplayer = self.avPlayer
+        if let _ = self.avPlayer
         {
             /*** Remove video preview here ***/
             self.avPlayer!.pause()

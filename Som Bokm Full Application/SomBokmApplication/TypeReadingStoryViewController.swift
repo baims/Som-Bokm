@@ -40,12 +40,14 @@ class TypeReadingStoryViewController: UIViewController {
         
         if adminMode == true
         {
-            parentViewController.changeStoryReadingWord(sender.text)
+
         }
         else if adminMode == false
         {
             // do something else
             // show the video ?? /*** OMAR ***/
+            parentViewController.showSearchView()
+            print("Showing searchVC")
         }
     }
     

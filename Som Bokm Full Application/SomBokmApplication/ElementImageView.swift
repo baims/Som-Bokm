@@ -26,12 +26,12 @@ class ElementImageView: UIImageView {
         
         self.userInteractionEnabled = true // to allow dragging
         
-        var panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
+        let panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
         self.gestureRecognizers = [panRecognizer]
     }
     
     func detectPan(recognizer:UIPanGestureRecognizer) {
-        var translation  = recognizer.translationInView(self.superview!)
+        let translation  = recognizer.translationInView(self.superview!)
         
         var x = lastLocation.x + translation.x
         var y = lastLocation.y + translation.y
@@ -60,12 +60,11 @@ class ElementImageView: UIImageView {
         self.center = CGPointMake(x, y)
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Promote the touched view
         self.superview?.bringSubviewToFront(self)
         
         // Remember original location
         lastLocation = self.center
     }
-
 }

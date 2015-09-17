@@ -86,11 +86,11 @@ class ElementVC: UIViewController {
         tahjee2VideoPlayer!.play()
         
         if  elementHasTahjee2Video{
-            println(elementHasTahjee2Video)
+            print(elementHasTahjee2Video)
             
             
             
-            UIView.animateWithDuration(0.4, delay: 0.0, options: UIViewAnimationOptions.BeginFromCurrentState | UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            UIView.animateWithDuration(0.4, delay: 0.0, options:[.BeginFromCurrentState, .CurveEaseInOut], animations: { () -> Void in
                 
                 self.elementImage.transform = CGAffineTransformMakeTranslation(-300, 0)
                 self.tahjee2VideoPlayer!.view.transform = CGAffineTransformMakeTranslation(-410, 0)
@@ -100,7 +100,7 @@ class ElementVC: UIViewController {
                 self.lettersVideoPlayer.frame.origin.x = self.spellingVideoFrame.origin.x - CGFloat(150.0)
                 
                 }, completion: nil)
-        }
+            }
     }
     
     
@@ -188,7 +188,7 @@ class ElementVC: UIViewController {
             lettersVideoPlayer.suffix  = "a"
             elementNameLabel.text   = nameOfElementInDictionary
             
-            println("THE NAME OF THE ELEMENT IS \(nameOfElementInDictionary)")
+            print("THE NAME OF THE ELEMENT IS \(nameOfElementInDictionary)")
         }
         else{
             elementName = element?.name!
@@ -196,14 +196,14 @@ class ElementVC: UIViewController {
         
         // Get the tahjee2 Video from the bundle
         if let tahjee2vidName : String? = NSBundle.mainBundle().pathForResource(tahjee2VideoName, ofType: "mp4"){
-            println(tahjee2VideoName)
+            print(tahjee2VideoName)
             if tahjee2vidName != nil{
                 elementHasTahjee2Video = true
-                println("\n\n\n********\n\n\nDoes have a video\n\n\(tahjee2vidName)")
+                print("\n\n\n********\n\n\nDoes have a video\n\n\(tahjee2vidName)")
                 
             }  else{
                 elementHasTahjee2Video = false
-                println("\n\n\n********\n\n\nDoesnt have a video\n\n\n*********\n\n\n")
+                print("\n\n\n********\n\n\nDoesnt have a video\n\n\n*********\n\n\n")
             }
             
         }

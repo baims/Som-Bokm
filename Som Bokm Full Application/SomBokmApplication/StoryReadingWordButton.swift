@@ -11,6 +11,7 @@ import UIKit
 class StoryReadingWordButton: UIButton {
 
     var englishName : String?
+    let base        = ElementManager.Base()
     
     var text : String!
         {
@@ -26,18 +27,21 @@ class StoryReadingWordButton: UIButton {
     func getTextOfWord() -> String!
     {
         /*** OMAR ***/
-        return ""
+        let arabicName = base[englishName!].arName!
+        return arabicName
     }
     
     func getVideoPathOfWord() -> String!
     {
         /*** OMAR ***/
-        return ""
+        let videoName = base[englishName!].videoName!
+        return videoName
     }
     
     /*
     /*** OMAR ***/
         write other functions here so we can access everything faster
+        Shno y3nee ?
     */
 
 }

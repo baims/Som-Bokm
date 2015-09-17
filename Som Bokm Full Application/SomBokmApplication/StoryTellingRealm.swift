@@ -10,7 +10,7 @@ import RealmSwift
 
 class StoryTelling : Object
 {
-    dynamic var date : NSDate!
+    dynamic var date : NSDate = NSDate()
     let scenes = List<Scene>()
     
     dynamic var telling : Bool    = false
@@ -21,9 +21,9 @@ class StoryTelling : Object
 class Scene : Object
 {
     dynamic var order = 0 // order starts from 1
-    dynamic var story    : String?
-    dynamic var videoUrl : String?
-    dynamic var backgroundImageName : String!
+    dynamic var story    : String = ""
+    dynamic var videoUrl : String = ""
+    dynamic var backgroundImageName : String = ""
     dynamic var isEditable : Bool = true
     let elements = List<Element>()
     let words    = List<StoryReadingWord>()
@@ -38,6 +38,6 @@ class Element : Object
 
 class StoryReadingWord : Object
 {
-    dynamic var englishName : String!
+    dynamic var englishName : String = ""
     dynamic var order = 0 // order starts from 0
 }

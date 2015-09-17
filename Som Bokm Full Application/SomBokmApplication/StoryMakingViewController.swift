@@ -17,6 +17,7 @@ class StoryMakingViewController: UIViewController {
     var typeOfRealmString   : String! // needed to adjust the views depending on the type ( telling/reading/completing ) - it has one of these three values: "Telling", "Reading" or "Completing"
     var typeOfRealm         : Object!
     var adminMode           : Bool = false
+    var buttonSenderTag     : Int  = 0
 
     @IBOutlet weak var storyLabel: UILabel!
     @IBOutlet weak var typeStoryContainerView: UIView!
@@ -31,11 +32,17 @@ class StoryMakingViewController: UIViewController {
     @IBOutlet weak var nextSceneButton: UIButton!
     @IBOutlet weak var backSceneButton: UIButton!
     @IBOutlet weak var videoButton: UIButton!
+    @IBOutlet var searchView: UIView!
     
     var typeStoryViewController      : TypeStoryViewController!
     var videoRecordingViewController : VideoRecordingViewController!
     var adminTypeStoryViewController : TypeReadingStoryViewController!
     var searchViewController         : SearchVC!
+    /*
+        Omar  For Search View hiding and showing 
+    */
+    var searchViewFrameOn    :  CGRect!
+    var searchViewFrameOff   :  CGRect!
     
     var viewIsLoaded = false
     
@@ -49,6 +56,15 @@ class StoryMakingViewController: UIViewController {
         self.elementsScrollView.addElements()
         
         self.backgroundImageView.image?.accessibilityIdentifier = "parkLandscapeBG"
+        /*
+        ••• O m a r
+        
+        */
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setTextOfButtonPressed:", name: "setTextOfButtonPressed", object: nil)
+        
+          NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideSearchView:", name: "hideSearchView", object: nil)
+        
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSearchView:", name: "showSearchView", object: nil)
     }
     
     override func viewDidLayoutSubviews()
@@ -64,6 +80,16 @@ class StoryMakingViewController: UIViewController {
             
             self.checkIfSceneIsSaved()
         }
+        
+        /*
+        Omar Search showing and hiding seting frames
+        */
+        
+        searchViewFrameOn   = searchView.frame
+        
+        searchView.frame.origin.x = self.view.frame.size.width
+        //var dif = searchView.frame.origin.x - searchViewFrameOn.origin.x
+        searchViewFrameOff = searchView.frame
     }
     
     override func didReceiveMemoryWarning() {
@@ -96,6 +122,7 @@ class StoryMakingViewController: UIViewController {
         else if segue.identifier == "Search"
         {
             searchViewController = segue.destinationViewController as! SearchVC
+            searchViewController.storyTellingMode = true
         }
         
         else if segue.identifier == "NextScene"
@@ -181,7 +208,7 @@ class StoryMakingViewController: UIViewController {
     }
     
     
-    func showExitAlertView(#home: Bool, back: Bool)
+    func showExitAlertView(home home: Bool, back: Bool)
     {
 //        let homeOrBackString = home == true ? "الخروج" : "الرجوع"
 //        let messageString    = saving == true ? "هل تريد حفظ هذه القصة قبل \(homeOrBackString) ؟" : "هل انت متأكد من \(homeOrBackString)"
@@ -243,11 +270,11 @@ class StoryMakingViewController: UIViewController {
     {
         if self.adminMode == true
         {
-            self.navigationController?.popToViewController(self.navigationController!.viewControllers[2] as! UIViewController, animated: true)
+            self.navigationController?.popToViewController(self.navigationController!.viewControllers[2], animated: true)
         }
         else if self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing"
         {
-            self.navigationController?.popToViewController(self.navigationController!.viewControllers[1] as! UIViewController, animated: true)
+            self.navigationController?.popToViewController(self.navigationController!.viewControllers[1], animated: true)
         }
         else
         {
@@ -330,14 +357,52 @@ extension StoryMakingViewController
 // AdminTypeReadingStoryViewController extensions
 extension StoryMakingViewController
 {
-    /*** for adminMode = true ***/
-    func changeStoryReadingWord(textOfButton : String)
+    
+    // O P E N i n g
+    func showSearchView(){
+        NSNotificationCenter.defaultCenter().postNotificationName("showKeyboard", object: nil)
+        UIView.animateKeyframesWithDuration(0.3, delay: 0.0, options: UIViewKeyframeAnimationOptions.BeginFromCurrentState, animations: { () -> Void in
+            
+            self.searchView.frame  = self.searchViewFrameOn
+            
+            }, completion: nil)
+        
+    }
+    
+    // C L O S I N G
+    func hideSearchView(notification: NSNotification?){
+        NSNotificationCenter.defaultCenter().postNotificationName("hideKeyboard", object:nil )
+        
+        UIView.animateKeyframesWithDuration(0.3, delay: 0.0, options: UIViewKeyframeAnimationOptions.BeginFromCurrentState, animations: { () -> Void in
+            
+            self.searchView.frame       = self.searchViewFrameOff
+            //          self.searchButton.transform = CGAffineTransformRotate(self.searchButton.transform, CGFloat(M_PI/2.0))
+            
+            
+            
+            }, completion: nil)
+        
+    }
+    
+    func setTextOfButtonPressed(notification: NSNotification){
+        let text = notification.object as! String
+        print("button pressed has value : \(text)")
+        wordIsSelectedFromSearchVC(text)
+        
+    }
+    
+    func changeStoryReadingWord(button : UIButton)
     {
         /*** OMAR ***/
+        /*** for adminMode = true ***/
         
         // show searchVC
         // send searchVC 'textOfButton'
         // the search bar in searchVC should have the same text as 'textOfButton'
+        
+        
+
+      
     }
     
     // searchVC will send the new word's dictionary to this function
@@ -348,6 +413,16 @@ extension StoryMakingViewController
     
     /*** for adminMode == false ***/
     // show the video ?? /*** OMAR ***/
+    
+// rename thue function and set all the right values
+    func showVideo(){
+        let elementName = ""
+        let element = ElementManager.Base()[elementName]
+        let frame = CGRectMake(0, 0, 2, 100) // Change the frame of course
+        let videoPlayer = VideoPlayer(name: element.videoName, withFrame: frame)
+        self.view.addSubview(videoPlayer.view)
+        
+    }
 }
 
 // Realm stuff
@@ -355,7 +430,7 @@ extension StoryMakingViewController
 {
     func saveSceneToRealm()
     {
-        let realm = Realm()
+        let realm = try! Realm()
         
         /*** Story Telling ***/
         var storyTelling = StoryTelling()
@@ -409,10 +484,10 @@ extension StoryMakingViewController
             }
         }
         
-        var scene = Scene()
+        let scene = Scene()
         
         scene.order = self.orderOfSceneInStory
-        scene.backgroundImageName = self.backgroundImageView.image?.accessibilityIdentifier
+        scene.backgroundImageName = self.backgroundImageView.image!.accessibilityIdentifier!
         
         /** making the scene editable or not editable **/
         if (self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing") && self.adminMode == true
@@ -431,7 +506,7 @@ extension StoryMakingViewController
         }
         else
         {
-            scene.story = nil
+            scene.story = ""
         }
         
         if let url = self.videoUrl
@@ -448,10 +523,10 @@ extension StoryMakingViewController
         /*** Element ***/
         for elementOnScreen in self.elementsScrollView.elementsOnscreen
         {
-            var element = Element()
+            let element = Element()
             element.positionX = Float(elementOnScreen.frame.origin.x)
             element.positionY = Float(elementOnScreen.frame.origin.y)
-            element.imageName = elementOnScreen.image!.accessibilityIdentifier
+            element.imageName = elementOnScreen.image!.accessibilityIdentifier!
             
             scene.elements.append(element) // adding every Element to Scene
         }
@@ -464,7 +539,7 @@ extension StoryMakingViewController
             {
                 if let englishName = (word as! StoryReadingWordButton).englishName
                 {
-                    var storyReadingWord = StoryReadingWord()
+                    let storyReadingWord = StoryReadingWord()
                     storyReadingWord.englishName = englishName
                     storyReadingWord.order       = self.adminTypeStoryViewController.arrayOfButtons.indexOfObject(word)
                     
@@ -488,14 +563,14 @@ extension StoryMakingViewController
     
     func checkIfSceneIsSaved()
     {
-        let realm = Realm()
+        let realm = try! Realm()
         
         let predicate = NSPredicate(format: "date = %@", self.dateOfStory) // dateOfStory checking predicate
         
         
         if realm.objects(StoryTelling).filter(predicate).count == 1 // saved story
         {
-            var storyTelling = realm.objects(StoryTelling).filter(predicate).first!
+            let storyTelling = realm.objects(StoryTelling).filter(predicate).first!
             
             
             for scene in storyTelling.scenes
@@ -530,16 +605,16 @@ extension StoryMakingViewController
         // add everything to screen
         self.backgroundImageView.image = UIImage(named: scene.backgroundImageName)
         
-        if scene.story! != ""
+        if scene.story != ""
         {
-            self.storyLabel.text = scene.story!
+            self.storyLabel.text = scene.story
             
             self.editStoryButton.setImage(UIImage(named: "edit icon - highlighted"), forState: UIControlState.Normal)
         }
         
         if scene.videoUrl != ""
         {
-            self.videoUrl = NSURL(string: scene.videoUrl!)
+            self.videoUrl = NSURL(string: scene.videoUrl)
             self.videoButton.setImage(UIImage(named: "video icon - highlighted"), forState: UIControlState.Normal)
         }
         
@@ -575,7 +650,7 @@ extension StoryMakingViewController
                 self.nextSceneButton.hidden = true
             }
             
-            if scene.videoUrl! == ""
+            if scene.videoUrl == ""
             {
                 self.videoButton.hidden = true
             }

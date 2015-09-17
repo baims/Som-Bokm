@@ -16,8 +16,10 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     var elementNeeds : ElementManager.Element?
     
     var selectedIndexPath : NSIndexPath!    //index for collection view to know which item was selected in segue
-    
-    var base = ElementManager.Base()
+    /**
+    Here dictionary wont have access to the mastered words synced from QuizVC
+    */
+    var base = ElementManager.prepareItemsOfDataBase()
     var rootsArray : [ElementManager.Root]?
     
     // ------- V I E W  D I D  L O A D  -------------
@@ -26,6 +28,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         rootsArray = base.rootArray //
         
@@ -83,7 +86,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         
         searchView.frame.origin.x = self.view.frame.size.width
         searchButtonFrameOff = searchView.frame
-        var dif = searchView.frame.origin.x - searchViewFrameOn.origin.x
+        let dif = searchView.frame.origin.x - searchViewFrameOn.origin.x
         searchViewFrameOff = searchView.frame
         searchButton.frame.origin.x += dif - 80
         searchButtonFrameOff = searchButton.frame
@@ -212,11 +215,11 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         if segue.identifier == "showElementFromCategories"
         {
             let vc : ElementVC = segue.destinationViewController as! ElementVC
-            println("&& HERE PREPAREA FOR SUGUE")
-            println(elementNeeds?.name)
+            print("&& HERE PREPAREA FOR SUGUE")
+            print(elementNeeds?.name)
             
             //passing the pressed button key to the dictionary that will be sent to the next VC
-            var itemToTransfer : ElementManager.Element? = elementNeeds
+            let itemToTransfer : ElementManager.Element? = elementNeeds
             itemToTransfer?.printDescreption()
             vc.element    = itemToTransfer
             
@@ -228,10 +231,10 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         {
             let vc : CategoriesVC = segue.destinationViewController as! CategoriesVC
             
-            if let itemName = rootsArray![segmentControl.selectedSegmentIndex].rootName
+            if let _ = rootsArray![segmentControl.selectedSegmentIndex].rootName
             {
                 //passing the pressed button key to the dictionary that will be sent to the next VC
-                var item  = rootsArray![segmentControl.selectedSegmentIndex].categoriesArray![selectedIndexPath.row].elementsArray
+                let item  = rootsArray![segmentControl.selectedSegmentIndex].categoriesArray![selectedIndexPath.row].elementsArray
                 
                 vc.categoryArray = item
             }

@@ -16,62 +16,60 @@
 import UIKit
 import MediaPlayer
 
-class VideoPlayer: MPMoviePlayerController {
-    override init(contentURL url: NSURL!) {
+class VideoPlayer: MPMoviePlayerController
+{
+    var videoName : String?
+    private var videoFrame : CGRect?
+    
+    override init(contentURL url: NSURL!)
+    {
         super.init(contentURL: url)
     }
     
-    var videoName : String?
-    private var videoFrame : CGRect?
-    init(name : String! , withFrame frame : CGRect!){
+    init(name : String! , withFrame frame : CGRect!)
+    {
         videoFrame = frame
         videoName = name!
-        if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4"){
-            if let url = NSURL.fileURLWithPath(path){
+        
+        if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
+        {
+            let url = NSURL.fileURLWithPath(path)
                 
-                super.init(contentURL: url)
+            super.init(contentURL: url)
                 
-                self.view.frame = frame
-                self.scalingMode = MPMovieScalingMode.Fill
-                self.fullscreen = true
-                self.controlStyle = MPMovieControlStyle.None
-                self.movieSourceType = .File
-                self.repeatMode = MPMovieRepeatMode.One
-                self.view.opaque = true
-                self.view.hidden = false
-                
-            }
-                
-            else{
-                super.init(contentURL: nil)
-            }
-            
+            self.view.frame = frame
+            self.scalingMode = MPMovieScalingMode.Fill
+            self.fullscreen = true
+            self.controlStyle = MPMovieControlStyle.None
+            self.movieSourceType = .File
+            self.repeatMode = MPMovieRepeatMode.One
+            self.view.opaque = true
+            self.view.hidden = false
         }
             
-        else{
+        else
+        {
             super.init(contentURL: nil)
         }
     }
+
     func pressed(){
         replay()
     }
+
     func replay(){
-        self.stop()
+        stop()
         
-        if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4"){
-            if let url = NSURL.fileURLWithPath(path){
-                self.contentURL = url
-                self.stop()
-                self.play()
-                
-            }
+        if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
+        {
+            let url = NSURL.fileURLWithPath(path)
             
+            self.contentURL = url
+            self.stop()
+            self.play()
             
         }
-        
-        
     }
-    
 }
 
 

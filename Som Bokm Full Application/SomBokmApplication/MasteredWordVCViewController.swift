@@ -18,9 +18,9 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
 
 // uncomment this line if you are using NSUserDefaults 
         
-        masteredWordsArray = NSUserDefaults.standardUserDefaults().objectForKey("MasteredWordsArray") as! [String]
+//        masteredWordsArray = NSUserDefaults.standardUserDefaults().objectForKey("MasteredWordsArray") as! [String]
         
-        println(masteredWordsArray)
+        print(masteredWordsArray)
 
         // Do any additional setup after loading the view.
     }
@@ -31,7 +31,7 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cellFotMaster", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellFotMaster", forIndexPath: indexPath)
         
         cell.textLabel?.text = masteredWordsArray[indexPath.row]
         
@@ -50,7 +50,7 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
     }
     
     @IBAction func clearAllWords(sender:UIButton){
-        var alert = UIAlertView(title: "تحذير!", message: "سيتم مسح جميع الكلمات من قائمة الكلمات المتقنة , هل أنت متأكد ؟", delegate: self, cancelButtonTitle: "Clear", otherButtonTitles: "Cancel")
+        let alert = UIAlertView(title: "تحذير!", message: "سيتم مسح جميع الكلمات من قائمة الكلمات المتقنة , هل أنت متأكد ؟", delegate: self, cancelButtonTitle: "Clear", otherButtonTitles: "Cancel")
         alert.show()
 
     }
@@ -59,6 +59,9 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
         if buttonIndex == 0 {
             NSUserDefaults.standardUserDefaults().setObject([], forKey: "MasteredWordsArray")
             masteredWordsArray = []
+            //var Print_numberOFmasteredWords = ElementManager.getMasteredWords()
+            
+            ElementManager.resetBase()
             
             tableView.reloadData()
 
@@ -77,4 +80,29 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
     }
     */
 
+}
+
+extension ElementManager {
+    class func getMasteredWords()->[ElementManager.Element]
+    {
+        var mastered : [ElementManager.Element] = []
+                
+        for element in self.getAllElementsFromBase()
+        {
+            if element.isMastered! == true{
+//                print(element.name! + "  IS master\n")
+                mastered.append(element)
+            }
+        }
+        print("All mastered words are\(mastered.count)")
+        return mastered
+    }
+}
+
+extension ElementManager{
+    class func resetBase(){
+        var b = Base()
+            b = prepareItemsOfDataBase()
+            b.sync()
+    }
 }

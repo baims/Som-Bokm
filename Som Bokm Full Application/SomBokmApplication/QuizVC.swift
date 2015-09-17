@@ -12,7 +12,7 @@
  
  class QuizVC: UIViewController {
     // number of times the word should be answered to get matered in the word
-    let masteredConstant = 5
+    let masteredConstant = 1
     
     @IBOutlet weak var videoContainer: UIView! // container to get the frame from it
     
@@ -76,7 +76,7 @@
         */
         dictionaryOfAllElements = DictionaryManager.getAllElementsInDictinoary()
         base = ElementManager.Base()
-        arrayOfAllElements = ElementManager.getAllElementsFromBase(base: base)
+        arrayOfAllElements = ElementManager.getAllElementsFromBase(base)
 //        println("OMSILALA \(arrayOfAllElements.description)")
         
         elementsImages = [self.image1, self.image2 , self.image3 , self.image4]
@@ -139,20 +139,18 @@
         Right Answer
         ••••••••••••••••••••••••••••••••
         */
-        if sender.tag == rightAnswerIndex + 1 {
-            
-            rightAnsweredTimes++ // Aug 29
+        
+        if sender.tag == rightAnswerIndex + 1
+        {
+            rightAnsweredTimes++ // Aug 29 counting right answer for summary sheet
             
             correctionImage.image = UIImage(named: "rightImage")
             correctionImage.hidden = false
-            
-//            self.checkMaster()
-            
-            
-            
+
+            rightAnswerElement?.answeredTimes?++
+            self.checkMaster(rightAnswerElement!)
             
             /// Show Tick
-            
             
             self.showCorrectionImage(sender,answered: true)
         }
@@ -211,7 +209,7 @@
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let id = "toMastered"
+        //let id = "toMastered"
         let vc : MasteredWordVCViewController = segue.destinationViewController as! MasteredWordVCViewController
         
         
@@ -255,7 +253,7 @@
         
         for (var i = 0 ; i < 4 ; i++)
         {
-            var randomNum = shuffledNumbers[i]
+            let randomNum = shuffledNumbers[i]
             randomElementsForChoices.append(_shuffledElements[randomNum]) // OMsilala
         }
         
@@ -269,7 +267,7 @@
         
         for (var i=0 ; i<4 ; i++){
             
-            var j : Int = shuffledNumbers[i] // <- should be a random number  generator
+            let j : Int = shuffledNumbers[i] // <- should be a random number  generator
             
             let elementImage : UIButton = (elementsImages[j])
             // chnaged to set image from set

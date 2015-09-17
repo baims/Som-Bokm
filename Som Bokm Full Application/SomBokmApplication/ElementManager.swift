@@ -23,6 +23,7 @@ classes : as the flow
 
 To use the base , use prepareDciota.... , it will manage all the dictionaries and arrays inside the base
 
+THIS ELEMENT MANAGER IS TAKING DATA FROM PLIST AND SAVES THEM AS SOON AS USER OPENS THE 
 
 */
 
@@ -37,18 +38,18 @@ class ElementManager {
         case English
     }
     
-    class Element
+    class Element : NSObject,  NSCoding
     {
         
-        var name            : String?
-        var arName          : String?
-        var categoryName    : String?
-        var rootName        : String?
-        var caption         : String? = ""
-        var isMastered      : Bool! = false
-        var answeredTimes   : Int   = 0
+        var name            : String? // name in English
+        var arName          : String? // name in Arabic
+        var categoryName    : String? // under what Category is this element ?
+        var rootName        : String? // under what root is this element ?
+        var caption         : String? = "" // caption (the third element in the plist )
+        var isMastered      : Bool! = false // checks
+        var answeredTimes   : Int?
         
-        var isNil : Bool?
+        var isNil : Bool? = true
         
         var imageName : String?  {
             get{
@@ -95,99 +96,175 @@ class ElementManager {
         
         
         func printDescreption(){
-            println(name            != nil ? " •\(name!): { "                          : "nil"         )
-            println(arName          != nil ? "   arabic name    : \(arName!)"           : ""            )
-            println(caption         != nil ? "   caption        : \(caption!)"          : ""            )
-            println(imageName       != nil ? "   image name     : \(imageName!)"        : "doesnt exist")
-            println(thumbImageName  != nil ? "   thumb name     : \(thumbImageName!)"   : "doesnt exist")
-            println(videoName       != nil ? "   video name     : \(videoName!)"        : "doesnt exist")
-            println(isMastered      != nil ? "   is Mastered    : \(isMastered!)"       : "doesnt exist")
-            println(categoryName    != nil ? "   category name  : \(categoryName!)"     : "doesnt exist")
-            println(rootName        != nil ? "   root name      : \(rootName!)"         : "doesnt exist")
-            println("}")
+            print(name            != nil ? " •\(name!): { "                          : "nil"         )
+            print(arName          != nil ? "   arabic name    : \(arName!)"           : ""            )
+            print(caption         != nil ? "   caption        : \(caption!)"          : ""            )
+            print(imageName       != nil ? "   image name     : \(imageName!)"        : "doesnt exist")
+            print(thumbImageName  != nil ? "   thumb name     : \(thumbImageName!)"   : "doesnt exist")
+            print(videoName       != nil ? "   video name     : \(videoName!)"        : "doesnt exist")
+            print(isMastered      != nil ? "   is Mastered    : \(isMastered!)"       : "doesnt exist")
+            print(answeredTimes   != nil ? "   ansered times  : \(answeredTimes!)"    : "doesnt exist")
+            print(categoryName    != nil ? "   category name  : \(categoryName!)"     : "doesnt exist")
+            print(rootName        != nil ? "   root name      : \(rootName!)"         : "doesnt exist")
+            print("}")
             
             
         }
         
-        init(_name:AnyObject){
+        /**
+        What this code does
+        see the plist , if it is string , set that string to name , if it is array , let 0->name , 1-> arName . 2-> capition
+        */
+        init(_name:AnyObject)
+        {
             isNil = false
             
-            if _name is String {
+            if _name is String
+            {
                 name = _name as? String
             }
-            else if _name is NSArray{
+            else if _name is NSArray
+            {
                 var arrayOfElemnt = _name as? [AnyObject]
                 name = arrayOfElemnt![0] as? String
                 
-                if arrayOfElemnt?.count >= 2{
+                if arrayOfElemnt?.count >= 2
+                {
                     if let _arName = arrayOfElemnt![1] as? String
                     {
                         arName = _arName
                     }
                 }
-                if arrayOfElemnt?.count >= 3{
+                if arrayOfElemnt?.count >= 3
+                {
                     if let _caption = arrayOfElemnt![2] as? String
                     {
                         caption = _caption
                     }
                 }
             }
+            
+            
         }
         
-        class func getArabicNameFromEnglish(englishName:String) -> String?{
+        
+        class func getArabicNameFromEnglish(englishName:String) -> String?
+        {
             return Base()[englishName].arName
         }
         
-        class func getEnglishNameFromArabic(arabicName:String) -> String?{
+        class func getEnglishNameFromArabic(arabicName:String) -> String?
+        {
             return ElementManager.searchForItemWithName(arabicName, base: Base(), nameType: ElementManager.ElementNameType.Arabic).name
         }
         
-        init(){
+        required init(coder aDecoder: NSCoder) {
+            
+            self.name            = aDecoder.decodeObjectForKey("name")           as? String
+            self.categoryName    = aDecoder.decodeObjectForKey("categoryName")   as? String
+            self.arName          = aDecoder.decodeObjectForKey("arName")         as? String
+            self.caption         = aDecoder.decodeObjectForKey("caption")        as? String
+            self.isMastered      = aDecoder.decodeObjectForKey("isMastered")     as? Bool
+            self.answeredTimes   = aDecoder.decodeObjectForKey("answeredTimes")  as? Int
+            self.isNil           = aDecoder.decodeObjectForKey("isNil")          as? Bool
+            if let answeredTimes = aDecoder.decodeObjectForKey("answeredTimes")  as? Int
+            {
+                self.answeredTimes = answeredTimes
+            }
+            else
+            {
+                self.answeredTimes = 0
+            }
+        }
+        
+        func encodeWithCoder(aCoder: NSCoder)
+        {
+            aCoder.encodeObject(name,          forKey:"name")
+            aCoder.encodeObject(categoryName,  forKey:"categoryName")
+            aCoder.encodeObject(arName,        forKey:"arName")
+            aCoder.encodeObject(caption,       forKey:"caption")
+            aCoder.encodeObject(isMastered,    forKey:"isMastered")
+            aCoder.encodeObject(answeredTimes, forKey:"answeredTimes")
+            aCoder.encodeObject(isNil        , forKey:"isNil")
+        }
+        
+        override init()
+        {
             isNil = true
+            super.init()
             // return nil
         }
         
+        
     }
+
     
     
-    class Category {
+    class Category : NSObject, NSCoding {
         
         var elementsArray : [Element]?
         var categoryName  : String?
         var rootName      : String?
         
-        func printDescreption(){
-            println("   \(categoryName!)  : {")
-            for _element in elementsArray! {
-                println("       \(_element.name!)")
+        func printDescreption()
+        {
+            print("   \(categoryName!)  : {")
+            for _element in elementsArray!
+            {
+                print("       \(_element.name!)")
             }
-            println("   }")
+            print("   }")
         }
         
         // elements with their details
-        func printDescreptionFull(){
-            for _element in elementsArray! {
+        func printDescreptionFull()
+        {
+            for _element in elementsArray!
+            {
                 _element.printDescreption()
             }
         }
         
-        init(_categoryName : String , _elementsArray : [Element]){
-            elementsArray = _elementsArray
-            categoryName  = _categoryName
+        init(_categoryName : String , _elementsArray : [Element])
+        {
+            self.elementsArray = _elementsArray
+            self.categoryName  = _categoryName
         }
         
+        
+        required init(coder aDecoder: NSCoder)
+        {
+            if let elementArray  = aDecoder.decodeObjectForKey("elementsArray") as? [Element] {
+                self.elementsArray = elementArray
+            }
+            if let categoryName  = aDecoder.decodeObjectForKey("categoryName2") as? String{
+                self.categoryName = categoryName
+            }
+            if let rootName = aDecoder.decodeObjectForKey("rootName2")     as? String
+            {
+                self.rootName = rootName
+            }
+        }
+        
+        func encodeWithCoder(aCoder: NSCoder)
+        {
+            aCoder.encodeObject(elementsArray,  forKey:"elementsArray")
+            aCoder.encodeObject(categoryName,   forKey:"categoryName2")
+            aCoder.encodeObject(rootName,       forKey:"rootName2")
+            
+        }
     }
     
-    class Root {
+    class Root: NSObject,NSCoding {
         var rootName : String?
         var categoriesArray : [Category]?
         
         func printDescreption(){
-            println("\(rootName!): {")
+            print("\(rootName!): {")
             for category in categoriesArray!{
                 category.printDescreption()
             }
-            println("}")
+            print("}")
             
             
         }
@@ -215,16 +292,34 @@ class ElementManager {
             }
             // C R A S H
             if category == nil {
-                println("No such Category named \(categoryName)")
+                print("No such Category named \(categoryName)")
             }
             return category!
+        }
+        
+        
+        required init(coder aDecoder: NSCoder) {
+            if let rootName = aDecoder.decodeObjectForKey("rootName") as? String
+            {
+                self.rootName = rootName
+            }
+            if let categoriesArray = aDecoder.decodeObjectForKey("categoriesArray") as? [Category]
+            {
+                self.categoriesArray = categoriesArray
+            }
+        }
+        
+        func encodeWithCoder(aCoder: NSCoder) {
+            aCoder.encodeObject(rootName,  forKey:"rootName")
+            aCoder.encodeObject(categoriesArray,   forKey:"categoriesArray")
+            
         }
     }
     
     // ••••••••••••••••••••••••••••••••••••••
     // ••••••••••  B   A   S   E   ••••••••••
     
-    class Base {
+    class Base : NSObject, NSCoding{
         var exists      : Bool! = false
         var rootArray   : [Root]?
         
@@ -239,15 +334,27 @@ class ElementManager {
         init(_rootArray:[Root]){
             rootArray = _rootArray
         }
-        init(){
-            rootArray = ElementManager.prepareItemsOfDataBase().rootArray
+        
+        override init(){
+            super.init()
+            
+            if ElementManager.checkNewPlistUpdate("Dictionary_1") == false
+            {
+            if let data = NSUserDefaults.standardUserDefaults().objectForKey("Base") as? NSData
+            {
+                let unarc = NSKeyedUnarchiver(forReadingWithData: data)
+                let newBase = unarc.decodeObjectForKey("root") as! Base
+                self.rootArray = newBase.rootArray
+            }
+            }
+            else
+            {
+                rootArray = ElementManager.prepareItemsOfDataBase().rootArray
+                NSUserDefaults.standardUserDefaults().setObject(NSKeyedArchiver.archivedDataWithRootObject(self), forKey: "Base")
+            }
         }
         
         
-        //        func getCategoriesArray() -> [Category]{
-        //
-        //        }
-        //
         subscript (elementName : String) -> Element{
             // searching
             let base = Base(_rootArray: rootArray!)
@@ -256,7 +363,35 @@ class ElementManager {
             return ElementManager.searchForItemWithName(elementName, base: base)
         }
         
+        
+        // Saving Data
+        
+        func sync()
+        {
+            
+            NSUserDefaults.standardUserDefaults().setObject(NSKeyedArchiver.archivedDataWithRootObject(self), forKey: "Base")
+            if let data = NSUserDefaults.standardUserDefaults().objectForKey("Base") as? NSData
+            {
+                let unarc = NSKeyedUnarchiver(forReadingWithData: data)
+                let newBase = unarc.decodeObjectForKey("root") as! Base
+                NSUserDefaults.standardUserDefaults().setObject(NSKeyedArchiver.archivedDataWithRootObject(newBase), forKey: "Base")
+                
+            }
+        }
+        required init(coder aDecoder: NSCoder) {
+            
+            
+            if let rootArray = aDecoder.decodeObjectForKey("rootArray") as? [Root] {
+                self.rootArray = rootArray
+            }
+        }
+        
+        func encodeWithCoder(aCoder: NSCoder) {
+            aCoder.encodeObject(self.rootArray, forKey: "rootArray")
+        }
+        
     }
+
     
     class func getAllElementsFromBase(base:Base?=Base()) -> [Element]{
         
@@ -284,10 +419,56 @@ class ElementManager {
             }
         }
         for i in allElementArray{
-            println(i.name!)
+            print(i.name!)
         }
         return allElementArray
     }
+    
+    enum ReturnTypeForElementManager {
+        case Root,Category,Element
+    }
+   
+    class func getAllElementsFromBase(base:Base?=Base() , returnType : ReturnTypeForElementManager) -> [NSObject]{
+        
+        func names()->[String]{
+            var ar : [String]!
+            for i in getAllElementsFromBase()
+            {
+                ar.append(i.name!)
+            }
+            return ar
+        }
+        
+        var allRootsArray       : [Root]     = []
+        var allCateogriesArray  : [Category] = []
+        var allElementArray     : [Element]  = []
+        
+        for _root in base!.rootArray!
+        {
+            allRootsArray.append(_root)
+            for _category in _root.categoriesArray!
+            {
+                allCateogriesArray.append(_category)
+                for _element in _category.elementsArray!
+                {
+                    allElementArray.append(_element)
+                }
+            }
+        }
+        for i in allElementArray{
+            print(i.name!)
+        }
+        
+        switch returnType{
+        case .Root :
+            return allRootsArray
+        case .Category :
+            return allCateogriesArray
+        case .Element :
+            return allElementArray
+        }
+    }
+    
     
     class func searchForItemWithName(name:String , base:Base,nameType : ElementNameType?=nil) -> Element{
         
@@ -304,6 +485,7 @@ class ElementManager {
                         {
                             if name == elementName
                             {
+                                _element.isNil = false
                                 return _element
                             }
                         }
@@ -315,6 +497,7 @@ class ElementManager {
                         {
                             if name == elementName
                             {
+                                _element.isNil = false
                                 return _element
                             }
                         }
@@ -425,7 +608,7 @@ class ElementManager {
                 */
                 for elementName in categoryArray{
                     //println("   \(elementName)")
-                    var element :  Element = Element(_name: elementName)
+                    let element :  Element = Element(_name: elementName)
                     element.categoryName   = categoryName
                     element.rootName       = rootName
                     elementsArray.append(element)
@@ -433,19 +616,19 @@ class ElementManager {
                 }
                 
                 //println("====")
-                var category : Category = Category(_categoryName: categoryName, _elementsArray: elementsArray)
+                let category : Category = Category(_categoryName: categoryName, _elementsArray: elementsArray)
                 categorysArray.append(category)
                 
                 
             }
             
-            var root = Root(_categoriesArray: categorysArray ,_rootName: rootName)
+            let root = Root(_categoriesArray: categorysArray ,_rootName: rootName)
             rootArray.append(root)
             //println("---------------------")
             
             
         }
-        var base : Base? = Base(_rootArray:rootArray)
+        let base : Base? = Base(_rootArray:rootArray)
         
         // T E S T I N G
         
@@ -465,5 +648,38 @@ class ElementManager {
         
         
     }
+    
+    class func checkNewPlistUpdate(plistName: String) -> Bool{
+        let def = NSUserDefaults.standardUserDefaults()
+        let path : String? = NSBundle.mainBundle().pathForResource(plistName, ofType: "plist")
+        let baseDictionary = NSDictionary(contentsOfFile: path!)
+
+        if def.objectForKey("dictionary.plist") == nil // nothing in the userDaufault
+        {
+            def.setObject(baseDictionary, forKey: "dictionary.plist")
+            return true
+        }
+        else // user default exixsts
+        {
+            if let dictionaryOfPlist = baseDictionary
+            {
+                if def.objectForKey("dictionary.plist") as? NSDictionary == dictionaryOfPlist // dictionary in userdefault identical to the current dictionary
+                {
+                    print("Dictionary has not changed")
+                    return false
+                }
+                else // dictionary in user default doenst match the current dictionary
+                {
+
+                    print("dictionary has changed !")
+                    def.setObject(dictionaryOfPlist, forKey: "dictionary.plist")
+                    return true
+
+                }
+            }
+        }
+        return false
+    }
+    
     
 }

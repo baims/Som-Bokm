@@ -154,29 +154,12 @@ class ElementVC: UIViewController {
     func prepareItemsInDictionary(){
         //** ELement Image
         elementImage.image = element?.image
-        //        if let imageOfElementInDictionary : String = element.objectForKey("image") as? String
-        //        {  elementImage.image = UIImage(named:imageOfElementInDictionary)}
-        //** ELement Caption
+
         elementCaption = element?.caption
         
-        //        if let captionOfElementInDictionary : String = element.objectForKey("caption") as? String
-        //        {   elementCaption = captionOfElementInDictionary }
-        
-        //** ELement tahjee2 Video Name from Dictionary
+
         tahjee2VideoName = element?.videoName
-        //        if let SIVideoOfElementInDictionary : String = element.objectForKey("SI_video") as? String
-        //        {   tahjee2VideoName = SIVideoOfElementInDictionary }
-        
-        
-        ////** alphabitaclally video Player NO NEED FOR NOW ,
-        //        WE SUBSITITUTE IT WITH THE ALPHABITACALY Class
-        //
-        //        if let SpellingVideoOfElementInDictionary : String = element.objectForKey("spelling_video") as? String
-        //            {   spellingVideoName = SpellingVideoOfElementInDictionary }
-        
-        
-        //Element Name in ARABIC
-        
+
         if let nameOfElementInDictionary : String = element?.arName != nil ? element?.arName! : element?.name! {
             elementName = nameOfElementInDictionary
             

@@ -97,7 +97,7 @@
     
     /*  ******************************************
     
-    L A Y O U T S
+        L A Y O U T S
     
     ******************************************
     */
@@ -240,7 +240,7 @@
         // get shuffled random numbers in an array for the buttons  , ar : is an array contains numbers from 0 to 3
         var randomNumbersArray  = [Int]()
         // var shuffledElements  = shuffle(allElementsOfCategories ,size:  allElementsOfCategories.count)
-        var _shuffledElements = shuffle(arrayOfAllElements,size: arrayOfAllElements.count)
+        var _shuffledElements = arrayOfAllElements.shuffle()
 
         
         for var k = 0 ; k < 4 ; k++ {
@@ -248,7 +248,7 @@
         }
 
         
-        var shuffledNumbers  = shuffle(randomNumbersArray,size: randomNumbersArray.count)
+        var shuffledNumbers  = randomNumbersArray.shuffle()
         
         
         for (var i = 0 ; i < 4 ; i++)

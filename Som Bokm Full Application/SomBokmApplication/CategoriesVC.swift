@@ -14,6 +14,8 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
     var categoryArray  : [ElementManager.Element]?
     var passDictionary = NSDictionary()
     
+    @IBOutlet var collectionView: UICollectionView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -27,7 +29,9 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
         self.view.sendSubviewToBack(bgImageView)
     }
     
-    
+    override func viewDidAppear(animated: Bool) {
+        collectionView.reloadData()
+    }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryArray!.count

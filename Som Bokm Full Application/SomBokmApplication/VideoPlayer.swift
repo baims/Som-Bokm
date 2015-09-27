@@ -19,6 +19,25 @@ import MediaPlayer
 class VideoPlayer: MPMoviePlayerController
 {
     var videoName : String?
+    var repetiveVideoMode : Bool!
+    func resetVideoName(videoName:String){
+        self.videoName = videoName
+        
+        if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
+        {
+            print("path is \(path)")
+            let url = NSURL.fileURLWithPath(path)
+            super.contentURL = url
+        }
+            
+        else
+        {
+            print("No such video file with name \(videoName)")
+            super.contentURL = nil
+
+        }
+    }
+    
     private var videoFrame : CGRect?
     
     override init(contentURL url: NSURL!)
@@ -30,9 +49,10 @@ class VideoPlayer: MPMoviePlayerController
     {
         videoFrame = frame
         videoName = name!
-        
+        repetiveVideoMode = true
         if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
         {
+            print("path is \(path)")
             let url = NSURL.fileURLWithPath(path)
                 
             super.init(contentURL: url)
@@ -42,9 +62,13 @@ class VideoPlayer: MPMoviePlayerController
             self.fullscreen = true
             self.controlStyle = MPMovieControlStyle.None
             self.movieSourceType = .File
-            self.repeatMode = MPMovieRepeatMode.One
+            self.repeatMode = repetiveVideoMode==true ? .One : .None
             self.view.opaque = true
             self.view.hidden = false
+            
+            if repetiveVideoMode == false{
+                self.repeatMode = .None
+            }
         }
             
         else
@@ -56,8 +80,13 @@ class VideoPlayer: MPMoviePlayerController
     func pressed(){
         replay()
     }
+    
+    
+   
 
     func replay(){
+        
+        if repetiveVideoMode == true {
         stop()
         
         if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
@@ -68,6 +97,12 @@ class VideoPlayer: MPMoviePlayerController
             self.stop()
             self.play()
             
+        }
+        }
+        else{
+            self.stop()
+
+            self.view.hidden = true
         }
     }
 }

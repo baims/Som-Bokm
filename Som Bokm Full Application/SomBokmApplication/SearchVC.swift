@@ -98,7 +98,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                 print("story telling mode is true")
                 NSNotificationCenter.defaultCenter().postNotificationName("setTextOfButtonPressed",object: selectedElement.name)
                 
-                                NSNotificationCenter.defaultCenter().postNotificationName("hideSearchView",object: nil)
+                NSNotificationCenter.defaultCenter().postNotificationName("hideSearchView",object: nil)
                 
             }
             
@@ -158,6 +158,9 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         }
     }
     
+    @IBAction func hideSearchView(sender: UIButton) {
+        NSNotificationCenter.defaultCenter().postNotificationName("hideSearchView",object: nil)
+    }
     /*
     // MARK: - Navigation
     

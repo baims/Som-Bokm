@@ -44,7 +44,8 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         base.printDescreption()
         
         
-        segmentControl.selectedSegmentIndex = (segmentControl.numberOfSegments-1) 
+        segmentControl.selectedSegmentIndex = (0)
+        collectionView.reloadData()
         
         //        self.navigationController?.navigationBarHidden = true
         
@@ -54,10 +55,12 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     }
     
     
-    
+    override func viewDidAppear(animated: Bool) {
+        collectionView.reloadData()
+    }
     
     override func viewWillAppear(animated: Bool) {
-        
+
     }
     
     // ------------- L  A  Y  O  U  T --------------

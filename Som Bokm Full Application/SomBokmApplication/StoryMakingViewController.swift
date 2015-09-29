@@ -46,9 +46,14 @@ class StoryMakingViewController: UIViewController {
     
     var viewIsLoaded = false
     
-    
+    //  Video Player
+     var videoPlayer = VideoPlayer(name: "", withFrame: CGRectMake(600, 100, 400, 300)) // BaDRaN ... Place it in the right place , add constraints
+     var showVideoTappedCounter = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.videoPlayer.repetiveVideoMode = false
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController!.navigationBar.hidden = true
@@ -58,7 +63,6 @@ class StoryMakingViewController: UIViewController {
         self.backgroundImageView.image?.accessibilityIdentifier = "parkLandscapeBG"
         /*
         ••• O m a r
-        
         */
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setTextOfButtonPressed:", name: "setTextOfButtonPressed", object: nil)
         
@@ -168,7 +172,6 @@ class StoryMakingViewController: UIViewController {
     @IBAction func typeButtonTapped(sender: UIButton) {
         self.showTypeStoryContainerView()
     }
-    
     
     @IBAction func videoButtonTapped(sender: UIButton) {
         self.showVideoRecordingContainerView()
@@ -415,13 +418,31 @@ extension StoryMakingViewController
     // show the video ?? /*** OMAR ***/
     
 // rename thue function and set all the right values
-    func showVideo(){
-        let elementName = ""
-        let element = ElementManager.Base()[elementName]
-        let frame = CGRectMake(0, 0, 2, 100) // Change the frame of course
-        let videoPlayer = VideoPlayer(name: element.videoName, withFrame: frame)
-        self.view.addSubview(videoPlayer.view)
-        
+    
+    func showVideo(elementName: String)
+    {
+        videoPlayer.repetiveVideoMode = false
+        if showVideoTappedCounter % 2 == 0
+        {
+            videoPlayer.view.hidden = false
+
+            let element = ElementManager.Base()[elementName]
+            element.printDescreption()
+            if element.isNil == false
+            {
+                
+                print("&&&& name is \(element.videoName!)")
+                videoPlayer.resetVideoName(element.videoName!)
+                self.view.addSubview(videoPlayer.view)
+                videoPlayer.play()
+            }
+        }
+        else
+        {
+            videoPlayer.view.hidden = true
+            videoPlayer.stop()
+        }
+        showVideoTappedCounter++
     }
 }
 

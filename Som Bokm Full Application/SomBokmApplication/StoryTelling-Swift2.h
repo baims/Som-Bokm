@@ -140,7 +140,7 @@ SWIFT_CLASS("_TtC12StoryTelling16ElementImageView")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithImage:(UIImage * __null_unspecified)image OBJC_DESIGNATED_INITIALIZER;
 - (void)detectPan:(UIPanGestureRecognizer * __nonnull)recognizer;
-- (void)touchesBegan:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
+- (void)touchesBegan:(NSSet * __nonnull)touches withEvent:(UIEvent * __nullable)event;
 @end
 
 @class UIButton;

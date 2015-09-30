@@ -53,7 +53,7 @@ class StoryMakingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.videoPlayer.repetiveVideoMode = false
+        self.videoPlayer.repeatEnabled = false
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController!.navigationBar.hidden = true
@@ -146,8 +146,12 @@ class StoryMakingViewController: UIViewController {
         {
             if self.storyLabel.text?.isEmpty == true && self.videoUrl == nil
             {
-                let alertView = UIAlertView(title: "اكتب القصة او صورها", message: "يجب عليك كتابة القصة او تسجيلها اولا", delegate: nil, cancelButtonTitle: "حسناً")
-                alertView.show()
+                let alertView = UIAlertController(title: "اكتب القصة او صورها", message: "يجب عليك كتابة القصة او تسجيلها اولا", preferredStyle: .Alert)
+                let cancelButton = UIAlertAction(title: "حسناً", style: .Cancel, handler: nil)
+                
+                alertView.addAction(cancelButton)
+                
+                self.presentViewController(alertView, animated: true, completion: nil)
                 
                 return false
             }
@@ -421,10 +425,10 @@ extension StoryMakingViewController
     
     func showVideo(elementName: String)
     {
-        videoPlayer.repetiveVideoMode = false
+        videoPlayer.repeatEnabled = false
         if showVideoTappedCounter % 2 == 0
         {
-            videoPlayer.view.hidden = false
+            videoPlayer.hidden = false
 
             let element = ElementManager.Base()[elementName]
             element.printDescreption()
@@ -432,14 +436,15 @@ extension StoryMakingViewController
             {
                 
                 print("&&&& name is \(element.videoName!)")
-                videoPlayer.resetVideoName(element.videoName!)
-                self.view.addSubview(videoPlayer.view)
+                //videoPlayer.resetVideoName(element.videoName!)
+                videoPlayer.videoName = element.videoName!
+                self.view.addSubview(videoPlayer)
                 videoPlayer.play()
             }
         }
         else
         {
-            videoPlayer.view.hidden = true
+            videoPlayer.hidden = true
             videoPlayer.stop()
         }
         showVideoTappedCounter++

@@ -1,111 +1,112 @@
 //
-//  Videoself.swift
-//  gestureTest
+//  VideoPlayer.swift
+//  AVPlayerKit
 //
-//  Created by Omar on 6/26/15.
-//  Copyright (c) 2015 Baims. All rights reserved.
+//  Created by Omar Alibrahim on 9/19/15.
+//  Copyright © 2015 OMSI. All rights reserved.
 //
-
-/*
-*This calss is for the video of the word in Dictionary that will display word by SL not the letters
-
-*The initilizer takes 2 arguments , videoName and its frame
-
-*/
 
 import UIKit
-import MediaPlayer
+import AVKit
+import AVFoundation
 
-class VideoPlayer: MPMoviePlayerController
-{
-    var videoName : String?
-    var repetiveVideoMode : Bool!
-    func resetVideoName(videoName:String){
-        self.videoName = videoName
-        
-        if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
-        {
-            print("path is \(path)")
-            let url = NSURL.fileURLWithPath(path)
-            super.contentURL = url
-        }
-            
-        else
-        {
-            print("No such video file with name \(videoName)")
-            super.contentURL = nil
+class VideoPlayer: UIView, AVPlayerViewControllerDelegate {
+    
+    let moviePlayerController = AVPlayerViewController()
+    var aPlayer = AVPlayer()
+    var videoName    : String!
+    var repeatEnabled : Bool? = false
+    var pipEnabled    : Bool? = false
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
 
-        }
+    }
+
+    convenience init () {
+        self.init(frame:CGRectZero)
     }
     
-    private var videoFrame : CGRect?
+    init(name: String!, withFrame frame: CGRect!){
+        super.init(frame: frame)
+        videoName   = name
+        prepareForPlay()
+//        self.play()
+    }
+    init(name: String!){
+        super.init(coder: NSCoder())!
+        videoName   = name
+        prepareForPlay()
+    }
     
-    override init(contentURL url: NSURL!)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func prepareForPlay()
     {
-        super.init(contentURL: url)
-    }
-    
-    init(name : String! , withFrame frame : CGRect!)
-    {
-        videoFrame = frame
-        videoName = name!
-        repetiveVideoMode = true
-        if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
-        {
-            print("path is \(path)")
-            let url = NSURL.fileURLWithPath(path)
-                
-            super.init(contentURL: url)
-                
-            self.view.frame = frame
-            self.scalingMode = MPMovieScalingMode.Fill
-            self.fullscreen = true
-            self.controlStyle = MPMovieControlStyle.None
-            self.movieSourceType = .File
-            self.repeatMode = repetiveVideoMode==true ? .One : .None
-            self.view.opaque = true
-            self.view.hidden = false
-            
-            if repetiveVideoMode == false{
-                self.repeatMode = .None
-            }
+        if let url = NSBundle.mainBundle().URLForResource(videoName, withExtension: "mp4") {
+            aPlayer = AVPlayer(URL: url)
         }
-            
-        else
-        {
-            super.init(contentURL: nil)
-        }
-    }
-
-    func pressed(){
-        replay()
-    }
-    
-    
-   
-
-    func replay(){
         
-        if repetiveVideoMode == true {
-        stop()
+        moviePlayerController.player = aPlayer
+        moviePlayerController.view.frame = self.frame
+        moviePlayerController.updateViewConstraints()
+        moviePlayerController.view.sizeToFit()
+        moviePlayerController.videoGravity = AVLayerVideoGravityResizeAspectFill
+        moviePlayerController.showsPlaybackControls = pipEnabled! ? true : false
+        moviePlayerController.delegate = self
         
-        if let path = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
-        {
-            let url = NSURL.fileURLWithPath(path)
-            
-            self.contentURL = url
-            self.stop()
-            self.play()
-            
-        }
-        }
-        else{
-            self.stop()
+        self.addSubview(moviePlayerController.view)
 
-            self.view.hidden = true
+    }
+    
+    func playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart(playerViewController: AVPlayerViewController) -> Bool {
+        return true
+    }
+    func playerViewControllerWillStartPictureInPicture(playerViewController: AVPlayerViewController) {
+        self.hidden = true
+    }
+    func playerViewControllerDidStopPictureInPicture(playerViewController: AVPlayerViewController) {
+        self.hidden = false
+    }
+    
+    
+    
+    func play(){
+
+        aPlayer.play()
+
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didPlayToEndTime", name: AVPlayerItemDidPlayToEndTimeNotification, object: aPlayer.currentItem)
+
+    }
+    
+
+    func didPlayToEndTime(){
+        print("didPlayToEndTime")
+        repeatEnabled == true ? repeatVideo() : stop()
+    }
+
+    func repeatVideo(){
+        aPlayer.seekToTime(kCMTimeZero)
+        aPlayer.play()
+    }
+    
+    func stop(){
+        aPlayer.pause()
+    }
+    
+var touchesCount = 0
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if moviePlayerController.showsPlaybackControls == false
+        {
+            touchesCount%2 == 0 ?     stop() : play()
+           touchesCount++
+            
         }
     }
+    
+
+    
 }
-
-
-

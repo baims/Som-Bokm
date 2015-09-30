@@ -72,7 +72,7 @@ class ElementVC: UIViewController {
             self.lettersVideoPlayer.frame.origin.x = self.elementImageFrame.origin.x
             
             self.elementInItsPosition = false
-            self.tahjee2VideoPlayer!.view.transform = CGAffineTransformMakeTranslation(410, 0)
+            self.tahjee2VideoPlayer!.transform = CGAffineTransformMakeTranslation(410, 0)
             
             }, completion: nil)
         
@@ -93,7 +93,7 @@ class ElementVC: UIViewController {
             UIView.animateWithDuration(0.4, delay: 0.0, options:[.BeginFromCurrentState, .CurveEaseInOut], animations: { () -> Void in
                 
                 self.elementImage.transform = CGAffineTransformMakeTranslation(-300, 0)
-                self.tahjee2VideoPlayer!.view.transform = CGAffineTransformMakeTranslation(-410, 0)
+                self.tahjee2VideoPlayer!.transform = CGAffineTransformMakeTranslation(-410, 0)
                 self.elementInItsPosition = false
                 
                 self.spellingVideoPlayer.transform = CGAffineTransformMakeTranslation(-450, 0)
@@ -123,7 +123,7 @@ class ElementVC: UIViewController {
         tahjee2Frame = elementImage.frame
         tahjee2Frame.origin.x = self.view.frame.size.width + 50.0
         tahjee2VideoPlayer = VideoPlayer(name: tahjee2VideoName, withFrame: tahjee2Frame)
-        self.view.addSubview(tahjee2VideoPlayer!.view)
+        self.view.addSubview(tahjee2VideoPlayer!)
         
         spellingVideoFrame = elementImage.frame
         spellingVideoFrame.origin.x =  -400.0

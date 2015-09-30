@@ -357,7 +357,7 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
     self.recording = NO;
     [self enableTorch:NO];
     
-    VideoRecordingViewController *superViewController = self.parentViewController;
+    VideoRecordingViewController *superViewController = (VideoRecordingViewController*) self.parentViewController;
     [superViewController endRecording];
     
     if(self.didRecord) {
@@ -710,7 +710,7 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
         }
     }
     else {
-        switch (self.interfaceOrientation) {
+        switch ([[UIApplication sharedApplication] statusBarOrientation]) {
             case UIInterfaceOrientationLandscapeLeft:
                 videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
                 break;
@@ -724,6 +724,7 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
                 videoOrientation = AVCaptureVideoOrientationPortrait;
                 break;
         }
+        
     }
     
     return videoOrientation;

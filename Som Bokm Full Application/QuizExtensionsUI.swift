@@ -215,7 +215,7 @@ extension QuizVC{
             for i in self.elementsImages{
                 i.alpha = 0.0
             }
-            self.tahjee2VideoPlayer?.view.alpha = 0.0
+            self.tahjee2VideoPlayer?.alpha = 0.0
             
             }, completion: { (f:Bool) -> Void in
                 
@@ -227,7 +227,7 @@ extension QuizVC{
                     for i in self.elementsImages{
                         i.alpha = 1.0
                     }
-                    self.tahjee2VideoPlayer?.view.alpha = 1.0
+                    self.tahjee2VideoPlayer?.alpha = 1.0
                     
                     
                 })

@@ -108,7 +108,7 @@
     override func viewDidAppear(animated: Bool) {
         
         tahjee2VideoPlayer = VideoPlayer(name: tahjee2VideoName, withFrame: videoContainer.frame)
-        self.view.addSubview(tahjee2VideoPlayer!.view)
+        self.view.addSubview(tahjee2VideoPlayer!)
         tahjee2VideoPlayer?.play()
         
         
@@ -295,9 +295,7 @@
         
         
         tahjee2VideoPlayer?.videoName = tahjee2VideoName
-        tahjee2VideoPlayer?.replay()
-        
-        
+        tahjee2VideoPlayer?.repeatVideo()
     }
     
     

@@ -12,13 +12,20 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
     
     var selectedIndexPath : NSIndexPath!
     var categoryArray  : [ElementManager.Element]?
-    var passDictionary = NSDictionary()
+    var masterMode     : Bool? = false
     
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if masterMode == true {
+            categoryArray = ElementManager.getMasteredWords()
+        }
+
     }
     
     override func viewWillLayoutSubviews() {

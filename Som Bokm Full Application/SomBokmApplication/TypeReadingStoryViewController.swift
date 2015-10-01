@@ -25,6 +25,7 @@ class TypeReadingStoryViewController: UIViewController {
         super.viewDidLoad()
 
         arrayOfButtons = [word1Button, word2Button, word3Button, word4Button, word5Button]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +71,8 @@ class TypeReadingStoryViewController: UIViewController {
         let wordButton = arrayOfButtons[self.buttonIndex] as! StoryReadingWordButton
         wordButton.englishName = englishName
         wordButton.text       = wordButton.getTextOfWord()
+        
+        self.removeUnnecessaryWordButtons()
     }
     
     
@@ -77,10 +80,14 @@ class TypeReadingStoryViewController: UIViewController {
     {
         if adminMode == false
         {
+            print("shhiititttt")
+            
             for wordButton in arrayOfButtons
             {
+                print((wordButton as! StoryReadingWordButton).englishName)
                 if (wordButton as! StoryReadingWordButton).englishName == nil
                 {
+                    print("shhiititttt333333333")
                     (wordButton as! StoryReadingWordButton).hidden = true
                 }
                 else

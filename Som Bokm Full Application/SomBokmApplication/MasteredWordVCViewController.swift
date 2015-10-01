@@ -80,21 +80,33 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
     }
     
     @IBAction func clearAllWords(sender:UIButton){
-        let alert = UIAlertView(title: "تحذير!", message: "سيتم مسح جميع الكلمات من قائمة الكلمات المتقنة , هل أنت متأكد ؟", delegate: self, cancelButtonTitle: "Clear", otherButtonTitles: "Cancel")
-        alert.show()
+        let alert = UIAlertController(title: "تحذير!", message: "سيتم مسح جميع الكلمات من قائمة الكلمات المتقنة , هل أنت متأكد ؟", preferredStyle: .Alert)
+        let cancel = UIAlertAction(title: "امسح", style: .Cancel)
+            { (action) -> Void in
+            
+            self.masteredWordsArray = []
+            ElementManager.resetBase()
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("reloadBase", object: nil)
+            
+            self.tableView.reloadData()
+        }
+        alert.addAction(cancel)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
 
     }
     
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        if buttonIndex == 0 {
-            
-            masteredWordsArray = []
-            ElementManager.resetBase()
-            NSNotificationCenter.defaultCenter().postNotificationName("reloadBase", object: nil)
-            tableView.reloadData()
-
-        }
-    }
+//    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+//        if buttonIndex == 0 {
+//            
+//            masteredWordsArray = []
+//            ElementManager.resetBase()
+//            NSNotificationCenter.defaultCenter().postNotificationName("reloadBase", object: nil)
+//            tableView.reloadData()
+//
+//        }
+//    }
     
 }
 

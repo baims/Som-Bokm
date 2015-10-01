@@ -78,8 +78,12 @@ class VideoRecordingViewController: UIViewController {
             {
                 if error?.code == 10 || error?.code == 11
                 {
-                    let alert = UIAlertView(title: "no permission", message: "We need permission for the camera", delegate: self, cancelButtonTitle: "Ok")
-                    alert.show()
+                    let alert = UIAlertController(title: "تحذير!", message: "سيتم مسح جميع الكلمات من قائمة الكلمات المتقنة , هل أنت متأكد ؟", preferredStyle: .Alert)
+                    let cancel = UIAlertAction(title: "امسح", style: .Cancel, handler: nil)
+                    
+                    alert.addAction(cancel)
+                    
+                    self.presentViewController(alert, animated: true, completion: nil)
                 }
             }
             

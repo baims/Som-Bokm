@@ -121,6 +121,7 @@ class StoryMakingViewController: UIViewController {
         {
             adminTypeStoryViewController = segue.destinationViewController as! TypeReadingStoryViewController
             adminTypeStoryViewController.adminMode = self.adminMode
+            adminTypeStoryViewController.removeUnnecessaryWordButtons()
         }
             
         else if segue.identifier == "Search"
@@ -144,7 +145,7 @@ class StoryMakingViewController: UIViewController {
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         if identifier == "NextScene"
         {
-            if self.storyLabel.text?.isEmpty == true && self.videoUrl == nil
+            if self.storyLabel.text?.isEmpty == true && self.videoUrl == nil && self.typeOfRealmString == "Telling"
             {
                 let alertView = UIAlertController(title: "اكتب القصة او صورها", message: "يجب عليك كتابة القصة او تسجيلها اولا", preferredStyle: .Alert)
                 let cancelButton = UIAlertAction(title: "حسناً", style: .Cancel, handler: nil)
@@ -682,6 +683,11 @@ extension StoryMakingViewController
             }
 
             self.enableUserInteractionsForAllElements(false)
+        }
+        
+        if self.adminMode == true && (self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing")
+        {
+            self.editStoryButton.hidden = true
         }
     }
 }

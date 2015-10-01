@@ -12,22 +12,31 @@ extension CategoriesVC : UIAlertViewDelegate{
 /*
     Bader change Alert
 */
-    @IBAction func clearAllWords(sender:UIButton){
-        let alert = UIAlertView(title: "تحذير!", message: "سيتم مسح جميع الكلمات من قائمة الكلمات المتقنة , هل أنت متأكد ؟", delegate: self, cancelButtonTitle: "Clear", otherButtonTitles: "Cancel")
-        alert.show()
+    @IBAction func clearAllWords(sender:UIButton)
+    {
+        let alert = UIAlertController(title: "تحذير!", message: "سيتم مسح جميع الكلمات من قائمة الكلمات المتقنة , هل أنت متأكد ؟", preferredStyle: .Alert)
+        let cancel = UIAlertAction(title: "امسح", style: .Cancel) { (action) -> Void in
+            self.categoryArray = []
+            ElementManager.resetBase()
+            
+            self.collectionView.reloadData()
+        }
+        alert.addAction(cancel)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
   
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        if buttonIndex == 0 {
-            
-            categoryArray = []
-            ElementManager.resetBase()
-            
-            collectionView.reloadData()
-            
-        }
-    }
+//    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+//        if buttonIndex == 0 {
+//            
+//            categoryArray = []
+//            ElementManager.resetBase()
+//            
+//            collectionView.reloadData()
+//            
+//        }
+//    }
 }
 
 

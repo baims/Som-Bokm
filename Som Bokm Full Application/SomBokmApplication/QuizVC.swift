@@ -223,7 +223,7 @@
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let toMasterId = "toMastered"
         if segue.identifier == toMasterId{
-            let vc : MasteredWordVCViewController = segue.destinationViewController as! MasteredWordVCViewController
+            //let vc : MasteredWordVCViewController = segue.destinationViewController as! MasteredWordVCViewController
 
         }
         else if segue.identifier == "fromQuizToCategories"  {

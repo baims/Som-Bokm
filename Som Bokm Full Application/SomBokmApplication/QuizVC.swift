@@ -55,7 +55,6 @@
     var gameCount = 0
     var rightAnsweredTimes = Int()
     
-    var def = NSUserDefaults.standardUserDefaults()
     
     var base : ElementManager.Base!
     
@@ -77,7 +76,6 @@
         dictionaryOfAllElements = DictionaryManager.getAllElementsInDictinoary()
         base = ElementManager.Base()
         arrayOfAllElements = ElementManager.getAllElementsFromBase(base)
-//        println("OMSILALA \(arrayOfAllElements.description)")
         
         elementsImages = [self.image1, self.image2 , self.image3 , self.image4]
         
@@ -88,9 +86,22 @@
         play()
         
         self.image1.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadBase:", name: "reloadBase", object: nil)
     }
     
-    
+    func reloadBase(notification : NSNotification){
+        if base != ElementManager.Base()
+        {
+            print("Base Has new version")
+            dictionaryOfAllElements = DictionaryManager.getAllElementsInDictinoary()
+            base = ElementManager.Base()
+            arrayOfAllElements = ElementManager.getAllElementsFromBase(base)
+        }
+        else{
+            print("Base Hasnt updated")
+        }
+    }
     
     
     
@@ -106,7 +117,6 @@
     
     
     override func viewDidAppear(animated: Bool) {
-        
         tahjee2VideoPlayer = VideoPlayer(name: tahjee2VideoName, withFrame: videoContainer.frame)
         self.view.addSubview(tahjee2VideoPlayer!.view)
         tahjee2VideoPlayer?.play()
@@ -115,6 +125,8 @@
         prepareCorrectionImage()
         self.view.addSubview(correctionImage)
     }
+    
+    
     
     
     
@@ -209,11 +221,16 @@
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //let id = "toMastered"
-        let vc : MasteredWordVCViewController = segue.destinationViewController as! MasteredWordVCViewController
+        let toMasterId = "toMastered"
+        if segue.identifier == toMasterId{
+            let vc : MasteredWordVCViewController = segue.destinationViewController as! MasteredWordVCViewController
+
+        }
+        else if segue.identifier == "fromQuizToCategories"  {
+            let vc : CategoriesVC = segue.destinationViewController as! CategoriesVC
+            vc.masterMode = true
+        }
         
-        
-        vc.masteredWordsArray = masteredWords
         
         
         

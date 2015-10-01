@@ -7,6 +7,13 @@
 //
 
 import UIKit
+/*
+
+
+you can delete this class no longer useful
+
+
+*/
 
 class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UITableViewDataSource  , UIAlertViewDelegate {
 
@@ -15,16 +22,39 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-// uncomment this line if you are using NSUserDefaults 
-        
-//        masteredWordsArray = NSUserDefaults.standardUserDefaults().objectForKey("MasteredWordsArray") as! [String]
-        
-        print(masteredWordsArray)
-
-        // Do any additional setup after loading the view.
+              // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+
+//        let allElemtns = ElementManager.getAllElementsFromBase()
+        masteredWordsArray = []
+        
+        for i in ElementManager.getMasteredWords()
+        {
+                masteredWordsArray +=  [i.name!]
+            
+        }
+                tableView.reloadData()
+        // reload Base in Quiz VC
+        
+//        for element in allElemtns{
+        
+            //            print(element.isMastered == false ? element.name! + " not mastered" : element.name! + " is Mastered\n")
+//            if element.isMastered! == true
+//            {
+//                print("element 1 in mastered : " + element.name!)
+//                masteredWordsArray.append(element.name!)
+//            }
+//        }
+        // uncomment this line if you are using NSUserDefaults
+        
+        //        masteredWordsArray = NSUserDefaults.standardUserDefaults().objectForKey("MasteredWordsArray") as! [String]
+        
+        print(masteredWordsArray)
+        
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,21 +87,19 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
     
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
         if buttonIndex == 0 {
-            NSUserDefaults.standardUserDefaults().setObject([], forKey: "MasteredWordsArray")
+            
             masteredWordsArray = []
-            //var Print_numberOFmasteredWords = ElementManager.getMasteredWords()
-            
             ElementManager.resetBase()
-            
+            NSNotificationCenter.defaultCenter().postNotificationName("reloadBase", object: nil)
             tableView.reloadData()
 
         }
     }
     
+}
 
-    
+
     /*
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -80,29 +108,7 @@ class MasteredWordVCViewController: UIViewController , UITableViewDelegate ,  UI
     }
     */
 
-}
 
-extension ElementManager {
-    class func getMasteredWords()->[ElementManager.Element]
-    {
-        var mastered : [ElementManager.Element] = []
-                
-        for element in self.getAllElementsFromBase()
-        {
-            if element.isMastered! == true{
-//                print(element.name! + "  IS master\n")
-                mastered.append(element)
-            }
-        }
-        print("All mastered words are\(mastered.count)")
-        return mastered
-    }
-}
 
-extension ElementManager{
-    class func resetBase(){
-        var b = Base()
-            b = prepareItemsOfDataBase()
-            b.sync()
-    }
-}
+
+

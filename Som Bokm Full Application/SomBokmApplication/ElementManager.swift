@@ -269,6 +269,16 @@ class ElementManager {
             
         }
         
+        func printDisprectiveDescreption(){
+            print("\(rootName!): {")
+            for category in categoriesArray!{
+                category.printDescreptionFull()
+            }
+            print("}")
+            
+            
+        }
+        
         init(_categoriesArray:[Category] , _rootName:String){
             categoriesArray = _categoriesArray
             rootName        = _rootName
@@ -327,6 +337,13 @@ class ElementManager {
         {
             for root in rootArray!{
                 root.printDescreption()
+            }
+            
+        }
+        func printDisprectiveDescreption()
+        {
+            for root in rootArray!{
+                root.printDisprectiveDescreption()
             }
             
         }
@@ -392,9 +409,11 @@ class ElementManager {
         
     }
 
+    // MARK: - public Functions for Base
+
     
     class func getAllElementsFromBase(base:Base?=Base()) -> [Element]{
-        
+
         func names()->[String]{
             var ar : [String]!
             for i in getAllElementsFromBase()
@@ -562,8 +581,9 @@ class ElementManager {
     }
     
     
-    // -------- THE MAIN FUNCTION
-    
+    /**
+        THE MAIN FUNCTION initilize the base with deafult values from the plist
+     */
     
     class func prepareItemsOfDataBase()-> Base {
         /*
@@ -629,20 +649,6 @@ class ElementManager {
             
         }
         let base : Base? = Base(_rootArray:rootArray)
-        
-        // T E S T I N G
-        
-        //    if let _base = base {
-        //        _base.rootArray![0].categoriesArray![0].elementsArray![0].isMastered = true
-        //
-        //        let element1 = _base["hammer"]
-        //        element1.isMastered = true
-        //        _base.printDescreption()
-        //        _base["lion"].isMastered = true
-        //
-        //        //println(base["lion"].isMastered)
-        //
-        //    }
         
         return base!
         

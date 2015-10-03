@@ -16,7 +16,7 @@ class VideoPlayer: UIView, AVPlayerViewControllerDelegate {
     var aPlayer = AVPlayer()
     var videoName    : String!
     var repeatEnabled : Bool? = false
-    var pipEnabled    : Bool? = false
+    var pipEnabled    : Bool? = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,11 +54,11 @@ class VideoPlayer: UIView, AVPlayerViewControllerDelegate {
         moviePlayerController.updateViewConstraints()
         moviePlayerController.view.sizeToFit()
         moviePlayerController.videoGravity = AVLayerVideoGravityResizeAspectFill
-        moviePlayerController.showsPlaybackControls = pipEnabled! ? true : false
+        moviePlayerController.showsPlaybackControls = pipEnabled!
         moviePlayerController.delegate = self
+    
         
         self.addSubview(moviePlayerController.view)
-
     }
     
     func playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart(playerViewController: AVPlayerViewController) -> Bool {

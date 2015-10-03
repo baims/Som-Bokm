@@ -150,7 +150,6 @@
 		07EAD3E91B7EE48A002B43C6 /* ؤa.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EAD3C71B7EE48A002B43C6 /* ؤa.png */; };
 		07EAD3EA1B7EE48A002B43C6 /* ىa.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EAD3C81B7EE48A002B43C6 /* ىa.png */; };
 		07EAD3EB1B7EE48A002B43C6 /* يa.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EAD3C91B7EE48A002B43C6 /* يa.png */; };
-		07EAD3F01B7EED2A002B43C6 /* MasteredWordVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAD3EE1B7EED2A002B43C6 /* MasteredWordVCViewController.swift */; };
 		07EAD3F11B7EED2A002B43C6 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAD3EF1B7EED2A002B43C6 /* QuizVC.swift */; };
 		07FB934A1B91FF0A0054B556 /* StoryTelling Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07FB93491B91FF0A0054B556 /* StoryTelling Media.xcassets */; };
 		07FB934C1B91FF360054B556 /* Elements.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07FB934B1B91FF360054B556 /* Elements.xcassets */; };
@@ -159,6 +158,7 @@
 		1718D6561B2B88A1004004A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1718D6541B2B88A1004004A6 /* LaunchScreen.xib */; };
 		1718D6621B2B88A1004004A6 /* SomBokmApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1718D6611B2B88A1004004A6 /* SomBokmApplicationTests.swift */; };
 		17A23DE31B2B9D2500695F98 /* SC_DUBAI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17A23DE21B2B9D2500695F98 /* SC_DUBAI.ttf */; };
+		9F33548E1BC07C5100FA1A21 /* GE SS Two Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F33548D1BC07C5100FA1A21 /* GE SS Two Medium.otf */; settings = {ASSET_TAGS = (); }; };
 		9F8F30B91BAAE65100364A0B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30B81BAAE65100364A0B /* MediaPlayer.framework */; };
 		9F8F30C11BAAE68D00364A0B /* MediaPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30B81BAAE65100364A0B /* MediaPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F8F30CA1BAAEA4A00364A0B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30C81BAAEA4A00364A0B /* Realm.framework */; };
@@ -351,7 +351,6 @@
 		07EAD3C71B7EE48A002B43C6 /* ؤa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ؤa.png"; sourceTree = "<group>"; };
 		07EAD3C81B7EE48A002B43C6 /* ىa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ىa.png"; sourceTree = "<group>"; };
 		07EAD3C91B7EE48A002B43C6 /* يa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "يa.png"; sourceTree = "<group>"; };
-		07EAD3EE1B7EED2A002B43C6 /* MasteredWordVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasteredWordVCViewController.swift; sourceTree = "<group>"; };
 		07EAD3EF1B7EED2A002B43C6 /* QuizVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		07FB93491B91FF0A0054B556 /* StoryTelling Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "StoryTelling Media.xcassets"; path = "SomBokmApplication/StoryTelling Media.xcassets"; sourceTree = "<group>"; };
 		07FB934B1B91FF360054B556 /* Elements.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Elements.xcassets; path = SomBokmApplication/Elements.xcassets; sourceTree = "<group>"; };
@@ -364,6 +363,7 @@
 		1718D6601B2B88A1004004A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1718D6611B2B88A1004004A6 /* SomBokmApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomBokmApplicationTests.swift; sourceTree = "<group>"; };
 		17A23DE21B2B9D2500695F98 /* SC_DUBAI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SC_DUBAI.ttf; sourceTree = "<group>"; };
+		9F33548D1BC07C5100FA1A21 /* GE SS Two Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE SS Two Medium.otf"; sourceTree = "<group>"; };
 		9F8F30B81BAAE65100364A0B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		9F8F30C81BAAEA4A00364A0B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		9F8F30C91BAAEA4A00364A0B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
@@ -581,7 +581,6 @@
 				079632141B9352EF00CC70A7 /* QuizChooseVC.swift */,
 				07EAD3EF1B7EED2A002B43C6 /* QuizVC.swift */,
 				074C51AA1B95A0590097FE55 /* codes */,
-				07EAD3EE1B7EED2A002B43C6 /* MasteredWordVCViewController.swift */,
 			);
 			name = Quiz;
 			sourceTree = "<group>";
@@ -590,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				17A23DE21B2B9D2500695F98 /* SC_DUBAI.ttf */,
+				9F33548D1BC07C5100FA1A21 /* GE SS Two Medium.otf */,
 				07EAD34C1B7EB2ED002B43C6 /* Thumb alphabit */,
 				07EAD3A51B7EB954002B43C6 /* Videos */,
 				07FB934B1B91FF360054B556 /* Elements.xcassets */,
@@ -834,6 +834,7 @@
 				07EAD2E11B7EB2BF002B43C6 /* تSI.png in Resources */,
 				07EAD2EF1B7EB2BF002B43C6 /* ظSI.png in Resources */,
 				07EAD2F11B7EB2BF002B43C6 /* غSI.png in Resources */,
+				9F33548E1BC07C5100FA1A21 /* GE SS Two Medium.otf in Resources */,
 				07EAD3261B7EB2E9002B43C6 /* ء_thumb.png in Resources */,
 				07EAD2FC1B7EB2BF002B43C6 /* ىSI.png in Resources */,
 				07EAD3451B7EB2E9002B43C6 /* ن_thumb.png in Resources */,
@@ -998,7 +999,6 @@
 				9FF207631BA1E25000B2345B /* TypeReadingStoryViewController.swift in Sources */,
 				9FBB27101B7FB88D00BD8041 /* StoryTellingRealm.swift in Sources */,
 				07EAD2AB1B7EB263002B43C6 /* SearchTableViewCell.swift in Sources */,
-				07EAD3F01B7EED2A002B43C6 /* MasteredWordVCViewController.swift in Sources */,
 				07EAD2B01B7EB289002B43C6 /* VideoPlayer.swift in Sources */,
 				9FBB27081B7FB83900BD8041 /* ElementImageView.swift in Sources */,
 			);

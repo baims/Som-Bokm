@@ -98,11 +98,15 @@ class SavedStoriesCollectionViewController: UIViewController, UICollectionViewDe
 // MARK: Storyboard buttons actions
 extension SavedStoriesCollectionViewController
 {
-    @IBAction func editButtonTapped(sender: UIButton) {
-        if !self.isEditingCollectionView {
+    @IBAction func editButtonTapped(sender: UIButton)
+    {
+        let normalImage = sender.imageForState(.Normal)
+        sender.setImage(sender.imageForState(.Highlighted), forState: .Normal)
+        sender.setImage(normalImage, forState: .Highlighted)
+        
+        if !self.isEditingCollectionView
+        {
             self.isEditingCollectionView = true
-            
-            sender.setTitle("تم", forState: UIControlState.Normal)
             
             self.deleteButton.enabled           = true
             self.addToReadStoriesButton.enabled = true
@@ -110,10 +114,9 @@ extension SavedStoriesCollectionViewController
             self.collectionView!.reloadData()
             
         }
-        else if self.isEditingCollectionView {
+        else
+        {
             self.isEditingCollectionView = false
-            
-            sender.setTitle("تعديل", forState: UIControlState.Normal)
             
             self.deleteButton.enabled           = false
             self.addToReadStoriesButton.enabled = false
@@ -212,13 +215,28 @@ extension SavedStoriesCollectionViewController
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! SavedStoryCollectionViewCell
         
-        cell.dateLabel.text = "\(self.stories[indexPath.item].date)"
+        let dateFormat = NSDateFormatter()
+        dateFormat.dateFormat = "dd-MM-yyyy"
+        
+        cell.dateLabel.text = "\(dateFormat.stringFromDate(self.stories[indexPath.item].date))"
         cell.storyTelling   = self.stories[indexPath.item]
+        
+        cell.bgImageView.image = UIImage(named: (self.stories[indexPath.item].scenes.first?.backgroundImageName)!)
         
         
         let backgroundView = UIView(frame: cell.frame)
-        backgroundView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        let tickImageView  = UIImageView(image: UIImage(named: "tick"))
+        tickImageView.frame = CGRectMake(8, 8, 28, 28)
+        
+        if self.isEditingCollectionView == true
+        {
+            backgroundView.addSubview(tickImageView)
+        }
+        
         cell.selectedBackgroundView = backgroundView
+        cell.bringSubviewToFront(cell.selectedBackgroundView!)
+        
+        cell.layoutIfNeeded()
         
         return cell
     }

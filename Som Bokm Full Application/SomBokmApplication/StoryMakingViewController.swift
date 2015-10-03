@@ -87,6 +87,11 @@ class StoryMakingViewController: UIViewController {
                 self.editStoryButton.hidden = true
             }
             
+            if self.typeOfRealmString == "Telling"
+            {
+                self.adminTypeStoryContainerView.hidden = true
+            }
+            
             self.checkIfSceneIsSaved()
         }
         

@@ -216,7 +216,7 @@ extension SavedStoriesCollectionViewController
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! SavedStoryCollectionViewCell
         
         let dateFormat = NSDateFormatter()
-        dateFormat.dateFormat = "dd-MM-yyyy"
+        dateFormat.dateFormat = "hh:mm  dd/MM/yyyy"
         
         cell.dateLabel.text = "\(dateFormat.stringFromDate(self.stories[indexPath.item].date))"
         cell.storyTelling   = self.stories[indexPath.item]

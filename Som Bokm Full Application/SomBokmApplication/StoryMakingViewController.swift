@@ -82,6 +82,11 @@ class StoryMakingViewController: UIViewController {
                 self.backSceneButton.hidden = true
             }
             
+            if self.typeOfRealmString == "Reading" || (self.typeOfRealmString == "Completing" && self.adminMode == true)
+            {
+                self.editStoryButton.hidden = true
+            }
+            
             self.checkIfSceneIsSaved()
         }
         
@@ -685,7 +690,7 @@ extension StoryMakingViewController
             self.enableUserInteractionsForAllElements(false)
         }
         
-        if self.adminMode == true && (self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing")
+        if self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing"
         {
             self.editStoryButton.hidden = true
         }

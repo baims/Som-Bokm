@@ -11,6 +11,8 @@ import UIKit
 class SavedStoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
-    var storyTelling : StoryTelling!
+    @IBOutlet weak var bgImageView: UIImageView!
     
+    
+    var storyTelling : StoryTelling!
 }

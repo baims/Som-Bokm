@@ -50,7 +50,7 @@ class VideoPlayer: UIView, AVPlayerViewControllerDelegate {
         }
         
         moviePlayerController.player = aPlayer
-        moviePlayerController.view.frame = self.frame
+        moviePlayerController.view.frame = CGRectMake(0, 0, self.frame.width, self.frame.height)
         moviePlayerController.updateViewConstraints()
         moviePlayerController.view.sizeToFit()
         moviePlayerController.videoGravity = AVLayerVideoGravityResizeAspectFill

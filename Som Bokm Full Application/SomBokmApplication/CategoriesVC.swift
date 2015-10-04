@@ -15,6 +15,7 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
     var masterMode     : Bool? = false
     
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var deleteMasteredWordsButton: UIButton!
     
     override func viewDidLoad()
     {
@@ -25,7 +26,9 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
         if masterMode == true {
             categoryArray = ElementManager.getMasteredWords()
         }
-
+        else{
+            deleteMasteredWordsButton.hidden = true
+        }
     }
     
     override func viewWillLayoutSubviews() {

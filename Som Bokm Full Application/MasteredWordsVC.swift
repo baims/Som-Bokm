@@ -15,14 +15,15 @@ extension CategoriesVC : UIAlertViewDelegate{
     @IBAction func clearAllWords(sender:UIButton)
     {
         let alert = UIAlertController(title: "تحذير!", message: "سيتم مسح جميع الكلمات من قائمة الكلمات المتقنة , هل أنت متأكد ؟", preferredStyle: .Alert)
-        let cancel = UIAlertAction(title: "امسح", style: .Cancel) { (action) -> Void in
+        let erase = UIAlertAction(title: "امسح", style: .Cancel) { (action) -> Void in
             self.categoryArray = []
             ElementManager.resetBase()
-            
+
             self.collectionView.reloadData()
         }
+        let cancel = UIAlertAction(title: "cancel", style: .Default, handler: nil)
+        alert.addAction(erase)
         alert.addAction(cancel)
-        
         self.presentViewController(alert, animated: true, completion: nil)
     }
     

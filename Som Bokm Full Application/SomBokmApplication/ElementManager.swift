@@ -93,7 +93,22 @@ class ElementManager {
             }
         }
         
-        
+        var videoExist : Bool {
+            get {
+                if let tahjee2vidName : String? = NSBundle.mainBundle().pathForResource(videoName, ofType: "mp4")
+                {
+
+                    if tahjee2vidName != nil
+                    {
+                        return true
+                    }
+                    else
+                    {
+                        return false
+                    }
+                }
+            }
+        }
         
         func printDescreption(){
             print(name            != nil ? " •\(name!): { "                          : "nil"         )
@@ -409,8 +424,23 @@ class ElementManager {
         
     }
 
-    // MARK: - public Functions for Base
+    // MARK: - For QuizVC , showing only questions for elements has video
 
+    class func  getElementsWithVideos() -> [Element]
+    {
+        let array = getAllElementsFromBase()
+        var array2 : [Element] = []
+        var counter = 0
+        for i in array
+        {
+            if i.videoExist == true
+            {
+               array2.append(i)
+            }
+            counter++
+        }
+        return array2
+    }
     
     class func getAllElementsFromBase(base:Base?=Base()) -> [Element]{
 
@@ -654,6 +684,8 @@ class ElementManager {
         
         
     }
+    
+    
     
     class func checkNewPlistUpdate(plistName: String) -> Bool{
         let def = NSUserDefaults.standardUserDefaults()

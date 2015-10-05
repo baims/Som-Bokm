@@ -15,7 +15,7 @@ class VideoPlayer: UIView, AVPlayerViewControllerDelegate {
     let moviePlayerController = AVPlayerViewController()
     var aPlayer = AVPlayer()
     var videoName    : String!
-    var repeatEnabled : Bool? = false
+    var repeatEnabled : Bool? = true
     var pipEnabled    : Bool? = true
     
     override init(frame: CGRect) {

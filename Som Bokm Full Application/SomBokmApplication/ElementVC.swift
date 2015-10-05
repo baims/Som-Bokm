@@ -85,7 +85,9 @@ class ElementVC: UIViewController {
         
         tahjee2VideoPlayer!.play()
         
-        if  elementHasTahjee2Video{
+//        if  elementHasTahjee2Video{
+        if element!.videoExist
+        {
             print(elementHasTahjee2Video)
             
             
@@ -178,18 +180,19 @@ class ElementVC: UIViewController {
         }
         
         // Get the tahjee2 Video from the bundle
-        if let tahjee2vidName : String? = NSBundle.mainBundle().pathForResource(tahjee2VideoName, ofType: "mp4"){
-            print(tahjee2VideoName)
-            if tahjee2vidName != nil{
-                elementHasTahjee2Video = true
-                print("\n\n\n********\n\n\nDoes have a video\n\n\(tahjee2vidName)")
-                
-            }  else{
-                elementHasTahjee2Video = false
-                print("\n\n\n********\n\n\nDoesnt have a video\n\n\n*********\n\n\n")
-            }
-            
-        }
+        // uncommented , did it in ElememntManager.Element ., Element.videoExist
+//        if let tahjee2vidName : String? = NSBundle.mainBundle().pathForResource(tahjee2VideoName, ofType: "mp4"){
+//            print(tahjee2VideoName)
+//            if tahjee2vidName != nil{
+//                elementHasTahjee2Video = true
+//                print("\n\n\n********\n\n\nDoes have a video\(tahjee2vidName)")
+//                
+//            }  else{
+//                elementHasTahjee2Video = false
+//                print("\n\n\n********\n\n\nDoesnt have a video*********\(tahjee2vidName)\n\n\n")
+//            }
+//            
+//        }
         //CAPTION
         
         if let caption : String? = element?.caption

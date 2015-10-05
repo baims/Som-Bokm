@@ -2,6 +2,80 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>أبجدي</key>
+	<dict>
+		<key>احرف</key>
+		<array>
+			<string>أ</string>
+			<string>ب</string>
+			<string>ت</string>
+			<string>ث</string>
+			<string>ج</string>
+			<string>ح</string>
+			<string>خ</string>
+			<string>د</string>
+			<string>ذ</string>
+			<string>ر</string>
+			<string>ز</string>
+			<string>س</string>
+			<string>ش</string>
+			<string>ص</string>
+			<string>ض</string>
+			<string>ط</string>
+			<string>ظ</string>
+			<string>ع</string>
+			<string>غ</string>
+			<string>ف</string>
+			<string>ق</string>
+			<string>ك</string>
+			<string>ل</string>
+			<string>م</string>
+			<string>ن</string>
+			<string>ه</string>
+			<string>و</string>
+			<string>ي</string>
+		</array>
+		<key>ارقام</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>3</string>
+			<string>4</string>
+			<string>5</string>
+			<string>6</string>
+			<string>7</string>
+			<string>8</string>
+			<string>9</string>
+			<string>10</string>
+			<string>11</string>
+			<string>12</string>
+			<string>13</string>
+			<string>14</string>
+			<string>15</string>
+			<string>16</string>
+			<string>17</string>
+			<string>18</string>
+			<string>19</string>
+			<string>20</string>
+			<string>21</string>
+			<string>22</string>
+			<string>23</string>
+			<string>24</string>
+			<string>25</string>
+			<string>26</string>
+		</array>
+	</dict>
+	<key>أفعال</key>
+	<dict>
+		<key>ماضي</key>
+		<array>
+			<string>شرب</string>
+		</array>
+		<key>حاضر</key>
+		<array>
+			<string>أكل</string>
+		</array>
+	</dict>
 	<key>التصنيف</key>
 	<dict>
 		<key>حيوانات</key>
@@ -26,7 +100,11 @@
 				<string>حصان</string>
 				<string>الدعسوقة حيوان مسكين</string>
 			</array>
-			<string>ladybug</string>
+			<array>
+				<string>ladybug</string>
+				<string>دعسوقة</string>
+				<string>الدعسوقة تسمى ام علي بالكويتي</string>
+			</array>
 			<string>butterfly</string>
 		</array>
 		<key>نباتات</key>

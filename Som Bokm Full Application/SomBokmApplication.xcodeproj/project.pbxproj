@@ -159,8 +159,6 @@
 		1718D6621B2B88A1004004A6 /* SomBokmApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1718D6611B2B88A1004004A6 /* SomBokmApplicationTests.swift */; };
 		17A23DE31B2B9D2500695F98 /* SC_DUBAI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17A23DE21B2B9D2500695F98 /* SC_DUBAI.ttf */; };
 		9F33548E1BC07C5100FA1A21 /* GE SS Two Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F33548D1BC07C5100FA1A21 /* GE SS Two Medium.otf */; settings = {ASSET_TAGS = (); }; };
-		9F8F30B91BAAE65100364A0B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30B81BAAE65100364A0B /* MediaPlayer.framework */; };
-		9F8F30C11BAAE68D00364A0B /* MediaPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30B81BAAE65100364A0B /* MediaPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F8F30CA1BAAEA4A00364A0B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30C81BAAEA4A00364A0B /* Realm.framework */; };
 		9F8F30CB1BAAEA4A00364A0B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30C81BAAEA4A00364A0B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F8F30CC1BAAEA4A00364A0B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30C91BAAEA4A00364A0B /* RealmSwift.framework */; };
@@ -199,7 +197,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9F8F30CB1BAAEA4A00364A0B /* Realm.framework in Embed Frameworks */,
-				9F8F30C11BAAE68D00364A0B /* MediaPlayer.framework in Embed Frameworks */,
 				9F8F30CD1BAAEA4A00364A0B /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -364,7 +361,6 @@
 		1718D6611B2B88A1004004A6 /* SomBokmApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomBokmApplicationTests.swift; sourceTree = "<group>"; };
 		17A23DE21B2B9D2500695F98 /* SC_DUBAI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SC_DUBAI.ttf; sourceTree = "<group>"; };
 		9F33548D1BC07C5100FA1A21 /* GE SS Two Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE SS Two Medium.otf"; sourceTree = "<group>"; };
-		9F8F30B81BAAE65100364A0B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		9F8F30C81BAAEA4A00364A0B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		9F8F30C91BAAEA4A00364A0B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		9FBB26FC1B7FB76200BD8041 /* StoryTelling-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StoryTelling-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -393,7 +389,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F8F30CA1BAAEA4A00364A0B /* Realm.framework in Frameworks */,
-				9F8F30B91BAAE65100364A0B /* MediaPlayer.framework in Frameworks */,
 				9F8F30CC1BAAEA4A00364A0B /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,21 +580,6 @@
 			name = Quiz;
 			sourceTree = "<group>";
 		};
-		07FB934D1B93299B0054B556 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				17A23DE21B2B9D2500695F98 /* SC_DUBAI.ttf */,
-				9F33548D1BC07C5100FA1A21 /* GE SS Two Medium.otf */,
-				07EAD34C1B7EB2ED002B43C6 /* Thumb alphabit */,
-				07EAD3A51B7EB954002B43C6 /* Videos */,
-				07FB934B1B91FF360054B556 /* Elements.xcassets */,
-				07FB93491B91FF0A0054B556 /* StoryTelling Media.xcassets */,
-				0705D1AC1B7EA7A4002D6672 /* ImagesForSomApp.xcassets */,
-				0705D1AE1B7EA7FF002D6672 /* buttons.xcassets */,
-			);
-			name = resources;
-			sourceTree = "<group>";
-		};
 		07FB934E1B9330010054B556 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,11 +597,17 @@
 				07E29E4D1BBCB29D0051AF56 /* MasteredWordsVC.swift */,
 				9F8F30C81BAAEA4A00364A0B /* Realm.framework */,
 				9F8F30C91BAAEA4A00364A0B /* RealmSwift.framework */,
-				9F8F30B81BAAE65100364A0B /* MediaPlayer.framework */,
 				1718D6481B2B88A1004004A6 /* SomBokmApplication */,
 				1718D65E1B2B88A1004004A6 /* SomBokmApplicationTests */,
 				1718D6471B2B88A1004004A6 /* Products */,
-				07FB934D1B93299B0054B556 /* resources */,
+				17A23DE21B2B9D2500695F98 /* SC_DUBAI.ttf */,
+				9F33548D1BC07C5100FA1A21 /* GE SS Two Medium.otf */,
+				07EAD34C1B7EB2ED002B43C6 /* Thumb alphabit */,
+				07EAD3A51B7EB954002B43C6 /* Videos */,
+				07FB934B1B91FF360054B556 /* Elements.xcassets */,
+				07FB93491B91FF0A0054B556 /* StoryTelling Media.xcassets */,
+				0705D1AC1B7EA7A4002D6672 /* ImagesForSomApp.xcassets */,
+				0705D1AE1B7EA7FF002D6672 /* buttons.xcassets */,
 			);
 			sourceTree = "<group>";
 		};

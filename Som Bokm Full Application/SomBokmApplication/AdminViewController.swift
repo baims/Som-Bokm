@@ -49,5 +49,10 @@ class AdminViewController: UIViewController {
             vc.typeOfRealmString = "Completing"
             vc.adminMode         = true
         }
+        else if segue.identifier == "fromAdminToCategories"
+        {
+            let vc = segue.destinationViewController as! CategoriesVC
+            vc.masterMode = true
+        }
     }
 }

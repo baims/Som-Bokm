@@ -75,7 +75,7 @@
         */
         dictionaryOfAllElements = DictionaryManager.getAllElementsInDictinoary()
         base = ElementManager.Base()
-        arrayOfAllElements = ElementManager.getAllElementsFromBase(base)
+        arrayOfAllElements = ElementManager.getElementsWithVideos()
         
         elementsImages = [self.image1, self.image2 , self.image3 , self.image4]
         
@@ -89,14 +89,14 @@
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadBase:", name: "reloadBase", object: nil)
     }
-    
+    // when turning back from MasteredVC we need to push the changes
     func reloadBase(notification : NSNotification){
         if base != ElementManager.Base()
         {
             print("Base Has new version")
             dictionaryOfAllElements = DictionaryManager.getAllElementsInDictinoary()
             base = ElementManager.Base()
-            arrayOfAllElements = ElementManager.getAllElementsFromBase(base)
+            arrayOfAllElements = ElementManager.getElementsWithVideos()
         }
         else{
             print("Base Hasnt updated")
@@ -312,7 +312,9 @@
         
         
         tahjee2VideoPlayer?.videoName = tahjee2VideoName
-        tahjee2VideoPlayer?.repeatVideo()
+        tahjee2VideoPlayer?.prepareForPlay()
+        tahjee2VideoPlayer?.play()
+//        tahjee2VideoPlayer?.repeatVideo()
     }
     
     

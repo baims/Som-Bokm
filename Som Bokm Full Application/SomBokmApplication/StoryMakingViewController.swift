@@ -47,7 +47,7 @@ class StoryMakingViewController: UIViewController {
     var viewIsLoaded = false
     
     //  Video Player
-     var videoPlayer = VideoPlayer(name: "", withFrame: CGRectMake(600, 100, 400, 300)) // BaDRaN ... Place it in the right place , add constraints
+     var videoPlayer = VideoPlayer(name: "", withFrame: CGRectMake(600, 100, 400, 300))
      var showVideoTappedCounter = 0
 
     override func viewDidLoad() {
@@ -87,9 +87,9 @@ class StoryMakingViewController: UIViewController {
                 self.editStoryButton.hidden = true
             }
             
-            if self.typeOfRealmString == "Telling"
+            if self.adminMode == true && (self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing")
             {
-                self.adminTypeStoryContainerView.hidden = true
+                self.adminTypeStoryContainerView.hidden = false
             }
             
             self.checkIfSceneIsSaved()
@@ -104,6 +104,9 @@ class StoryMakingViewController: UIViewController {
         searchView.frame.origin.x = self.view.frame.size.width
         //var dif = searchView.frame.origin.x - searchViewFrameOn.origin.x
         searchViewFrameOff = searchView.frame
+        
+        
+        videoPlayer.frame = CGRectMake(self.view.frame.width-310, 10, 300, 225)
     }
     
     override func didReceiveMemoryWarning() {
@@ -445,9 +448,6 @@ extension StoryMakingViewController
             element.printDescreption()
             if element.isNil == false
             {
-                
-                print("&&&& name is \(element.videoName!)")
-                //videoPlayer.resetVideoName(element.videoName!)
                 videoPlayer.videoName = element.videoName!
                 self.view.addSubview(videoPlayer)
                 videoPlayer.play()
@@ -699,6 +699,15 @@ extension StoryMakingViewController
         if self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing"
         {
             self.editStoryButton.hidden = true
+        }
+        
+        if self.typeOfRealmString == "Reading"
+        {
+            self.adminTypeStoryContainerView.hidden = false
+        }
+        else if self.typeOfRealmString == "Completing" && (scene.isEditable == false || self.adminMode == true)
+        {
+            self.adminTypeStoryContainerView.hidden = false
         }
     }
 }

@@ -20,6 +20,7 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBOutlet var numberField: UITextField!
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var alertView: UIView!
     
     var numberOfQuestions = 1
     var gameType : GameType!
@@ -53,6 +54,16 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
             self.performSegueWithIdentifier("2quiz", sender: self)
     }
     
+    @IBAction func showAlertQNum(sender: UIButton) {
+        let shadowedButton = UIButton(frame: self.view.frame)
+        shadowedButton.backgroundColor = UIColor.blackColor()
+        shadowedButton.alpha = 0.7
+        self.view.addSubview(shadowedButton)
+        self.view.bringSubviewToFront(alertView)
+        self.alertView.hidden=false
+        
+    }
+   
     
     /*
     • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •

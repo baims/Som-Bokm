@@ -39,6 +39,11 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
         self.view.sendSubviewToBack(bgImageView)
     }
     
+//    override func viewDidLayoutSubviews() {
+//        self.collectionView.setNeedsLayout()
+//        self.collectionView.layoutIfNeeded()
+//    }
+    
     override func viewDidAppear(animated: Bool) {
         collectionView.reloadData()
     }
@@ -69,6 +74,9 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
             cell.cellBG.image  = UIImage(named: "defaultCollectionButton")
             
         }
+        
+        
+        cell.layoutIfNeeded()
         
         return cell
         

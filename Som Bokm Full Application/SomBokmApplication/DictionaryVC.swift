@@ -55,13 +55,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     }
     
     
-    override func viewDidAppear(animated: Bool) {
-        collectionView.reloadData()
-    }
     
-    override func viewWillAppear(animated: Bool) {
-
-    }
     
     // ------------- L  A  Y  O  U  T --------------
     
@@ -72,6 +66,8 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         bgImageView.frame = self.view.frame
         self.view.addSubview(bgImageView)
         self.view.sendSubviewToBack(bgImageView)
+        
+        
     }
     
     
@@ -188,6 +184,8 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         }
         
         cell.contentView.addSubview(cell.label)
+        
+        cell.layoutIfNeeded()
         
         return cell;
     }

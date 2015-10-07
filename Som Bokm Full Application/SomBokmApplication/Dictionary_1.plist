@@ -73,7 +73,11 @@
 		</array>
 		<key>حاضر</key>
 		<array>
-			<string>أكل</string>
+			<array>
+				<string>ate</string>
+				<string>أكل</string>
+				<string>الأكل هو وضع الطعام في الفم</string>
+			</array>
 		</array>
 	</dict>
 	<key>التصنيف</key>
@@ -83,6 +87,21 @@
 			<array>
 				<string>lion</string>
 				<string>أسد</string>
+				<string>الأسد هو ملك الغابة و كذا</string>
+			</array>
+			<array>
+				<string>lion1</string>
+				<string>أرنب</string>
+				<string>الأسد هو ملك الغابة و كذا</string>
+			</array>
+			<array>
+				<string>lion3</string>
+				<string>أفعوان</string>
+				<string>الأسد هو ملك الغابة و كذا</string>
+			</array>
+			<array>
+				<string>lion4</string>
+				<string>أهبل</string>
 				<string>الأسد هو ملك الغابة و كذا</string>
 			</array>
 			<array>

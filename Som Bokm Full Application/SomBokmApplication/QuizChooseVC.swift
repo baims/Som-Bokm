@@ -21,7 +21,7 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet var numberField: UITextField!
     @IBOutlet var collectionView: UICollectionView!
     
-    var numberOfQuestions = 0
+    var numberOfQuestions = 1
     var gameType : GameType!
     var pickerValues = [Int]()
     

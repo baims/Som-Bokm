@@ -79,7 +79,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! SearchTableViewCell
         searchField.text = cell.cellLabel.text
         
-        checkSearching(cell.cellLabel.text!)
+        //checkSearching(cell.cellLabel.text!) // Caused a crash , because it checkde and then changed to another array , which will contain only the textField.text , which has changed since we tapped on the button
         
         
         

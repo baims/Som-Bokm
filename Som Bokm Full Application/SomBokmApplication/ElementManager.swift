@@ -430,14 +430,14 @@ class ElementManager {
     {
         let array = getAllElementsFromBase()
         var array2 : [Element] = []
-        var counter = 0
+//        var counter = 0
         for i in array
         {
             if i.videoExist == true
             {
                array2.append(i)
             }
-            counter++
+//            counter++
         }
         return array2
     }

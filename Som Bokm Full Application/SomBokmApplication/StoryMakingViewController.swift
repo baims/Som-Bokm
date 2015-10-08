@@ -18,6 +18,7 @@ class StoryMakingViewController: UIViewController {
     var typeOfRealm         : Object!
     var adminMode           : Bool = false
     var buttonSenderTag     : Int  = 0
+    
 
     @IBOutlet weak var storyLabel: UILabel!
     @IBOutlet weak var typeStoryContainerView: UIView!
@@ -225,6 +226,23 @@ class StoryMakingViewController: UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
+    
+    
+    
+    
+    /*//
+        
+    OMAR BACKGROUND ADDING
+    
+    */
+    
+    @IBAction func changeBackgroundTapped(sender: UIButton) {
+        
+//        self.backgroundImageView = 
+    }
+    
+    
+
     
     func showExitAlertView(home home: Bool, back: Bool)
     {

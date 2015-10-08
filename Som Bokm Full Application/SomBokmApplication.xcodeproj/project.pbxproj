@@ -12,6 +12,7 @@
 		0709D7B31B9DFCEE00AED422 /* QuizExtensionsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709D7B21B9DFCEE00AED422 /* QuizExtensionsUI.swift */; };
 		0709D8111B9E379A00AED422 /* hammer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0709D8101B9E379A00AED422 /* hammer.mp4 */; };
 		074C51AB1B95A0590097FE55 /* codes in Resources */ = {isa = PBXBuildFile; fileRef = 074C51AA1B95A0590097FE55 /* codes */; };
+		077421471BC5D1240005BF2D /* BackgroundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077421461BC5D1240005BF2D /* BackgroundManager.swift */; settings = {ASSET_TAGS = (); }; };
 		079632151B9352EF00CC70A7 /* QuizChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079632141B9352EF00CC70A7 /* QuizChooseVC.swift */; };
 		079632191B93692B00CC70A7 /* IBElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079632181B93692B00CC70A7 /* IBElements.swift */; };
 		07CAA44F1B9805F8003D950C /* ElementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CAA44E1B9805F8003D950C /* ElementManager.swift */; };
@@ -210,6 +211,7 @@
 		0709D7B21B9DFCEE00AED422 /* QuizExtensionsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizExtensionsUI.swift; path = ../QuizExtensionsUI.swift; sourceTree = "<group>"; };
 		0709D8101B9E379A00AED422 /* hammer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hammer.mp4; sourceTree = "<group>"; };
 		074C51AA1B95A0590097FE55 /* codes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = codes; sourceTree = "<group>"; };
+		077421461BC5D1240005BF2D /* BackgroundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundManager.swift; sourceTree = "<group>"; };
 		079632141B9352EF00CC70A7 /* QuizChooseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizChooseVC.swift; sourceTree = "<group>"; };
 		079632181B93692B00CC70A7 /* IBElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBElements.swift; sourceTree = "<group>"; };
 		07CAA44E1B9805F8003D950C /* ElementManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementManager.swift; sourceTree = "<group>"; };
@@ -625,6 +627,7 @@
 			children = (
 				07CAA4501B980776003D950C /* Dictionary_1.plist */,
 				1718D64F1B2B88A1004004A6 /* Main.storyboard */,
+				077421461BC5D1240005BF2D /* BackgroundManager.swift */,
 				07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */,
 				079632181B93692B00CC70A7 /* IBElements.swift */,
 				07FB934E1B9330010054B556 /* Main */,
@@ -961,6 +964,7 @@
 				07EAD3F11B7EED2A002B43C6 /* QuizVC.swift in Sources */,
 				07EAD2A91B7EB253002B43C6 /* SearchVC.swift in Sources */,
 				07CAA44F1B9805F8003D950C /* ElementManager.swift in Sources */,
+				077421471BC5D1240005BF2D /* BackgroundManager.swift in Sources */,
 				9FF207651BA1F00A00B2345B /* StoryReadingWordButton.swift in Sources */,
 				9FBB27171B7FB8A300BD8041 /* LLSimpleCamera.m in Sources */,
 				07EAD3501B7EB74F002B43C6 /* DictionaryManager.swift in Sources */,

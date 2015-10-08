@@ -125,7 +125,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="-35"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="beQ-0E-dJ7" secondAttribute="centerX" constant="-0.5" id="RCT-Dr-bJ2">
-                                <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="130.5"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="FoO-qt-epH" secondAttribute="centerX" id="Vkk-7i-3LA"/>
                             <constraint firstItem="fJe-un-Wyv" firstAttribute="bottom" secondItem="i9u-EJ-6Xb" secondAttribute="top" id="YUv-qV-xEK">
@@ -1689,6 +1689,9 @@
                                                 <include reference="y19-zL-6W0"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="changeBackgroundTapped:" destination="dmP-8F-Zbo" eventType="touchUpInside" id="tyU-CF-zc6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTk-4d-e5X">
                                         <rect key="frame" x="264" y="0.0" width="83" height="84"/>
@@ -2558,7 +2561,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ZKR-oM-VcK">
                                 <rect key="frame" x="151" y="-9" width="537" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-Xu-DcG" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-Xu-DcG" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="97" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2569,7 +2572,7 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="q1M-Jb-4T9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-FM-gz8" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-FM-gz8" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="110" y="0.0" width="97" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2580,7 +2583,7 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="9IB-JX-TZm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-oj-aJh" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-oj-aJh" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="220" y="0.0" width="97" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2591,7 +2594,7 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="bfJ-PJ-ePZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29e-Q3-f6p" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29e-Q3-f6p" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="330" y="0.0" width="97" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2602,7 +2605,7 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="zYc-s7-VOm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-WF-VgM" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-WF-VgM" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="440" y="0.0" width="97" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2700,7 +2703,8 @@
                                         <exclude reference="xcO-kc-2FL"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="33" y="60" width="454" height="207"/>
                                     <mask key="constraints">
                                         <include reference="ANT-A3-jMS"/>
                                         <include reference="xcO-kc-2FL"/>
@@ -3152,20 +3156,20 @@
                                 <exclude reference="dDR-EV-Nf9"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="3Yy-23-8YD"/>
+                                <exclude reference="bTp-sK-QHL"/>
+                                <exclude reference="dwD-oD-uHO"/>
+                                <exclude reference="CTG-bw-RPu"/>
+                                <exclude reference="duC-zU-hS2"/>
                                 <exclude reference="VOy-CU-yDc"/>
                                 <exclude reference="XWi-y2-GBp"/>
                                 <exclude reference="eZf-bA-cao"/>
+                                <exclude reference="a9P-f1-IpX"/>
+                                <exclude reference="d5L-mA-3bS"/>
                                 <exclude reference="hxn-Ea-fXT"/>
                                 <exclude reference="jhP-Kx-SUI"/>
                                 <exclude reference="jjI-kT-eFu"/>
                                 <exclude reference="qnE-fK-59t"/>
-                                <exclude reference="a9P-f1-IpX"/>
-                                <exclude reference="d5L-mA-3bS"/>
-                                <exclude reference="3Yy-23-8YD"/>
-                                <exclude reference="bTp-sK-QHL"/>
-                                <exclude reference="CTG-bw-RPu"/>
-                                <exclude reference="duC-zU-hS2"/>
-                                <exclude reference="dwD-oD-uHO"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -3177,20 +3181,20 @@
                                 <include reference="dDR-EV-Nf9"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="3Yy-23-8YD"/>
+                                <include reference="bTp-sK-QHL"/>
+                                <exclude reference="dwD-oD-uHO"/>
+                                <include reference="CTG-bw-RPu"/>
+                                <include reference="duC-zU-hS2"/>
                                 <exclude reference="VOy-CU-yDc"/>
                                 <include reference="XWi-y2-GBp"/>
                                 <include reference="eZf-bA-cao"/>
+                                <include reference="a9P-f1-IpX"/>
+                                <include reference="d5L-mA-3bS"/>
                                 <include reference="hxn-Ea-fXT"/>
                                 <exclude reference="jhP-Kx-SUI"/>
                                 <include reference="jjI-kT-eFu"/>
                                 <exclude reference="qnE-fK-59t"/>
-                                <include reference="a9P-f1-IpX"/>
-                                <include reference="d5L-mA-3bS"/>
-                                <include reference="3Yy-23-8YD"/>
-                                <include reference="bTp-sK-QHL"/>
-                                <include reference="CTG-bw-RPu"/>
-                                <include reference="duC-zU-hS2"/>
-                                <exclude reference="dwD-oD-uHO"/>
                             </mask>
                         </variation>
                     </view>
@@ -3908,10 +3912,10 @@
         <image name="ِaddStpryButton_hl" width="160" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g1C-RE-kSy"/>
-        <segue reference="Wci-sf-7Pe"/>
+        <segue reference="ijQ-S3-uoG"/>
+        <segue reference="r72-wu-l1C"/>
+        <segue reference="gJN-bD-0H5"/>
         <segue reference="2Nc-vO-UQ3"/>
         <segue reference="mAq-YL-Pab"/>
-        <segue reference="gJN-bD-0H5"/>
     </inferredMetricsTieBreakers>
 </document>

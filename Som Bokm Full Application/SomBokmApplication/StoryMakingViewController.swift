@@ -64,11 +64,15 @@ class StoryMakingViewController: UIViewController {
         /*
         ••• O m a r
         */
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setTextOfButtonPressed:", name: "setTextOfButtonPressed", object: nil)
         
-          NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideSearchView:", name: "hideSearchView", object: nil)
+        if (adminMode == true)
+        {
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "setTextOfButtonPressed:", name: "setTextOfButtonPressed", object: nil)
         
-         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSearchView:", name: "showSearchView", object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideSearchView:", name: "hideSearchView", object: nil)
+        
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSearchView:", name: "showSearchView", object: nil)
+        }
     }
     
     override func viewDidLayoutSubviews()
@@ -454,7 +458,7 @@ extension StoryMakingViewController
 // AdminTypeReadingStoryViewController extensions
 extension StoryMakingViewController
 {
-    
+ 
     // O P E N i n g
     func showSearchView(){
         NSNotificationCenter.defaultCenter().postNotificationName("showKeyboard", object: nil)

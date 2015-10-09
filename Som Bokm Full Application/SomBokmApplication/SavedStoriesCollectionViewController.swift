@@ -19,6 +19,8 @@ class SavedStoriesCollectionViewController: UIViewController, UICollectionViewDe
     @IBOutlet weak var addToReadStoriesButton: UIButton!
     @IBOutlet weak var addNewStoryButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var deleteAllButton: UIButton!
     
     
     var numberOfStories : Int!
@@ -53,9 +55,21 @@ class SavedStoriesCollectionViewController: UIViewController, UICollectionViewDe
         self.collectionView.reloadData()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLayoutSubviews()
+    {
+        self.hideUnnecessarySubviews()
+    }
+    
+    func hideUnnecessarySubviews()
+    {
+        if self.adminMode == false
+        {
+            self.addNewStoryButton.hidden      = true
+            self.editButton.hidden             = true
+            self.addToReadStoriesButton.hidden = true
+            self.deleteButton.hidden           = true
+            self.deleteAllButton.hidden        = true
+        }
     }
 
 

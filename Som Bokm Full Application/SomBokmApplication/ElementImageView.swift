@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ElementImageView: UIImageView {
+class ElementImageView: UIImageView, UIGestureRecognizerDelegate {
 
     var lastLocation:CGPoint = CGPointMake(0, 0)
     
@@ -26,8 +26,16 @@ class ElementImageView: UIImageView {
         
         self.userInteractionEnabled = true // to allow dragging
         
-        let panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
-        self.gestureRecognizers = [panRecognizer]
+        
+        let pinchRecognizer  = UIPinchGestureRecognizer(target:self, action:"handlePinch:")
+        let rotateRecognizer = UIRotationGestureRecognizer(target:self, action:"handleRotate:")
+        let panRecognizer    = UIPanGestureRecognizer(target:self, action:"detectPan:")
+        
+        pinchRecognizer.delegate  = self
+        rotateRecognizer.delegate = self
+        panRecognizer.delegate    = self
+        
+        self.gestureRecognizers = [panRecognizer,pinchRecognizer,rotateRecognizer]
     }
     
     func detectPan(recognizer:UIPanGestureRecognizer) {
@@ -66,5 +74,24 @@ class ElementImageView: UIImageView {
         
         // Remember original location
         lastLocation = self.center
+    }
+    
+    func handlePinch(recognizer : UIPinchGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = CGAffineTransformScale(view.transform,
+                recognizer.scale, recognizer.scale)
+            recognizer.scale = 1
+        }
+    }
+    
+    func handleRotate(recognizer : UIRotationGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = CGAffineTransformRotate(view.transform, recognizer.rotation)
+            recognizer.rotation = 0
+        }
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }

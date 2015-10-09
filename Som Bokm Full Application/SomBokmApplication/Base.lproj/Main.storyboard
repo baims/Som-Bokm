@@ -2324,10 +2324,24 @@
                                                     <animations/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32T-UF-Knu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqq-bs-fuv">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32T-UF-Knu">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyB-Nn-N6v">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -2340,28 +2354,32 @@
                                         <constraints>
                                             <constraint firstItem="aew-oQ-Wix" firstAttribute="width" secondItem="bxX-6H-8Dh" secondAttribute="width" id="0dX-Ea-iWR"/>
                                             <constraint firstItem="Mk3-oQ-Ov9" firstAttribute="centerX" secondItem="bxX-6H-8Dh" secondAttribute="centerX" id="4P5-dk-vhB"/>
-                                            <constraint firstAttribute="centerX" secondItem="32T-UF-Knu" secondAttribute="centerX" constant="0.5" id="BlN-xF-gXV">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
-                                            </constraint>
                                             <constraint firstItem="Mk3-oQ-Ov9" firstAttribute="centerY" secondItem="bxX-6H-8Dh" secondAttribute="centerY" id="KcF-aY-5Bl"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="32T-UF-Knu" secondAttribute="bottom" constant="86" id="O90-9Q-rig">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                            </constraint>
                                             <constraint firstItem="aew-oQ-Wix" firstAttribute="centerX" secondItem="bxX-6H-8Dh" secondAttribute="centerX" id="Ovv-5B-in1"/>
+                                            <constraint firstItem="32T-UF-Knu" firstAttribute="centerX" secondItem="bxX-6H-8Dh" secondAttribute="centerX" id="TFh-Vu-ipi"/>
                                             <constraint firstItem="aew-oQ-Wix" firstAttribute="centerY" secondItem="bxX-6H-8Dh" secondAttribute="centerY" id="TcV-IA-wNs"/>
                                             <constraint firstItem="aew-oQ-Wix" firstAttribute="height" secondItem="bxX-6H-8Dh" secondAttribute="height" id="UkB-45-ifC"/>
-                                            <constraint firstAttribute="centerY" secondItem="32T-UF-Knu" secondAttribute="centerY" constant="0.5" id="nPq-OC-lTr">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                                            <constraint firstItem="gyB-Nn-N6v" firstAttribute="centerY" secondItem="bxX-6H-8Dh" secondAttribute="centerY" id="c22-13-ie0"/>
+                                            <constraint firstItem="tqq-bs-fuv" firstAttribute="centerX" secondItem="bxX-6H-8Dh" secondAttribute="centerX" id="i0o-fl-x1K"/>
+                                            <constraint firstItem="tqq-bs-fuv" firstAttribute="top" secondItem="bxX-6H-8Dh" secondAttribute="topMargin" constant="46" id="rSh-DL-DEh">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                                             </constraint>
                                             <constraint firstItem="Mk3-oQ-Ov9" firstAttribute="width" secondItem="bxX-6H-8Dh" secondAttribute="width" id="rZN-Ir-kjL"/>
+                                            <constraint firstItem="gyB-Nn-N6v" firstAttribute="centerX" secondItem="bxX-6H-8Dh" secondAttribute="centerX" id="tRs-Ma-Q3U"/>
                                             <constraint firstItem="Mk3-oQ-Ov9" firstAttribute="height" secondItem="bxX-6H-8Dh" secondAttribute="height" id="trd-T7-upS"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="aew-oQ-Wix"/>
                                                 <exclude reference="Mk3-oQ-Ov9"/>
+                                                <exclude reference="tqq-bs-fuv"/>
                                                 <exclude reference="32T-UF-Knu"/>
+                                                <exclude reference="gyB-Nn-N6v"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="BlN-xF-gXV"/>
-                                                <exclude reference="nPq-OC-lTr"/>
                                                 <exclude reference="4P5-dk-vhB"/>
                                                 <exclude reference="KcF-aY-5Bl"/>
                                                 <exclude reference="rZN-Ir-kjL"/>
@@ -2370,17 +2388,23 @@
                                                 <exclude reference="Ovv-5B-in1"/>
                                                 <exclude reference="TcV-IA-wNs"/>
                                                 <exclude reference="UkB-45-ifC"/>
+                                                <exclude reference="i0o-fl-x1K"/>
+                                                <exclude reference="rSh-DL-DEh"/>
+                                                <exclude reference="c22-13-ie0"/>
+                                                <exclude reference="tRs-Ma-Q3U"/>
+                                                <exclude reference="O90-9Q-rig"/>
+                                                <exclude reference="TFh-Vu-ipi"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="subviews">
                                                 <include reference="aew-oQ-Wix"/>
                                                 <include reference="Mk3-oQ-Ov9"/>
+                                                <include reference="tqq-bs-fuv"/>
                                                 <include reference="32T-UF-Knu"/>
+                                                <include reference="gyB-Nn-N6v"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="BlN-xF-gXV"/>
-                                                <include reference="nPq-OC-lTr"/>
                                                 <include reference="4P5-dk-vhB"/>
                                                 <include reference="KcF-aY-5Bl"/>
                                                 <include reference="rZN-Ir-kjL"/>
@@ -2389,11 +2413,19 @@
                                                 <include reference="Ovv-5B-in1"/>
                                                 <include reference="TcV-IA-wNs"/>
                                                 <include reference="UkB-45-ifC"/>
+                                                <include reference="i0o-fl-x1K"/>
+                                                <include reference="rSh-DL-DEh"/>
+                                                <include reference="c22-13-ie0"/>
+                                                <include reference="tRs-Ma-Q3U"/>
+                                                <include reference="O90-9Q-rig"/>
+                                                <include reference="TFh-Vu-ipi"/>
                                             </mask>
                                         </variation>
                                         <connections>
                                             <outlet property="bgImageView" destination="aew-oQ-Wix" id="LUw-ns-Vv1"/>
                                             <outlet property="dateLabel" destination="32T-UF-Knu" id="s1k-RS-za4"/>
+                                            <outlet property="titleLabel" destination="gyB-Nn-N6v" id="xcH-qZ-Yyc"/>
+                                            <outlet property="writerLabel" destination="tqq-bs-fuv" id="e5t-NM-pMM"/>
                                             <segue destination="dmP-8F-Zbo" kind="show" identifier="ShowSavedScene" id="g1C-RE-kSy"/>
                                         </connections>
                                     </collectionViewCell>
@@ -2711,6 +2743,9 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="209.5" y="13" width="102" height="32"/>
+                                </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="اااا" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="pfe-98-ep7" customClass="CustomTextView" customModule="SomBokmApplication" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -4094,8 +4129,8 @@
         <image name="ِaddStpryButton_hl" width="160" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ijQ-S3-uoG"/>
         <segue reference="X7e-6q-hS2"/>
+        <segue reference="g1C-RE-kSy"/>
         <segue reference="gJN-bD-0H5"/>
         <segue reference="2Nc-vO-UQ3"/>
         <segue reference="mAq-YL-Pab"/>

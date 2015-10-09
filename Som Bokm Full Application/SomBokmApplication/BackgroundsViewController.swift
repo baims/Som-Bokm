@@ -17,8 +17,6 @@ class BackgroundsViewController: UIViewController, UICollectionViewDelegate, UIC
         super.viewDidLoad()
         
         backgroundNames = ["islandBGST", "beachBGST"]
-
-        print(BackgroundManager().backgroundsInBundle())
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("is there new dictionary ? : ") 
+        //print("is there new dictionary ? : ")
         print(ElementManager.checkNewPlistUpdate("Dictionary_1"))
 
         // Do any additional setup after loading the view.

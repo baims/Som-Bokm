@@ -30,7 +30,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     var storyTellingMode : Bool?
     
     override func viewDidLoad() {
-        print("story Telling mode is (\(storyTellingMode))")
+        //print("story Telling mode is (\(storyTellingMode))")
         super.viewDidLoad()
         table.backgroundColor = UIColor.clearColor()
         table.separatorColor = UIColor.clearColor()
@@ -95,7 +95,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
             // notifiaction pushed
             
             if storyTellingMode == true{
-                print("story telling mode is true")
+               // print("story telling mode is true")
                 NSNotificationCenter.defaultCenter().postNotificationName("setTextOfButtonPressed",object: selectedElement.name)
                 
                 NSNotificationCenter.defaultCenter().postNotificationName("hideSearchView",object: nil)

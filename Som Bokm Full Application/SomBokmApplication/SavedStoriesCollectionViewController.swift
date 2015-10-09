@@ -232,6 +232,9 @@ extension SavedStoriesCollectionViewController
         let dateFormat = NSDateFormatter()
         dateFormat.dateFormat = "hh:mm  dd/MM/yyyy"
         
+        
+        cell.writerLabel.text = "\(self.stories[indexPath.item].writer)"
+        cell.titleLabel.text  = "\(self.stories[indexPath.item].title)"
         cell.dateLabel.text = "\(dateFormat.stringFromDate(self.stories[indexPath.item].date))"
         cell.storyTelling   = self.stories[indexPath.item]
         

@@ -703,7 +703,7 @@ class ElementManager {
             {
                 if def.objectForKey("dictionary.plist") as? NSDictionary == dictionaryOfPlist // dictionary in userdefault identical to the current dictionary
                 {
-                    print("Dictionary has not changed")
+                    //print("Dictionary has not changed")
                     return false
                 }
                 else // dictionary in user default doenst match the current dictionary

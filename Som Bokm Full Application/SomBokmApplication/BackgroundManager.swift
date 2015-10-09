@@ -44,7 +44,7 @@ class BackgroundManager{
     func backgroundsInBundle() -> [String]
     {
             
-            let arrayOfImagesWithSuffix_BG = NSBundle.mainBundle().recursivePathsForResources(type: "jpg",suffix : "BG")
+            let arrayOfImagesWithSuffix_BG = NSBundle.mainBundle().recursivePathsForResources(type: "png",suffix : "BG")
             //        print(arrayOfImagesWithSuffix_BG)
             
             var backgroundsNames : [String] = []

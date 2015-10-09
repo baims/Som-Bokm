@@ -10,8 +10,9 @@ import RealmSwift
 
 class StoryTelling : Object
 {
-    dynamic var date  : NSDate = NSDate()
-    dynamic var title : String = ""
+    dynamic var date   : NSDate = NSDate()
+    dynamic var title  : String = ""
+    dynamic var writer : String = ""
     let scenes = List<Scene>()
     
     dynamic var telling : Bool    = false

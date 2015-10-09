@@ -160,6 +160,8 @@
 		1718D6621B2B88A1004004A6 /* SomBokmApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1718D6611B2B88A1004004A6 /* SomBokmApplicationTests.swift */; };
 		17A23DE31B2B9D2500695F98 /* SC_DUBAI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17A23DE21B2B9D2500695F98 /* SC_DUBAI.ttf */; };
 		9F33548E1BC07C5100FA1A21 /* GE SS Two Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F33548D1BC07C5100FA1A21 /* GE SS Two Medium.otf */; settings = {ASSET_TAGS = (); }; };
+		9F3354911BC8154500FA1A21 /* BackgroundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3354901BC8154500FA1A21 /* BackgroundsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9F3354931BC81BBF00FA1A21 /* BackgroundsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3354921BC81BBF00FA1A21 /* BackgroundsCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		9F8F30CA1BAAEA4A00364A0B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30C81BAAEA4A00364A0B /* Realm.framework */; };
 		9F8F30CB1BAAEA4A00364A0B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30C81BAAEA4A00364A0B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F8F30CC1BAAEA4A00364A0B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8F30C91BAAEA4A00364A0B /* RealmSwift.framework */; };
@@ -363,6 +365,8 @@
 		1718D6611B2B88A1004004A6 /* SomBokmApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomBokmApplicationTests.swift; sourceTree = "<group>"; };
 		17A23DE21B2B9D2500695F98 /* SC_DUBAI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SC_DUBAI.ttf; sourceTree = "<group>"; };
 		9F33548D1BC07C5100FA1A21 /* GE SS Two Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE SS Two Medium.otf"; sourceTree = "<group>"; };
+		9F3354901BC8154500FA1A21 /* BackgroundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundsViewController.swift; sourceTree = "<group>"; };
+		9F3354921BC81BBF00FA1A21 /* BackgroundsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F8F30C81BAAEA4A00364A0B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		9F8F30C91BAAEA4A00364A0B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		9FBB26FC1B7FB76200BD8041 /* StoryTelling-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StoryTelling-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -423,7 +427,6 @@
 				07CAA44E1B9805F8003D950C /* ElementManager.swift */,
 				9FBB26FC1B7FB76200BD8041 /* StoryTelling-Bridging-Header.h */,
 				9FBB26FD1B7FB76200BD8041 /* StoryTelling-Swift2.h */,
-				9FBB270E1B7FB87E00BD8041 /* Realm */,
 				9FBB27111B7FB89700BD8041 /* LLSimpleCamera */,
 				07EAD2AA1B7EB263002B43C6 /* SearchTableViewCell.swift */,
 				07EAD2AC1B7EB289002B43C6 /* CollectionViewCell.swift */,
@@ -631,6 +634,7 @@
 				07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */,
 				079632181B93692B00CC70A7 /* IBElements.swift */,
 				07FB934E1B9330010054B556 /* Main */,
+				9FBB270E1B7FB87E00BD8041 /* Realm */,
 				9FBB26FE1B7FB82100BD8041 /* Story Telling */,
 				9FBB27091B7FB86100BD8041 /* Saved Stories */,
 				07EAD3F21B7EED2F002B43C6 /* Quiz */,
@@ -673,6 +677,8 @@
 				9FBB27001B7FB83900BD8041 /* VideoRecordingViewController.swift */,
 				9FBB27011B7FB83900BD8041 /* TypeStoryViewController.swift */,
 				9FF207621BA1E25000B2345B /* TypeReadingStoryViewController.swift */,
+				9F3354901BC8154500FA1A21 /* BackgroundsViewController.swift */,
+				9F3354921BC81BBF00FA1A21 /* BackgroundsCollectionViewCell.swift */,
 				9FF207641BA1F00A00B2345B /* StoryReadingWordButton.swift */,
 				9FBB27021B7FB83900BD8041 /* ElementsScrollView.swift */,
 				9FBB27031B7FB83900BD8041 /* ElementImageView.swift */,
@@ -972,6 +978,7 @@
 				9FBB270D1B7FB86B00BD8041 /* SavedStoryCollectionViewCell.swift in Sources */,
 				9FBB27041B7FB83900BD8041 /* StoryMakingViewController.swift in Sources */,
 				07EAD2AF1B7EB289002B43C6 /* CollectionViewCell.swift in Sources */,
+				9F3354911BC8154500FA1A21 /* BackgroundsViewController.swift in Sources */,
 				07EAD2A31B7EB1C5002B43C6 /* DictionaryVC.swift in Sources */,
 				9FBB27211B7FBC5B00BD8041 /* HomeViewController.swift in Sources */,
 				0709D7B31B9DFCEE00AED422 /* QuizExtensionsUI.swift in Sources */,
@@ -979,6 +986,7 @@
 				9FBB27281B8571DE00BD8041 /* AdminViewController.swift in Sources */,
 				9FBB27051B7FB83900BD8041 /* VideoRecordingViewController.swift in Sources */,
 				9FBB27071B7FB83900BD8041 /* ElementsScrollView.swift in Sources */,
+				9F3354931BC81BBF00FA1A21 /* BackgroundsCollectionViewCell.swift in Sources */,
 				07E29E4E1BBCB29D0051AF56 /* MasteredWordsVC.swift in Sources */,
 				079632191B93692B00CC70A7 /* IBElements.swift in Sources */,
 				079632151B9352EF00CC70A7 /* QuizChooseVC.swift in Sources */,

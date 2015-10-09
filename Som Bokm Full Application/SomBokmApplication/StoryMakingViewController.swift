@@ -14,6 +14,7 @@ class StoryMakingViewController: UIViewController {
     var orderOfSceneInStory : Int!    // to get the right scene and show it ( or save it )
     var dateOfStory         : NSDate! // needed for Story.realm
     var videoUrl            : NSURL?  // needed for Scene.realm - videoURL
+    var backgroundName      : String?
     var typeOfRealmString   : String! // needed to adjust the views depending on the type ( telling/reading/completing ) - it has one of these three values: "Telling", "Reading" or "Completing"
     var typeOfRealm         : Object!
     var adminMode           : Bool = false
@@ -23,6 +24,7 @@ class StoryMakingViewController: UIViewController {
     @IBOutlet weak var storyLabel: UILabel!
     @IBOutlet weak var typeStoryContainerView: UIView!
     @IBOutlet weak var videoRecordingContainerView: UIView!
+    @IBOutlet weak var backgroundsContainerView: UIView!
     @IBOutlet weak var searchContainerView: UIView!
     @IBOutlet weak var adminTypeStoryContainerView: UIView!
     @IBOutlet weak var elementsScrollView: ElementsScrollView!
@@ -37,6 +39,7 @@ class StoryMakingViewController: UIViewController {
     
     var typeStoryViewController      : TypeStoryViewController!
     var videoRecordingViewController : VideoRecordingViewController!
+    var backgroundsViewController    : BackgroundsViewController!
     var adminTypeStoryViewController : TypeReadingStoryViewController!
     var searchViewController         : SearchVC!
     /*
@@ -58,10 +61,6 @@ class StoryMakingViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController!.navigationBar.hidden = true
-        
-        self.elementsScrollView.addElements()
-        
-        self.backgroundImageView.image?.accessibilityIdentifier = "parkLandscapeBG"
         /*
         ••• O m a r
         */
@@ -93,6 +92,21 @@ class StoryMakingViewController: UIViewController {
                 self.adminTypeStoryContainerView.hidden = false
             }
             
+            
+            // background checking
+            if let bgName = self.backgroundName
+            {
+                self.backgroundImageView.image = UIImage(named: bgName)
+                self.backgroundImageView.image!.accessibilityIdentifier = bgName
+            }
+            else
+            {
+                self.backgroundName = "islandBGST"
+                self.backgroundImageView.image = UIImage(named: "islandBGST")
+                self.backgroundImageView.image!.accessibilityIdentifier = "islandBGST"
+            }
+            
+            self.elementsScrollView.update(self.backgroundName!)
             self.checkIfSceneIsSaved()
         }
         
@@ -131,6 +145,12 @@ class StoryMakingViewController: UIViewController {
             videoRecordingViewController.nameOfFile = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
         }
             
+        else if segue.identifier == "BackgroundsViewController"
+        {
+            backgroundsViewController = segue.destinationViewController as! BackgroundsViewController
+            backgroundsViewController.storyMakingViewController = self
+        }
+            
         else if segue.identifier == "AdminTypeStory"
         {
             adminTypeStoryViewController = segue.destinationViewController as! TypeReadingStoryViewController
@@ -153,6 +173,7 @@ class StoryMakingViewController: UIViewController {
             vc.dateOfStory         = self.dateOfStory
             vc.typeOfRealmString   = self.typeOfRealmString
             vc.adminMode           = self.adminMode
+            vc.backgroundName      = self.backgroundName
         }
     }
     
@@ -196,6 +217,11 @@ class StoryMakingViewController: UIViewController {
         self.showVideoRecordingContainerView()
     }
     
+    @IBAction func backgroundButtonTapped(sender: UIButton) {
+        self.showBackgroundsContainerView()
+    }
+    
+    
     @IBAction func homeButtonTapped(sender: AnyObject) {
 //        var save = false
 //        
@@ -206,7 +232,7 @@ class StoryMakingViewController: UIViewController {
 //        
 //        self.showExitAlertView(home: true, back: false, saving: save)
         
-        if (self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0) && self.typeOfRealmString != "Reading"
+        if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0
         {
             self.showExitAlertView(home: false, back: true)
         }
@@ -355,6 +381,38 @@ extension StoryMakingViewController
         {
             self.editStoryButton.setImage(UIImage(named: "edit icon"), forState: UIControlState.Normal)
         }
+    }
+}
+
+// BackgroundsViewController extensions
+extension StoryMakingViewController
+{
+    func showBackgroundsContainerView()
+    {
+        self.enableUserInteractionsForAllElements(false)
+        
+        // un-hiding ( animating ) the typeStoryViewController & making it on top of everything
+        self.backgroundsContainerView.hidden = false
+        self.view.bringSubviewToFront(self.backgroundsContainerView)
+    }
+    
+    // making the opposite of the previous func
+    func hideBackgroundsContainerView(backgroundName : String!)
+    {
+        self.backgroundName = backgroundName
+        self.backgroundImageView.image = UIImage(named: backgroundName)
+        self.backgroundImageView.image!.accessibilityIdentifier = backgroundName
+        
+        self.elementsScrollView.update(self.backgroundName!)
+        
+        self.hideBackgroundsContainerView()
+    }
+    
+    func hideBackgroundsContainerView()
+    {
+        self.enableUserInteractionsForAllElements(true)
+        
+        self.backgroundsContainerView.hidden = true
     }
 }
 
@@ -659,7 +717,11 @@ extension StoryMakingViewController
         }
         
         // add everything to screen
+        self.backgroundName            = scene.backgroundImageName
         self.backgroundImageView.image = UIImage(named: scene.backgroundImageName)
+        self.backgroundImageView.image?.accessibilityIdentifier = scene.backgroundImageName
+        
+        self.elementsScrollView.update(self.backgroundName!)
         
         if scene.story != ""
         {

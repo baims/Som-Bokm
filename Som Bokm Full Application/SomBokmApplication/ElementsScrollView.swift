@@ -10,20 +10,53 @@ import UIKit
 
 class ElementsScrollView: UIScrollView {
     
-    let numberOfElements = 12
+   // let numberOfElements = 12
     let heightOfElement  = 90
     let widthOfElement   = 66
     
     var elementsOnscreen = [ElementImageView]()
     
-    var elementsImageName = ["boyElement", "girlElement", "boyElement", "girlElement", "boyElement", "girlElement", "boyElement", "girlElement", "boyElement", "girlElement", "boyElement", "girlElement"]
+    var elementsImageNames = ["boyElement", "girlElement"]
+    
+    
+    func update(bgName : String)
+    {
+        self.updateElementNames(bgName)
+    }
+    
+    func updateElementNames(bgName : String)
+    {
+        elementsImageNames = ["boyElement", "girlElement"]
+        
+        for i in 1...5
+        {
+            elementsImageNames.append("\(bgName)\(i)")
+        }
+        
+        
+        self.resetAllElements()
+    }
+    
+    func resetAllElements()
+    {
+        self.deleteElements()
+        self.addElements()
+    }
+    
+    func deleteElements()
+    {
+        for subview in self.subviews
+        {
+            subview.removeFromSuperview()
+        }
+    }
 
     func addElements()
     {
-        let heightOfContentSize = CGFloat( numberOfElements*heightOfElement + (heightOfElement/3)*(numberOfElements+1) )
+        let heightOfContentSize = CGFloat( ( elementsImageNames.count * heightOfElement ) + (heightOfElement/3) * (elementsImageNames.count+1) )
         self.contentSize = CGSizeMake(116, heightOfContentSize)
         
-        for i in 0..<elementsImageName.count
+        for i in 0..<elementsImageNames.count
         {
             let yPosition = (heightOfElement/3)*(i+1) + (heightOfElement*(i))
             
@@ -33,8 +66,8 @@ class ElementsScrollView: UIScrollView {
             elementButton.addTarget(self, action: "elementTapped:", forControlEvents: UIControlEvents.TouchUpInside)
             elementButton.imageView?.contentMode = .ScaleAspectFit
             
-            elementButton.setImage(UIImage(named: elementsImageName[i]), forState: UIControlState.Normal)
-            elementButton.accessibilityIdentifier = elementsImageName[i]
+            elementButton.setImage(UIImage(named: elementsImageNames[i]), forState: UIControlState.Normal)
+            elementButton.accessibilityIdentifier = elementsImageNames[i]
 
             self.addSubview(elementButton)
         }

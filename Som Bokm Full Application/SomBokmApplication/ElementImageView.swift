@@ -51,9 +51,9 @@ class ElementImageView: UIImageView {
         {
             y = self.frame.height/2
         }
-        else if y+(self.frame.height/2) > self.superview!.frame.height-160
+        else if y+(self.frame.height/2) > self.superview!.frame.height-101
         {
-            y = self.superview!.frame.height-(self.frame.height/2)-160
+            y = self.superview!.frame.height-(self.frame.height/2)-101
         }
         
         // moving the element to a new position

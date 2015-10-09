@@ -525,6 +525,7 @@ extension StoryMakingViewController
             if element.isNil == false
             {
                 videoPlayer.videoName = element.videoName!
+                videoPlayer.prepareForPlay()
                 self.view.addSubview(videoPlayer)
                 videoPlayer.play()
                 videoPlayer.pipEnabled = true

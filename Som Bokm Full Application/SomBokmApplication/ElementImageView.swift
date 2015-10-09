@@ -14,6 +14,7 @@ class ElementImageView: UIImageView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -27,7 +28,10 @@ class ElementImageView: UIImageView {
         self.userInteractionEnabled = true // to allow dragging
         
         let panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
-        self.gestureRecognizers = [panRecognizer]
+        let pinchRecognizer = UIPinchGestureRecognizer(target:self, action:"handlePinch:")
+        let rotateRecognizer = UIRotationGestureRecognizer(target:self, action:"handleRotate:")
+
+        self.gestureRecognizers = [panRecognizer,pinchRecognizer,rotateRecognizer]
     }
     
     func detectPan(recognizer:UIPanGestureRecognizer) {
@@ -58,6 +62,22 @@ class ElementImageView: UIImageView {
         
         // moving the element to a new position
         self.center = CGPointMake(x, y)
+    }
+    
+    
+     func handlePinch(recognizer : UIPinchGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = CGAffineTransformScale(view.transform,
+                recognizer.scale, recognizer.scale)
+            recognizer.scale = 1
+        }
+    }
+    
+     func handleRotate(recognizer : UIRotationGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = CGAffineTransformRotate(view.transform, recognizer.rotation)
+            recognizer.rotation = 0
+        }
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

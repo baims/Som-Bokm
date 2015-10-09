@@ -20,6 +20,9 @@ class StoryMakingViewController: UIViewController {
     var adminMode           : Bool = false
     var buttonSenderTag     : Int  = 0
     
+    var writerOfStory       : String?
+    var titleOfStory        : String?
+    
 
     @IBOutlet weak var storyLabel: UILabel!
     @IBOutlet weak var typeStoryContainerView: UIView!
@@ -122,6 +125,18 @@ class StoryMakingViewController: UIViewController {
         
         
         videoPlayer.frame = CGRectMake(self.view.frame.width-310, 10, 300, 225)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.videoRecordingViewController.camera.stop()
+        
+        if let _ = videoRecordingViewController.avPlayer
+        {
+            /*** Remove video preview here ***/
+            videoRecordingViewController.avPlayer!.pause()
+            videoRecordingViewController.avPlayerLayer!.removeFromSuperlayer()
+            videoRecordingViewController.avPlayer = nil
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -314,6 +329,12 @@ class StoryMakingViewController: UIViewController {
         let exitAction = UIAlertAction(title: "نعم", style: UIAlertActionStyle.Default)
             { (action) -> Void in
                 
+                if self.typeOfRealmString == "Telling" || self.adminMode == true
+                {
+                    self.writerOfStory = alertController.textFields![0].text!
+                    self.titleOfStory  = alertController.textFields![1].text!
+                }
+                
                 self.saveSceneToRealm()
                 if home == true
                 {
@@ -323,6 +344,19 @@ class StoryMakingViewController: UIViewController {
                 {
                     self.popToHome()
                 }
+        }
+        
+        if self.typeOfRealmString == "Telling" || self.adminMode == true
+        {
+            alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+                textField.placeholder = "اسم الطالب"
+                textField.textAlignment = .Right
+            }
+            
+            alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+                textField.placeholder = "عنوان القصة"
+                textField.textAlignment = .Right
+            }
         }
         
         alertController.addAction(cancelAction)
@@ -548,7 +582,17 @@ extension StoryMakingViewController
         
         /*** Story Telling ***/
         var storyTelling = StoryTelling()
-
+        
+        if let writer = self.writerOfStory
+        {
+            storyTelling.writer = writer
+        }
+        
+        if let title = self.titleOfStory
+        {
+            storyTelling.title = title
+        }
+        
         
         let predicate = NSPredicate(format: "date = %@", self.dateOfStory) // dateOfStory checking predicate
         
@@ -602,6 +646,7 @@ extension StoryMakingViewController
         
         scene.order = self.orderOfSceneInStory
         scene.backgroundImageName = self.backgroundImageView.image!.accessibilityIdentifier!
+
         
         /** making the scene editable or not editable **/
         if (self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing") && self.adminMode == true

@@ -80,14 +80,11 @@ class TypeReadingStoryViewController: UIViewController {
     {
         if adminMode == false
         {
-            print("shhiititttt")
-            
             for wordButton in arrayOfButtons
             {
                 print((wordButton as! StoryReadingWordButton).englishName)
                 if (wordButton as! StoryReadingWordButton).englishName == nil
                 {
-                    print("shhiititttt333333333")
                     (wordButton as! StoryReadingWordButton).hidden = true
                 }
                 else

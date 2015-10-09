@@ -10,6 +10,8 @@ import UIKit
 
 class SavedStoryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var writerLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var bgImageView: UIImageView!
     

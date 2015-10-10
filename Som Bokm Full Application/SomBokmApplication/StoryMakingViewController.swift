@@ -250,7 +250,7 @@ class StoryMakingViewController: UIViewController {
 //        
 //        self.showExitAlertView(home: true, back: false, saving: save)
         
-        if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0
+        if self.storyLabel!.text != "" || self.videoUrl != nil || self.elementsScrollView.elementsOnscreen.count > 0 || self.orderOfSceneInStory > 1
         {
             self.showExitAlertView(home: false, back: true)
         }
@@ -339,6 +339,7 @@ class StoryMakingViewController: UIViewController {
                 }
                 
                 self.saveSceneToRealm()
+                
                 if home == true
                 {
                     self.popToHome()
@@ -354,11 +355,21 @@ class StoryMakingViewController: UIViewController {
             alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
                 textField.placeholder = "اسم الطالب"
                 textField.textAlignment = .Right
+                
+                if let writer = self.writerOfStory
+                {
+                    textField.text = writer
+                }
             }
             
             alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
                 textField.placeholder = "عنوان القصة"
                 textField.textAlignment = .Right
+                
+                if let title = self.titleOfStory
+                {
+                    textField.text = title
+                }
             }
         }
         
@@ -586,17 +597,7 @@ extension StoryMakingViewController
         
         /*** Story Telling ***/
         var storyTelling = StoryTelling()
-        
-        if let writer = self.writerOfStory
-        {
-            storyTelling.writer = writer
-        }
-        
-        if let title = self.titleOfStory
-        {
-            storyTelling.title = title
-        }
-        
+
         
         let predicate = NSPredicate(format: "date = %@", self.dateOfStory) // dateOfStory checking predicate
         
@@ -604,6 +605,17 @@ extension StoryMakingViewController
         if realm.objects(StoryTelling).filter(predicate).count == 0 // it's a new story - not editing an old story
         {
             storyTelling.date = self.dateOfStory
+            
+            if let writer = self.writerOfStory
+            {
+                storyTelling.writer = writer
+            }
+            
+            if let title = self.titleOfStory
+            {
+                storyTelling.title = title
+            }
+            
             
             switch self.typeOfRealmString
             {
@@ -623,6 +635,18 @@ extension StoryMakingViewController
         else // editing an old story or adding new scenes to a story
         {
             storyTelling = realm.objects(StoryTelling).filter(predicate).first!
+            
+            realm.write {
+                if let writer = self.writerOfStory
+                {
+                    storyTelling.writer = writer
+                }
+                
+                if let title = self.titleOfStory
+                {
+                    storyTelling.title = title
+                }
+            }
         }
         
         
@@ -740,6 +764,9 @@ extension StoryMakingViewController
             {
                 if scene.order == self.orderOfSceneInStory
                 {
+                    self.writerOfStory = storyTelling.writer
+                    self.titleOfStory  = storyTelling.title
+                    
                     self.showSavedScene(scene)
                     self.removeUnnecessaryViews(scene, numberOfScenes: storyTelling.scenes.count)
                     

@@ -9,6 +9,11 @@
 import UIKit
 import RealmSwift
 
+func bundlePath(path: String) -> String? {
+    let resourcePath = NSBundle.mainBundle().resourcePath as NSString?
+    return resourcePath?.stringByAppendingPathComponent(path)
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,6 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         ElementManager.Base().sync()
+        
+        // copy over old data files for migration
+        let realm = try! Realm()
+        
+        if realm.objects(StoryTelling).count == 0
+        {
+            let defaultPath = Realm.Configuration.defaultConfiguration.path!
+            //let defaultParentPath = (defaultPath as NSString).stringByDeletingLastPathComponent
+            
+            if let v0Path = bundlePath("preloaded.realm") {
+                do {
+                    try NSFileManager.defaultManager().removeItemAtPath(defaultPath)
+                    try NSFileManager.defaultManager().copyItemAtPath(v0Path, toPath: defaultPath)
+                } catch {}
+            }
+        }
         
         return true
     }

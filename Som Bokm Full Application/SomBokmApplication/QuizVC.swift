@@ -12,7 +12,7 @@
  
  class QuizVC: UIViewController {
     // number of times the word should be answered to get matered in the word
-    let masteredConstant = 1
+    let masteredConstant = 3
     
     @IBOutlet weak var videoContainer: UIView! // container to get the frame from it
     

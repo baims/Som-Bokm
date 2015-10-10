@@ -54,7 +54,7 @@ class ElementManager {
         var imageName : String?  {
             get{
                 if let _name = name {
-                    let _imageName = _name + "Big"
+                    let _imageName = _name + "Dic"
                     return _imageName
                 }
                 return nil
@@ -132,6 +132,7 @@ class ElementManager {
         */
         init(_name:AnyObject)
         {
+
             isNil = false
             
             if _name is String

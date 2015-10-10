@@ -154,6 +154,61 @@
 				<string>هاتف</string>
 			</array>
 		</array>
+		<key>اعضاء الجسم</key>
+		<array>
+			<array>
+				<string>boy</string>
+				<string>ولد</string>
+			</array>
+			<array>
+				<string>chest</string>
+				<string>صدر</string>
+			</array>
+			<array>
+				<string>eye</string>
+				<string>عين</string>
+			</array>
+			<array>
+				<string>feet</string>
+				<string>رجل</string>
+			</array>
+			<array>
+				<string>girl</string>
+				<string>بنت</string>
+			</array>
+			<array>
+				<string>hand</string>
+				<string>يد</string>
+			</array>
+			<array>
+				<string>hair</string>
+				<string>شعر</string>
+			</array>
+			<array>
+				<string>mouth</string>
+				<string>فم</string>
+			</array>
+			<array>
+				<string>nail</string>
+				<string>ظفر</string>
+			</array>
+			<array>
+				<string>neck</string>
+				<string>رقبة</string>
+			</array>
+			<array>
+				<string>nose</string>
+				<string>أنف</string>
+			</array>
+			<array>
+				<string>short</string>
+				<string>قصير</string>
+			</array>
+			<array>
+				<string>tall</string>
+				<string>طويل</string>
+			</array>
+		</array>
 	</dict>
 </dict>
 </plist>

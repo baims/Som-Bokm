@@ -11,6 +11,7 @@
 		0705D1AF1B7EA7FF002D6672 /* buttons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0705D1AE1B7EA7FF002D6672 /* buttons.xcassets */; };
 		0709D7B31B9DFCEE00AED422 /* QuizExtensionsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709D7B21B9DFCEE00AED422 /* QuizExtensionsUI.swift */; };
 		0709D8111B9E379A00AED422 /* hammer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0709D8101B9E379A00AED422 /* hammer.mp4 */; };
+		070F66F51BCD5AE1001169B9 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070F66F41BCD5AE1001169B9 /* Images-2.xcassets */; settings = {ASSET_TAGS = (); }; };
 		074C51AB1B95A0590097FE55 /* codes in Resources */ = {isa = PBXBuildFile; fileRef = 074C51AA1B95A0590097FE55 /* codes */; };
 		077421471BC5D1240005BF2D /* BackgroundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077421461BC5D1240005BF2D /* BackgroundManager.swift */; settings = {ASSET_TAGS = (); }; };
 		079632151B9352EF00CC70A7 /* QuizChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079632141B9352EF00CC70A7 /* QuizChooseVC.swift */; };
@@ -247,6 +248,7 @@
 		0705D1AE1B7EA7FF002D6672 /* buttons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = buttons.xcassets; path = SomBokmApplication/buttons.xcassets; sourceTree = "<group>"; };
 		0709D7B21B9DFCEE00AED422 /* QuizExtensionsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizExtensionsUI.swift; path = ../QuizExtensionsUI.swift; sourceTree = "<group>"; };
 		0709D8101B9E379A00AED422 /* hammer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hammer.mp4; sourceTree = "<group>"; };
+		070F66F41BCD5AE1001169B9 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		074C51AA1B95A0590097FE55 /* codes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = codes; sourceTree = "<group>"; };
 		077421461BC5D1240005BF2D /* BackgroundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundManager.swift; sourceTree = "<group>"; };
 		079632141B9352EF00CC70A7 /* QuizChooseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizChooseVC.swift; sourceTree = "<group>"; };
@@ -769,6 +771,7 @@
 				07EAD3F21B7EED2F002B43C6 /* Quiz */,
 				07EAD2A11B7EB11C002B43C6 /* Dictionary */,
 				07EAD2B21B7EB292002B43C6 /* Subclasses */,
+				070F66F41BCD5AE1001169B9 /* Images-2.xcassets */,
 				1718D6491B2B88A1004004A6 /* Supporting Files */,
 			);
 			path = SomBokmApplication;
@@ -969,6 +972,7 @@
 				07EAD3261B7EB2E9002B43C6 /* ء_thumb.png in Resources */,
 				07EAD2FC1B7EB2BF002B43C6 /* ىSI.png in Resources */,
 				07E060DA1BC9BDD300561EB2 /* nail.mp4 in Resources */,
+				070F66F51BCD5AE1001169B9 /* Images-2.xcassets in Resources */,
 				07EAD3451B7EB2E9002B43C6 /* ن_thumb.png in Resources */,
 				07EAD3471B7EB2E9002B43C6 /* و_thumb.png in Resources */,
 				07EAD3431B7EB2E9002B43C6 /* لا_thumb.png in Resources */,
@@ -1292,6 +1296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1314,6 +1319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

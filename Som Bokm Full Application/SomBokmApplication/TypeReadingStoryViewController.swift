@@ -82,7 +82,6 @@ class TypeReadingStoryViewController: UIViewController {
         {
             for wordButton in arrayOfButtons
             {
-                print((wordButton as! StoryReadingWordButton).englishName)
                 if (wordButton as! StoryReadingWordButton).englishName == nil
                 {
                     (wordButton as! StoryReadingWordButton).hidden = true

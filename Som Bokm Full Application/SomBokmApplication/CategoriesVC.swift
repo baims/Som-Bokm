@@ -75,6 +75,7 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
             
         }
         
+        cell.bringSubviewToFront(cell.label)
         
         cell.layoutIfNeeded()
         

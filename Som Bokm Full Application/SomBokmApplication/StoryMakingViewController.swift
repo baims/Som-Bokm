@@ -791,6 +791,7 @@ extension StoryMakingViewController
                 self.adminTypeStoryViewController.changeWordButton(word.englishName, index: word.order)
             }
         }
+
         
         // add everything to screen
         self.backgroundName            = scene.backgroundImageName
@@ -857,7 +858,7 @@ extension StoryMakingViewController
             self.editStoryButton.hidden = true
         }
         
-        if self.typeOfRealmString == "Reading"
+        if self.typeOfRealmString == "Reading" && scene.words.count > 0
         {
             self.adminTypeStoryContainerView.hidden = false
         }

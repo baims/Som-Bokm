@@ -24,6 +24,7 @@ class TypeStoryViewController: UIViewController {
         let superview = self.parentViewController as! StoryMakingViewController
         
         superview.storyLabel.text = self.textView.text
+        superview.storyLabel.sizeToFit()
         superview.hideTypeStoryContainerView()
     }
 }

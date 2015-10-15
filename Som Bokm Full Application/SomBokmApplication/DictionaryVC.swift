@@ -183,7 +183,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
             
         }
         
-        cell.contentView.addSubview(cell.label)
+        cell.bringSubviewToFront(cell.label)
         
         cell.layoutIfNeeded()
         

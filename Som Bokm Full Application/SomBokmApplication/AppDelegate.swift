@@ -31,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if realm.objects(StoryTelling).count == 0
         {
             let defaultPath = Realm.Configuration.defaultConfiguration.path!
-            //let defaultParentPath = (defaultPath as NSString).stringByDeletingLastPathComponent
             
             if let v0Path = bundlePath("preloaded.realm") {
                 do {

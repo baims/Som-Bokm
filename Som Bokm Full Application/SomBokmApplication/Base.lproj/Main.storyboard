@@ -399,6 +399,14 @@
                                                 <include reference="eBp-vH-0HV"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="Eo0-jk-Sdf"/>
+                                                <exclude reference="M31-e5-1i8"/>
+                                                <exclude reference="a7w-5u-LoF"/>
+                                                <exclude reference="i6G-2X-z4k"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="cellBG" destination="viN-de-6Tz" id="h5i-Zb-rAB"/>
                                             <outlet property="label" destination="JZr-1V-q3m" id="Db5-FJ-w15"/>
@@ -636,13 +644,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="322" height="226"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الحيوانات" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBp-5m-30t">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="33"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FkV-CC-oBG">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <animations/>
@@ -662,6 +663,13 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الحيوانات" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBp-5m-30t">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="33"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -677,9 +685,11 @@
                                                 <variation key="widthClass=regular" constant="-203"/>
                                             </constraint>
                                             <constraint firstItem="FkV-CC-oBG" firstAttribute="bottom" secondItem="XBp-5m-30t" secondAttribute="bottom" constant="66" id="RAe-4P-QV7"/>
+                                            <constraint firstItem="XBp-5m-30t" firstAttribute="centerY" secondItem="QrP-nA-wRo" secondAttribute="centerY" id="U00-lm-awg"/>
                                             <constraint firstItem="XBp-5m-30t" firstAttribute="top" secondItem="QrP-nA-wRo" secondAttribute="topMargin" constant="54" id="VYL-ov-jAd"/>
                                             <constraint firstItem="FkV-CC-oBG" firstAttribute="top" secondItem="XBp-5m-30t" secondAttribute="bottom" constant="-98" id="cpJ-3r-BE0"/>
                                             <constraint firstItem="FkV-CC-oBG" firstAttribute="leading" secondItem="QrP-nA-wRo" secondAttribute="leadingMargin" constant="-8" id="fl7-4L-Vb9"/>
+                                            <constraint firstItem="XBp-5m-30t" firstAttribute="centerX" secondItem="QrP-nA-wRo" secondAttribute="centerX" id="kFI-C8-5Xm"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="FkV-CC-oBG" secondAttribute="trailing" constant="-8" id="yqE-Ys-vVV"/>
                                             <constraint firstItem="FkV-CC-oBG" firstAttribute="top" secondItem="XBp-5m-30t" secondAttribute="bottom" constant="-103" id="zD1-43-mbI">
                                                 <variation key="widthClass=regular" constant="-98"/>
@@ -687,11 +697,10 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
-                                                <exclude reference="XBp-5m-30t"/>
                                                 <exclude reference="FkV-CC-oBG"/>
+                                                <exclude reference="XBp-5m-30t"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="VYL-ov-jAd"/>
                                                 <exclude reference="6bn-eD-bYA"/>
                                                 <exclude reference="ERL-V8-hQW"/>
                                                 <exclude reference="JlX-WD-qo5"/>
@@ -700,15 +709,17 @@
                                                 <exclude reference="fl7-4L-Vb9"/>
                                                 <exclude reference="yqE-Ys-vVV"/>
                                                 <exclude reference="zD1-43-mbI"/>
+                                                <exclude reference="U00-lm-awg"/>
+                                                <exclude reference="VYL-ov-jAd"/>
+                                                <exclude reference="kFI-C8-5Xm"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=regular">
                                             <mask key="subviews">
-                                                <include reference="XBp-5m-30t"/>
                                                 <include reference="FkV-CC-oBG"/>
+                                                <include reference="XBp-5m-30t"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="VYL-ov-jAd"/>
                                                 <include reference="6bn-eD-bYA"/>
                                                 <include reference="ERL-V8-hQW"/>
                                                 <include reference="JlX-WD-qo5"/>
@@ -717,6 +728,16 @@
                                                 <include reference="fl7-4L-Vb9"/>
                                                 <include reference="yqE-Ys-vVV"/>
                                                 <exclude reference="zD1-43-mbI"/>
+                                                <include reference="VYL-ov-jAd"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="JlX-WD-qo5"/>
+                                                <exclude reference="RAe-4P-QV7"/>
+                                                <include reference="U00-lm-awg"/>
+                                                <exclude reference="VYL-ov-jAd"/>
+                                                <include reference="kFI-C8-5Xm"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -1288,7 +1309,7 @@
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="257" y="8" width="55" height="53"/>
+                                                        <rect key="frame" x="217" y="8" width="55" height="53.5"/>
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-0Z-Euf">
@@ -1301,7 +1322,7 @@
                                                         <rect key="frame" x="196" y="24" width="42" height="21"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="201" y="24" width="37" height="21"/>
+                                                        <rect key="frame" x="161" y="24" width="37" height="21.5"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -1738,22 +1759,28 @@
                                         <rect key="frame" x="264" y="0.0" width="83" height="84"/>
                                         <animations/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="CNR-ML-EDF"/>
                                             <constraint firstAttribute="height" constant="70" id="ClE-4g-Xeh"/>
                                             <constraint firstAttribute="width" secondItem="lTk-4d-e5X" secondAttribute="height" multiplier="1:1" id="Qam-ly-ZIR"/>
+                                            <constraint firstAttribute="width" secondItem="lTk-4d-e5X" secondAttribute="height" multiplier="1:1" id="krv-SB-64x"/>
                                         </constraints>
                                         <state key="normal" image="back icon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="CNR-ML-EDF"/>
                                                 <exclude reference="ClE-4g-Xeh"/>
                                                 <exclude reference="Qam-ly-ZIR"/>
+                                                <exclude reference="krv-SB-64x"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
+                                                <include reference="CNR-ML-EDF"/>
                                                 <exclude reference="ClE-4g-Xeh"/>
                                                 <exclude reference="Qam-ly-ZIR"/>
+                                                <include reference="krv-SB-64x"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -1790,13 +1817,41 @@
                                     </button>
                                 </subviews>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="zWh-OX-hQr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="zWh-OX-hQr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="zWh-OX-hQr"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Aq3-0x-uTV">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="UJo-hA-mnl">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="26"/>
                                 <color key="textColor" red="0.92805467360000005" green="0.92805467360000005" blue="0.92805467360000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UJo-hA-mnl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="UJo-hA-mnl"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqQ-Cb-Aq7">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -2656,10 +2711,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ZKR-oM-VcK">
-                                <rect key="frame" x="151" y="-9" width="362" height="47"/>
+                                <rect key="frame" x="151" y="-9" width="452" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-Xu-DcG" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="47"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2671,7 +2726,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-FM-gz8" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="75" y="0.0" width="62" height="47"/>
+                                        <rect key="frame" x="93" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2683,7 +2738,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-oj-aJh" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="150" y="0.0" width="62" height="47"/>
+                                        <rect key="frame" x="186" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2695,7 +2750,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29e-Q3-f6p" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="225" y="0.0" width="62" height="47"/>
+                                        <rect key="frame" x="279" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2707,7 +2762,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-WF-VgM" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="300" y="0.0" width="62" height="47"/>
+                                        <rect key="frame" x="372" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2720,9 +2775,6 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="-86" y="10" width="362" height="47"/>
-                                </variation>
                             </stackView>
                         </subviews>
                         <animations/>
@@ -4130,10 +4182,10 @@
         <image name="ِaddStpryButton_hl" width="160" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X7e-6q-hS2"/>
         <segue reference="ijQ-S3-uoG"/>
-        <segue reference="gJN-bD-0H5"/>
-        <segue reference="2Nc-vO-UQ3"/>
+        <segue reference="X7e-6q-hS2"/>
+        <segue reference="l6c-KE-KfQ"/>
+        <segue reference="MZU-3j-bPX"/>
         <segue reference="mAq-YL-Pab"/>
     </inferredMetricsTieBreakers>
 </document>

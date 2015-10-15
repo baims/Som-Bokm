@@ -862,7 +862,7 @@ extension StoryMakingViewController
             self.adminTypeStoryContainerView.hidden = false
         }
         else if self.typeOfRealmString == "Completing" && (scene.isEditable == false || self.adminMode == true)
-        {
+        {            
             self.adminTypeStoryContainerView.hidden = false
         }
     }

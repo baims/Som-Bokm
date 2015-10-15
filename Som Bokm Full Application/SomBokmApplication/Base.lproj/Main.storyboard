@@ -14,6 +14,7 @@
             <string>GESSTwoMedium-Medium</string>
             <string>GESSTwoMedium-Medium</string>
             <string>GESSTwoMedium-Medium</string>
+            <string>GESSTwoMedium-Medium</string>
         </mutableArray>
         <mutableArray key="SC_DUBAI.ttf">
             <string>SC_DUBAI</string>
@@ -641,9 +642,6 @@
                                                     <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="33"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="94" y="62" width="109" height="61"/>
-                                                    </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FkV-CC-oBG">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -880,9 +878,6 @@
                                         <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="178" y="85" width="445" height="65"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أسد" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwn-6s-abr">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -902,9 +897,6 @@
                                             <mask key="constraints">
                                                 <exclude reference="QGG-GQ-RLt"/>
                                             </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="343" y="14" width="117" height="95"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j63-ky-XTL">
@@ -1276,7 +1268,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2cE-mX-xu0" id="cTW-EB-lHv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="chj-sm-xt1">
@@ -1309,7 +1301,7 @@
                                                         <rect key="frame" x="196" y="24" width="42" height="21"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="196" y="24" width="42" height="21"/>
+                                                        <rect key="frame" x="201" y="24" width="37" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -1388,9 +1380,6 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="45"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="88" y="8" width="107" height="53"/>
-                                </variation>
                             </label>
                         </subviews>
                         <animations/>
@@ -1802,11 +1791,11 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Aq3-0x-uTV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Aq3-0x-uTV">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="26"/>
+                                <color key="textColor" red="0.92805467360000005" green="0.92805467360000005" blue="0.92805467360000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqQ-Cb-Aq7">
@@ -2667,79 +2656,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ZKR-oM-VcK">
-                                <rect key="frame" x="151" y="-9" width="452" height="50"/>
+                                <rect key="frame" x="151" y="-9" width="362" height="47"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-Xu-DcG" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-Xu-DcG" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
                                             <color key="titleColor" red="0.9558469655832349" green="1" blue="0.9600694025751737" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="62" height="47"/>
-                                        </variation>
                                         <connections>
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="q1M-Jb-4T9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-FM-gz8" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="93" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-FM-gz8" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="75" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
                                             <color key="titleColor" red="0.94540395414428058" green="1" blue="0.92958664420377135" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="75" y="0.0" width="62" height="47"/>
-                                        </variation>
                                         <connections>
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="9IB-JX-TZm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-oj-aJh" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="186" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-oj-aJh" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
                                             <color key="titleColor" red="0.94540395414428058" green="1" blue="0.92958664420377135" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="150" y="0.0" width="62" height="47"/>
-                                        </variation>
                                         <connections>
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="bfJ-PJ-ePZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29e-Q3-f6p" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="279" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29e-Q3-f6p" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="225" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
                                             <color key="titleColor" red="0.94540395414428058" green="1" blue="0.92958664420377135" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="225" y="0.0" width="62" height="47"/>
-                                        </variation>
                                         <connections>
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="zYc-s7-VOm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-WF-VgM" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="372" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-WF-VgM" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="300" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
                                             <color key="titleColor" red="0.94540395414428058" green="1" blue="0.92958664420377135" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="300" y="0.0" width="62" height="47"/>
-                                        </variation>
                                         <connections>
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="k1K-3F-02Z"/>
                                         </connections>
@@ -2802,9 +2776,6 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="212" y="13" width="99" height="28"/>
-                                </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="اااا" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="pfe-98-ep7" customClass="CustomTextView" customModule="SomBokmApplication" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -2854,8 +2825,7 @@
                                         <exclude reference="kEM-U7-LYy"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="213" y="281" width="97" height="30"/>
+                                <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="89I-lf-dkJ"/>
                                         <include reference="kEM-U7-LYy"/>
@@ -2953,8 +2923,7 @@
                                         <exclude reference="Fh9-80-Z5H"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="141" y="434" width="70" height="70"/>
+                                <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="F3V-9Q-UMy"/>
                                         <include reference="Fh9-80-Z5H"/>
@@ -3000,9 +2969,6 @@
                                 <state key="normal" title="Use">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="161" y="454" width="30" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="hide:" destination="y01-x3-WUv" eventType="touchUpInside" id="zLb-zy-0jd"/>
                                 </connections>
@@ -3156,9 +3122,6 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="52"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="241" y="28" width="320" height="61"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6U3-Ij-CWe">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -3240,22 +3203,22 @@
                                 <exclude reference="7v9-k2-3XI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="VOy-CU-yDc"/>
-                                <exclude reference="XWi-y2-GBp"/>
-                                <exclude reference="eZf-bA-cao"/>
-                                <exclude reference="3Yy-23-8YD"/>
-                                <exclude reference="bTp-sK-QHL"/>
-                                <exclude reference="Eny-Rr-69Q"/>
-                                <exclude reference="Evj-gy-Vqs"/>
-                                <exclude reference="JTt-Qb-S8d"/>
                                 <exclude reference="2ud-Xn-Hoe"/>
                                 <exclude reference="A8I-tC-Gwy"/>
                                 <exclude reference="BfT-cF-VMX"/>
                                 <exclude reference="bAD-8f-TIv"/>
                                 <exclude reference="bXN-Be-Yyp"/>
+                                <exclude reference="3Yy-23-8YD"/>
+                                <exclude reference="bTp-sK-QHL"/>
+                                <exclude reference="wIG-6A-VzV"/>
                                 <exclude reference="2Sv-tP-h6W"/>
                                 <exclude reference="pEI-9m-XKM"/>
-                                <exclude reference="wIG-6A-VzV"/>
+                                <exclude reference="VOy-CU-yDc"/>
+                                <exclude reference="XWi-y2-GBp"/>
+                                <exclude reference="eZf-bA-cao"/>
+                                <exclude reference="Eny-Rr-69Q"/>
+                                <exclude reference="Evj-gy-Vqs"/>
+                                <exclude reference="JTt-Qb-S8d"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -3267,22 +3230,22 @@
                                 <include reference="7v9-k2-3XI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="VOy-CU-yDc"/>
-                                <include reference="XWi-y2-GBp"/>
-                                <include reference="eZf-bA-cao"/>
-                                <include reference="3Yy-23-8YD"/>
-                                <include reference="bTp-sK-QHL"/>
-                                <include reference="Eny-Rr-69Q"/>
-                                <include reference="Evj-gy-Vqs"/>
-                                <include reference="JTt-Qb-S8d"/>
                                 <include reference="2ud-Xn-Hoe"/>
                                 <exclude reference="A8I-tC-Gwy"/>
                                 <include reference="BfT-cF-VMX"/>
                                 <include reference="bAD-8f-TIv"/>
                                 <exclude reference="bXN-Be-Yyp"/>
+                                <include reference="3Yy-23-8YD"/>
+                                <include reference="bTp-sK-QHL"/>
+                                <include reference="wIG-6A-VzV"/>
                                 <include reference="2Sv-tP-h6W"/>
                                 <include reference="pEI-9m-XKM"/>
-                                <include reference="wIG-6A-VzV"/>
+                                <exclude reference="VOy-CU-yDc"/>
+                                <include reference="XWi-y2-GBp"/>
+                                <include reference="eZf-bA-cao"/>
+                                <include reference="Eny-Rr-69Q"/>
+                                <include reference="Evj-gy-Vqs"/>
+                                <include reference="JTt-Qb-S8d"/>
                             </mask>
                         </variation>
                     </view>

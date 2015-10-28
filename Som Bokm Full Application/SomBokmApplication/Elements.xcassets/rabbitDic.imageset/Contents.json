@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Cartoon-Happy-Rabbit-Vector.png"
+      "filename" : "Bunny.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "Cartoon-Happy-Rabbit-Vector-1.png"
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",

@@ -13,6 +13,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellBG: UIImageView!
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet var elementImage: UIImageView!
     
     
 }

@@ -90,19 +90,9 @@
 				<string>الأسد هو ملك الغابة و كذا</string>
 			</array>
 			<array>
-				<string>lion1</string>
+				<string>rabbit</string>
 				<string>أرنب</string>
-				<string>الأسد هو ملك الغابة و كذا</string>
-			</array>
-			<array>
-				<string>lion3</string>
-				<string>أفعوان</string>
-				<string>الأسد هو ملك الغابة و كذا</string>
-			</array>
-			<array>
-				<string>lion4</string>
-				<string>أهبل</string>
-				<string>الأسد هو ملك الغابة و كذا</string>
+				<string>الارنب حيوان أليف و كرمووووش</string>
 			</array>
 			<array>
 				<string>tiger</string>
@@ -124,7 +114,11 @@
 				<string>دعسوقة</string>
 				<string>الدعسوقة تسمى ام علي بالكويتي</string>
 			</array>
-			<string>butterfly</string>
+			<array>
+				<string>butterfly</string>
+				<string>فراشة</string>
+				<string>الفراشة حشرة ملونة جميلة تجوب بين الحدائق و الزهور</string>
+			</array>
 		</array>
 		<key>نباتات</key>
 		<array>

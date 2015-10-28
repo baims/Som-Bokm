@@ -50,14 +50,14 @@ class VideoRecordingViewController: UIViewController {
             {
                 // unhide flashButton
                 
-                if self.camera.isFlashOn() == true
+               /* if self.camera.isFlashOn() == true
                 {
                     // flashButton.selected = false
                 }
                 else
                 {
                     // flashButton.selected = true
-                }
+                }*/
                 
             }
             else
@@ -142,6 +142,8 @@ extension VideoRecordingViewController
             
             // maximum duration of recording
             self.camera.movieFileOutput.maxRecordedDuration = CMTimeMake(10, 1)
+            
+            
             
             // start recording
             let outputURL = self.applicationDocumentsDirectory().URLByAppendingPathComponent(nameOfFile).URLByAppendingPathExtension("mov")

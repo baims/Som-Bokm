@@ -150,7 +150,7 @@ extension SavedStoriesCollectionViewController
             { (action) -> Void in
                 let realm = try! Realm()
                 
-                realm.write {
+                try! realm.write {
                     realm.delete(realm.objects(StoryTelling))
                 }
                 
@@ -187,7 +187,7 @@ extension SavedStoriesCollectionViewController
                 
                 let realm = try! Realm()
                 
-                realm.write {
+                try! realm.write {
                     realm.delete(stories)
                 }
                 

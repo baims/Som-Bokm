@@ -636,7 +636,7 @@ extension StoryMakingViewController
         {
             storyTelling = realm.objects(StoryTelling).filter(predicate).first!
             
-            realm.write {
+            try! realm.write {
                 if let writer = self.writerOfStory
                 {
                     storyTelling.writer = writer
@@ -657,7 +657,7 @@ extension StoryMakingViewController
             {
                 if scene.isEditable == false && self.adminMode == true // We don't want to override the current scene of reading/completing story unless we are in Admin Mode
                 {
-                    realm.write {
+                    try! realm.write {
                         realm.delete(scene)
                     }
                 }
@@ -737,7 +737,7 @@ extension StoryMakingViewController
         
         
         // writing to realm
-        realm.write {
+        try! realm.write {
             storyTelling.scenes.append(scene)
             
             if realm.objects(StoryTelling).filter(predicate).count == 0 // it's a new story - not editing an old story

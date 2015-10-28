@@ -32,7 +32,6 @@ typedef enum : NSUInteger {
 @interface LLSimpleCamera : UIViewController
 
 @property (strong, nonatomic) AVCaptureMovieFileOutput *movieFileOutput;
-@property (strong, nonatomic) UIView *preview;
 
 /**
  * Triggered on device change.
@@ -164,8 +163,6 @@ typedef enum : NSUInteger {
  * Checks if flash is avilable for the currently active device.
  */
 - (BOOL)isFlashAvailable;
-
-- (BOOL) isFlashOn;
 
 /**
  * Checks if torch (flash for video) is avilable for the currently active device.

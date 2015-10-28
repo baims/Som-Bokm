@@ -9,10 +9,9 @@
 #import "LLSimpleCamera.h"
 #import <ImageIO/CGImageProperties.h>
 #import "UIImage+FixOrientation.h"
-#import "StoryTelling-Swift2.h"
 
 @interface LLSimpleCamera () <AVCaptureFileOutputRecordingDelegate>
-
+@property (strong, nonatomic) UIView *preview;
 @property (strong, nonatomic) AVCaptureStillImageOutput *stillImageOutput;
 @property (strong, nonatomic) AVCaptureSession *session;
 @property (strong, nonatomic) AVCaptureDevice *videoCaptureDevice;
@@ -51,9 +50,9 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
     if(self) {
         _cameraQuality = quality;
         _position = position;
-        _fixOrientationAfterCapture = YES;
+        _fixOrientationAfterCapture = NO;
         _tapToFocus = YES;
-        _useDeviceOrientation = YES;
+        _useDeviceOrientation = NO;
         _flash = CameraFlashOff;
         _videoEnabled = videoEnabled;
         _recording = NO;
@@ -80,8 +79,6 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
     
     // add focus box to view
     [self addDefaultFocusBox];
-    
-    
 }
 
 - (void)addDefaultFocusBox {
@@ -331,14 +328,10 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
     if(self.flash == CameraFlashOn) {
         [self enableTorch:YES];
     }
-    
-    NSLog(@"started recorindddd");
-    
     [self.movieFileOutput startRecordingToOutputFileURL:url recordingDelegate:self];
 }
 
 - (void)stopRecording:(void (^)(LLSimpleCamera *camera, NSURL *outputFileUrl, NSError *error))completionBlock {
-    NSLog(@"stopped recordiggggg");
     
     if(!self.videoEnabled) {
         return;
@@ -356,9 +349,6 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
     
     self.recording = NO;
     [self enableTorch:NO];
-    
-    VideoRecordingViewController *superViewController = (VideoRecordingViewController*) self.parentViewController;
-    [superViewController endRecording];
     
     if(self.didRecord) {
         self.didRecord(self, outputFileURL, error);
@@ -596,10 +586,6 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
     }
 }
 
--(BOOL) isFlashOn {
-    return self.flash == CameraFlashOn ? YES : NO;
-}
-
 - (CGPoint)convertToPointOfInterestFromViewCoordinates:(CGPoint)viewCoordinates
 {
     AVCaptureVideoPreviewLayer *previewLayer = self.captureVideoPreviewLayer;
@@ -696,10 +682,10 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
         switch ([UIDevice currentDevice].orientation) {
             case UIDeviceOrientationLandscapeLeft:
                 // yes we to the right, this is not bug!
-                videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
+                videoOrientation = AVCaptureVideoOrientationLandscapeRight;
                 break;
             case UIDeviceOrientationLandscapeRight:
-                videoOrientation = AVCaptureVideoOrientationLandscapeRight;
+                videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
                 break;
             case UIDeviceOrientationPortraitUpsideDown:
                 videoOrientation = AVCaptureVideoOrientationPortraitUpsideDown;
@@ -710,7 +696,7 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
         }
     }
     else {
-        switch ([[UIApplication sharedApplication] statusBarOrientation]) {
+        switch (self.interfaceOrientation) {
             case UIInterfaceOrientationLandscapeLeft:
                 videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
                 break;
@@ -724,7 +710,6 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
                 videoOrientation = AVCaptureVideoOrientationPortrait;
                 break;
         }
-        
     }
     
     return videoOrientation;

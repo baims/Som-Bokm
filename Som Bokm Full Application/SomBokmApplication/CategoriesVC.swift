@@ -17,6 +17,7 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var deleteMasteredWordsButton: UIButton!
     
+    @IBOutlet var imageOfElement: UIImageView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -43,10 +44,7 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
 //        self.collectionView.setNeedsLayout()
 //        self.collectionView.layoutIfNeeded()
 //    }
-    
-    override func viewDidAppear(animated: Bool) {
-        collectionView.reloadData()
-    }
+ 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryArray!.count
@@ -60,33 +58,64 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellCat", forIndexPath: indexPath) as! CollectionViewCell
         
         let elementInCollection = categoryArray![indexPath.row]
-        let textOfCategory = elementInCollection.name!
+//        _ = elementInCollection.name!
         
         if let cellIcon = UIImage(named: elementInCollection.thumbImageName!){
             cell.cellBG.image = cellIcon
+            cell.elementImage.hidden = true;
+            cell.label.hidden = true
         }
             
             
-        else{
+        else if (elementInCollection.thumbImageExists == false){
+            
+            
+            
             //make an image that contains only name :
+            cell.elementImage.hidden = false;
             cell.label.hidden = false
-            cell.label.text = textOfCategory
             cell.cellBG.image  = UIImage(named: "defaultCollectionButton")
+            cell.elementImage.image = elementInCollection.image
+            
+            if elementInCollection.arName == "" || elementInCollection.arName == nil{
+                cell.label.text = elementInCollection.name
+
+            }
+            else{
+            cell.label.text = elementInCollection.arName
+            }
             
         }
+        
         
         cell.bringSubviewToFront(cell.label)
-        
+        cell.bringSubviewToFront(cell.elementImage)
+
         cell.layoutIfNeeded()
         
         return cell
         
     }
     
-    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+       
+        if categoryArray![selectedIndexPath.row].videoExist != true
+        {
+            return false
+        }
+        return true
+    }
     
     func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        
         selectedIndexPath = indexPath
+
+
+        if self.shouldPerformSegueWithIdentifier("toElement", sender: self)
+        {
+            // check if it has content 
+      
+        }
         return true
     }
     

@@ -328,6 +328,9 @@
                                                     <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="33"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                        <rect key="frame" x="94" y="71" width="109" height="39"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <animations/>
@@ -460,8 +463,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXJ-v6-yNy">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2"/>
                                 <state key="normal" image="searchButton">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.2172111742424242" green="0.2172111742424242" blue="0.2172111742424242" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressedSearch:" destination="tSO-xq-9Jz" eventType="touchUpInside" id="qaf-kh-Iiu"/>
@@ -663,12 +667,34 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="butterflyDic" translatesAutoresizingMaskIntoConstraints="NO" id="aBJ-aB-xOM" userLabel="element Image">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="131" id="k38-QH-z8C"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="k38-QH-z8C"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <mask key="constraints">
+                                                            <include reference="k38-QH-z8C"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الحيوانات" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBp-5m-30t">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="33"/>
+                                                    <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="46"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.37505278716216217" colorSpace="calibratedRGB"/>
+                                                    <size key="shadowOffset" width="0.0" height="1"/>
+                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                        <rect key="frame" x="177" y="83" width="133" height="61"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <animations/>
@@ -685,11 +711,18 @@
                                                 <variation key="widthClass=regular" constant="-203"/>
                                             </constraint>
                                             <constraint firstItem="FkV-CC-oBG" firstAttribute="bottom" secondItem="XBp-5m-30t" secondAttribute="bottom" constant="66" id="RAe-4P-QV7"/>
+                                            <constraint firstItem="aBJ-aB-xOM" firstAttribute="top" secondItem="QrP-nA-wRo" secondAttribute="topMargin" constant="9" id="S6W-iW-RAT"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="aBJ-aB-xOM" secondAttribute="bottom" constant="56" id="SUr-x7-HtS"/>
                                             <constraint firstItem="XBp-5m-30t" firstAttribute="centerY" secondItem="QrP-nA-wRo" secondAttribute="centerY" id="U00-lm-awg"/>
                                             <constraint firstItem="XBp-5m-30t" firstAttribute="top" secondItem="QrP-nA-wRo" secondAttribute="topMargin" constant="54" id="VYL-ov-jAd"/>
+                                            <constraint firstItem="aBJ-aB-xOM" firstAttribute="leading" secondItem="QrP-nA-wRo" secondAttribute="leadingMargin" id="buF-bk-eze">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="16"/>
+                                            </constraint>
                                             <constraint firstItem="FkV-CC-oBG" firstAttribute="top" secondItem="XBp-5m-30t" secondAttribute="bottom" constant="-98" id="cpJ-3r-BE0"/>
                                             <constraint firstItem="FkV-CC-oBG" firstAttribute="leading" secondItem="QrP-nA-wRo" secondAttribute="leadingMargin" constant="-8" id="fl7-4L-Vb9"/>
-                                            <constraint firstItem="XBp-5m-30t" firstAttribute="centerX" secondItem="QrP-nA-wRo" secondAttribute="centerX" id="kFI-C8-5Xm"/>
+                                            <constraint firstItem="XBp-5m-30t" firstAttribute="centerX" secondItem="QrP-nA-wRo" secondAttribute="centerX" id="kFI-C8-5Xm">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="82.5"/>
+                                            </constraint>
                                             <constraint firstAttribute="trailingMargin" secondItem="FkV-CC-oBG" secondAttribute="trailing" constant="-8" id="yqE-Ys-vVV"/>
                                             <constraint firstItem="FkV-CC-oBG" firstAttribute="top" secondItem="XBp-5m-30t" secondAttribute="bottom" constant="-103" id="zD1-43-mbI">
                                                 <variation key="widthClass=regular" constant="-98"/>
@@ -698,6 +731,7 @@
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="FkV-CC-oBG"/>
+                                                <exclude reference="aBJ-aB-xOM"/>
                                                 <exclude reference="XBp-5m-30t"/>
                                             </mask>
                                             <mask key="constraints">
@@ -709,6 +743,9 @@
                                                 <exclude reference="fl7-4L-Vb9"/>
                                                 <exclude reference="yqE-Ys-vVV"/>
                                                 <exclude reference="zD1-43-mbI"/>
+                                                <exclude reference="S6W-iW-RAT"/>
+                                                <exclude reference="SUr-x7-HtS"/>
+                                                <exclude reference="buF-bk-eze"/>
                                                 <exclude reference="U00-lm-awg"/>
                                                 <exclude reference="VYL-ov-jAd"/>
                                                 <exclude reference="kFI-C8-5Xm"/>
@@ -732,9 +769,15 @@
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="subviews">
+                                                <include reference="aBJ-aB-xOM"/>
+                                            </mask>
                                             <mask key="constraints">
                                                 <exclude reference="JlX-WD-qo5"/>
                                                 <exclude reference="RAe-4P-QV7"/>
+                                                <include reference="S6W-iW-RAT"/>
+                                                <include reference="SUr-x7-HtS"/>
+                                                <include reference="buF-bk-eze"/>
                                                 <include reference="U00-lm-awg"/>
                                                 <exclude reference="VYL-ov-jAd"/>
                                                 <include reference="kFI-C8-5Xm"/>
@@ -742,8 +785,9 @@
                                         </variation>
                                         <connections>
                                             <outlet property="cellBG" destination="FkV-CC-oBG" id="AWA-uu-N91"/>
+                                            <outlet property="elementImage" destination="aBJ-aB-xOM" id="z6k-Sk-xNb"/>
                                             <outlet property="label" destination="XBp-5m-30t" id="DVD-rm-hsu"/>
-                                            <segue destination="vk2-wy-Nw3" kind="show" id="mAq-YL-Pab"/>
+                                            <segue destination="vk2-wy-Nw3" kind="show" identifier="toElement" id="mAq-YL-Pab"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -899,6 +943,9 @@
                                         <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="178" y="85" width="445" height="65"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أسد" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwn-6s-abr">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -918,6 +965,9 @@
                                             <mask key="constraints">
                                                 <exclude reference="QGG-GQ-RLt"/>
                                             </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="343" y="14" width="117" height="95"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j63-ky-XTL">
@@ -1196,7 +1246,8 @@
                                                     <include reference="0tN-h1-QGR"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="heightClass=regular-widthClass=regular">
+                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                <rect key="frame" x="26" y="83" width="228" height="30"/>
                                                 <mask key="constraints">
                                                     <exclude reference="0tN-h1-QGR"/>
                                                 </mask>
@@ -1223,7 +1274,8 @@
                                                     <exclude reference="Iah-xm-wGz"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="heightClass=regular-widthClass=regular">
+                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                <rect key="frame" x="238" y="8" width="16" height="18"/>
                                                 <mask key="constraints">
                                                     <include reference="5a5-sz-ddh"/>
                                                     <include reference="Iah-xm-wGz"/>
@@ -1273,6 +1325,9 @@
                                 </view>
                                 <animations/>
                                 <blurEffect style="dark"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="280" height="800"/>
+                                </variation>
                             </visualEffectView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZzZ-jL-cwT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1289,7 +1344,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2cE-mX-xu0" id="cTW-EB-lHv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="chj-sm-xt1">
@@ -1309,7 +1364,7 @@
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="217" y="8" width="55" height="53.5"/>
+                                                        <rect key="frame" x="257" y="8" width="55" height="53"/>
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-0Z-Euf">
@@ -1322,7 +1377,7 @@
                                                         <rect key="frame" x="196" y="24" width="42" height="21"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="161" y="24" width="37" height="21.5"/>
+                                                        <rect key="frame" x="196" y="24" width="42" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -1385,7 +1440,8 @@
                                         <include reference="yry-At-6mh"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="137" width="280" height="663"/>
                                     <mask key="constraints">
                                         <exclude reference="yry-At-6mh"/>
                                     </mask>
@@ -1401,6 +1457,9 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="45"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="88" y="8" width="107" height="53"/>
+                                </variation>
                             </label>
                         </subviews>
                         <animations/>
@@ -2713,7 +2772,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ZKR-oM-VcK">
                                 <rect key="frame" x="151" y="-9" width="452" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-Xu-DcG" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-Xu-DcG" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2725,7 +2784,7 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="q1M-Jb-4T9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-FM-gz8" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-FM-gz8" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="93" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2737,7 +2796,7 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="9IB-JX-TZm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-oj-aJh" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-oj-aJh" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="186" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2749,7 +2808,7 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="bfJ-PJ-ePZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29e-Q3-f6p" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29e-Q3-f6p" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="279" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2761,7 +2820,7 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="zYc-s7-VOm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-WF-VgM" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-WF-VgM" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
                                         <rect key="frame" x="372" y="0.0" width="80" height="50"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
@@ -2775,6 +2834,9 @@
                                     </button>
                                 </subviews>
                                 <animations/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="-86" y="10" width="362" height="47"/>
+                                </variation>
                             </stackView>
                         </subviews>
                         <animations/>
@@ -2828,6 +2890,9 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="212" y="13" width="99" height="28"/>
+                                </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="اااا" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="pfe-98-ep7" customClass="CustomTextView" customModule="SomBokmApplication" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -2854,7 +2919,8 @@
                                         <exclude reference="xcO-kc-2FL"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="33" y="60" width="454" height="207"/>
                                     <mask key="constraints">
                                         <include reference="ANT-A3-jMS"/>
                                         <include reference="xcO-kc-2FL"/>
@@ -2877,7 +2943,8 @@
                                         <exclude reference="kEM-U7-LYy"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="213" y="281" width="97" height="30"/>
                                     <mask key="constraints">
                                         <include reference="89I-lf-dkJ"/>
                                         <include reference="kEM-U7-LYy"/>
@@ -2975,7 +3042,8 @@
                                         <exclude reference="Fh9-80-Z5H"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="141" y="434" width="70" height="70"/>
                                     <mask key="constraints">
                                         <include reference="F3V-9Q-UMy"/>
                                         <include reference="Fh9-80-Z5H"/>
@@ -3021,6 +3089,9 @@
                                 <state key="normal" title="Use">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="161" y="454" width="30" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="hide:" destination="y01-x3-WUv" eventType="touchUpInside" id="zLb-zy-0jd"/>
                                 </connections>
@@ -3174,6 +3245,9 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="52"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="241" y="28" width="320" height="61"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6U3-Ij-CWe">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -4147,6 +4221,7 @@
         <image name="backButton" width="72" height="72"/>
         <image name="bg-icon" width="77" height="81"/>
         <image name="bgParkClean" width="1024" height="768"/>
+        <image name="butterflyDic" width="600" height="570"/>
         <image name="camera-switch" width="29" height="22"/>
         <image name="changeSettings" width="235" height="68"/>
         <image name="completeStory" width="263" height="212"/>
@@ -4185,7 +4260,7 @@
         <segue reference="ijQ-S3-uoG"/>
         <segue reference="X7e-6q-hS2"/>
         <segue reference="l6c-KE-KfQ"/>
+        <segue reference="8hf-s6-HVR"/>
         <segue reference="MZU-3j-bPX"/>
-        <segue reference="mAq-YL-Pab"/>
     </inferredMetricsTieBreakers>
 </document>

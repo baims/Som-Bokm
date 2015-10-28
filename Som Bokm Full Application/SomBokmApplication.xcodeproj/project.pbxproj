@@ -37,21 +37,21 @@
 		07E060DD1BC9BDD300561EB2 /* short.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 07E060CA1BC9BDD300561EB2 /* short.mp4 */; settings = {ASSET_TAGS = (); }; };
 		07E060DE1BC9BDD300561EB2 /* stomach.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 07E060CB1BC9BDD300561EB2 /* stomach.mp4 */; settings = {ASSET_TAGS = (); }; };
 		07E060DF1BC9BDD300561EB2 /* tall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 07E060CC1BC9BDD300561EB2 /* tall.mp4 */; settings = {ASSET_TAGS = (); }; };
-		07E060F11BC9BE2C00561EB2 /* BoyDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E21BC9BE2C00561EB2 /* BoyDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060F21BC9BE2C00561EB2 /* ChestDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E31BC9BE2C00561EB2 /* ChestDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060F31BC9BE2C00561EB2 /* EarDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E41BC9BE2C00561EB2 /* EarDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060F41BC9BE2C00561EB2 /* EyeDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E51BC9BE2C00561EB2 /* EyeDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060F51BC9BE2C00561EB2 /* FeetDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E61BC9BE2C00561EB2 /* FeetDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060F61BC9BE2C00561EB2 /* GirlDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E71BC9BE2C00561EB2 /* GirlDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060F71BC9BE2C00561EB2 /* HairDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E81BC9BE2C00561EB2 /* HairDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060F81BC9BE2C00561EB2 /* HandDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E91BC9BE2C00561EB2 /* HandDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060F91BC9BE2C00561EB2 /* HeadDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EA1BC9BE2C00561EB2 /* HeadDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060FA1BC9BE2C00561EB2 /* MouthDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EB1BC9BE2C00561EB2 /* MouthDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060FB1BC9BE2C00561EB2 /* NailDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EC1BC9BE2C00561EB2 /* NailDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060FC1BC9BE2C00561EB2 /* NeckDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060ED1BC9BE2C00561EB2 /* NeckDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060FD1BC9BE2C00561EB2 /* NoseDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EE1BC9BE2C00561EB2 /* NoseDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060FE1BC9BE2C00561EB2 /* ShortDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EF1BC9BE2C00561EB2 /* ShortDic.png */; settings = {ASSET_TAGS = (); }; };
-		07E060FF1BC9BE2C00561EB2 /* TallDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060F01BC9BE2C00561EB2 /* TallDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060F11BC9BE2C00561EB2 /* boyDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E21BC9BE2C00561EB2 /* boyDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060F21BC9BE2C00561EB2 /* chestDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E31BC9BE2C00561EB2 /* chestDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060F31BC9BE2C00561EB2 /* earDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E41BC9BE2C00561EB2 /* earDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060F41BC9BE2C00561EB2 /* eyeDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E51BC9BE2C00561EB2 /* eyeDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060F51BC9BE2C00561EB2 /* feetDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E61BC9BE2C00561EB2 /* feetDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060F61BC9BE2C00561EB2 /* girlDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E71BC9BE2C00561EB2 /* girlDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060F71BC9BE2C00561EB2 /* hairDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E81BC9BE2C00561EB2 /* hairDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060F81BC9BE2C00561EB2 /* handDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060E91BC9BE2C00561EB2 /* handDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060F91BC9BE2C00561EB2 /* headDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EA1BC9BE2C00561EB2 /* headDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060FA1BC9BE2C00561EB2 /* mouthDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EB1BC9BE2C00561EB2 /* mouthDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060FB1BC9BE2C00561EB2 /* nailDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EC1BC9BE2C00561EB2 /* nailDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060FC1BC9BE2C00561EB2 /* neckDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060ED1BC9BE2C00561EB2 /* neckDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060FD1BC9BE2C00561EB2 /* noseDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EE1BC9BE2C00561EB2 /* noseDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060FE1BC9BE2C00561EB2 /* shortDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060EF1BC9BE2C00561EB2 /* shortDic.png */; settings = {ASSET_TAGS = (); }; };
+		07E060FF1BC9BE2C00561EB2 /* tallDic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E060F01BC9BE2C00561EB2 /* tallDic.png */; settings = {ASSET_TAGS = (); }; };
 		07E29E4E1BBCB29D0051AF56 /* MasteredWordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E29E4D1BBCB29D0051AF56 /* MasteredWordsVC.swift */; settings = {ASSET_TAGS = (); }; };
 		07EAD2A01B7EB0E0002B43C6 /* Dictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */; };
 		07EAD2A31B7EB1C5002B43C6 /* DictionaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAD2A21B7EB1C5002B43C6 /* DictionaryVC.swift */; };
@@ -274,21 +274,21 @@
 		07E060CA1BC9BDD300561EB2 /* short.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = short.mp4; sourceTree = "<group>"; };
 		07E060CB1BC9BDD300561EB2 /* stomach.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = stomach.mp4; sourceTree = "<group>"; };
 		07E060CC1BC9BDD300561EB2 /* tall.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tall.mp4; sourceTree = "<group>"; };
-		07E060E21BC9BE2C00561EB2 /* BoyDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoyDic.png; sourceTree = "<group>"; };
-		07E060E31BC9BE2C00561EB2 /* ChestDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChestDic.png; sourceTree = "<group>"; };
-		07E060E41BC9BE2C00561EB2 /* EarDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EarDic.png; sourceTree = "<group>"; };
-		07E060E51BC9BE2C00561EB2 /* EyeDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EyeDic.png; sourceTree = "<group>"; };
-		07E060E61BC9BE2C00561EB2 /* FeetDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeetDic.png; sourceTree = "<group>"; };
-		07E060E71BC9BE2C00561EB2 /* GirlDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GirlDic.png; sourceTree = "<group>"; };
-		07E060E81BC9BE2C00561EB2 /* HairDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HairDic.png; sourceTree = "<group>"; };
-		07E060E91BC9BE2C00561EB2 /* HandDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HandDic.png; sourceTree = "<group>"; };
-		07E060EA1BC9BE2C00561EB2 /* HeadDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeadDic.png; sourceTree = "<group>"; };
-		07E060EB1BC9BE2C00561EB2 /* MouthDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MouthDic.png; sourceTree = "<group>"; };
-		07E060EC1BC9BE2C00561EB2 /* NailDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NailDic.png; sourceTree = "<group>"; };
-		07E060ED1BC9BE2C00561EB2 /* NeckDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NeckDic.png; sourceTree = "<group>"; };
-		07E060EE1BC9BE2C00561EB2 /* NoseDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoseDic.png; sourceTree = "<group>"; };
-		07E060EF1BC9BE2C00561EB2 /* ShortDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShortDic.png; sourceTree = "<group>"; };
-		07E060F01BC9BE2C00561EB2 /* TallDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TallDic.png; sourceTree = "<group>"; };
+		07E060E21BC9BE2C00561EB2 /* boyDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boyDic.png; sourceTree = "<group>"; };
+		07E060E31BC9BE2C00561EB2 /* chestDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chestDic.png; sourceTree = "<group>"; };
+		07E060E41BC9BE2C00561EB2 /* earDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earDic.png; sourceTree = "<group>"; };
+		07E060E51BC9BE2C00561EB2 /* eyeDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeDic.png; sourceTree = "<group>"; };
+		07E060E61BC9BE2C00561EB2 /* feetDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feetDic.png; sourceTree = "<group>"; };
+		07E060E71BC9BE2C00561EB2 /* girlDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girlDic.png; sourceTree = "<group>"; };
+		07E060E81BC9BE2C00561EB2 /* hairDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hairDic.png; sourceTree = "<group>"; };
+		07E060E91BC9BE2C00561EB2 /* handDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handDic.png; sourceTree = "<group>"; };
+		07E060EA1BC9BE2C00561EB2 /* headDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headDic.png; sourceTree = "<group>"; };
+		07E060EB1BC9BE2C00561EB2 /* mouthDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouthDic.png; sourceTree = "<group>"; };
+		07E060EC1BC9BE2C00561EB2 /* nailDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nailDic.png; sourceTree = "<group>"; };
+		07E060ED1BC9BE2C00561EB2 /* neckDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neckDic.png; sourceTree = "<group>"; };
+		07E060EE1BC9BE2C00561EB2 /* noseDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noseDic.png; sourceTree = "<group>"; };
+		07E060EF1BC9BE2C00561EB2 /* shortDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shortDic.png; sourceTree = "<group>"; };
+		07E060F01BC9BE2C00561EB2 /* tallDic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tallDic.png; sourceTree = "<group>"; };
 		07E29E4D1BBCB29D0051AF56 /* MasteredWordsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasteredWordsVC.swift; sourceTree = "<group>"; };
 		07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dictionary.plist; sourceTree = "<group>"; };
 		07EAD2A21B7EB1C5002B43C6 /* DictionaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryVC.swift; sourceTree = "<group>"; };
@@ -518,21 +518,21 @@
 		07E060E11BC9BE1E00561EB2 /* body parts */ = {
 			isa = PBXGroup;
 			children = (
-				07E060E21BC9BE2C00561EB2 /* BoyDic.png */,
-				07E060E31BC9BE2C00561EB2 /* ChestDic.png */,
-				07E060E41BC9BE2C00561EB2 /* EarDic.png */,
-				07E060E51BC9BE2C00561EB2 /* EyeDic.png */,
-				07E060E61BC9BE2C00561EB2 /* FeetDic.png */,
-				07E060E71BC9BE2C00561EB2 /* GirlDic.png */,
-				07E060E81BC9BE2C00561EB2 /* HairDic.png */,
-				07E060E91BC9BE2C00561EB2 /* HandDic.png */,
-				07E060EA1BC9BE2C00561EB2 /* HeadDic.png */,
-				07E060EB1BC9BE2C00561EB2 /* MouthDic.png */,
-				07E060EC1BC9BE2C00561EB2 /* NailDic.png */,
-				07E060ED1BC9BE2C00561EB2 /* NeckDic.png */,
-				07E060EE1BC9BE2C00561EB2 /* NoseDic.png */,
-				07E060EF1BC9BE2C00561EB2 /* ShortDic.png */,
-				07E060F01BC9BE2C00561EB2 /* TallDic.png */,
+				07E060E21BC9BE2C00561EB2 /* boyDic.png */,
+				07E060E31BC9BE2C00561EB2 /* chestDic.png */,
+				07E060E41BC9BE2C00561EB2 /* earDic.png */,
+				07E060E51BC9BE2C00561EB2 /* eyeDic.png */,
+				07E060E61BC9BE2C00561EB2 /* feetDic.png */,
+				07E060E71BC9BE2C00561EB2 /* girlDic.png */,
+				07E060E81BC9BE2C00561EB2 /* hairDic.png */,
+				07E060E91BC9BE2C00561EB2 /* handDic.png */,
+				07E060EA1BC9BE2C00561EB2 /* headDic.png */,
+				07E060EB1BC9BE2C00561EB2 /* mouthDic.png */,
+				07E060EC1BC9BE2C00561EB2 /* nailDic.png */,
+				07E060ED1BC9BE2C00561EB2 /* neckDic.png */,
+				07E060EE1BC9BE2C00561EB2 /* noseDic.png */,
+				07E060EF1BC9BE2C00561EB2 /* shortDic.png */,
+				07E060F01BC9BE2C00561EB2 /* tallDic.png */,
 			);
 			name = "body parts";
 			sourceTree = "<group>";
@@ -898,7 +898,7 @@
 				TargetAttributes = {
 					1718D6451B2B88A1004004A6 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = XAT4WZ442G;
+						DevelopmentTeam = 9VCECTYT2E;
 					};
 					1718D65A1B2B88A1004004A6 = {
 						CreatedOnToolsVersion = 6.3;
@@ -931,7 +931,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07EAD3E91B7EE48A002B43C6 /* ؤa.png in Resources */,
-				07E060F61BC9BE2C00561EB2 /* GirlDic.png in Resources */,
+				07E060F61BC9BE2C00561EB2 /* girlDic.png in Resources */,
 				07EAD3DC1B7EE48A002B43C6 /* ضa.png in Resources */,
 				07EAD3DF1B7EE48A002B43C6 /* عa.png in Resources */,
 				07FB934C1B91FF360054B556 /* Elements.xcassets in Resources */,
@@ -967,7 +967,7 @@
 				07EAD2E11B7EB2BF002B43C6 /* تSI.png in Resources */,
 				07EAD2EF1B7EB2BF002B43C6 /* ظSI.png in Resources */,
 				07EAD2F11B7EB2BF002B43C6 /* غSI.png in Resources */,
-				07E060FF1BC9BE2C00561EB2 /* TallDic.png in Resources */,
+				07E060FF1BC9BE2C00561EB2 /* tallDic.png in Resources */,
 				9F33548E1BC07C5100FA1A21 /* GE SS Two Medium.otf in Resources */,
 				07EAD3261B7EB2E9002B43C6 /* ء_thumb.png in Resources */,
 				07EAD2FC1B7EB2BF002B43C6 /* ىSI.png in Resources */,
@@ -976,7 +976,7 @@
 				07EAD3451B7EB2E9002B43C6 /* ن_thumb.png in Resources */,
 				07EAD3471B7EB2E9002B43C6 /* و_thumb.png in Resources */,
 				07EAD3431B7EB2E9002B43C6 /* لا_thumb.png in Resources */,
-				07E060F71BC9BE2C00561EB2 /* HairDic.png in Resources */,
+				07E060F71BC9BE2C00561EB2 /* hairDic.png in Resources */,
 				07EAD2F41B7EB2BF002B43C6 /* كSI.png in Resources */,
 				07EAD3E81B7EE48A002B43C6 /* وa.png in Resources */,
 				07CAA4511B980776003D950C /* Dictionary_1.plist in Resources */,
@@ -984,13 +984,13 @@
 				07EAD2DE1B7EB2BF002B43C6 /* إSI.png in Resources */,
 				07E060D81BC9BDD300561EB2 /* head.mp4 in Resources */,
 				07EAD3D41B7EE48A002B43C6 /* خa.png in Resources */,
-				07E060F51BC9BE2C00561EB2 /* FeetDic.png in Resources */,
+				07E060F51BC9BE2C00561EB2 /* feetDic.png in Resources */,
 				07EAD3D21B7EE48A002B43C6 /* جa.png in Resources */,
 				07EAD2E51B7EB2BF002B43C6 /* خSI.png in Resources */,
 				07E060D51BC9BDD300561EB2 /* girl.mp4 in Resources */,
-				07E060F91BC9BE2C00561EB2 /* HeadDic.png in Resources */,
+				07E060F91BC9BE2C00561EB2 /* headDic.png in Resources */,
 				07EAD3271B7EB2E9002B43C6 /* ا_thumb.png in Resources */,
-				07E060FB1BC9BE2C00561EB2 /* NailDic.png in Resources */,
+				07E060FB1BC9BE2C00561EB2 /* nailDic.png in Resources */,
 				07EAD3D31B7EE48A002B43C6 /* حa.png in Resources */,
 				1718D6561B2B88A1004004A6 /* LaunchScreen.xib in Resources */,
 				07EAD2EA1B7EB2BF002B43C6 /* سSI.png in Resources */,
@@ -1001,16 +1001,16 @@
 				07EAD3421B7EB2E9002B43C6 /* ل_thumb.png in Resources */,
 				07EAD3CA1B7EE48A002B43C6 /* اa.png in Resources */,
 				07EAD32D1B7EB2E9002B43C6 /* ة_thumb.png in Resources */,
-				07E060FE1BC9BE2C00561EB2 /* ShortDic.png in Resources */,
+				07E060FE1BC9BE2C00561EB2 /* shortDic.png in Resources */,
 				07EAD33B1B7EB2E9002B43C6 /* ط_thumb.png in Resources */,
 				07E060D31BC9BDD300561EB2 /* feet.mp4 in Resources */,
 				07EAD2F31B7EB2BF002B43C6 /* قSI.png in Resources */,
 				07EAD2ED1B7EB2BF002B43C6 /* ضSI.png in Resources */,
 				07EAD32B1B7EB2E9002B43C6 /* إ_thumb.png in Resources */,
 				07EAD34A1B7EB2E9002B43C6 /* ي_thumb.png in Resources */,
-				07E060F81BC9BE2C00561EB2 /* HandDic.png in Resources */,
+				07E060F81BC9BE2C00561EB2 /* handDic.png in Resources */,
 				07EAD33A1B7EB2E9002B43C6 /* ض_thumb.png in Resources */,
-				07E060FC1BC9BE2C00561EB2 /* NeckDic.png in Resources */,
+				07E060FC1BC9BE2C00561EB2 /* neckDic.png in Resources */,
 				07E060CD1BC9BDD300561EB2 /* back.mp4 in Resources */,
 				07EAD3361B7EB2E9002B43C6 /* ز_thumb.png in Resources */,
 				07EAD3301B7EB2E9002B43C6 /* ج_thumb.png in Resources */,
@@ -1025,7 +1025,7 @@
 				17A23DE31B2B9D2500695F98 /* SC_DUBAI.ttf in Resources */,
 				07E060D71BC9BDD300561EB2 /* hand.mp4 in Resources */,
 				07EAD2E91B7EB2BF002B43C6 /* زSI.png in Resources */,
-				07E060F21BC9BE2C00561EB2 /* ChestDic.png in Resources */,
+				07E060F21BC9BE2C00561EB2 /* chestDic.png in Resources */,
 				07EAD3D01B7EE48A002B43C6 /* تa.png in Resources */,
 				07EAD3CE1B7EE48A002B43C6 /* بa.png in Resources */,
 				07EAD3E21B7EE48A002B43C6 /* قa.png in Resources */,
@@ -1034,7 +1034,7 @@
 				07E060D01BC9BDD300561EB2 /* chest.mp4 in Resources */,
 				07EAD2E61B7EB2BF002B43C6 /* دSI.png in Resources */,
 				07EAD2E31B7EB2BF002B43C6 /* جSI.png in Resources */,
-				07E060F41BC9BE2C00561EB2 /* EyeDic.png in Resources */,
+				07E060F41BC9BE2C00561EB2 /* eyeDic.png in Resources */,
 				07EAD2DA1B7EB2BF002B43C6 /* اSI.png in Resources */,
 				07EAD2EB1B7EB2BF002B43C6 /* شSI.png in Resources */,
 				07EAD2F91B7EB2BF002B43C6 /* هSI.png in Resources */,
@@ -1048,14 +1048,14 @@
 				07EAD3401B7EB2E9002B43C6 /* ق_thumb.png in Resources */,
 				07EAD2E01B7EB2BF002B43C6 /* ةSI.png in Resources */,
 				07EAD3311B7EB2E9002B43C6 /* خ_thumb.png in Resources */,
-				07E060FD1BC9BE2C00561EB2 /* NoseDic.png in Resources */,
+				07E060FD1BC9BE2C00561EB2 /* noseDic.png in Resources */,
 				07E060D61BC9BDD300561EB2 /* hair.mp4 in Resources */,
-				07E060F11BC9BE2C00561EB2 /* BoyDic.png in Resources */,
+				07E060F11BC9BE2C00561EB2 /* boyDic.png in Resources */,
 				07EAD3E31B7EE48A002B43C6 /* كa.png in Resources */,
 				07EAD3441B7EB2E9002B43C6 /* م_thumb.png in Resources */,
 				07EAD33D1B7EB2E9002B43C6 /* ع_thumb.png in Resources */,
 				07EAD32A1B7EB2E9002B43C6 /* أ_thumb.png in Resources */,
-				07E060F31BC9BE2C00561EB2 /* EarDic.png in Resources */,
+				07E060F31BC9BE2C00561EB2 /* earDic.png in Resources */,
 				07EAD2F51B7EB2BF002B43C6 /* لSI.png in Resources */,
 				07EAD3321B7EB2E9002B43C6 /* ح_thumb.png in Resources */,
 				07EAD3411B7EB2E9002B43C6 /* ك_thumb.png in Resources */,
@@ -1073,7 +1073,7 @@
 				07EAD2FB1B7EB2BF002B43C6 /* ؤSI.png in Resources */,
 				07EAD3DD1B7EE48A002B43C6 /* طa.png in Resources */,
 				07EAD33F1B7EB2E9002B43C6 /* ف_thumb.png in Resources */,
-				07E060FA1BC9BE2C00561EB2 /* MouthDic.png in Resources */,
+				07E060FA1BC9BE2C00561EB2 /* mouthDic.png in Resources */,
 				07EAD3D91B7EE48A002B43C6 /* سa.png in Resources */,
 				07EAD3341B7EB2E9002B43C6 /* ذ_thumb.png in Resources */,
 				07EAD3D11B7EE48A002B43C6 /* ثa.png in Resources */,

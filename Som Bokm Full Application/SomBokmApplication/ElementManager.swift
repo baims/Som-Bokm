@@ -72,6 +72,14 @@ class ElementManager {
             }
         }
         
+        var thumbImageExists : Bool
+            {
+                if let _ = UIImage(named: thumbImageName!){
+                    return true
+                }
+                return false;
+            }
+        
         var image : UIImage? {
             get{
                 if let _image = UIImage(named: imageName!){
@@ -80,6 +88,14 @@ class ElementManager {
                 }
                 return nil
             }
+        }
+        
+        var imageExists : Bool
+            {
+                if let _ = UIImage(named: imageName!){
+                    return true
+                }
+                return false;
         }
         
         var videoName : String? {

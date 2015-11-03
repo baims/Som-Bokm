@@ -29,6 +29,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     var base = ElementManager.Base()
     var storyTellingMode : Bool?
     
+    
     override func viewDidLoad() {
         //print("story Telling mode is (\(storyTellingMode))")
         super.viewDidLoad()
@@ -47,12 +48,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //println("**")
-        //        for i in suggestedItems {
-        //            i.printDescreption()
-        //            println("--")
-        //        }
-        //println("**")
+
         return suggestedItems.count
     }
     
@@ -116,6 +112,8 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     @IBAction func searchWord(sender: UITextField) {
         if let _ = sender.text{
             checkSearching(sender.text!)
+//            showCellOfFieldText()
+            
             table.reloadData()
         }
         
@@ -149,6 +147,18 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         
         
     }
+    
+    func showCellOfFieldText(){
+        if storyTellingMode!
+        {
+            
+            let text = searchField.text
+            let elementOfText = ElementManager.Element(_name: text!)
+//            suggestedItems.insert(elementOfText, atIndex: 0)
+        }
+
+    }
+    
     
     @IBAction func goToTheSearchedItem(sender: AnyObject) {
         if searchedItemExists{

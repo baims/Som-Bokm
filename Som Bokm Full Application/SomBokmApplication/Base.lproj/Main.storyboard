@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hpu-2a-Fjd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hpu-2a-Fjd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -328,9 +328,6 @@
                                                     <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="33"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="94" y="71" width="109" height="39"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <animations/>
@@ -692,9 +689,6 @@
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.37505278716216217" colorSpace="calibratedRGB"/>
                                                     <size key="shadowOffset" width="0.0" height="1"/>
-                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="177" y="83" width="133" height="61"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <animations/>
@@ -735,6 +729,9 @@
                                                 <exclude reference="XBp-5m-30t"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <exclude reference="U00-lm-awg"/>
+                                                <exclude reference="VYL-ov-jAd"/>
+                                                <exclude reference="kFI-C8-5Xm"/>
                                                 <exclude reference="6bn-eD-bYA"/>
                                                 <exclude reference="ERL-V8-hQW"/>
                                                 <exclude reference="JlX-WD-qo5"/>
@@ -746,9 +743,6 @@
                                                 <exclude reference="S6W-iW-RAT"/>
                                                 <exclude reference="SUr-x7-HtS"/>
                                                 <exclude reference="buF-bk-eze"/>
-                                                <exclude reference="U00-lm-awg"/>
-                                                <exclude reference="VYL-ov-jAd"/>
-                                                <exclude reference="kFI-C8-5Xm"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=regular">
@@ -757,6 +751,7 @@
                                                 <include reference="XBp-5m-30t"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <include reference="VYL-ov-jAd"/>
                                                 <include reference="6bn-eD-bYA"/>
                                                 <include reference="ERL-V8-hQW"/>
                                                 <include reference="JlX-WD-qo5"/>
@@ -765,7 +760,6 @@
                                                 <include reference="fl7-4L-Vb9"/>
                                                 <include reference="yqE-Ys-vVV"/>
                                                 <exclude reference="zD1-43-mbI"/>
-                                                <include reference="VYL-ov-jAd"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -773,14 +767,14 @@
                                                 <include reference="aBJ-aB-xOM"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <include reference="U00-lm-awg"/>
+                                                <exclude reference="VYL-ov-jAd"/>
+                                                <include reference="kFI-C8-5Xm"/>
                                                 <exclude reference="JlX-WD-qo5"/>
                                                 <exclude reference="RAe-4P-QV7"/>
                                                 <include reference="S6W-iW-RAT"/>
                                                 <include reference="SUr-x7-HtS"/>
                                                 <include reference="buF-bk-eze"/>
-                                                <include reference="U00-lm-awg"/>
-                                                <exclude reference="VYL-ov-jAd"/>
-                                                <include reference="kFI-C8-5Xm"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -943,9 +937,6 @@
                                         <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="178" y="85" width="445" height="65"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أسد" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwn-6s-abr">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -965,9 +956,6 @@
                                             <mask key="constraints">
                                                 <exclude reference="QGG-GQ-RLt"/>
                                             </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="343" y="14" width="117" height="95"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j63-ky-XTL">
@@ -1246,8 +1234,7 @@
                                                     <include reference="0tN-h1-QGR"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                <rect key="frame" x="26" y="83" width="228" height="30"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
                                                 <mask key="constraints">
                                                     <exclude reference="0tN-h1-QGR"/>
                                                 </mask>
@@ -1274,8 +1261,7 @@
                                                     <exclude reference="Iah-xm-wGz"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                <rect key="frame" x="238" y="8" width="16" height="18"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
                                                 <mask key="constraints">
                                                     <include reference="5a5-sz-ddh"/>
                                                     <include reference="Iah-xm-wGz"/>
@@ -1325,9 +1311,6 @@
                                 </view>
                                 <animations/>
                                 <blurEffect style="dark"/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="280" height="800"/>
-                                </variation>
                             </visualEffectView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZzZ-jL-cwT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1344,7 +1327,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2cE-mX-xu0" id="cTW-EB-lHv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="chj-sm-xt1">
@@ -1364,7 +1347,7 @@
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="257" y="8" width="55" height="53"/>
+                                                        <rect key="frame" x="217" y="8" width="55" height="53"/>
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-0Z-Euf">
@@ -1377,7 +1360,7 @@
                                                         <rect key="frame" x="196" y="24" width="42" height="21"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="196" y="24" width="42" height="21"/>
+                                                        <rect key="frame" x="161" y="24" width="37" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -1440,8 +1423,7 @@
                                         <include reference="yry-At-6mh"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="137" width="280" height="663"/>
+                                <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <exclude reference="yry-At-6mh"/>
                                     </mask>
@@ -1457,9 +1439,6 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="45"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="88" y="8" width="107" height="53"/>
-                                </variation>
                             </label>
                         </subviews>
                         <animations/>
@@ -1564,7 +1543,7 @@
                     <toolbarItems/>
                     <connections>
                         <outlet property="searchField" destination="12F-4z-DXZ" id="bZw-Q5-jRM"/>
-                        <outlet property="table" destination="ZzZ-jL-cwT" id="eZC-lJ-l7n"/>
+                        <outlet property="table" destination="ZzZ-jL-cwT" id="4Qp-3Y-5HK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDe-IL-sSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2770,10 +2749,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ZKR-oM-VcK">
-                                <rect key="frame" x="151" y="-9" width="452" height="50"/>
+                                <rect key="frame" x="151" y="-9" width="362" height="47"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-Xu-DcG" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-Xu-DcG" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2784,8 +2763,8 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="q1M-Jb-4T9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-FM-gz8" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="93" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-FM-gz8" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="75" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2796,8 +2775,8 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="9IB-JX-TZm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-oj-aJh" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="186" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-oj-aJh" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="150" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2808,8 +2787,8 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="bfJ-PJ-ePZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29e-Q3-f6p" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="279" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29e-Q3-f6p" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="225" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2820,8 +2799,8 @@
                                             <action selector="wordButtonTapped:" destination="hU0-Me-Sab" eventType="touchUpInside" id="zYc-s7-VOm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-WF-VgM" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
-                                        <rect key="frame" x="372" y="0.0" width="80" height="50"/>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tes-WF-VgM" customClass="StoryReadingWordButton" customModule="SomBokmApplication" customModuleProvider="target">
+                                        <rect key="frame" x="300" y="0.0" width="62" height="47"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="GESSTwoMedium-Medium" family="GE SS Two" pointSize="32"/>
                                         <state key="normal" title="_____">
@@ -2890,9 +2869,6 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="212" y="13" width="99" height="28"/>
-                                </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="اااا" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="pfe-98-ep7" customClass="CustomTextView" customModule="SomBokmApplication" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -2919,8 +2895,7 @@
                                         <exclude reference="xcO-kc-2FL"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="33" y="60" width="454" height="207"/>
+                                <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="ANT-A3-jMS"/>
                                         <include reference="xcO-kc-2FL"/>
@@ -2943,8 +2918,7 @@
                                         <exclude reference="kEM-U7-LYy"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="213" y="281" width="97" height="30"/>
+                                <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="89I-lf-dkJ"/>
                                         <include reference="kEM-U7-LYy"/>
@@ -3042,8 +3016,7 @@
                                         <exclude reference="Fh9-80-Z5H"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="141" y="434" width="70" height="70"/>
+                                <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="F3V-9Q-UMy"/>
                                         <include reference="Fh9-80-Z5H"/>
@@ -3089,9 +3062,6 @@
                                 <state key="normal" title="Use">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="161" y="454" width="30" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="hide:" destination="y01-x3-WUv" eventType="touchUpInside" id="zLb-zy-0jd"/>
                                 </connections>
@@ -3245,9 +3215,6 @@
                                 <fontDescription key="fontDescription" name="SC_DUBAI" family="SC_DUBAI" pointSize="52"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="241" y="28" width="320" height="61"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6U3-Ij-CWe">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>

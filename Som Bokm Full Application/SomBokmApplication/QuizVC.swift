@@ -292,7 +292,9 @@
             elementImage.tag = j+1 // set the tag to the random number
             // when the first random number is generated , let this be the right answer , its index is not 0 , it is random number
             // for example let's say the computer generated 2,3,1,0 , ( rightAnswerIndex = 2 )
-            if i==0 {
+          
+            if i==0
+            {
                 rightAnswerIndex = j
             }
         }

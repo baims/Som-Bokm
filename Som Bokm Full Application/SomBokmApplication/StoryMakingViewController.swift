@@ -75,6 +75,8 @@ class StoryMakingViewController: UIViewController {
             
              NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSearchView:", name: "showSearchView", object: nil)
         }
+        
+        showBackgroundsContainerView()
     }
     
     override func viewDidLayoutSubviews()
@@ -230,12 +232,22 @@ class StoryMakingViewController: UIViewController {
     @IBAction func typeButtonTapped(sender: UIButton) {
         self.showTypeStoryContainerView()
     }
-    
     @IBAction func videoButtonTapped(sender: UIButton) {
-        self.showVideoRecordingContainerView()
+        if videoRecordingContainerView.hidden == true
+        {
+            self.showVideoRecordingContainerView()
+        }
+        else
+        {
+
+            self.videoRecordingViewController.hide(sender)
+        }
+        
+
     }
     
-    @IBAction func backgroundButtonTapped(sender: UIButton) {
+    @IBAction func backgroundButtonTapped(sender: UIButton)
+    {
         self.showBackgroundsContainerView()
     }
     
@@ -489,6 +501,7 @@ extension StoryMakingViewController
         
         self.videoRecordingContainerView.hidden = true
         self.videoRecordingViewController.camera.stop()
+
     }
     
     func videoHasBeenRecorded(url : NSURL)
@@ -566,17 +579,20 @@ extension StoryMakingViewController
         videoPlayer.repeatEnabled = true
         if showVideoTappedCounter % 2 == 0
         {
-            videoPlayer.hidden = false
 
             let element = ElementManager.Base()[elementName]
             element.printDescreption()
             if element.isNil == false
             {
+                if element.videoExist == true {
+                videoPlayer.hidden = false
+
                 videoPlayer.videoName = element.videoName!
                 videoPlayer.prepareForPlay()
                 self.view.addSubview(videoPlayer)
                 videoPlayer.play()
                 videoPlayer.pipEnabled = true
+                }
             }
         }
         else

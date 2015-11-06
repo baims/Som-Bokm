@@ -86,6 +86,7 @@ class ElementManager {
                     return _image
                     
                 }
+                
                 return nil
             }
         }
@@ -451,7 +452,7 @@ class ElementManager {
 //        var counter = 0
         for i in array
         {
-            if i.videoExist == true
+            if i.videoExist == true && i.imageExists == true
             {
                array2.append(i)
             }

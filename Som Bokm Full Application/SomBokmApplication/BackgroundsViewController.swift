@@ -16,7 +16,7 @@ class BackgroundsViewController: UIViewController, UICollectionViewDelegate, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backgroundNames = ["islandBGST", "beachBGST"]
+        backgroundNames = ["islandBGST", "beachBGST","parkBGST","sea1BGST","sea2BGST"]
     }
 
     override func didReceiveMemoryWarning() {

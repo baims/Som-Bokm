@@ -74,3 +74,39 @@ import Foundation
         }
     }
 }
+
+
+
+@IBDesignable class CustomButton : UIButton{
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
+    
+    
+    @IBInspectable var borderWidth: CGFloat{
+        set {
+            layer.borderWidth = newValue
+        }
+        get{
+            return self.layer.borderWidth
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            layer.borderColor = newValue?.CGColor
+        }
+        get{
+            let c = UIColor(CGColor: layer.borderColor!)
+            return c
+        }
+    }
+    
+}

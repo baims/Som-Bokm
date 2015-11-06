@@ -16,7 +16,7 @@ class ElementsScrollView: UIScrollView {
     
     var elementsOnscreen = [ElementImageView]()
     
-    var elementsImageNames = ["boyElement", "girlElement"]
+    var elementsImageNames = ["boyElement", "girlElement","bigSisElement","boyGElement","girl1Element","boy1Element","momElement","manElement","girlGElement","womenElement","papa3oodElement","girl2Element","GrandMaElement"]
     
     
     func update(bgName : String)
@@ -26,9 +26,9 @@ class ElementsScrollView: UIScrollView {
     
     func updateElementNames(bgName : String)
     {
-        elementsImageNames = ["boyElement", "girlElement"]
+        elementsImageNames = ["boyElement", "girlElement","bigSisElement","boyGElement","girl1Element","boy1Element","momElement","manElement","girlGElement","womenElement","papa3oodElement","girl2Element","GrandMaElement"]
         
-        for i in 1...5
+        for i in 1...10
         {
             elementsImageNames.append("\(bgName)\(i)")
         }
@@ -75,18 +75,21 @@ class ElementsScrollView: UIScrollView {
     
     func elementTapped(sender : UIButton)
     {
-        let superView = self.superview!
-        let image     = sender.imageForState(.Normal)! // getting the image of the button
-        let element   = ElementImageView(image: image)
+        if let image = sender.imageForState(.Normal)
+        {
+            let superView = self.superview!
+            let image     = image // getting the image of the button
+            let element   = ElementImageView(image: image)
         
-        element.frame.size = CGSizeMake(image.size.width, image.size.height)
-        element.center     = superView.center
-        element.image?.accessibilityIdentifier = sender.accessibilityIdentifier
+            element.frame.size = CGSizeMake(image.size.width, image.size.height)
+            element.center     = superView.center
+            element.image?.accessibilityIdentifier = sender.accessibilityIdentifier
         
-        superView.addSubview(element)
+            superView.addSubview(element)
 
         // add it to the array
         elementsOnscreen.append(element)
+        }
     }
 
 }

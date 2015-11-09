@@ -86,6 +86,7 @@ class ElementManager {
                     return _image
                     
                 }
+                
                 return nil
             }
         }
@@ -154,6 +155,7 @@ class ElementManager {
             if _name is String
             {
                 name = _name as? String
+                arName = _name as? String
             }
             else if _name is NSArray
             {
@@ -450,7 +452,7 @@ class ElementManager {
 //        var counter = 0
         for i in array
         {
-            if i.videoExist == true
+            if i.videoExist == true && i.imageExists == true
             {
                array2.append(i)
             }

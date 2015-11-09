@@ -47,7 +47,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         segmentControl.selectedSegmentIndex = (0)
         collectionView.reloadData()
         
-        //        self.navigationController?.navigationBarHidden = true
+        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "goToSearchedItem:", name: "goToSearchedItem", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideSearchView:"  , name: "hideSearchView", object: nil)
@@ -169,7 +169,10 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         // C E L L  _  I M A G E
         
         let cell_image_name = rootsArray![segmentControl.selectedSegmentIndex].categoriesArray![indexPath.row].categoryName! + "_thumb"
-        if let cell_image   = UIImage(named:cell_image_name){
+        
+        if let cell_image   = UIImage(named:cell_image_name)
+        {
+            cell.label.hidden = true
             cell.cellBG.image       = cell_image
             cell.cellBG.contentMode = UIViewContentMode.ScaleAspectFit
         }
@@ -199,6 +202,7 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         selectedIndexPath = indexPath
         
         return true
+        
     }
     
     
@@ -206,7 +210,13 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     
     @IBAction func segmentChangedValue(sender: UISegmentedControl)
     {
+
         self.collectionView.reloadData()
+        /*
+            PROBLEM WHEN RELOADING PAGE , LABL of another thing comes here
+        */
+        self.collectionView.setNeedsLayout()
+        self.collectionView.layoutIfNeeded()
     }
     
     // ----------- S    E    G   U   E ---------->

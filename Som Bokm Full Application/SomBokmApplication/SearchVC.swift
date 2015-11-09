@@ -28,6 +28,9 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     var searchedItemExists = false
     var base = ElementManager.Base()
     var storyTellingMode : Bool?
+    var array : [ElementManager.Element]!
+
+    
     
     override func viewDidLoad() {
         //print("story Telling mode is (\(storyTellingMode))")
@@ -38,6 +41,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideKeyboard:"  , name: "hideKeyboard", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showKeyboard:"  , name: "showKeyboard", object: nil)
         
+        
 
     }
     
@@ -47,12 +51,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //println("**")
-        //        for i in suggestedItems {
-        //            i.printDescreption()
-        //            println("--")
-        //        }
-        //println("**")
+
         return suggestedItems.count
     }
     
@@ -64,6 +63,8 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         let imageName        = suggestedItems[indexPath.row].imageName
         cell.cellImage.image = UIImage(named:imageName!)
         
+        
+        //seperator View
         let seperatorView = UIView(frame: CGRectMake(0,cell.frame.size.height-3,cell.frame.size.width,3))
         seperatorView.backgroundColor = UIColor.grayColor()
         cell.addSubview(seperatorView)
@@ -74,7 +75,6 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Selected")
         
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! SearchTableViewCell
         searchField.text = cell.cellLabel.text
@@ -87,7 +87,7 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         searchField.text = text
         
         checkSearching(text)
-        print(searchedItemExists)
+        
         if searchedItemExists{
             print("notifiaction pushed")
             
@@ -116,6 +116,10 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     @IBAction func searchWord(sender: UITextField) {
         if let _ = sender.text{
             checkSearching(sender.text!)
+            
+            showCellOfFieldText()
+            
+            
             table.reloadData()
         }
         
@@ -129,26 +133,71 @@ class SearchVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     }
     
     func checkSearching(text: String){
-        let array = ElementManager.getArrayyOfElementsWithPrefix(text, base: ElementManager.Base())
+
+        array = ElementManager.getArrayyOfElementsWithPrefix(text, base: ElementManager.Base())
+        showCellOfFieldText()
         suggestedItems = array
         
+//        
+//        if storyTellingMode == false
+//        {
         // get the element
-        if let str = ElementManager.Element.getEnglishNameFromArabic(text){
-            let el = ElementManager.Base()[str]
-            
-            if !el.isNil!
+            if let str = ElementManager.Element.getEnglishNameFromArabic(text)
             {
-                selectedElement = el
-                print("The selected element \(selectedElement.name) is ready to push")
-                searchedItemExists = true
+                let el = ElementManager.Base()[str]
+                
+                if !el.isNil!
+                {
+                    selectedElement = el
+                    print("The selected element \(selectedElement.name) is ready to push")
+                    searchedItemExists = true
+                }
+              
+                else
+                {
+                    print("element with name \(selectedElement.name!) is not applicable to ppush")
+                    searchedItemExists = false
+                }
             }
-            else{
-                searchedItemExists = false
+            else if storyTellingMode == true
+            {
+                print ("Story MODE DMEODMEODEOM DOMEODME DOMDOE DE")
+                let el = ElementManager.Element(_name: text)
+                
+
+                
+                    print ("NOt NILLL LL LL LL LL LL")
+                    selectedElement = el
+                    print("The selected element \(selectedElement.name) is ready to push")
+                    searchedItemExists = true
+                
+                
             }
-        }
+        
+        
+//        }
+        
+
         
         
     }
+    
+    func showCellOfFieldText(){
+        if storyTellingMode == true
+        {
+            let text = searchField.text
+            let elementOfText = ElementManager.Element(_name: text!)
+//            suggestedItems.insert(elementOfText, atIndex: 0)
+            array.insert(elementOfText, atIndex: 0)
+        }
+
+    }
+    
+    func addElementToBase(inout array:[ElementManager.Element])
+    {
+//        array.
+    }
+    
     
     @IBAction func goToTheSearchedItem(sender: AnyObject) {
         if searchedItemExists{

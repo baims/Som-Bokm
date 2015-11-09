@@ -216,6 +216,74 @@
 		9FBB27281B8571DE00BD8041 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB27271B8571DE00BD8041 /* AdminViewController.swift */; };
 		9FF207631BA1E25000B2345B /* TypeReadingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF207621BA1E25000B2345B /* TypeReadingStoryViewController.swift */; };
 		9FF207651BA1F00A00B2345B /* StoryReadingWordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF207641BA1F00A00B2345B /* StoryReadingWordButton.swift */; };
+		C329BD761BE96DF4006C8094 /* Brother.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD6E1BE96DF4006C8094 /* Brother.mp4 */; };
+		C329BD771BE96DF4006C8094 /* Family.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD6F1BE96DF4006C8094 /* Family.mp4 */; };
+		C329BD781BE96DF4006C8094 /* Father.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD701BE96DF4006C8094 /* Father.mp4 */; };
+		C329BD791BE96DF4006C8094 /* Grandfather.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD711BE96DF4006C8094 /* Grandfather.mp4 */; };
+		C329BD7A1BE96DF4006C8094 /* Grandmother.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD721BE96DF4006C8094 /* Grandmother.mp4 */; };
+		C329BD7B1BE96DF4006C8094 /* Mother.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD731BE96DF4006C8094 /* Mother.mp4 */; };
+		C329BD7C1BE96DF4006C8094 /* Relatives.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD741BE96DF4006C8094 /* Relatives.mp4 */; };
+		C329BD7D1BE96DF4006C8094 /* Sister.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD751BE96DF4006C8094 /* Sister.mp4 */; };
+		C329BD801BE96E5D006C8094 /* Juice.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD7F1BE96E5D006C8094 /* Juice.mp4 */; };
+		C329BD831BE96E69006C8094 /* CannedDrink.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD811BE96E69006C8094 /* CannedDrink.mp4 */; };
+		C329BD841BE96E69006C8094 /* CannedFood.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD821BE96E69006C8094 /* CannedFood.mp4 */; };
+		C329BD861BE96E74006C8094 /* Egg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD851BE96E74006C8094 /* Egg.mp4 */; };
+		C329BD931BE96EB3006C8094 /* Carpenter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD881BE96EB3006C8094 /* Carpenter.mp4 */; };
+		C329BD941BE96EB3006C8094 /* Chaser.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD891BE96EB3006C8094 /* Chaser.mp4 */; };
+		C329BD951BE96EB3006C8094 /* Doctor.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8A1BE96EB3006C8094 /* Doctor.mp4 */; };
+		C329BD961BE96EB3006C8094 /* Firefighter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8B1BE96EB3006C8094 /* Firefighter.mp4 */; };
+		C329BD971BE96EB3006C8094 /* KG.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8C1BE96EB3006C8094 /* KG.mp4 */; };
+		C329BD981BE96EB3006C8094 /* OilWell.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8D1BE96EB3006C8094 /* OilWell.mp4 */; };
+		C329BD991BE96EB3006C8094 /* Painter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8E1BE96EB3006C8094 /* Painter.mp4 */; };
+		C329BD9A1BE96EB3006C8094 /* Pharmacy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8F1BE96EB3006C8094 /* Pharmacy.mp4 */; };
+		C329BD9C1BE96EB3006C8094 /* Tailor.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD911BE96EB3006C8094 /* Tailor.mp4 */; };
+		C329BD9D1BE96EB3006C8094 /* Worker.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD921BE96EB3006C8094 /* Worker.mp4 */; };
+		C329BDA01BE96EDC006C8094 /* Airport.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD9F1BE96EDC006C8094 /* Airport.mp4 */; };
+		C329BDA21BE96EF5006C8094 /* Sea.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDA11BE96EF5006C8094 /* Sea.mp4 */; };
+		C329BDA41BE96F02006C8094 /* Resturant.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDA31BE96F02006C8094 /* Resturant.mp4 */; };
+		C329BDA61BE96F0A006C8094 /* Barn.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDA51BE96F0A006C8094 /* Barn.mp4 */; };
+		C329BDA81BE96F11006C8094 /* Bathroom.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDA71BE96F11006C8094 /* Bathroom.mp4 */; };
+		C329BDAA1BE96F1A006C8094 /* EntertainmentCity.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDA91BE96F1A006C8094 /* EntertainmentCity.mp4 */; };
+		C329BDAC1BE96F23006C8094 /* KG.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDAB1BE96F23006C8094 /* KG.mp4 */; };
+		C329BDAE1BE96F2B006C8094 /* KuwaitTowers.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDAD1BE96F2B006C8094 /* KuwaitTowers.mp4 */; };
+		C329BDB01BE96F36006C8094 /* OilWell.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDAF1BE96F36006C8094 /* OilWell.mp4 */; };
+		C329BDB21BE96F40006C8094 /* Pharmacy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB11BE96F40006C8094 /* Pharmacy.mp4 */; };
+		C329BDB41BE96F56006C8094 /* ScientificCenter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB31BE96F56006C8094 /* ScientificCenter.mp4 */; };
+		C329BDBD1BE96F92006C8094 /* Blackborad.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB61BE96F92006C8094 /* Blackborad.mp4 */; };
+		C329BDBE1BE96F92006C8094 /* Book.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB71BE96F92006C8094 /* Book.mp4 */; };
+		C329BDBF1BE96F92006C8094 /* Classroom.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB81BE96F92006C8094 /* Classroom.mp4 */; };
+		C329BDC01BE96F92006C8094 /* pen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB91BE96F92006C8094 /* pen.mp4 */; };
+		C329BDC11BE96F92006C8094 /* SchoolPrincipl.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDBA1BE96F92006C8094 /* SchoolPrincipl.mp4 */; };
+		C329BDC21BE96F92006C8094 /* Table.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDBB1BE96F92006C8094 /* Table.mp4 */; };
+		C329BDC31BE96F92006C8094 /* Teacher.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDBC1BE96F92006C8094 /* Teacher.mp4 */; };
+		C329BDC91BE96FC8006C8094 /* Ball.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDC51BE96FC8006C8094 /* Ball.mp4 */; };
+		C329BDCA1BE96FC8006C8094 /* Door.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDC61BE96FC8006C8094 /* Door.mp4 */; };
+		C329BDCB1BE96FC8006C8094 /* Garden.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDC71BE96FC8006C8094 /* Garden.mp4 */; };
+		C329BDCC1BE96FC8006C8094 /* Toys.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDC81BE96FC8006C8094 /* Toys.mp4 */; };
+		C329BDD71BE96FE4006C8094 /* Day.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDCE1BE96FE4006C8094 /* Day.mp4 */; };
+		C329BDD81BE96FE4006C8094 /* Fall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDCF1BE96FE4006C8094 /* Fall.mp4 */; };
+		C329BDD91BE96FE4006C8094 /* FourSeasons.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDD01BE96FE4006C8094 /* FourSeasons.mp4 */; };
+		C329BDDA1BE96FE4006C8094 /* Moon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDD11BE96FE4006C8094 /* Moon.mp4 */; };
+		C329BDDB1BE96FE4006C8094 /* Night.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDD21BE96FE4006C8094 /* Night.mp4 */; };
+		C329BDDC1BE96FE4006C8094 /* Spring.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDD31BE96FE4006C8094 /* Spring.mp4 */; };
+		C329BDDD1BE96FE4006C8094 /* Summer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDD41BE96FE4006C8094 /* Summer.mp4 */; };
+		C329BDDE1BE96FE4006C8094 /* Sun.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDD51BE96FE4006C8094 /* Sun.mp4 */; };
+		C329BDDF1BE96FE4006C8094 /* Winter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDD61BE96FE4006C8094 /* Winter.mp4 */; };
+		C329BDED1BE9700A006C8094 /* Draw.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDE11BE9700A006C8094 /* Draw.mp4 */; };
+		C329BDEE1BE9700A006C8094 /* Eat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDE21BE9700A006C8094 /* Eat.mp4 */; };
+		C329BDEF1BE9700A006C8094 /* Exercise.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDE31BE9700A006C8094 /* Exercise.mp4 */; };
+		C329BDF01BE9700A006C8094 /* Happy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDE41BE9700A006C8094 /* Happy.mp4 */; };
+		C329BDF11BE9700A006C8094 /* Hungry.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDE51BE9700A006C8094 /* Hungry.mp4 */; };
+		C329BDF21BE9700A006C8094 /* PayMoney.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDE61BE9700A006C8094 /* PayMoney.mp4 */; };
+		C329BDF31BE9700A006C8094 /* Sad.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDE71BE9700A006C8094 /* Sad.mp4 */; };
+		C329BDF41BE9700A006C8094 /* Search.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDE81BE9700A006C8094 /* Search.mp4 */; };
+		C329BDF51BE9700A006C8094 /* Smell.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDE91BE9700A006C8094 /* Smell.mp4 */; };
+		C329BDF61BE9700A006C8094 /* TakeaShower.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDEA1BE9700A006C8094 /* TakeaShower.mp4 */; };
+		C329BDF71BE9700A006C8094 /* Thirsty.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDEB1BE9700A006C8094 /* Thirsty.mp4 */; };
+		C329BDF81BE9700A006C8094 /* WashHand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDEC1BE9700A006C8094 /* WashHand.mp4 */; };
+		C329BE1A1BEA8D8C006C8094 /* DictionaryLastUpdate.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C329BE191BEA8D8C006C8094 /* DictionaryLastUpdate.xcassets */; };
+		C3A411E41BEB92FE00AE6122 /* Policeman.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3A411E31BEB92FE00AE6122 /* Policeman.mp4 */; };
+		C3DD93331BF0E17B00421C60 /* ئa.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD93321BF0E17B00421C60 /* ئa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -459,6 +527,74 @@
 		9FBB27271B8571DE00BD8041 /* AdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		9FF207621BA1E25000B2345B /* TypeReadingStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeReadingStoryViewController.swift; sourceTree = "<group>"; };
 		9FF207641BA1F00A00B2345B /* StoryReadingWordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryReadingWordButton.swift; sourceTree = "<group>"; };
+		C329BD6E1BE96DF4006C8094 /* Brother.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brother.mp4; sourceTree = "<group>"; };
+		C329BD6F1BE96DF4006C8094 /* Family.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Family.mp4; sourceTree = "<group>"; };
+		C329BD701BE96DF4006C8094 /* Father.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Father.mp4; sourceTree = "<group>"; };
+		C329BD711BE96DF4006C8094 /* Grandfather.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Grandfather.mp4; sourceTree = "<group>"; };
+		C329BD721BE96DF4006C8094 /* Grandmother.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Grandmother.mp4; sourceTree = "<group>"; };
+		C329BD731BE96DF4006C8094 /* Mother.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mother.mp4; sourceTree = "<group>"; };
+		C329BD741BE96DF4006C8094 /* Relatives.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Relatives.mp4; sourceTree = "<group>"; };
+		C329BD751BE96DF4006C8094 /* Sister.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sister.mp4; sourceTree = "<group>"; };
+		C329BD7F1BE96E5D006C8094 /* Juice.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Juice.mp4; sourceTree = "<group>"; };
+		C329BD811BE96E69006C8094 /* CannedDrink.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CannedDrink.mp4; sourceTree = "<group>"; };
+		C329BD821BE96E69006C8094 /* CannedFood.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CannedFood.mp4; sourceTree = "<group>"; };
+		C329BD851BE96E74006C8094 /* Egg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Egg.mp4; sourceTree = "<group>"; };
+		C329BD881BE96EB3006C8094 /* Carpenter.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Carpenter.mp4; sourceTree = "<group>"; };
+		C329BD891BE96EB3006C8094 /* Chaser.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chaser.mp4; sourceTree = "<group>"; };
+		C329BD8A1BE96EB3006C8094 /* Doctor.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Doctor.mp4; sourceTree = "<group>"; };
+		C329BD8B1BE96EB3006C8094 /* Firefighter.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Firefighter.mp4; sourceTree = "<group>"; };
+		C329BD8C1BE96EB3006C8094 /* KG.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = KG.mp4; sourceTree = "<group>"; };
+		C329BD8D1BE96EB3006C8094 /* OilWell.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OilWell.mp4; sourceTree = "<group>"; };
+		C329BD8E1BE96EB3006C8094 /* Painter.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Painter.mp4; sourceTree = "<group>"; };
+		C329BD8F1BE96EB3006C8094 /* Pharmacy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pharmacy.mp4; sourceTree = "<group>"; };
+		C329BD911BE96EB3006C8094 /* Tailor.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tailor.mp4; sourceTree = "<group>"; };
+		C329BD921BE96EB3006C8094 /* Worker.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Worker.mp4; sourceTree = "<group>"; };
+		C329BD9F1BE96EDC006C8094 /* Airport.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Airport.mp4; sourceTree = "<group>"; };
+		C329BDA11BE96EF5006C8094 /* Sea.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sea.mp4; sourceTree = "<group>"; };
+		C329BDA31BE96F02006C8094 /* Resturant.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Resturant.mp4; sourceTree = "<group>"; };
+		C329BDA51BE96F0A006C8094 /* Barn.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Barn.mp4; sourceTree = "<group>"; };
+		C329BDA71BE96F11006C8094 /* Bathroom.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bathroom.mp4; sourceTree = "<group>"; };
+		C329BDA91BE96F1A006C8094 /* EntertainmentCity.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = EntertainmentCity.mp4; sourceTree = "<group>"; };
+		C329BDAB1BE96F23006C8094 /* KG.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = KG.mp4; sourceTree = "<group>"; };
+		C329BDAD1BE96F2B006C8094 /* KuwaitTowers.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = KuwaitTowers.mp4; sourceTree = "<group>"; };
+		C329BDAF1BE96F36006C8094 /* OilWell.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OilWell.mp4; sourceTree = "<group>"; };
+		C329BDB11BE96F40006C8094 /* Pharmacy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pharmacy.mp4; sourceTree = "<group>"; };
+		C329BDB31BE96F56006C8094 /* ScientificCenter.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScientificCenter.mp4; sourceTree = "<group>"; };
+		C329BDB61BE96F92006C8094 /* Blackborad.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Blackborad.mp4; path = "School Vids/Blackborad.mp4"; sourceTree = "<group>"; };
+		C329BDB71BE96F92006C8094 /* Book.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Book.mp4; path = "School Vids/Book.mp4"; sourceTree = "<group>"; };
+		C329BDB81BE96F92006C8094 /* Classroom.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Classroom.mp4; path = "School Vids/Classroom.mp4"; sourceTree = "<group>"; };
+		C329BDB91BE96F92006C8094 /* pen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = pen.mp4; path = "School Vids/pen.mp4"; sourceTree = "<group>"; };
+		C329BDBA1BE96F92006C8094 /* SchoolPrincipl.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = SchoolPrincipl.mp4; path = "School Vids/SchoolPrincipl.mp4"; sourceTree = "<group>"; };
+		C329BDBB1BE96F92006C8094 /* Table.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Table.mp4; path = "School Vids/Table.mp4"; sourceTree = "<group>"; };
+		C329BDBC1BE96F92006C8094 /* Teacher.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Teacher.mp4; path = "School Vids/Teacher.mp4"; sourceTree = "<group>"; };
+		C329BDC51BE96FC8006C8094 /* Ball.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ball.mp4; path = "Sea Vids/Ball.mp4"; sourceTree = "<group>"; };
+		C329BDC61BE96FC8006C8094 /* Door.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Door.mp4; path = "Sea Vids/Door.mp4"; sourceTree = "<group>"; };
+		C329BDC71BE96FC8006C8094 /* Garden.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Garden.mp4; path = "Sea Vids/Garden.mp4"; sourceTree = "<group>"; };
+		C329BDC81BE96FC8006C8094 /* Toys.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Toys.mp4; path = "Sea Vids/Toys.mp4"; sourceTree = "<group>"; };
+		C329BDCE1BE96FE4006C8094 /* Day.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Day.mp4; path = seasons/Day.mp4; sourceTree = "<group>"; };
+		C329BDCF1BE96FE4006C8094 /* Fall.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Fall.mp4; path = seasons/Fall.mp4; sourceTree = "<group>"; };
+		C329BDD01BE96FE4006C8094 /* FourSeasons.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = FourSeasons.mp4; path = seasons/FourSeasons.mp4; sourceTree = "<group>"; };
+		C329BDD11BE96FE4006C8094 /* Moon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Moon.mp4; path = seasons/Moon.mp4; sourceTree = "<group>"; };
+		C329BDD21BE96FE4006C8094 /* Night.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Night.mp4; path = seasons/Night.mp4; sourceTree = "<group>"; };
+		C329BDD31BE96FE4006C8094 /* Spring.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Spring.mp4; path = seasons/Spring.mp4; sourceTree = "<group>"; };
+		C329BDD41BE96FE4006C8094 /* Summer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Summer.mp4; path = seasons/Summer.mp4; sourceTree = "<group>"; };
+		C329BDD51BE96FE4006C8094 /* Sun.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sun.mp4; path = seasons/Sun.mp4; sourceTree = "<group>"; };
+		C329BDD61BE96FE4006C8094 /* Winter.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Winter.mp4; path = seasons/Winter.mp4; sourceTree = "<group>"; };
+		C329BDE11BE9700A006C8094 /* Draw.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Draw.mp4; path = Verbs/Draw.mp4; sourceTree = "<group>"; };
+		C329BDE21BE9700A006C8094 /* Eat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Eat.mp4; path = Verbs/Eat.mp4; sourceTree = "<group>"; };
+		C329BDE31BE9700A006C8094 /* Exercise.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Exercise.mp4; path = Verbs/Exercise.mp4; sourceTree = "<group>"; };
+		C329BDE41BE9700A006C8094 /* Happy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Happy.mp4; path = Verbs/Happy.mp4; sourceTree = "<group>"; };
+		C329BDE51BE9700A006C8094 /* Hungry.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Hungry.mp4; path = Verbs/Hungry.mp4; sourceTree = "<group>"; };
+		C329BDE61BE9700A006C8094 /* PayMoney.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = PayMoney.mp4; path = Verbs/PayMoney.mp4; sourceTree = "<group>"; };
+		C329BDE71BE9700A006C8094 /* Sad.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sad.mp4; path = Verbs/Sad.mp4; sourceTree = "<group>"; };
+		C329BDE81BE9700A006C8094 /* Search.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Search.mp4; path = Verbs/Search.mp4; sourceTree = "<group>"; };
+		C329BDE91BE9700A006C8094 /* Smell.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Smell.mp4; path = Verbs/Smell.mp4; sourceTree = "<group>"; };
+		C329BDEA1BE9700A006C8094 /* TakeaShower.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = TakeaShower.mp4; path = Verbs/TakeaShower.mp4; sourceTree = "<group>"; };
+		C329BDEB1BE9700A006C8094 /* Thirsty.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Thirsty.mp4; path = Verbs/Thirsty.mp4; sourceTree = "<group>"; };
+		C329BDEC1BE9700A006C8094 /* WashHand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = WashHand.mp4; path = Verbs/WashHand.mp4; sourceTree = "<group>"; };
+		C329BE191BEA8D8C006C8094 /* DictionaryLastUpdate.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DictionaryLastUpdate.xcassets; sourceTree = "<group>"; };
+		C3A411E31BEB92FE00AE6122 /* Policeman.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Policeman.mp4; sourceTree = "<group>"; };
+		C3DD93321BF0E17B00421C60 /* ئa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ئa.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -601,6 +737,7 @@
 				07EAD3C71B7EE48A002B43C6 /* ؤa.png */,
 				07EAD3C81B7EE48A002B43C6 /* ىa.png */,
 				07EAD3C91B7EE48A002B43C6 /* يa.png */,
+				C3DD93321BF0E17B00421C60 /* ئa.png */,
 				07EAD3001B7EB2E9002B43C6 /* ء_thumb.png */,
 				07EAD3011B7EB2E9002B43C6 /* ا_thumb.png */,
 				07EAD3021B7EB2E9002B43C6 /* ال_thumb.png */,
@@ -684,21 +821,18 @@
 		07EAD3A51B7EB954002B43C6 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				C329BDE01BE96FF9006C8094 /* Verbs */,
+				C329BDCD1BE96FDA006C8094 /* Seasons */,
+				C329BDC41BE96FB0006C8094 /* Sea */,
+				C329BDB51BE96F88006C8094 /* School */,
+				C329BD9E1BE96EBB006C8094 /* places */,
+				C329BD871BE96E9D006C8094 /* Jobs */,
+				C329BD7E1BE96E00006C8094 /* Food */,
+				C329BD6D1BE96DCE006C8094 /* Family members */,
+				C329BD6C1BE96D6D006C8094 /* tools */,
+				C329BD6B1BE96D5E006C8094 /* Animals */,
+				C329BD6A1BE96D43006C8094 /* Plants */,
 				07E060B91BC9BD8700561EB2 /* body part */,
-				0709D8101B9E379A00AED422 /* hammer.mp4 */,
-				07EAD3891B7EB93D002B43C6 /* butterfly.mp4 */,
-				07EAD38A1B7EB93D002B43C6 /* camel.mp4 */,
-				07EAD38B1B7EB93D002B43C6 /* flower.mp4 */,
-				07EAD38C1B7EB93D002B43C6 /* girrafe.mp4 */,
-				07EAD38D1B7EB93D002B43C6 /* knife.mp4 */,
-				07EAD38E1B7EB93D002B43C6 /* lion.mp4 */,
-				07EAD38F1B7EB93D002B43C6 /* rabbit.mp4 */,
-				07EAD3901B7EB93D002B43C6 /* sheep.mp4 */,
-				07EAD3911B7EB93D002B43C6 /* telephone.mp4 */,
-				07EAD3921B7EB93D002B43C6 /* tiger.mp4 */,
-				07EAD3931B7EB93D002B43C6 /* tree.mp4 */,
-				07EAD3951B7EB93D002B43C6 /* water.mp4 */,
-				07EAD3961B7EB93D002B43C6 /* horse.mp4 */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -717,6 +851,8 @@
 		07FB934E1B9330010054B556 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */,
+				079632181B93692B00CC70A7 /* IBElements.swift */,
 				1718D6541B2B88A1004004A6 /* LaunchScreen.xib */,
 				1718D64B1B2B88A1004004A6 /* AppDelegate.swift */,
 				9FBB27201B7FBC5B00BD8041 /* HomeViewController.swift */,
@@ -744,6 +880,7 @@
 				07FB93491B91FF0A0054B556 /* StoryTelling Media.xcassets */,
 				0705D1AC1B7EA7A4002D6672 /* ImagesForSomApp.xcassets */,
 				0705D1AE1B7EA7FF002D6672 /* buttons.xcassets */,
+				C329BE191BEA8D8C006C8094 /* DictionaryLastUpdate.xcassets */,
 				070F66F41BCD5AE1001169B9 /* Images-2.xcassets */,
 			);
 			sourceTree = "<group>";
@@ -763,8 +900,6 @@
 				07CAA4501B980776003D950C /* Dictionary_1.plist */,
 				1718D64F1B2B88A1004004A6 /* Main.storyboard */,
 				077421461BC5D1240005BF2D /* BackgroundManager.swift */,
-				07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */,
-				079632181B93692B00CC70A7 /* IBElements.swift */,
 				07FB934E1B9330010054B556 /* Main */,
 				9FBB270E1B7FB87E00BD8041 /* Realm */,
 				9FBB26FE1B7FB82100BD8041 /* Story Telling */,
@@ -846,6 +981,163 @@
 			name = LLSimpleCamera;
 			sourceTree = "<group>";
 		};
+		C329BD6A1BE96D43006C8094 /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+				07EAD38B1B7EB93D002B43C6 /* flower.mp4 */,
+				07EAD3931B7EB93D002B43C6 /* tree.mp4 */,
+			);
+			name = Plants;
+			sourceTree = "<group>";
+		};
+		C329BD6B1BE96D5E006C8094 /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				07EAD3891B7EB93D002B43C6 /* butterfly.mp4 */,
+				07EAD38A1B7EB93D002B43C6 /* camel.mp4 */,
+				07EAD38C1B7EB93D002B43C6 /* girrafe.mp4 */,
+				07EAD38E1B7EB93D002B43C6 /* lion.mp4 */,
+				07EAD38F1B7EB93D002B43C6 /* rabbit.mp4 */,
+				07EAD3901B7EB93D002B43C6 /* sheep.mp4 */,
+				07EAD3921B7EB93D002B43C6 /* tiger.mp4 */,
+				07EAD3961B7EB93D002B43C6 /* horse.mp4 */,
+			);
+			name = Animals;
+			sourceTree = "<group>";
+		};
+		C329BD6C1BE96D6D006C8094 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				07EAD3911B7EB93D002B43C6 /* telephone.mp4 */,
+				07EAD38D1B7EB93D002B43C6 /* knife.mp4 */,
+				0709D8101B9E379A00AED422 /* hammer.mp4 */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		C329BD6D1BE96DCE006C8094 /* Family members */ = {
+			isa = PBXGroup;
+			children = (
+				C329BD6E1BE96DF4006C8094 /* Brother.mp4 */,
+				C329BD6F1BE96DF4006C8094 /* Family.mp4 */,
+				C329BD701BE96DF4006C8094 /* Father.mp4 */,
+				C329BD711BE96DF4006C8094 /* Grandfather.mp4 */,
+				C329BD721BE96DF4006C8094 /* Grandmother.mp4 */,
+				C329BD731BE96DF4006C8094 /* Mother.mp4 */,
+				C329BD741BE96DF4006C8094 /* Relatives.mp4 */,
+				C329BD751BE96DF4006C8094 /* Sister.mp4 */,
+			);
+			name = "Family members";
+			sourceTree = "<group>";
+		};
+		C329BD7E1BE96E00006C8094 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				C329BD811BE96E69006C8094 /* CannedDrink.mp4 */,
+				C329BD851BE96E74006C8094 /* Egg.mp4 */,
+				C329BD821BE96E69006C8094 /* CannedFood.mp4 */,
+				C329BD7F1BE96E5D006C8094 /* Juice.mp4 */,
+				07EAD3951B7EB93D002B43C6 /* water.mp4 */,
+			);
+			name = Food;
+			sourceTree = "<group>";
+		};
+		C329BD871BE96E9D006C8094 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				C329BD881BE96EB3006C8094 /* Carpenter.mp4 */,
+				C329BD891BE96EB3006C8094 /* Chaser.mp4 */,
+				C329BD8A1BE96EB3006C8094 /* Doctor.mp4 */,
+				C329BD8B1BE96EB3006C8094 /* Firefighter.mp4 */,
+				C329BD8C1BE96EB3006C8094 /* KG.mp4 */,
+				C329BD8D1BE96EB3006C8094 /* OilWell.mp4 */,
+				C329BD8E1BE96EB3006C8094 /* Painter.mp4 */,
+				C3A411E31BEB92FE00AE6122 /* Policeman.mp4 */,
+				C329BD8F1BE96EB3006C8094 /* Pharmacy.mp4 */,
+				C329BD911BE96EB3006C8094 /* Tailor.mp4 */,
+				C329BD921BE96EB3006C8094 /* Worker.mp4 */,
+			);
+			name = Jobs;
+			sourceTree = "<group>";
+		};
+		C329BD9E1BE96EBB006C8094 /* places */ = {
+			isa = PBXGroup;
+			children = (
+				C329BDA51BE96F0A006C8094 /* Barn.mp4 */,
+				C329BD9F1BE96EDC006C8094 /* Airport.mp4 */,
+				C329BDA31BE96F02006C8094 /* Resturant.mp4 */,
+				C329BDA91BE96F1A006C8094 /* EntertainmentCity.mp4 */,
+				C329BDA71BE96F11006C8094 /* Bathroom.mp4 */,
+				C329BDA11BE96EF5006C8094 /* Sea.mp4 */,
+				C329BDAB1BE96F23006C8094 /* KG.mp4 */,
+				C329BDAD1BE96F2B006C8094 /* KuwaitTowers.mp4 */,
+				C329BDB11BE96F40006C8094 /* Pharmacy.mp4 */,
+				C329BDAF1BE96F36006C8094 /* OilWell.mp4 */,
+				C329BDB31BE96F56006C8094 /* ScientificCenter.mp4 */,
+			);
+			name = places;
+			sourceTree = "<group>";
+		};
+		C329BDB51BE96F88006C8094 /* School */ = {
+			isa = PBXGroup;
+			children = (
+				C329BDB61BE96F92006C8094 /* Blackborad.mp4 */,
+				C329BDB71BE96F92006C8094 /* Book.mp4 */,
+				C329BDB81BE96F92006C8094 /* Classroom.mp4 */,
+				C329BDB91BE96F92006C8094 /* pen.mp4 */,
+				C329BDBA1BE96F92006C8094 /* SchoolPrincipl.mp4 */,
+				C329BDBB1BE96F92006C8094 /* Table.mp4 */,
+				C329BDBC1BE96F92006C8094 /* Teacher.mp4 */,
+			);
+			name = School;
+			sourceTree = "<group>";
+		};
+		C329BDC41BE96FB0006C8094 /* Sea */ = {
+			isa = PBXGroup;
+			children = (
+				C329BDC51BE96FC8006C8094 /* Ball.mp4 */,
+				C329BDC61BE96FC8006C8094 /* Door.mp4 */,
+				C329BDC71BE96FC8006C8094 /* Garden.mp4 */,
+				C329BDC81BE96FC8006C8094 /* Toys.mp4 */,
+			);
+			name = Sea;
+			sourceTree = "<group>";
+		};
+		C329BDCD1BE96FDA006C8094 /* Seasons */ = {
+			isa = PBXGroup;
+			children = (
+				C329BDCE1BE96FE4006C8094 /* Day.mp4 */,
+				C329BDCF1BE96FE4006C8094 /* Fall.mp4 */,
+				C329BDD01BE96FE4006C8094 /* FourSeasons.mp4 */,
+				C329BDD11BE96FE4006C8094 /* Moon.mp4 */,
+				C329BDD21BE96FE4006C8094 /* Night.mp4 */,
+				C329BDD31BE96FE4006C8094 /* Spring.mp4 */,
+				C329BDD41BE96FE4006C8094 /* Summer.mp4 */,
+				C329BDD51BE96FE4006C8094 /* Sun.mp4 */,
+				C329BDD61BE96FE4006C8094 /* Winter.mp4 */,
+			);
+			name = Seasons;
+			sourceTree = "<group>";
+		};
+		C329BDE01BE96FF9006C8094 /* Verbs */ = {
+			isa = PBXGroup;
+			children = (
+				C329BDE11BE9700A006C8094 /* Draw.mp4 */,
+				C329BDE21BE9700A006C8094 /* Eat.mp4 */,
+				C329BDE31BE9700A006C8094 /* Exercise.mp4 */,
+				C329BDE41BE9700A006C8094 /* Happy.mp4 */,
+				C329BDE51BE9700A006C8094 /* Hungry.mp4 */,
+				C329BDE61BE9700A006C8094 /* PayMoney.mp4 */,
+				C329BDE71BE9700A006C8094 /* Sad.mp4 */,
+				C329BDE81BE9700A006C8094 /* Search.mp4 */,
+				C329BDE91BE9700A006C8094 /* Smell.mp4 */,
+				C329BDEA1BE9700A006C8094 /* TakeaShower.mp4 */,
+				C329BDEB1BE9700A006C8094 /* Thirsty.mp4 */,
+				C329BDEC1BE9700A006C8094 /* WashHand.mp4 */,
+			);
+			name = Verbs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -898,7 +1190,7 @@
 				TargetAttributes = {
 					1718D6451B2B88A1004004A6 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = XAT4WZ442G;
+						DevelopmentTeam = 9VCECTYT2E;
 					};
 					1718D65A1B2B88A1004004A6 = {
 						CreatedOnToolsVersion = 6.3;
@@ -930,6 +1222,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C329BDF41BE9700A006C8094 /* Search.mp4 in Resources */,
+				C329BD931BE96EB3006C8094 /* Carpenter.mp4 in Resources */,
 				07EAD3E91B7EE48A002B43C6 /* ؤa.png in Resources */,
 				07E060F61BC9BE2C00561EB2 /* girlDic.png in Resources */,
 				07EAD3DC1B7EE48A002B43C6 /* ضa.png in Resources */,
@@ -940,10 +1234,15 @@
 				07EAD33E1B7EB2E9002B43C6 /* غ_thumb.png in Resources */,
 				07EAD3CC1B7EE48A002B43C6 /* أa.png in Resources */,
 				07EAD2DB1B7EB2BF002B43C6 /* الSI.png in Resources */,
+				C329BDC21BE96F92006C8094 /* Table.mp4 in Resources */,
 				07E060CF1BC9BDD300561EB2 /* boy.mp4 in Resources */,
 				07EAD3D71B7EE48A002B43C6 /* رa.png in Resources */,
 				07EAD3CB1B7EE48A002B43C6 /* آa.png in Resources */,
+				C329BD981BE96EB3006C8094 /* OilWell.mp4 in Resources */,
+				C329BD9C1BE96EB3006C8094 /* Tailor.mp4 in Resources */,
 				07EAD3D51B7EE48A002B43C6 /* دa.png in Resources */,
+				C329BDEF1BE9700A006C8094 /* Exercise.mp4 in Resources */,
+				C329BDDB1BE96FE4006C8094 /* Night.mp4 in Resources */,
 				07EAD3DE1B7EE48A002B43C6 /* ظa.png in Resources */,
 				07EAD3481B7EB2E9002B43C6 /* ؤ_thumb.png in Resources */,
 				07EAD2E21B7EB2BF002B43C6 /* ثSI.png in Resources */,
@@ -955,6 +1254,7 @@
 				07EAD2F01B7EB2BF002B43C6 /* عSI.png in Resources */,
 				07EAD33C1B7EB2E9002B43C6 /* ظ_thumb.png in Resources */,
 				07E060D91BC9BDD300561EB2 /* mouth.mp4 in Resources */,
+				C329BDB01BE96F36006C8094 /* OilWell.mp4 in Resources */,
 				07EAD2E41B7EB2BF002B43C6 /* حSI.png in Resources */,
 				07EAD3E11B7EE48A002B43C6 /* فa.png in Resources */,
 				0709D8111B9E379A00AED422 /* hammer.mp4 in Resources */,
@@ -964,16 +1264,22 @@
 				07E060DD1BC9BDD300561EB2 /* short.mp4 in Resources */,
 				07EAD34B1B7EB2E9002B43C6 /* ئ_thumb.png in Resources */,
 				07E060DF1BC9BDD300561EB2 /* tall.mp4 in Resources */,
+				C329BD9A1BE96EB3006C8094 /* Pharmacy.mp4 in Resources */,
 				07EAD2E11B7EB2BF002B43C6 /* تSI.png in Resources */,
+				C329BD831BE96E69006C8094 /* CannedDrink.mp4 in Resources */,
+				C329BD781BE96DF4006C8094 /* Father.mp4 in Resources */,
 				07EAD2EF1B7EB2BF002B43C6 /* ظSI.png in Resources */,
 				07EAD2F11B7EB2BF002B43C6 /* غSI.png in Resources */,
 				07E060FF1BC9BE2C00561EB2 /* tallDic.png in Resources */,
+				C329BDA41BE96F02006C8094 /* Resturant.mp4 in Resources */,
 				9F33548E1BC07C5100FA1A21 /* GE SS Two Medium.otf in Resources */,
+				C329BD941BE96EB3006C8094 /* Chaser.mp4 in Resources */,
 				07EAD3261B7EB2E9002B43C6 /* ء_thumb.png in Resources */,
 				07EAD2FC1B7EB2BF002B43C6 /* ىSI.png in Resources */,
 				07E060DA1BC9BDD300561EB2 /* nail.mp4 in Resources */,
 				070F66F51BCD5AE1001169B9 /* Images-2.xcassets in Resources */,
 				07EAD3451B7EB2E9002B43C6 /* ن_thumb.png in Resources */,
+				C329BDC31BE96F92006C8094 /* Teacher.mp4 in Resources */,
 				07EAD3471B7EB2E9002B43C6 /* و_thumb.png in Resources */,
 				07EAD3431B7EB2E9002B43C6 /* لا_thumb.png in Resources */,
 				07E060F71BC9BE2C00561EB2 /* hairDic.png in Resources */,
@@ -982,86 +1288,129 @@
 				07CAA4511B980776003D950C /* Dictionary_1.plist in Resources */,
 				07EAD2F71B7EB2BF002B43C6 /* مSI.png in Resources */,
 				07EAD2DE1B7EB2BF002B43C6 /* إSI.png in Resources */,
+				C329BDC01BE96F92006C8094 /* pen.mp4 in Resources */,
 				07E060D81BC9BDD300561EB2 /* head.mp4 in Resources */,
 				07EAD3D41B7EE48A002B43C6 /* خa.png in Resources */,
 				07E060F51BC9BE2C00561EB2 /* feetDic.png in Resources */,
+				C329BD771BE96DF4006C8094 /* Family.mp4 in Resources */,
+				C329BD9D1BE96EB3006C8094 /* Worker.mp4 in Resources */,
+				C329BDED1BE9700A006C8094 /* Draw.mp4 in Resources */,
 				07EAD3D21B7EE48A002B43C6 /* جa.png in Resources */,
 				07EAD2E51B7EB2BF002B43C6 /* خSI.png in Resources */,
+				C3DD93331BF0E17B00421C60 /* ئa.png in Resources */,
+				C329BDBE1BE96F92006C8094 /* Book.mp4 in Resources */,
 				07E060D51BC9BDD300561EB2 /* girl.mp4 in Resources */,
 				07E060F91BC9BE2C00561EB2 /* headDic.png in Resources */,
+				C329BD961BE96EB3006C8094 /* Firefighter.mp4 in Resources */,
 				07EAD3271B7EB2E9002B43C6 /* ا_thumb.png in Resources */,
 				07E060FB1BC9BE2C00561EB2 /* nailDic.png in Resources */,
 				07EAD3D31B7EE48A002B43C6 /* حa.png in Resources */,
 				1718D6561B2B88A1004004A6 /* LaunchScreen.xib in Resources */,
 				07EAD2EA1B7EB2BF002B43C6 /* سSI.png in Resources */,
+				C329BD7D1BE96DF4006C8094 /* Sister.mp4 in Resources */,
+				C329BD841BE96E69006C8094 /* CannedFood.mp4 in Resources */,
 				07EAD2FE1B7EB2BF002B43C6 /* ئSI.png in Resources */,
 				0705D1AF1B7EA7FF002D6672 /* buttons.xcassets in Resources */,
 				07EAD2DF1B7EB2BF002B43C6 /* بSI.png in Resources */,
 				07EAD3DB1B7EE48A002B43C6 /* صa.png in Resources */,
+				C329BDCC1BE96FC8006C8094 /* Toys.mp4 in Resources */,
 				07EAD3421B7EB2E9002B43C6 /* ل_thumb.png in Resources */,
 				07EAD3CA1B7EE48A002B43C6 /* اa.png in Resources */,
 				07EAD32D1B7EB2E9002B43C6 /* ة_thumb.png in Resources */,
+				C329BDD81BE96FE4006C8094 /* Fall.mp4 in Resources */,
 				07E060FE1BC9BE2C00561EB2 /* shortDic.png in Resources */,
+				C329BDD71BE96FE4006C8094 /* Day.mp4 in Resources */,
 				07EAD33B1B7EB2E9002B43C6 /* ط_thumb.png in Resources */,
+				C329BDA61BE96F0A006C8094 /* Barn.mp4 in Resources */,
+				C329BD801BE96E5D006C8094 /* Juice.mp4 in Resources */,
 				07E060D31BC9BDD300561EB2 /* feet.mp4 in Resources */,
 				07EAD2F31B7EB2BF002B43C6 /* قSI.png in Resources */,
+				C329BD7C1BE96DF4006C8094 /* Relatives.mp4 in Resources */,
 				07EAD2ED1B7EB2BF002B43C6 /* ضSI.png in Resources */,
+				C329BD7B1BE96DF4006C8094 /* Mother.mp4 in Resources */,
 				07EAD32B1B7EB2E9002B43C6 /* إ_thumb.png in Resources */,
 				07EAD34A1B7EB2E9002B43C6 /* ي_thumb.png in Resources */,
 				07E060F81BC9BE2C00561EB2 /* handDic.png in Resources */,
+				C329BE1A1BEA8D8C006C8094 /* DictionaryLastUpdate.xcassets in Resources */,
 				07EAD33A1B7EB2E9002B43C6 /* ض_thumb.png in Resources */,
 				07E060FC1BC9BE2C00561EB2 /* neckDic.png in Resources */,
+				C329BDAE1BE96F2B006C8094 /* KuwaitTowers.mp4 in Resources */,
+				C329BDA81BE96F11006C8094 /* Bathroom.mp4 in Resources */,
+				C329BDF21BE9700A006C8094 /* PayMoney.mp4 in Resources */,
 				07E060CD1BC9BDD300561EB2 /* back.mp4 in Resources */,
 				07EAD3361B7EB2E9002B43C6 /* ز_thumb.png in Resources */,
+				C329BDDD1BE96FE4006C8094 /* Summer.mp4 in Resources */,
 				07EAD3301B7EB2E9002B43C6 /* ج_thumb.png in Resources */,
+				C329BD791BE96DF4006C8094 /* Grandfather.mp4 in Resources */,
 				07E060D11BC9BDD300561EB2 /* ear.mp4 in Resources */,
 				07EAD3E71B7EE48A002B43C6 /* هa.png in Resources */,
 				07EAD32C1B7EB2E9002B43C6 /* ب_thumb.png in Resources */,
+				C329BDAC1BE96F23006C8094 /* KG.mp4 in Resources */,
+				C329BD971BE96EB3006C8094 /* KG.mp4 in Resources */,
 				07EAD3371B7EB2E9002B43C6 /* س_thumb.png in Resources */,
 				07EAD2F61B7EB2BF002B43C6 /* لاSI.png in Resources */,
 				07E060D41BC9BDD300561EB2 /* friend.mp4 in Resources */,
 				07EAD3351B7EB2E9002B43C6 /* ر_thumb.png in Resources */,
 				07EAD3EA1B7EE48A002B43C6 /* ىa.png in Resources */,
+				C329BDDE1BE96FE4006C8094 /* Sun.mp4 in Resources */,
 				17A23DE31B2B9D2500695F98 /* SC_DUBAI.ttf in Resources */,
 				07E060D71BC9BDD300561EB2 /* hand.mp4 in Resources */,
 				07EAD2E91B7EB2BF002B43C6 /* زSI.png in Resources */,
+				C329BDAA1BE96F1A006C8094 /* EntertainmentCity.mp4 in Resources */,
+				C329BD951BE96EB3006C8094 /* Doctor.mp4 in Resources */,
 				07E060F21BC9BE2C00561EB2 /* chestDic.png in Resources */,
 				07EAD3D01B7EE48A002B43C6 /* تa.png in Resources */,
 				07EAD3CE1B7EE48A002B43C6 /* بa.png in Resources */,
+				C329BDB41BE96F56006C8094 /* ScientificCenter.mp4 in Resources */,
 				07EAD3E21B7EE48A002B43C6 /* قa.png in Resources */,
 				07EAD2DD1B7EB2BF002B43C6 /* أSI.png in Resources */,
+				C329BDF71BE9700A006C8094 /* Thirsty.mp4 in Resources */,
+				C329BDBF1BE96F92006C8094 /* Classroom.mp4 in Resources */,
 				07EAD3281B7EB2E9002B43C6 /* ال_thumb.png in Resources */,
 				07E060D01BC9BDD300561EB2 /* chest.mp4 in Resources */,
 				07EAD2E61B7EB2BF002B43C6 /* دSI.png in Resources */,
 				07EAD2E31B7EB2BF002B43C6 /* جSI.png in Resources */,
+				C329BDF11BE9700A006C8094 /* Hungry.mp4 in Resources */,
 				07E060F41BC9BE2C00561EB2 /* eyeDic.png in Resources */,
 				07EAD2DA1B7EB2BF002B43C6 /* اSI.png in Resources */,
 				07EAD2EB1B7EB2BF002B43C6 /* شSI.png in Resources */,
 				07EAD2F91B7EB2BF002B43C6 /* هSI.png in Resources */,
 				07EAD2F21B7EB2BF002B43C6 /* فSI.png in Resources */,
 				07E060DC1BC9BDD300561EB2 /* nose.mp4 in Resources */,
+				C329BDF51BE9700A006C8094 /* Smell.mp4 in Resources */,
 				07EAD2EC1B7EB2BF002B43C6 /* صSI.png in Resources */,
+				C3A411E41BEB92FE00AE6122 /* Policeman.mp4 in Resources */,
+				C329BD861BE96E74006C8094 /* Egg.mp4 in Resources */,
 				07EAD3491B7EB2E9002B43C6 /* ى_thumb.png in Resources */,
+				C329BD761BE96DF4006C8094 /* Brother.mp4 in Resources */,
+				C329BDDF1BE96FE4006C8094 /* Winter.mp4 in Resources */,
 				07E060DE1BC9BDD300561EB2 /* stomach.mp4 in Resources */,
 				07EAD2DC1B7EB2BF002B43C6 /* آSI.png in Resources */,
 				07E060CE1BC9BDD300561EB2 /* body.mp4 in Resources */,
 				07EAD3401B7EB2E9002B43C6 /* ق_thumb.png in Resources */,
 				07EAD2E01B7EB2BF002B43C6 /* ةSI.png in Resources */,
 				07EAD3311B7EB2E9002B43C6 /* خ_thumb.png in Resources */,
+				C329BDA01BE96EDC006C8094 /* Airport.mp4 in Resources */,
 				07E060FD1BC9BE2C00561EB2 /* noseDic.png in Resources */,
 				07E060D61BC9BDD300561EB2 /* hair.mp4 in Resources */,
 				07E060F11BC9BE2C00561EB2 /* boyDic.png in Resources */,
+				C329BDF61BE9700A006C8094 /* TakeaShower.mp4 in Resources */,
 				07EAD3E31B7EE48A002B43C6 /* كa.png in Resources */,
+				C329BDD91BE96FE4006C8094 /* FourSeasons.mp4 in Resources */,
 				07EAD3441B7EB2E9002B43C6 /* م_thumb.png in Resources */,
+				C329BDF31BE9700A006C8094 /* Sad.mp4 in Resources */,
 				07EAD33D1B7EB2E9002B43C6 /* ع_thumb.png in Resources */,
 				07EAD32A1B7EB2E9002B43C6 /* أ_thumb.png in Resources */,
 				07E060F31BC9BE2C00561EB2 /* earDic.png in Resources */,
+				C329BDA21BE96EF5006C8094 /* Sea.mp4 in Resources */,
 				07EAD2F51B7EB2BF002B43C6 /* لSI.png in Resources */,
 				07EAD3321B7EB2E9002B43C6 /* ح_thumb.png in Resources */,
+				C329BDEE1BE9700A006C8094 /* Eat.mp4 in Resources */,
 				07EAD3411B7EB2E9002B43C6 /* ك_thumb.png in Resources */,
 				07EAD3391B7EB2E9002B43C6 /* ص_thumb.png in Resources */,
 				07EAD2E71B7EB2BF002B43C6 /* ذSI.png in Resources */,
 				07EAD3D61B7EE48A002B43C6 /* ذa.png in Resources */,
+				C329BDC91BE96FC8006C8094 /* Ball.mp4 in Resources */,
 				07EAD3331B7EB2E9002B43C6 /* د_thumb.png in Resources */,
 				07EAD3291B7EB2E9002B43C6 /* آ_thumb.png in Resources */,
 				0705D1AD1B7EA7A4002D6672 /* ImagesForSomApp.xcassets in Resources */,
@@ -1071,7 +1420,11 @@
 				07EAD2A01B7EB0E0002B43C6 /* Dictionary.plist in Resources */,
 				07E060DB1BC9BDD300561EB2 /* neck.mp4 in Resources */,
 				07EAD2FB1B7EB2BF002B43C6 /* ؤSI.png in Resources */,
+				C329BDCA1BE96FC8006C8094 /* Door.mp4 in Resources */,
 				07EAD3DD1B7EE48A002B43C6 /* طa.png in Resources */,
+				C329BD991BE96EB3006C8094 /* Painter.mp4 in Resources */,
+				C329BDDA1BE96FE4006C8094 /* Moon.mp4 in Resources */,
+				C329BDF01BE9700A006C8094 /* Happy.mp4 in Resources */,
 				07EAD33F1B7EB2E9002B43C6 /* ف_thumb.png in Resources */,
 				07E060FA1BC9BE2C00561EB2 /* mouthDic.png in Resources */,
 				07EAD3D91B7EE48A002B43C6 /* سa.png in Resources */,
@@ -1079,19 +1432,26 @@
 				07EAD3D11B7EE48A002B43C6 /* ثa.png in Resources */,
 				07EAD3D81B7EE48A002B43C6 /* زa.png in Resources */,
 				07EAD32E1B7EB2E9002B43C6 /* ت_thumb.png in Resources */,
+				C329BD7A1BE96DF4006C8094 /* Grandmother.mp4 in Resources */,
+				C329BDBD1BE96F92006C8094 /* Blackborad.mp4 in Resources */,
+				C329BDC11BE96F92006C8094 /* SchoolPrincipl.mp4 in Resources */,
 				07EAD3E01B7EE48A002B43C6 /* غa.png in Resources */,
 				07EAD3E51B7EE48A002B43C6 /* مa.png in Resources */,
 				07EAD2FA1B7EB2BF002B43C6 /* وSI.png in Resources */,
+				C329BDDC1BE96FE4006C8094 /* Spring.mp4 in Resources */,
 				07EAD3381B7EB2E9002B43C6 /* ش_thumb.png in Resources */,
 				07EAD2E81B7EB2BF002B43C6 /* رSI.png in Resources */,
+				C329BDCB1BE96FC8006C8094 /* Garden.mp4 in Resources */,
 				07EAD3971B7EB93D002B43C6 /* butterfly.mp4 in Resources */,
 				07EAD3981B7EB93D002B43C6 /* camel.mp4 in Resources */,
+				C329BDB21BE96F40006C8094 /* Pharmacy.mp4 in Resources */,
 				07EAD3991B7EB93D002B43C6 /* flower.mp4 in Resources */,
 				07EAD39A1B7EB93D002B43C6 /* girrafe.mp4 in Resources */,
 				07EAD39B1B7EB93D002B43C6 /* knife.mp4 in Resources */,
 				07EAD39C1B7EB93E002B43C6 /* lion.mp4 in Resources */,
 				07EAD39D1B7EB93E002B43C6 /* rabbit.mp4 in Resources */,
 				9F3354951BC8F57D00FA1A21 /* preloaded.realm in Resources */,
+				C329BDF81BE9700A006C8094 /* WashHand.mp4 in Resources */,
 				07EAD39E1B7EB93E002B43C6 /* sheep.mp4 in Resources */,
 				07EAD39F1B7EB93E002B43C6 /* telephone.mp4 in Resources */,
 				07EAD3A01B7EB93E002B43C6 /* tiger.mp4 in Resources */,

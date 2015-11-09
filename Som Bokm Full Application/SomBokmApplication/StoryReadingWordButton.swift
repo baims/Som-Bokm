@@ -27,8 +27,16 @@ class StoryReadingWordButton: UIButton {
     func getTextOfWord() -> String!
     {
         /*** OMAR ***/
-        let arabicName = base[englishName!].arName!
-        return arabicName
+        
+        if (englishName != nil)
+        {
+            
+            if let arabicName = base[englishName!].arName
+            {
+                return arabicName
+            }
+        }
+        return englishName!
     }
     
     func getVideoPathOfWord() -> String!

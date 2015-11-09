@@ -55,7 +55,11 @@ class VideoPlayer: UIView, AVPlayerViewControllerDelegate {
         moviePlayerController.view.sizeToFit()
         moviePlayerController.videoGravity = AVLayerVideoGravityResizeAspectFill
         moviePlayerController.showsPlaybackControls = pipEnabled!
-        moviePlayerController.delegate = self
+        if #available(iOS 9.0, *) {
+            moviePlayerController.delegate = self
+        } else {
+            // Fallback on earlier versions
+        }
     
         
         self.addSubview(moviePlayerController.view)

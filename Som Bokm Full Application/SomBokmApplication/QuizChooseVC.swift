@@ -18,7 +18,6 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBOutlet var picker: UIPickerView!
     
-    @IBOutlet var numberField: UITextField!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var alertView: UIView!
     
@@ -26,20 +25,35 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
     var gameType : GameType!
     var pickerValues = [Int]()
     
+    var shadowedButton : UIButton!
+
+    
     override func viewDidLoad() {
+        
+        
+        super.viewDidLoad()
+        
+        // Shadow button
+        shadowedButton = UIButton(frame: self.view.frame)
+        shadowedButton.backgroundColor = UIColor.blackColor()
+        shadowedButton.alpha = 0.7
+        shadowedButton.hidden = true
+        
+        
         let bgImageView = UIImageView(image: UIImage(named: "parkLandscapeBG"))
         bgImageView.contentMode = .ScaleAspectFit
         bgImageView.frame = self.view.frame
         self.view.addSubview(bgImageView)
         self.view.sendSubviewToBack(bgImageView)
         
-        super.viewDidLoad()
+        alertView.hidden = true
+        
         
         for i in 1...30 {
             pickerValues.append(i)
         }
         
-        picker.delegate = self
+        picker.delegate   = self
         picker.dataSource = self
     }
     
@@ -55,15 +69,22 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     @IBAction func showAlertQNum(sender: UIButton) {
-        let shadowedButton = UIButton(frame: self.view.frame)
-        shadowedButton.backgroundColor = UIColor.blackColor()
-        shadowedButton.alpha = 0.7
+
+        shadowedButton.hidden = false
         self.view.addSubview(shadowedButton)
         self.view.bringSubviewToFront(alertView)
-        self.alertView.hidden=false
+        self.alertView.hidden = false
         
     }
    
+    @IBAction func hideAlert(sender: AnyObject) {
+        
+        
+        shadowedButton.hidden = true
+        self.alertView.hidden = true
+
+        
+    }
     
     /*
     • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
@@ -87,7 +108,9 @@ class QuizChooseVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     /*
         • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • 
+    
                     C O L L E C T I O N   V  I E W
+    
         • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
     */
 

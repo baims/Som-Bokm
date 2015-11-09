@@ -576,7 +576,7 @@ extension StoryMakingViewController
     
     func showVideo(elementName: String)
     {
-        videoPlayer.repeatEnabled = true
+        videoPlayer.repeatEnabled = false
         if showVideoTappedCounter % 2 == 0
         {
 

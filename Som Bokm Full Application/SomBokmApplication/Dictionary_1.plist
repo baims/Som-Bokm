@@ -65,21 +65,6 @@
 			<string>26</string>
 		</array>
 	</dict>
-	<key>أفعال</key>
-	<dict>
-		<key>ماضي</key>
-		<array>
-			<string>شرب</string>
-		</array>
-		<key>حاضر</key>
-		<array>
-			<array>
-				<string>ate</string>
-				<string>أكل</string>
-				<string>الأكل هو وضع الطعام في الفم</string>
-			</array>
-		</array>
-	</dict>
 	<key>التصنيف</key>
 	<dict>
 		<key>حيوانات</key>
@@ -231,7 +216,7 @@
 			</array>
 			<array>
 				<string>Relatives</string>
-				<string>أقادب</string>
+				<string>أقارب</string>
 			</array>
 			<array>
 				<string>Sister</string>

@@ -283,6 +283,7 @@
 		C329BDF81BE9700A006C8094 /* WashHand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDEC1BE9700A006C8094 /* WashHand.mp4 */; };
 		C329BE1A1BEA8D8C006C8094 /* DictionaryLastUpdate.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C329BE191BEA8D8C006C8094 /* DictionaryLastUpdate.xcassets */; };
 		C3A411E41BEB92FE00AE6122 /* Policeman.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3A411E31BEB92FE00AE6122 /* Policeman.mp4 */; };
+		C3DD93331BF0E17B00421C60 /* ئa.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD93321BF0E17B00421C60 /* ئa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -593,6 +594,7 @@
 		C329BDEC1BE9700A006C8094 /* WashHand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = WashHand.mp4; path = Verbs/WashHand.mp4; sourceTree = "<group>"; };
 		C329BE191BEA8D8C006C8094 /* DictionaryLastUpdate.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DictionaryLastUpdate.xcassets; sourceTree = "<group>"; };
 		C3A411E31BEB92FE00AE6122 /* Policeman.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Policeman.mp4; sourceTree = "<group>"; };
+		C3DD93321BF0E17B00421C60 /* ئa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ئa.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -735,6 +737,7 @@
 				07EAD3C71B7EE48A002B43C6 /* ؤa.png */,
 				07EAD3C81B7EE48A002B43C6 /* ىa.png */,
 				07EAD3C91B7EE48A002B43C6 /* يa.png */,
+				C3DD93321BF0E17B00421C60 /* ئa.png */,
 				07EAD3001B7EB2E9002B43C6 /* ء_thumb.png */,
 				07EAD3011B7EB2E9002B43C6 /* ا_thumb.png */,
 				07EAD3021B7EB2E9002B43C6 /* ال_thumb.png */,
@@ -848,6 +851,7 @@
 		07FB934E1B9330010054B556 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */,
 				079632181B93692B00CC70A7 /* IBElements.swift */,
 				1718D6541B2B88A1004004A6 /* LaunchScreen.xib */,
 				1718D64B1B2B88A1004004A6 /* AppDelegate.swift */,
@@ -896,7 +900,6 @@
 				07CAA4501B980776003D950C /* Dictionary_1.plist */,
 				1718D64F1B2B88A1004004A6 /* Main.storyboard */,
 				077421461BC5D1240005BF2D /* BackgroundManager.swift */,
-				07EAD29F1B7EB0E0002B43C6 /* Dictionary.plist */,
 				07FB934E1B9330010054B556 /* Main */,
 				9FBB270E1B7FB87E00BD8041 /* Realm */,
 				9FBB26FE1B7FB82100BD8041 /* Story Telling */,
@@ -1294,6 +1297,7 @@
 				C329BDED1BE9700A006C8094 /* Draw.mp4 in Resources */,
 				07EAD3D21B7EE48A002B43C6 /* جa.png in Resources */,
 				07EAD2E51B7EB2BF002B43C6 /* خSI.png in Resources */,
+				C3DD93331BF0E17B00421C60 /* ئa.png in Resources */,
 				C329BDBE1BE96F92006C8094 /* Book.mp4 in Resources */,
 				07E060D51BC9BDD300561EB2 /* girl.mp4 in Resources */,
 				07E060F91BC9BE2C00561EB2 /* headDic.png in Resources */,

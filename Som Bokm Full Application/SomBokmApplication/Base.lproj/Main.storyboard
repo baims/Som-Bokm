@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqQ-wE-doG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="1029.75"/>
+            <point key="canvasLocation" x="972" y="1071.75"/>
         </scene>
         <!--DictionaryVC-->
         <scene sceneID="1fo-Xp-uGD">
@@ -331,7 +331,7 @@
                                                     <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.24983377659574468" colorSpace="calibratedRGB"/>
                                                     <size key="shadowOffset" width="0.0" height="2"/>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="83" y="60" width="131" height="49"/>
+                                                        <rect key="frame" x="83" y="60.5" width="131" height="49"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -696,7 +696,7 @@
                                                     <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.37505278716216217" colorSpace="calibratedRGB"/>
                                                     <size key="shadowOffset" width="0.0" height="1"/>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="163" y="76" width="151" height="43"/>
+                                                        <rect key="frame" x="163" y="76.5" width="151" height="43"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -966,7 +966,7 @@
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="342" y="14" width="117" height="94.5"/>
+                                            <rect key="frame" x="342.5" y="14.5" width="117" height="94.5"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j63-ky-XTL">
@@ -1023,7 +1023,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                            <rect key="frame" x="178" y="102" width="445" height="64.5"/>
+                                            <rect key="frame" x="178" y="102.5" width="445" height="64.5"/>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -1404,7 +1404,7 @@
                                                         <rect key="frame" x="196" y="24" width="42" height="21"/>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="225.5" y="25" width="23.5" height="19"/>
+                                                        <rect key="frame" x="225" y="25" width="23.5" height="19"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -1599,7 +1599,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XJ-7r-Ui8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="1029.75"/>
+            <point key="canvasLocation" x="-45" y="1023.75"/>
         </scene>
         <!--Story Making View Controller-->
         <scene sceneID="6c3-SM-Xvl">
@@ -2480,7 +2480,7 @@
                                                     <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="121" y="38" width="51.5" height="24.5"/>
+                                                        <rect key="frame" x="121.5" y="38" width="51.5" height="24.5"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32T-UF-Knu">
@@ -2497,7 +2497,7 @@
                                                     <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="117" y="91" width="59" height="28"/>
+                                                        <rect key="frame" x="117.5" y="91" width="59" height="28"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -3156,16 +3156,16 @@
                                 <exclude reference="T46-kB-BGL"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="OUV-ef-Yb5"/>
+                                <exclude reference="zKU-bH-SvL"/>
                                 <exclude reference="QFn-Vh-ye7"/>
                                 <exclude reference="kng-bu-jXu"/>
-                                <exclude reference="Rme-JY-WfC"/>
-                                <exclude reference="fzX-32-gbn"/>
-                                <exclude reference="zKU-bH-SvL"/>
-                                <exclude reference="iXX-aB-Fzp"/>
-                                <exclude reference="zL1-hh-KSY"/>
                                 <exclude reference="gJN-CC-nsj"/>
                                 <exclude reference="gw3-er-unE"/>
-                                <exclude reference="OUV-ef-Yb5"/>
+                                <exclude reference="iXX-aB-Fzp"/>
+                                <exclude reference="zL1-hh-KSY"/>
+                                <exclude reference="Rme-JY-WfC"/>
+                                <exclude reference="fzX-32-gbn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -3177,16 +3177,16 @@
                                 <include reference="T46-kB-BGL"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="OUV-ef-Yb5"/>
+                                <include reference="zKU-bH-SvL"/>
                                 <include reference="QFn-Vh-ye7"/>
                                 <include reference="kng-bu-jXu"/>
-                                <include reference="Rme-JY-WfC"/>
-                                <include reference="fzX-32-gbn"/>
-                                <include reference="zKU-bH-SvL"/>
-                                <include reference="iXX-aB-Fzp"/>
-                                <include reference="zL1-hh-KSY"/>
                                 <include reference="gJN-CC-nsj"/>
                                 <include reference="gw3-er-unE"/>
-                                <include reference="OUV-ef-Yb5"/>
+                                <include reference="iXX-aB-Fzp"/>
+                                <include reference="zL1-hh-KSY"/>
+                                <include reference="Rme-JY-WfC"/>
+                                <include reference="fzX-32-gbn"/>
                             </mask>
                         </variation>
                     </view>
@@ -4349,7 +4349,7 @@
         <image name="edit icon" width="83" height="84"/>
         <image name="edit_hl" width="125" height="46"/>
         <image name="exitIcon" width="80" height="80"/>
-        <image name="islandBGST" width="1024" height="768"/>
+        <image name="islandBGST" width="1600" height="1200"/>
         <image name="lionDic" width="306" height="319"/>
         <image name="lowerBar" width="1024" height="101"/>
         <image name="masteredWords1" width="215" height="51"/>
@@ -4362,7 +4362,7 @@
         <image name="reply" width="235" height="68"/>
         <image name="result_paper" width="637" height="719"/>
         <image name="saved_pg_button" width="390" height="145"/>
-        <image name="searchButton" width="58" height="59"/>
+        <image name="searchButton" width="45" height="62"/>
         <image name="settingIcon" width="78" height="82"/>
         <image name="storytellingIcon" width="303" height="264"/>
         <image name="tahjee2" width="160" height="160"/>
@@ -4374,10 +4374,10 @@
         <image name="ِaddStpryButton_hl" width="160" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ijQ-S3-uoG"/>
         <segue reference="X7e-6q-hS2"/>
-        <segue reference="g1C-RE-kSy"/>
-        <segue reference="gJN-bD-0H5"/>
         <segue reference="8hf-s6-HVR"/>
-        <segue reference="MZU-3j-bPX"/>
+        <segue reference="x7q-Wo-FxM"/>
+        <segue reference="gJN-bD-0H5"/>
     </inferredMetricsTieBreakers>
 </document>

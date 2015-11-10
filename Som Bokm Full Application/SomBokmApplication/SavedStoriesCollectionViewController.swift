@@ -11,7 +11,7 @@ import RealmSwift
 
 
 class SavedStoriesCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+
     var typeOfRealmString : String!
     var adminMode         : Bool!
     
@@ -69,6 +69,11 @@ class SavedStoriesCollectionViewController: UIViewController, UICollectionViewDe
             self.addToReadStoriesButton.hidden = true
             self.deleteButton.hidden           = true
             self.deleteAllButton.hidden        = true
+        }
+        
+        if self.typeOfRealmString == "Reading"
+        {
+            self.addToReadStoriesButton.hidden = true
         }
     }
 
@@ -154,10 +159,14 @@ extension SavedStoriesCollectionViewController
                     realm.delete(realm.objects(StoryTelling))
                 }
                 
-                self.stories = realm.objects(StoryTelling).sorted("date", ascending: false)
+                
+                
+                let predicate = NSPredicate(format: "%K == true", self.typeOfRealmString.lowercaseString);
+                
+                self.stories = realm.objects(StoryTelling).filter(predicate).sorted("date", ascending: false)
                 self.numberOfStories = self.stories.count
                 
-                self.collectionView?.reloadData()
+                self.collectionView.reloadData()
         }
         
         alertController.addAction(deleteAction)
@@ -192,10 +201,12 @@ extension SavedStoriesCollectionViewController
                 }
                 
                 
-                self.stories = realm.objects(StoryTelling).sorted("date", ascending: false)
+                let predicate = NSPredicate(format: "%K == true", self.typeOfRealmString.lowercaseString);
+                
+                self.stories = realm.objects(StoryTelling).filter(predicate).sorted("date", ascending: false)
                 self.numberOfStories = self.stories.count
                 
-                self.collectionView?.reloadData()
+                self.collectionView.reloadData()
         }
         
         alertController.addAction(deleteAction)
@@ -210,6 +221,45 @@ extension SavedStoriesCollectionViewController
         self.navigationController?.popViewControllerAnimated(true)
     }
     
+    
+    @IBAction func addStoryToReadingStoryRealm(sender: UIButton)
+    {
+        var stories = [StoryTelling]()
+        var newStories = [StoryTelling]()
+        
+        for indexPath in self.collectionView!.indexPathsForSelectedItems()!
+        {
+            let cell = self.collectionView!.cellForItemAtIndexPath(indexPath) as! SavedStoryCollectionViewCell
+            
+            stories.append(cell.storyTelling)
+        }
+        
+        for story in stories
+        {
+            let newStory = StoryTelling()
+            newStory.reading = true
+            newStory.title = story.title
+            newStory.writer = story.writer
+            newStory.date = NSDate()
+            newStory.scenes.appendContentsOf(story.scenes)
+            
+            newStories.append(newStory)
+        }
+        
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.add(newStories)
+        }
+        
+        
+        let predicate = NSPredicate(format: "%K == true", self.typeOfRealmString.lowercaseString);
+        
+        self.stories = realm.objects(StoryTelling).filter(predicate).sorted("date", ascending: false)
+        self.numberOfStories = self.stories.count
+        
+        self.collectionView.reloadData()
+    }
 }
 
 

@@ -46,15 +46,15 @@ class ElementImageView: UIImageView, UIGestureRecognizerDelegate {
     func detectPan(recognizer:UIPanGestureRecognizer) {
         let translation  = recognizer.translationInView(self.superview!)
         
-        let x = lastLocation.x + translation.x
-        let y = lastLocation.y + translation.y
+        var x = lastLocation.x + translation.x
+        var y = lastLocation.y + translation.y
         
         
         /*** Making sure that elements CANNOT cross the bottom bar and the left bar ***/
-//        if x-(self.frame.width/2) < 116
-//        {
-//            x = 116+(self.frame.width/2)
-//        }
+        if x-(self.frame.width/2) < 116
+        {
+            x = 116+(self.frame.width/2)
+        }
 //        else if x+(self.frame.width/2) > self.superview!.frame.width
 //        {
 //            x = self.superview!.frame.width-(self.frame.width/2)
@@ -64,10 +64,10 @@ class ElementImageView: UIImageView, UIGestureRecognizerDelegate {
 //        {
 //            y = self.frame.height/2
 //        }
-//        else if y+(self.frame.height/2) > self.superview!.frame.height-101
-//        {
-//            y = self.superview!.frame.height-(self.frame.height/2)-101
-//        }
+        if y+(self.frame.height/2) > self.superview!.frame.height-101
+        {
+            y = self.superview!.frame.height-(self.frame.height/2)-101
+        }
         
         // moving the element to a new position
         self.center = CGPointMake(x, y)

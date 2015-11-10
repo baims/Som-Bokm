@@ -2591,14 +2591,6 @@
                                     <action selector="deleteButtonTapped:" destination="VQc-bb-htA" eventType="touchUpInside" id="vgU-qH-20F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQs-hh-eHA">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" image="addToReadingStory">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" image="addToReadingStory_hl"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2l-81-p0S">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -2629,6 +2621,17 @@
                                 </state>
                                 <connections>
                                     <action selector="backButtonTapped:" destination="VQc-bb-htA" eventType="touchUpInside" id="4QI-lc-XVa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQs-hh-eHA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="addToReadingStory">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="addToReadingStory_hl"/>
+                                <connections>
+                                    <action selector="addStoryToReadingStoryRealm:" destination="VQc-bb-htA" eventType="touchUpInside" id="nBS-g3-H91"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2676,10 +2679,10 @@
                                 <exclude reference="4WE-jj-BY1"/>
                                 <exclude reference="Vu9-zv-OBL"/>
                                 <exclude reference="Bs6-nm-WDq"/>
-                                <exclude reference="gQs-hh-eHA"/>
                                 <exclude reference="P2l-81-p0S"/>
                                 <exclude reference="E8c-Su-t5h"/>
                                 <exclude reference="w8h-Tx-oua"/>
+                                <exclude reference="gQs-hh-eHA"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="FRE-uQ-JT0"/>
@@ -2710,10 +2713,10 @@
                                 <include reference="4WE-jj-BY1"/>
                                 <include reference="Vu9-zv-OBL"/>
                                 <include reference="Bs6-nm-WDq"/>
-                                <include reference="gQs-hh-eHA"/>
                                 <include reference="P2l-81-p0S"/>
                                 <include reference="E8c-Su-t5h"/>
                                 <include reference="w8h-Tx-oua"/>
+                                <include reference="gQs-hh-eHA"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="FRE-uQ-JT0"/>
@@ -4350,10 +4353,10 @@
         <image name="ِaddStpryButton_hl" width="160" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ijQ-S3-uoG"/>
         <segue reference="X7e-6q-hS2"/>
+        <segue reference="g1C-RE-kSy"/>
+        <segue reference="gJN-bD-0H5"/>
         <segue reference="8hf-s6-HVR"/>
         <segue reference="x7q-Wo-FxM"/>
-        <segue reference="gJN-bD-0H5"/>
     </inferredMetricsTieBreakers>
 </document>

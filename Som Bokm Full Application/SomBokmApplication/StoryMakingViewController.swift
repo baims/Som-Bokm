@@ -77,7 +77,7 @@ class StoryMakingViewController: UIViewController {
              NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSearchView:", name: "showSearchView", object: nil)
         }
         
-        if self.typeOfRealmString == "Telling" || ((self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing") && self.adminMode == true)
+        if (self.typeOfRealmString == "Telling" && self.adminMode == false) || ((self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing") && self.adminMode == true)
         {
             showBackgroundsContainerView()
         }
@@ -733,6 +733,9 @@ extension StoryMakingViewController
             let element = Element()
             element.positionX = Float(elementOnScreen.frame.origin.x)
             element.positionY = Float(elementOnScreen.frame.origin.y)
+            element.width     = Float(elementOnScreen.frame.size.width)
+            element.height    = Float(elementOnScreen.frame.size.height)
+            element.rotation  = elementOnScreen.rotation
             element.imageName = elementOnScreen.image!.accessibilityIdentifier!
             
             scene.elements.append(element) // adding every Element to Scene
@@ -839,8 +842,10 @@ extension StoryMakingViewController
         for elementFromRealm in elements
         {
             let element = ElementImageView(image: UIImage(named: elementFromRealm.imageName))
-            element.frame = CGRectMake(CGFloat(elementFromRealm.positionX), CGFloat(elementFromRealm.positionY), element.image!.size.width, element.image!.size.height)
+            element.frame = CGRectMake(CGFloat(elementFromRealm.positionX), CGFloat(elementFromRealm.positionY), CGFloat(elementFromRealm.width), CGFloat(elementFromRealm.height))
             element.image?.accessibilityIdentifier = elementFromRealm.imageName
+            element.transform = CGAffineTransformMakeRotation(CGFloat(elementFromRealm.rotation))
+            element.contentMode = .ScaleAspectFit
             
             self.view.insertSubview(element, aboveSubview: self.backgroundImageView)
             

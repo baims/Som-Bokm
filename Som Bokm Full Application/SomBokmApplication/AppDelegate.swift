@@ -28,17 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // copy over old data files for migration
         let realm = try! Realm()
         
-        if realm.objects(StoryTelling).count == 0
-        {
-            let defaultPath = Realm.Configuration.defaultConfiguration.path!
-            
-            if let v0Path = bundlePath("preloaded.realm") {
-                do {
-                    try NSFileManager.defaultManager().removeItemAtPath(defaultPath)
-                    try NSFileManager.defaultManager().copyItemAtPath(v0Path, toPath: defaultPath)
-                } catch {}
-            }
-        }
+//        if realm.objects(StoryTelling).count == 0
+//        {
+//            let defaultPath = Realm.Configuration.defaultConfiguration.path!
+//            
+//            if let v0Path = bundlePath("preloaded.realm") {
+//                do {
+//                    try NSFileManager.defaultManager().removeItemAtPath(defaultPath)
+//                    try NSFileManager.defaultManager().copyItemAtPath(v0Path, toPath: defaultPath)
+//                } catch {}
+//            }
+//        }
         
         return true
     }

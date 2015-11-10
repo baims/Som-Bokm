@@ -33,8 +33,11 @@ class Scene : Object
 
 class Element : Object
 {
-    dynamic var positionX : Float = 0
-    dynamic var positionY : Float = 0
+    dynamic var positionX : Float  = 0
+    dynamic var positionY : Float  = 0
+    dynamic var width     : Float  = 0
+    dynamic var height    : Float  = 0
+    dynamic var rotation  : Double = 0
     dynamic var imageName = ""
 }
 

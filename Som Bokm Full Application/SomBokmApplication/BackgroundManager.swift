@@ -12,51 +12,54 @@ import UIKit
 class BackgroundManager{
     
     
-    func getEelementOfScene(sceneName:String) -> [String]
-    {
-        var elementsArray : [String] = []
-        for i in backgroundsInBundle()
-        {
-            if sceneName == i
-            {
-                var c = 1 // your start point of naming
-                var nameOfImage = i+"\(c)"
-                while NSBundle.mainBundle().pathExistsWithName(type: "png", name: nameOfImage)
-                {
-                    elementsArray.append(nameOfImage)
-                    c++
-                    nameOfImage = i+"\(c)"
-                }
-                return elementsArray
-            }
-            else
-            {
-                print("you Background : \(sceneName) Doesnt Exist!")
-            }
-        }
-        print("No elements found for bg named: \(sceneName)")
-        return []
-    }
- 
     
     
     
-    func backgroundsInBundle() -> [String]
-    {
-            
-            let arrayOfImagesWithSuffix_BG = NSBundle.mainBundle().recursivePathsForResources(type: "png",suffix : "BG")
-            //        print(arrayOfImagesWithSuffix_BG)
-            
-            var backgroundsNames : [String] = []
-            for i in arrayOfImagesWithSuffix_BG as! [String]
-            {
-                let bgName  = (i.characters.split{$0 == "_"}.map(String.init))[0] // choosed 0 to take •••BEFORE••• the " _ "
-                backgroundsNames.append(bgName)
-            }
-            
-            return backgroundsNames
-            
-    }
+//    func getEelementOfScene(sceneName:String) -> [String]
+//    {
+//        var elementsArray : [String] = []
+//        for i in backgroundsInBundle()
+//        {
+//            if sceneName == i
+//            {
+//                var c = 1 // your start point of naming
+//                var nameOfImage = i+"\(c)"
+//                while NSBundle.mainBundle().pathExistsWithName(type: "png", name: nameOfImage)
+//                {
+//                    elementsArray.append(nameOfImage)
+//                    c++
+//                    nameOfImage = i+"\(c)"
+//                }
+//                return elementsArray
+//            }
+//            else
+//            {
+//                print("you Background : \(sceneName) Doesnt Exist!")
+//            }
+//        }
+//        print("No elements found for bg named: \(sceneName)")
+//        return []
+//    }
+// 
+//    
+//    
+//    
+//    func backgroundsInBundle() -> [String]
+//    {
+//            
+//            let arrayOfImagesWithSuffix_BG = NSBundle.mainBundle().recursivePathsForResources(type: "png",suffix : "BG")
+//            //        print(arrayOfImagesWithSuffix_BG)
+//            
+//            var backgroundsNames : [String] = []
+//            for i in arrayOfImagesWithSuffix_BG as! [String]
+//            {
+//                let bgName  = (i.characters.split{$0 == "_"}.map(String.init))[0] // choosed 0 to take •••BEFORE••• the " _ "
+//                backgroundsNames.append(bgName)
+//            }
+//            
+//            return backgroundsNames
+//            
+//    }
     
     
     

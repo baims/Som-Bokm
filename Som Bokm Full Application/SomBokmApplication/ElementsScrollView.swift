@@ -28,9 +28,12 @@ class ElementsScrollView: UIScrollView {
     {
         elementsImageNames = ["boyElement", "girlElement","bigSisElement","boyGElement","girl1Element","boy1Element","momElement","manElement","girlGElement","womenElement","papa3oodElement","girl2Element","GrandMaElement"]
         
-        for i in 1...10
+        
+        let elementsOfBackground = self.getElementsOfBackground(bgName)
+        
+        for backgroundElement in elementsOfBackground
         {
-            elementsImageNames.append("\(bgName)\(i)")
+            elementsImageNames.append(backgroundElement)
         }
         
         
@@ -72,6 +75,30 @@ class ElementsScrollView: UIScrollView {
             self.addSubview(elementButton)
         }
     }
+    
+    
+    func getElementsOfBackground(bgName : String!) -> [String]!
+    {
+        var elements = [String]()
+
+        
+        for i in 1...100
+        {
+            let fileName = bgName + "\(i)" + ".png"
+            
+            if let _ = UIImage(named: fileName)
+            {
+                elements.append(fileName)
+            }
+            else
+            {
+                break
+            }
+        }
+        
+        return elements
+    }
+    
     
     func elementTapped(sender : UIButton)
     {

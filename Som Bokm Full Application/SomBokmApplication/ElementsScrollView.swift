@@ -87,8 +87,8 @@ class ElementsScrollView: UIScrollView {
         
             superView.addSubview(element)
 
-        // add it to the array
-        elementsOnscreen.append(element)
+            // add it to the array
+            elementsOnscreen.append(element)
         }
     }
 

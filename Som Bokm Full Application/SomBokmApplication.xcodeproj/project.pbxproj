@@ -232,7 +232,6 @@
 		C329BD941BE96EB3006C8094 /* Chaser.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD891BE96EB3006C8094 /* Chaser.mp4 */; };
 		C329BD951BE96EB3006C8094 /* Doctor.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8A1BE96EB3006C8094 /* Doctor.mp4 */; };
 		C329BD961BE96EB3006C8094 /* Firefighter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8B1BE96EB3006C8094 /* Firefighter.mp4 */; };
-		C329BD971BE96EB3006C8094 /* KG.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8C1BE96EB3006C8094 /* KG.mp4 */; };
 		C329BD981BE96EB3006C8094 /* OilWell.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8D1BE96EB3006C8094 /* OilWell.mp4 */; };
 		C329BD991BE96EB3006C8094 /* Painter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8E1BE96EB3006C8094 /* Painter.mp4 */; };
 		C329BD9A1BE96EB3006C8094 /* Pharmacy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BD8F1BE96EB3006C8094 /* Pharmacy.mp4 */; };
@@ -246,8 +245,6 @@
 		C329BDAA1BE96F1A006C8094 /* EntertainmentCity.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDA91BE96F1A006C8094 /* EntertainmentCity.mp4 */; };
 		C329BDAC1BE96F23006C8094 /* KG.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDAB1BE96F23006C8094 /* KG.mp4 */; };
 		C329BDAE1BE96F2B006C8094 /* KuwaitTowers.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDAD1BE96F2B006C8094 /* KuwaitTowers.mp4 */; };
-		C329BDB01BE96F36006C8094 /* OilWell.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDAF1BE96F36006C8094 /* OilWell.mp4 */; };
-		C329BDB21BE96F40006C8094 /* Pharmacy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB11BE96F40006C8094 /* Pharmacy.mp4 */; };
 		C329BDB41BE96F56006C8094 /* ScientificCenter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB31BE96F56006C8094 /* ScientificCenter.mp4 */; };
 		C329BDBD1BE96F92006C8094 /* Blackborad.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB61BE96F92006C8094 /* Blackborad.mp4 */; };
 		C329BDBE1BE96F92006C8094 /* Book.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C329BDB71BE96F92006C8094 /* Book.mp4 */; };
@@ -1185,12 +1182,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Baims;
 				TargetAttributes = {
 					1718D6451B2B88A1004004A6 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 9VCECTYT2E;
+						DevelopmentTeam = XAT4WZ442G;
 					};
 					1718D65A1B2B88A1004004A6 = {
 						CreatedOnToolsVersion = 6.3;
@@ -1254,7 +1251,6 @@
 				07EAD2F01B7EB2BF002B43C6 /* عSI.png in Resources */,
 				07EAD33C1B7EB2E9002B43C6 /* ظ_thumb.png in Resources */,
 				07E060D91BC9BDD300561EB2 /* mouth.mp4 in Resources */,
-				C329BDB01BE96F36006C8094 /* OilWell.mp4 in Resources */,
 				07EAD2E41B7EB2BF002B43C6 /* حSI.png in Resources */,
 				07EAD3E11B7EE48A002B43C6 /* فa.png in Resources */,
 				0709D8111B9E379A00AED422 /* hammer.mp4 in Resources */,
@@ -1346,7 +1342,6 @@
 				07EAD3E71B7EE48A002B43C6 /* هa.png in Resources */,
 				07EAD32C1B7EB2E9002B43C6 /* ب_thumb.png in Resources */,
 				C329BDAC1BE96F23006C8094 /* KG.mp4 in Resources */,
-				C329BD971BE96EB3006C8094 /* KG.mp4 in Resources */,
 				07EAD3371B7EB2E9002B43C6 /* س_thumb.png in Resources */,
 				07EAD2F61B7EB2BF002B43C6 /* لاSI.png in Resources */,
 				07E060D41BC9BDD300561EB2 /* friend.mp4 in Resources */,
@@ -1444,7 +1439,6 @@
 				C329BDCB1BE96FC8006C8094 /* Garden.mp4 in Resources */,
 				07EAD3971B7EB93D002B43C6 /* butterfly.mp4 in Resources */,
 				07EAD3981B7EB93D002B43C6 /* camel.mp4 in Resources */,
-				C329BDB21BE96F40006C8094 /* Pharmacy.mp4 in Resources */,
 				07EAD3991B7EB93D002B43C6 /* flower.mp4 in Resources */,
 				07EAD39A1B7EB93D002B43C6 /* girrafe.mp4 in Resources */,
 				07EAD39B1B7EB93D002B43C6 /* knife.mp4 in Resources */,

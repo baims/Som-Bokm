@@ -64,6 +64,7 @@ class StoryMakingViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationController!.navigationBar.hidden = true
+        
         /*
         ••• O m a r
         */
@@ -76,7 +77,10 @@ class StoryMakingViewController: UIViewController {
              NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSearchView:", name: "showSearchView", object: nil)
         }
         
-        showBackgroundsContainerView()
+        if self.typeOfRealmString == "Telling" || ((self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing") && self.adminMode == true)
+        {
+            showBackgroundsContainerView()
+        }
     }
     
     override func viewDidLayoutSubviews()

@@ -72,9 +72,9 @@ class StoryMakingViewController: UIViewController {
         {
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "setTextOfButtonPressed:", name: "setTextOfButtonPressed", object: nil)
             
-              NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideSearchView:", name: "hideSearchView", object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideSearchView:", name: "hideSearchView", object: nil)
             
-             NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSearchView:", name: "showSearchView", object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSearchView:", name: "showSearchView", object: nil)
         }
         
         if (self.typeOfRealmString == "Telling" && self.adminMode == false) || ((self.typeOfRealmString == "Reading" || self.typeOfRealmString == "Completing") && self.adminMode == true)

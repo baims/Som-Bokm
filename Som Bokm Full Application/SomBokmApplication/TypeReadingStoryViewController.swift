@@ -50,12 +50,18 @@ class TypeReadingStoryViewController: UIViewController {
             // show the video ?? /*** OMAR ***/
             let titleForButton = sender.titleForState(.Normal)!
             let elementName = ElementManager.Element.getEnglishNameFromArabic(titleForButton)
+            
             if elementName != nil{
                 print("element name : \(elementName)")
                 if ElementManager.Base()[elementName!].isNil == false {
                     print("button video wil show for \(titleForButton)")
                     parentViewController.showVideo(elementName!)
                 }
+                
+            }
+            else
+            {
+                parentViewController.showVideoContainer()
             }
         }
     }

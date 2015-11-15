@@ -578,26 +578,14 @@ extension StoryMakingViewController
     
 // rename thue function and set all the right values
     
-    func showVideo(elementName: String)
+    
+    func  showVideoContainer()
     {
-        videoPlayer.repeatEnabled = false
         if showVideoTappedCounter % 2 == 0
         {
-
-            let element = ElementManager.Base()[elementName]
-            element.printDescreption()
-            if element.isNil == false
-            {
-                if element.videoExist == true {
-                videoPlayer.hidden = false
-
-                videoPlayer.videoName = element.videoName!
-                videoPlayer.prepareForPlay()
-                self.view.addSubview(videoPlayer)
-                videoPlayer.play()
-                videoPlayer.pipEnabled = true
-                }
-            }
+        videoPlayer.hidden = false
+        self.view.addSubview(videoPlayer)
+            
         }
         else
         {
@@ -605,6 +593,29 @@ extension StoryMakingViewController
             videoPlayer.stop()
         }
         showVideoTappedCounter++
+
+    }
+    
+    func showVideo(elementName: String)
+    {
+        videoPlayer.repeatEnabled = false
+       
+
+            let element = ElementManager.Base()[elementName]
+            element.printDescreption()
+            if element.isNil == false
+            {
+                if element.videoExist == true {
+                    
+                    
+                    videoPlayer.videoName = element.videoName!
+                    videoPlayer.prepareForPlay()
+                    videoPlayer.play()
+                    videoPlayer.pipEnabled = true
+                    showVideoContainer()
+                }
+            }
+ 
     }
 }
 

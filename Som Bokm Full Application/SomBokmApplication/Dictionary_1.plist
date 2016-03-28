@@ -210,7 +210,7 @@
 			</array>
 			<array>
 				<string>Father</string>
-				<string>أب</string>
+				<string>الأب</string>
 			</array>
 			<array>
 				<string>Grandfather</string>
@@ -480,6 +480,102 @@
 			<array>
 				<string>WashHand</string>
 				<string>غسل اليدين</string>
+			</array>
+			<array>
+				<string>angry</string>
+				<string>غضب</string>
+			</array>
+			<array>
+				<string>ball1</string>
+				<string>كرة</string>
+			</array>
+			<array>
+				<string>ball1</string>
+				<string>الكرة</string>
+			</array>
+			<array>
+				<string>break</string>
+				<string>كسر</string>
+			</array>
+			<array>
+				<string>come</string>
+				<string>جاءت</string>
+			</array>
+			<array>
+				<string>forgive</string>
+				<string>سامحه</string>
+			</array>
+			<array>
+				<string>Grandmother</string>
+				<string>جدتي</string>
+			</array>
+			<array>
+				<string>happy</string>
+				<string>فرحاُ</string>
+			</array>
+			<array>
+				<string>head</string>
+				<string>رأس</string>
+			</array>
+			<array>
+				<string>head</string>
+				<string>رأسه</string>
+			</array>
+			<array>
+				<string>hug</string>
+				<string>عانقت</string>
+			</array>
+			<array>
+				<string>kiss</string>
+				<string>قبَّل</string>
+			</array>
+			<array>
+				<string>kiss</string>
+				<string>قبَّلت</string>
+			</array>
+			<array>
+				<string>kiss</string>
+				<string>وقبَّلت</string>
+			</array>
+			<array>
+				<string>order2</string>
+				<string>تأمرين</string>
+			</array>
+			<array>
+				<string>polite</string>
+				<string>مهذب</string>
+			</array>
+			<array>
+				<string>say</string>
+				<string>قال</string>
+			</array>
+			<array>
+				<string>say</string>
+				<string>قالت</string>
+			</array>
+			<array>
+				<string>thank</string>
+				<string>شكراً</string>
+			</array>
+			<array>
+				<string>trip</string>
+				<string>رحلة</string>
+			</array>
+			<array>
+				<string>will</string>
+				<string>سوف</string>
+			</array>
+			<array>
+				<string>window</string>
+				<string>النافذة</string>
+			</array>
+			<array>
+				<string>Father</string>
+				<string>أبي</string>
+			</array>
+			<array>
+				<string>schoold trip</string>
+				<string>رحلة المدرسة</string>
 			</array>
 		</array>
 	</dict>

@@ -316,6 +316,24 @@
 		C330414E1BF2459600785E74 /* 400_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = C330412A1BF2459600785E74 /* 400_thumb.png */; };
 		C330414F1BF2459600785E74 /* 500_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = C330412B1BF2459600785E74 /* 500_thumb.png */; };
 		C3A411E41BEB92FE00AE6122 /* Policeman.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3A411E31BEB92FE00AE6122 /* Policeman.mp4 */; };
+		C3D9C2F41CA166BA00E453C4 /* thank.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2E31CA166BA00E453C4 /* thank.mp4 */; };
+		C3D9C2F51CA166BA00E453C4 /* happy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2E41CA166BA00E453C4 /* happy.mp4 */; };
+		C3D9C2F61CA166BA00E453C4 /* hug.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2E51CA166BA00E453C4 /* hug.mp4 */; };
+		C3D9C2F71CA166BA00E453C4 /* order2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2E61CA166BA00E453C4 /* order2.mp4 */; };
+		C3D9C2F81CA166BA00E453C4 /* kiss.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2E71CA166BA00E453C4 /* kiss.mp4 */; };
+		C3D9C2F91CA166BA00E453C4 /* for.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2E81CA166BA00E453C4 /* for.mp4 */; };
+		C3D9C2FA1CA166BA00E453C4 /* forgive.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2E91CA166BA00E453C4 /* forgive.mp4 */; };
+		C3D9C2FB1CA166BA00E453C4 /* polite.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2EA1CA166BA00E453C4 /* polite.mp4 */; };
+		C3D9C2FC1CA166BA00E453C4 /* come.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2EB1CA166BA00E453C4 /* come.mp4 */; };
+		C3D9C2FD1CA166BA00E453C4 /* will.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2EC1CA166BA00E453C4 /* will.mp4 */; };
+		C3D9C2FE1CA166BA00E453C4 /* trip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2ED1CA166BA00E453C4 /* trip.mp4 */; };
+		C3D9C2FF1CA166BA00E453C4 /* school.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2EE1CA166BA00E453C4 /* school.mp4 */; };
+		C3D9C3001CA166BA00E453C4 /* say.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2EF1CA166BA00E453C4 /* say.mp4 */; };
+		C3D9C3011CA166BA00E453C4 /* angry.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2F01CA166BA00E453C4 /* angry.mp4 */; };
+		C3D9C3021CA166BA00E453C4 /* window.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2F11CA166BA00E453C4 /* window.mp4 */; };
+		C3D9C3031CA166BA00E453C4 /* ball1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2F21CA166BA00E453C4 /* ball1.mp4 */; };
+		C3D9C3041CA166BA00E453C4 /* break.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C2F31CA166BA00E453C4 /* break.mp4 */; };
+		C3D9C3061CA16F1C00E453C4 /* schoold trip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3D9C3051CA16F1C00E453C4 /* schoold trip.mp4 */; };
 		C3DD93331BF0E17B00421C60 /* ئa.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD93321BF0E17B00421C60 /* ئa.png */; };
 /* End PBXBuildFile section */
 
@@ -663,6 +681,24 @@
 		C330412A1BF2459600785E74 /* 400_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 400_thumb.png; sourceTree = "<group>"; };
 		C330412B1BF2459600785E74 /* 500_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 500_thumb.png; sourceTree = "<group>"; };
 		C3A411E31BEB92FE00AE6122 /* Policeman.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Policeman.mp4; sourceTree = "<group>"; };
+		C3D9C2E31CA166BA00E453C4 /* thank.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = thank.mp4; sourceTree = "<group>"; };
+		C3D9C2E41CA166BA00E453C4 /* happy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = happy.mp4; sourceTree = "<group>"; };
+		C3D9C2E51CA166BA00E453C4 /* hug.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hug.mp4; sourceTree = "<group>"; };
+		C3D9C2E61CA166BA00E453C4 /* order2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = order2.mp4; sourceTree = "<group>"; };
+		C3D9C2E71CA166BA00E453C4 /* kiss.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = kiss.mp4; sourceTree = "<group>"; };
+		C3D9C2E81CA166BA00E453C4 /* for.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = for.mp4; sourceTree = "<group>"; };
+		C3D9C2E91CA166BA00E453C4 /* forgive.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = forgive.mp4; sourceTree = "<group>"; };
+		C3D9C2EA1CA166BA00E453C4 /* polite.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = polite.mp4; sourceTree = "<group>"; };
+		C3D9C2EB1CA166BA00E453C4 /* come.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = come.mp4; sourceTree = "<group>"; };
+		C3D9C2EC1CA166BA00E453C4 /* will.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = will.mp4; sourceTree = "<group>"; };
+		C3D9C2ED1CA166BA00E453C4 /* trip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = trip.mp4; sourceTree = "<group>"; };
+		C3D9C2EE1CA166BA00E453C4 /* school.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = school.mp4; sourceTree = "<group>"; };
+		C3D9C2EF1CA166BA00E453C4 /* say.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = say.mp4; sourceTree = "<group>"; };
+		C3D9C2F01CA166BA00E453C4 /* angry.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = angry.mp4; sourceTree = "<group>"; };
+		C3D9C2F11CA166BA00E453C4 /* window.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = window.mp4; sourceTree = "<group>"; };
+		C3D9C2F21CA166BA00E453C4 /* ball1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ball1.mp4; sourceTree = "<group>"; };
+		C3D9C2F31CA166BA00E453C4 /* break.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = break.mp4; sourceTree = "<group>"; };
+		C3D9C3051CA16F1C00E453C4 /* schoold trip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "schoold trip.mp4"; sourceTree = "<group>"; };
 		C3DD93321BF0E17B00421C60 /* ئa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ئa.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -926,6 +962,7 @@
 		07EAD3A51B7EB954002B43C6 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				C3552F451C9E131F0082F2B3 /* new words */,
 				C329BDE01BE96FF9006C8094 /* Verbs */,
 				C329BDCD1BE96FDA006C8094 /* Seasons */,
 				C329BDC41BE96FB0006C8094 /* Sea */,
@@ -1243,6 +1280,31 @@
 			name = Verbs;
 			sourceTree = "<group>";
 		};
+		C3552F451C9E131F0082F2B3 /* new words */ = {
+			isa = PBXGroup;
+			children = (
+				C3D9C3051CA16F1C00E453C4 /* schoold trip.mp4 */,
+				C3D9C2E31CA166BA00E453C4 /* thank.mp4 */,
+				C3D9C2E41CA166BA00E453C4 /* happy.mp4 */,
+				C3D9C2E51CA166BA00E453C4 /* hug.mp4 */,
+				C3D9C2E61CA166BA00E453C4 /* order2.mp4 */,
+				C3D9C2E71CA166BA00E453C4 /* kiss.mp4 */,
+				C3D9C2E81CA166BA00E453C4 /* for.mp4 */,
+				C3D9C2E91CA166BA00E453C4 /* forgive.mp4 */,
+				C3D9C2EA1CA166BA00E453C4 /* polite.mp4 */,
+				C3D9C2EB1CA166BA00E453C4 /* come.mp4 */,
+				C3D9C2EC1CA166BA00E453C4 /* will.mp4 */,
+				C3D9C2ED1CA166BA00E453C4 /* trip.mp4 */,
+				C3D9C2EE1CA166BA00E453C4 /* school.mp4 */,
+				C3D9C2EF1CA166BA00E453C4 /* say.mp4 */,
+				C3D9C2F01CA166BA00E453C4 /* angry.mp4 */,
+				C3D9C2F11CA166BA00E453C4 /* window.mp4 */,
+				C3D9C2F21CA166BA00E453C4 /* ball1.mp4 */,
+				C3D9C2F31CA166BA00E453C4 /* break.mp4 */,
+			);
+			name = "new words";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1361,6 +1423,7 @@
 				07EAD3E61B7EE48A002B43C6 /* نa.png in Resources */,
 				C33041331BF2459600785E74 /* 7_thumb.png in Resources */,
 				07FB934A1B91FF0A0054B556 /* StoryTelling Media.xcassets in Resources */,
+				C3D9C3031CA166BA00E453C4 /* ball1.mp4 in Resources */,
 				07EAD2F01B7EB2BF002B43C6 /* عSI.png in Resources */,
 				07EAD33C1B7EB2E9002B43C6 /* ظ_thumb.png in Resources */,
 				07E060D91BC9BDD300561EB2 /* mouth.mp4 in Resources */,
@@ -1371,6 +1434,7 @@
 				07EAD32F1B7EB2E9002B43C6 /* ث_thumb.png in Resources */,
 				07EAD2D91B7EB2BF002B43C6 /* ءSI.png in Resources */,
 				07EAD3E41B7EE48A002B43C6 /* لa.png in Resources */,
+				C3D9C2FE1CA166BA00E453C4 /* trip.mp4 in Resources */,
 				07E060DD1BC9BDD300561EB2 /* short.mp4 in Resources */,
 				C330414B1BF2459600785E74 /* 100_thumb.png in Resources */,
 				07EAD34B1B7EB2E9002B43C6 /* ئ_thumb.png in Resources */,
@@ -1389,6 +1453,9 @@
 				07EAD2FC1B7EB2BF002B43C6 /* ىSI.png in Resources */,
 				07E060DA1BC9BDD300561EB2 /* nail.mp4 in Resources */,
 				C330414D1BF2459600785E74 /* 300_thumb.png in Resources */,
+				C3D9C3061CA16F1C00E453C4 /* schoold trip.mp4 in Resources */,
+				C3D9C2F61CA166BA00E453C4 /* hug.mp4 in Resources */,
+				C3D9C2FC1CA166BA00E453C4 /* come.mp4 in Resources */,
 				070F66F51BCD5AE1001169B9 /* Images-2.xcassets in Resources */,
 				07EAD3451B7EB2E9002B43C6 /* ن_thumb.png in Resources */,
 				C329BDC31BE96F92006C8094 /* Teacher.mp4 in Resources */,
@@ -1412,6 +1479,7 @@
 				07EAD2E51B7EB2BF002B43C6 /* خSI.png in Resources */,
 				C3DD93331BF0E17B00421C60 /* ئa.png in Resources */,
 				C329BDBE1BE96F92006C8094 /* Book.mp4 in Resources */,
+				C3D9C2FB1CA166BA00E453C4 /* polite.mp4 in Resources */,
 				07E060D51BC9BDD300561EB2 /* girl.mp4 in Resources */,
 				07E060F91BC9BE2C00561EB2 /* headDic.png in Resources */,
 				C329BD961BE96EB3006C8094 /* Firefighter.mp4 in Resources */,
@@ -1420,6 +1488,7 @@
 				07EAD3D31B7EE48A002B43C6 /* حa.png in Resources */,
 				1718D6561B2B88A1004004A6 /* LaunchScreen.xib in Resources */,
 				C33041381BF2459600785E74 /* 12_thumb.png in Resources */,
+				C3D9C3021CA166BA00E453C4 /* window.mp4 in Resources */,
 				C33041301BF2459600785E74 /* 4_thumb.png in Resources */,
 				07EAD2EA1B7EB2BF002B43C6 /* سSI.png in Resources */,
 				C33041361BF2459600785E74 /* 10_thumb.png in Resources */,
@@ -1439,7 +1508,9 @@
 				07E060FE1BC9BE2C00561EB2 /* shortDic.png in Resources */,
 				C330413F1BF2459600785E74 /* 19_thumb.png in Resources */,
 				C33041321BF2459600785E74 /* 6_thumb.png in Resources */,
+				C3D9C2FD1CA166BA00E453C4 /* will.mp4 in Resources */,
 				C329BDD71BE96FE4006C8094 /* Day.mp4 in Resources */,
+				C3D9C2F81CA166BA00E453C4 /* kiss.mp4 in Resources */,
 				07EAD33B1B7EB2E9002B43C6 /* ط_thumb.png in Resources */,
 				C329BDA61BE96F0A006C8094 /* Barn.mp4 in Resources */,
 				C329BD801BE96E5D006C8094 /* Juice.mp4 in Resources */,
@@ -1458,6 +1529,7 @@
 				C33041411BF2459600785E74 /* 21_thumb.png in Resources */,
 				07E060FC1BC9BE2C00561EB2 /* neckDic.png in Resources */,
 				C329BDAE1BE96F2B006C8094 /* KuwaitTowers.mp4 in Resources */,
+				C3D9C2F41CA166BA00E453C4 /* thank.mp4 in Resources */,
 				C329BDA81BE96F11006C8094 /* Bathroom.mp4 in Resources */,
 				C329BDF21BE9700A006C8094 /* PayMoney.mp4 in Resources */,
 				07E060CD1BC9BDD300561EB2 /* back.mp4 in Resources */,
@@ -1465,13 +1537,16 @@
 				C329BDDD1BE96FE4006C8094 /* Summer.mp4 in Resources */,
 				07EAD3301B7EB2E9002B43C6 /* ج_thumb.png in Resources */,
 				C329BD791BE96DF4006C8094 /* Grandfather.mp4 in Resources */,
+				C3D9C2FF1CA166BA00E453C4 /* school.mp4 in Resources */,
 				07E060D11BC9BDD300561EB2 /* ear.mp4 in Resources */,
 				07EAD3E71B7EE48A002B43C6 /* هa.png in Resources */,
 				07EAD32C1B7EB2E9002B43C6 /* ب_thumb.png in Resources */,
 				C329BDAC1BE96F23006C8094 /* KG.mp4 in Resources */,
+				C3D9C3001CA166BA00E453C4 /* say.mp4 in Resources */,
 				07EAD3371B7EB2E9002B43C6 /* س_thumb.png in Resources */,
 				07EAD2F61B7EB2BF002B43C6 /* لاSI.png in Resources */,
 				07E060D41BC9BDD300561EB2 /* friend.mp4 in Resources */,
+				C3D9C2F71CA166BA00E453C4 /* order2.mp4 in Resources */,
 				C330412F1BF2459600785E74 /* 3_thumb.png in Resources */,
 				07EAD3351B7EB2E9002B43C6 /* ر_thumb.png in Resources */,
 				07EAD3EA1B7EE48A002B43C6 /* ىa.png in Resources */,
@@ -1492,6 +1567,7 @@
 				C330412E1BF2459600785E74 /* 2_thumb.png in Resources */,
 				07EAD3E21B7EE48A002B43C6 /* قa.png in Resources */,
 				07EAD2DD1B7EB2BF002B43C6 /* أSI.png in Resources */,
+				C3D9C3041CA166BA00E453C4 /* break.mp4 in Resources */,
 				C329BDF71BE9700A006C8094 /* Thirsty.mp4 in Resources */,
 				C329BDBF1BE96F92006C8094 /* Classroom.mp4 in Resources */,
 				07EAD3281B7EB2E9002B43C6 /* ال_thumb.png in Resources */,
@@ -1506,6 +1582,7 @@
 				07EAD2EB1B7EB2BF002B43C6 /* شSI.png in Resources */,
 				07EAD2F91B7EB2BF002B43C6 /* هSI.png in Resources */,
 				07EAD2F21B7EB2BF002B43C6 /* فSI.png in Resources */,
+				C3D9C2F51CA166BA00E453C4 /* happy.mp4 in Resources */,
 				07E060DC1BC9BDD300561EB2 /* nose.mp4 in Resources */,
 				C329BDF51BE9700A006C8094 /* Smell.mp4 in Resources */,
 				07EAD2EC1B7EB2BF002B43C6 /* صSI.png in Resources */,
@@ -1533,6 +1610,7 @@
 				07EAD33D1B7EB2E9002B43C6 /* ع_thumb.png in Resources */,
 				07EAD32A1B7EB2E9002B43C6 /* أ_thumb.png in Resources */,
 				07E060F31BC9BE2C00561EB2 /* earDic.png in Resources */,
+				C3D9C2FA1CA166BA00E453C4 /* forgive.mp4 in Resources */,
 				C329BDA21BE96EF5006C8094 /* Sea.mp4 in Resources */,
 				C33041351BF2459600785E74 /* 9_thumb.png in Resources */,
 				07EAD2F51B7EB2BF002B43C6 /* لSI.png in Resources */,
@@ -1544,6 +1622,7 @@
 				07EAD3D61B7EE48A002B43C6 /* ذa.png in Resources */,
 				C329BDC91BE96FC8006C8094 /* Ball.mp4 in Resources */,
 				C330413A1BF2459600785E74 /* 14_thumb.png in Resources */,
+				C3D9C3011CA166BA00E453C4 /* angry.mp4 in Resources */,
 				07EAD3331B7EB2E9002B43C6 /* د_thumb.png in Resources */,
 				07EAD3291B7EB2E9002B43C6 /* آ_thumb.png in Resources */,
 				0705D1AD1B7EA7A4002D6672 /* ImagesForSomApp.xcassets in Resources */,
@@ -1563,6 +1642,7 @@
 				07E060FA1BC9BE2C00561EB2 /* mouthDic.png in Resources */,
 				07EAD3D91B7EE48A002B43C6 /* سa.png in Resources */,
 				07EAD3341B7EB2E9002B43C6 /* ذ_thumb.png in Resources */,
+				C3D9C2F91CA166BA00E453C4 /* for.mp4 in Resources */,
 				07EAD3D11B7EE48A002B43C6 /* ثa.png in Resources */,
 				07EAD3D81B7EE48A002B43C6 /* زa.png in Resources */,
 				07EAD32E1B7EB2E9002B43C6 /* ت_thumb.png in Resources */,

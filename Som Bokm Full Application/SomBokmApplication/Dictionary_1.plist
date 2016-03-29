@@ -481,10 +481,9 @@
 				<string>WashHand</string>
 				<string>غسل اليدين</string>
 			</array>
-			<array>
-				<string>angry</string>
-				<string>غضب</string>
-			</array>
+		</array>
+		<key>قصة</key>
+		<array>
 			<array>
 				<string>ball1</string>
 				<string>كرة</string>
@@ -576,6 +575,14 @@
 			<array>
 				<string>schoold trip</string>
 				<string>رحلة المدرسة</string>
+			</array>
+			<array>
+				<string>hamad</string>
+				<string>حمد</string>
+			</array>
+			<array>
+				<string>angry</string>
+				<string>غضب</string>
 			</array>
 		</array>
 	</dict>

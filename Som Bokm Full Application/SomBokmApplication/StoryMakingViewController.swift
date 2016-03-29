@@ -56,6 +56,7 @@ class StoryMakingViewController: UIViewController {
     //  Video Player
      var videoPlayer = VideoPlayer(name: "", withFrame: CGRectMake(600, 100, 400, 300))
      var showVideoTappedCounter = 0
+     var tagOfButton = -1 // for the button when it touched it , to disappear or appear
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -579,24 +580,41 @@ extension StoryMakingViewController
 // rename thue function and set all the right values
     
     
-    func  showVideoContainer()
+   
+    func  showVideoContainer(tag:Int)
     {
-        if showVideoTappedCounter % 2 == 0
+        if tagOfButton != tag
         {
-        videoPlayer.hidden = false
-        self.view.addSubview(videoPlayer)
-            
+            showVideoContainer2()
         }
         else
         {
-            videoPlayer.hidden = true
-            videoPlayer.stop()
+            if videoPlayer.hidden == true
+            {
+               showVideoContainer2()
+            }
+            else
+            {
+               hideVideoContainer()
+            }
         }
-        showVideoTappedCounter++
-
+        
+        tagOfButton = tag
+        
     }
     
-    func showVideo(elementName: String)
+    func hideVideoContainer()
+    {
+        videoPlayer.hidden = true
+        videoPlayer.stop()
+    }
+    func showVideoContainer2()
+    {
+        videoPlayer.hidden = false
+        self.view.addSubview(videoPlayer)
+    }
+    
+    func showVideo(elementName: String , tag: Int)
     {
         videoPlayer.repeatEnabled = false
        
@@ -612,7 +630,7 @@ extension StoryMakingViewController
                     videoPlayer.prepareForPlay()
                     videoPlayer.play()
                     videoPlayer.pipEnabled = true
-                    showVideoContainer()
+                    showVideoContainer(tag)
                 }
             }
  

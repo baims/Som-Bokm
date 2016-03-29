@@ -58,6 +58,7 @@ class CategoriesVC: UIViewController,  UICollectionViewDelegate,UICollectionView
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellCat", forIndexPath: indexPath) as! CollectionViewCell
         
         let elementInCollection = categoryArray![indexPath.row]
+        
 //        _ = elementInCollection.name!
         
         if let cellIcon = UIImage(named: elementInCollection.thumbImageName!){

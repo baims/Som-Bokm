@@ -53,15 +53,18 @@ class TypeReadingStoryViewController: UIViewController {
             
             if elementName != nil{
                 print("element name : \(elementName)")
-                if ElementManager.Base()[elementName!].isNil == false {
+                if ElementManager.Base()[elementName!].isNil == false
+                {
                     print("button video wil show for \(titleForButton)")
-                    parentViewController.showVideo(elementName!)
+                    parentViewController.showVideo(elementName! , tag: sender.tag)
                 }
                 
             }
             else
             {
-                parentViewController.showVideoContainer()
+                // Dont show 
+                parentViewController.hideVideoContainer()
+//                parentViewController.showVideoContainer()
             }
         }
     }

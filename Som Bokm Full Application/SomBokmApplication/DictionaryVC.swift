@@ -170,6 +170,13 @@ class DictionaryVC: UIViewController , UICollectionViewDelegate , UICollectionVi
         
         let cell_image_name = rootsArray![segmentControl.selectedSegmentIndex].categoriesArray![indexPath.row].categoryName! + "_thumb"
         
+        if rootsArray![segmentControl.selectedSegmentIndex].categoriesArray![indexPath.row].categoryName! == "قصة"
+        {
+            cell.label.text = "قصة"
+            cell.userInteractionEnabled = false
+            return cell
+        }
+        
         if let cell_image   = UIImage(named:cell_image_name)
         {
             cell.label.hidden = true
